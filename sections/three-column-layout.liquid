@@ -1,0 +1,110 @@
+<style>
+.three-column-section .columns-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.three-column-section .column-item {
+  width: calc(33.3% - 2rem);
+}
+.three-column-section .column-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.three-column-section .column-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+}
+.three-column-section .column-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.three-column-section .more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background-color: #007aff; /* blue */
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.three-column-section .more-button:hover {
+  background-color: #005fcc;
+}
+</style>
+
+<div class="three-column-section section section--page-width color-scheme-1">
+  <div class="columns-wrapper">
+    {% for block in section.blocks %}
+      <div class="column-item" {{ block.shopify_attributes }}>
+        {% if block.settings.image %}
+          <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}">
+        {% endif %}
+        <h3 class="column-title">{{ block.settings.title }}</h3>
+        <p class="column-description">{{ block.settings.description }}</p>
+        {% if block.settings.button_text and block.settings.button_link %}
+          <a class="more-button" href="{{ block.settings.button_link }}">
+            {{ block.settings.button_text }}
+            <span aria-hidden="true">›</span>
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Three Column Blocks",
+  "tag": "section",
+  "class": "three-column-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Block Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Block description goes here."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Three Column Blocks",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

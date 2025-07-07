@@ -1,0 +1,687 @@
+{% doc %}
+  @prompt
+    A magazine-style editorial layout
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .magazine-editorial-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns }}, 1fr);
+    gap: {{ block.settings.gap }}px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .magazine-editorial__header-{{ ai_gen_id }} {
+    grid-column: 1 / -1;
+    margin-bottom: {{ block.settings.spacing }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .magazine-editorial__headline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.headline_size }}px;
+    font-weight: {{ block.settings.headline_weight }};
+    color: {{ block.settings.headline_color }};
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+  }
+
+  .magazine-editorial__subheading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subheading_size }}px;
+    font-weight: {{ block.settings.subheading_weight }};
+    color: {{ block.settings.subheading_color }};
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    line-height: 1.4;
+  }
+
+  .magazine-editorial__byline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.byline_size }}px;
+    font-style: italic;
+    color: {{ block.settings.byline_color }};
+    margin-bottom: 1em;
+  }
+
+  .magazine-editorial__image-container-{{ ai_gen_id }} {
+    grid-column: span {{ block.settings.image_width }};
+    margin-bottom: {{ block.settings.spacing }}px;
+  }
+
+  .magazine-editorial__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: {{ block.settings.image_aspect_ratio }};
+  }
+
+  .magazine-editorial__image-container-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #f4f4f4;
+    aspect-ratio: {{ block.settings.image_aspect_ratio }};
+  }
+
+  .magazine-editorial__caption-{{ ai_gen_id }} {
+    font-size: {{ block.settings.caption_size }}px;
+    color: {{ block.settings.caption_color }};
+    margin-top: 0.5em;
+    font-style: italic;
+  }
+
+  .magazine-editorial__content-{{ ai_gen_id }} {
+    grid-column: span {{ block.settings.content_width }};
+    font-size: {{ block.settings.body_size }}px;
+    line-height: {{ block.settings.body_line_height }};
+    color: {{ block.settings.body_color }};
+  }
+
+  .magazine-editorial__content-{{ ai_gen_id }} p {
+    margin-bottom: 1em;
+  }
+
+  .magazine-editorial__dropcap-{{ ai_gen_id }} p:first-child::first-letter {
+    float: left;
+    font-size: {{ block.settings.dropcap_size }}px;
+    line-height: 0.8;
+    margin-right: 0.1em;
+    color: {{ block.settings.dropcap_color }};
+    font-weight: {{ block.settings.dropcap_weight }};
+  }
+
+  .magazine-editorial__pullquote-{{ ai_gen_id }} {
+    grid-column: span {{ block.settings.pullquote_width }};
+    font-size: {{ block.settings.pullquote_size }}px;
+    line-height: 1.4;
+    color: {{ block.settings.pullquote_color }};
+    font-weight: {{ block.settings.pullquote_weight }};
+    padding: 20px;
+    margin: {{ block.settings.spacing }}px 0;
+    border-left: 4px solid {{ block.settings.pullquote_accent_color }};
+    background-color: {{ block.settings.pullquote_background }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .magazine-editorial-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+      padding: {{ block.settings.padding | divided_by: 2 }}px;
+      gap: {{ block.settings.gap | divided_by: 2 }}px;
+    }
+
+    .magazine-editorial__image-container-{{ ai_gen_id }},
+    .magazine-editorial__content-{{ ai_gen_id }},
+    .magazine-editorial__pullquote-{{ ai_gen_id }} {
+      grid-column: 1 / -1;
+    }
+
+    .magazine-editorial__headline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.headline_size | times: 0.7 }}px;
+    }
+
+    .magazine-editorial__subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheading_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="magazine-editorial-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <header class="magazine-editorial__header-{{ ai_gen_id }}">
+    {% if block.settings.headline != blank %}
+      <h2 class="magazine-editorial__headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h2>
+    {% endif %}
+    
+    {% if block.settings.subheading != blank %}
+      <div class="magazine-editorial__subheading-{{ ai_gen_id }}">{{ block.settings.subheading }}</div>
+    {% endif %}
+    
+    {% if block.settings.byline != blank %}
+      <div class="magazine-editorial__byline-{{ ai_gen_id }}">{{ block.settings.byline }}</div>
+    {% endif %}
+  </header>
+
+  {% if block.settings.image_position == 'top' %}
+    <div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img 
+          src="{{ block.settings.image | image_url: width: 2000 }}" 
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          class="magazine-editorial__image-{{ ai_gen_id }}"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      {% else %}
+        <div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+      
+      {% if block.settings.caption != blank %}
+        <div class="magazine-editorial__caption-{{ ai_gen_id }}">{{ block.settings.caption }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="magazine-editorial__content-{{ ai_gen_id }} {% if block.settings.enable_dropcap %}magazine-editorial__dropcap-{{ ai_gen_id }}{% endif %}">
+    {{ block.settings.content }}
+  </div>
+
+  {% if block.settings.image_position == 'middle' %}
+    <div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img 
+          src="{{ block.settings.image | image_url: width: 2000 }}" 
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          class="magazine-editorial__image-{{ ai_gen_id }}"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      {% else %}
+        <div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+      
+      {% if block.settings.caption != blank %}
+        <div class="magazine-editorial__caption-{{ ai_gen_id }}">{{ block.settings.caption }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if block.settings.pullquote != blank %}
+    <blockquote class="magazine-editorial__pullquote-{{ ai_gen_id }}">
+      {{ block.settings.pullquote }}
+    </blockquote>
+  {% endif %}
+
+  {% if block.settings.image_position == 'bottom' %}
+    <div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img 
+          src="{{ block.settings.image | image_url: width: 2000 }}" 
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          class="magazine-editorial__image-{{ ai_gen_id }}"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      {% else %}
+        <div class="magazine-editorial__image-container-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+      
+      {% if block.settings.caption != blank %}
+        <div class="magazine-editorial__caption-{{ ai_gen_id }}">{{ block.settings.caption }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Magazine Editorial",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Your Captivating Headline"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "An engaging subheading that draws readers in"
+    },
+    {
+      "type": "text",
+      "id": "byline",
+      "label": "Byline",
+      "default": "By Author Name"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Start your article with an engaging introduction. This is where you'll capture your reader's attention and set the stage for the rest of your content. A good introduction provides context, establishes relevance, and gives readers a reason to keep reading.</p><p>The body of your article should expand on your main points with supporting evidence, examples, and insights. Break up long paragraphs to improve readability and use subheadings to organize your content into logical sections.</p><p>End with a conclusion that summarizes your key points and leaves readers with something to think about. A strong conclusion reinforces your message and may include a call to action.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Featured image"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Image caption",
+      "default": "Image caption or credit"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "richtext",
+      "id": "pullquote",
+      "label": "Pull quote",
+      "default": "<p>\"This is a compelling pull quote that highlights a key point from your article.\"</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Number of columns",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Image width (columns)",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Content width (columns)",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "pullquote_width",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Pull quote width (columns)",
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "1/1",
+          "label": "1:1 (Square)"
+        },
+        {
+          "value": "3/4",
+          "label": "3:4"
+        },
+        {
+          "value": "2/3",
+          "label": "2:3"
+        }
+      ],
+      "default": "16/9"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Vertical spacing",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Headline size",
+      "default": 48
+    },
+    {
+      "type": "select",
+      "id": "headline_weight",
+      "label": "Headline weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "subheading_weight",
+      "label": "Subheading weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "byline_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Byline size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Body text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_line_height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "label": "Body line height",
+      "default": 1.6
+    },
+    {
+      "type": "range",
+      "id": "caption_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Caption size",
+      "default": 14
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_dropcap",
+      "label": "Enable drop cap",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "dropcap_size",
+      "min": 40,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Drop cap size",
+      "default": 72
+    },
+    {
+      "type": "select",
+      "id": "dropcap_weight",
+      "label": "Drop cap weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "pullquote_size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Pull quote size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "pullquote_weight",
+      "label": "Pull quote weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "byline_color",
+      "label": "Byline color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "caption_color",
+      "label": "Caption color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "dropcap_color",
+      "label": "Drop cap color",
+      "default": "#000F9F"
+    },
+    {
+      "type": "color",
+      "id": "pullquote_color",
+      "label": "Pull quote text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "pullquote_accent_color",
+      "label": "Pull quote accent color",
+      "default": "#000F9F"
+    },
+    {
+      "type": "color",
+      "id": "pullquote_background",
+      "label": "Pull quote background",
+      "default": "#F5F5F5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Magazine Editorial"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

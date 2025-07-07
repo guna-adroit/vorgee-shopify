@@ -1,0 +1,454 @@
+{% doc %}
+  @prompt
+    create a 3 column layout with Image, title, description and More text button with icon
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-columns-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: {{ block.settings.column_gap }}px;
+    margin-bottom: {{ block.settings.bottom_margin }}px;
+  }
+
+  .ai-column-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: calc(33.333% - ({{ block.settings.column_gap }}px * 2 / 3));
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-column-image-container-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.image_spacing }}px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-column-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: {{ block.settings.image_aspect_ratio }};
+    object-fit: cover;
+  }
+
+  .ai-column-image-container-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: {{ block.settings.image_aspect_ratio }};
+    background-color: #f4f4f4;
+  }
+
+  .ai-column-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    margin-top: 0;
+    margin-bottom: {{ block.settings.title_spacing }}px;
+    color: {{ block.settings.title_color }};
+  }
+
+  .ai-column-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.5;
+    margin-bottom: {{ block.settings.text_spacing }}px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-column-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    font-size: {{ block.settings.button_text_size }}px;
+    color: {{ block.settings.button_color }};
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s ease;
+  }
+
+  .ai-column-button-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-column-button-icon-{{ ai_gen_id }} {
+    margin-left: 8px;
+    width: {{ block.settings.button_text_size }}px;
+    height: {{ block.settings.button_text_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-columns-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: {{ block.settings.mobile_column_gap }}px;
+    }
+
+    .ai-column-{{ ai_gen_id }} {
+      width: 100%;
+      min-width: 100%;
+      margin-bottom: {{ block.settings.mobile_column_gap }}px;
+    }
+
+    .ai-column-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-columns-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% for i in (1..3) %}
+    {% liquid
+      assign image_key = 'image_' | append: i
+      assign title_key = 'title_' | append: i
+      assign description_key = 'description_' | append: i
+      assign button_text_key = 'button_text_' | append: i
+      assign button_url_key = 'button_url_' | append: i
+      
+      assign image = block.settings[image_key]
+      assign title = block.settings[title_key]
+      assign description = block.settings[description_key]
+      assign button_text = block.settings[button_text_key]
+      assign button_url = block.settings[button_url_key]
+    %}
+    
+    <div class="ai-column-{{ ai_gen_id }}">
+      <div class="ai-column-image-container-{{ ai_gen_id }}">
+        {% if image != blank %}
+          <img 
+            src="{{ image | image_url: width: 800 }}"
+            alt="{{ image.alt | escape }}"
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+            loading="lazy"
+            class="ai-column-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          {{ 'image' | placeholder_svg_tag }}
+        {% endif %}
+      </div>
+      
+      {% if title != blank %}
+        <h3 class="ai-column-title-{{ ai_gen_id }}">{{ title }}</h3>
+      {% endif %}
+      
+      {% if description != blank %}
+        <div class="ai-column-description-{{ ai_gen_id }}">{{ description }}</div>
+      {% endif %}
+      
+      {% if button_text != blank and button_url != blank %}
+        <a href="{{ button_url }}" class="ai-column-button-{{ ai_gen_id }}">
+          {{ button_text }}
+          <svg class="ai-column-button-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Three Column Layout",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Column 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Column 1 Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description_1",
+      "label": "Description",
+      "default": "<p>Add your description text here to provide information about this column.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "Button text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "Button link"
+    },
+    
+    {
+      "type": "header",
+      "content": "Column 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Column 2 Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description_2",
+      "label": "Description",
+      "default": "<p>Add your description text here to provide information about this column.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "Button text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "Button link"
+    },
+    
+    {
+      "type": "header",
+      "content": "Column 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title",
+      "default": "Column 3 Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description_3",
+      "label": "Description",
+      "default": "<p>Add your description text here to provide information about this column.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text_3",
+      "label": "Button text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_url_3",
+      "label": "Button link"
+    },
+    
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Column spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_column_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile column spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 40
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        {
+          "value": "1/1",
+          "label": "1:1 (Square)"
+        },
+        {
+          "value": "4/3",
+          "label": "4:3"
+        },
+        {
+          "value": "16/9",
+          "label": "16:9"
+        },
+        {
+          "value": "3/2",
+          "label": "3:2"
+        }
+      ],
+      "default": "3/2"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "image_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Image bottom spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Title bottom spacing",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Text bottom spacing",
+      "default": 15
+    },
+    
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Column Layout"
+    }
+  ]
+}
+{% endschema %}

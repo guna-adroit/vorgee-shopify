@@ -1,0 +1,156 @@
+<div id="product-carousel-{{ section.id }}" class="product-carousel-section">
+  {% assign selected_collection = collections[section.settings.collection] %}
+  {% if selected_collection and selected_collection.products_count > 0 %}
+    <div class="product-carousel">
+      {% for product in selected_collection.products limit: section.settings.products_limit %}
+        <div class="carousel-item">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No products found in the selected collection.</p>
+  {% endif %}
+</div>
+
+<link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+
+<script>
+  $('.product-carousel').slick({
+    slidesToShow: {{ section.settings.slides_to_show | default: 4 }},
+    slidesToScroll: 1,
+    arrows: {{ section.settings.show_arrows | json }},
+    dots: {{ section.settings.show_dots | json }},
+    autoplay: {{ section.settings.autoplay | json }},
+    autoplaySpeed: {{ section.settings.autoplay_speed | default: 3000 }},
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+</script>
+
+{% stylesheet %}
+#product-carousel-{{ section.id }} {
+  padding: 32px 0;
+  background: {{ section.settings.bg_color }};
+}
+#product-carousel-{{ section.id }} .carousel-item {
+  text-align: center;
+  padding: 16px;
+}
+#product-carousel-{{ section.id }} img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  max-width: 100%;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+#product-carousel-{{ section.id }} h3 {
+  font-size: 18px;
+  margin: 8px 0 4px;
+  color: {{ section.settings.title_color }};
+}
+#product-carousel-{{ section.id }} p {
+  color: {{ section.settings.price_color }};
+  font-size: 16px;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Carousel",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_limit",
+      "label": "Number of products to show",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Product title color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#444444"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show",
+      "label": "Products to show at once",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show navigation dots",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed (ms)",
+      "min": 1000,
+      "max": 8000,
+      "step": 500,
+      "default": 3000
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Carousel"
+    }
+  ]
+}
+{% endschema %}

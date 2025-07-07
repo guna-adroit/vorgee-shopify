@@ -1,0 +1,385 @@
+{% doc %}
+  @prompt
+    create a 2 column collapsible dorpdown for FAQ with chevron icon and section title
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-faq-container-{{ ai_gen_id }} {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ai-faq-title-{{ ai_gen_id }} {
+    margin-bottom: 30px;
+    text-align: {{ block.settings.title_alignment }};
+    color: {{ block.settings.title_color }};
+  }
+
+  .ai-faq-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-faq-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ai-faq-item-{{ ai_gen_id }} {
+    border: 1px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    margin-bottom: 10px;
+    background-color: {{ block.settings.background_color }};
+    overflow: hidden;
+  }
+
+  .ai-faq-question-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: {{ block.settings.question_bg_color }};
+    color: {{ block.settings.question_color }};
+    font-weight: {{ block.settings.question_weight }};
+    transition: background-color 0.3s;
+  }
+
+  .ai-faq-question-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.question_hover_bg_color }};
+  }
+
+  .ai-faq-chevron-{{ ai_gen_id }} {
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+  }
+
+  .ai-faq-item-{{ ai_gen_id }}.active .ai-faq-chevron-{{ ai_gen_id }} {
+    transform: rotate(180deg);
+  }
+
+  .ai-faq-answer-{{ ai_gen_id }} {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    color: {{ block.settings.answer_color }};
+  }
+
+  .ai-faq-item-{{ ai_gen_id }}.active .ai-faq-answer-{{ ai_gen_id }} {
+    padding: 0 20px 20px;
+    max-height: 1000px;
+  }
+
+  .ai-faq-answer-inner-{{ ai_gen_id }} {
+    margin-top: 0;
+  }
+{% endstyle %}
+
+<div class="ai-faq-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.title != blank %}
+    <h2 class="ai-faq-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+  {% endif %}
+
+  <div class="ai-faq-grid-{{ ai_gen_id }}">
+    {% for i in (1..block.settings.faq_count) %}
+      {% assign question_key = 'question_' | append: i %}
+      {% assign answer_key = 'answer_' | append: i %}
+      
+      {% if block.settings[question_key] != blank %}
+        <div class="ai-faq-item-{{ ai_gen_id }}">
+          <button 
+            class="ai-faq-question-{{ ai_gen_id }}" 
+            aria-expanded="false"
+            aria-controls="faq-answer-{{ ai_gen_id }}-{{ i }}"
+          >
+            <span>{{ block.settings[question_key] }}</span>
+            <svg class="ai-faq-chevron-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div 
+            id="faq-answer-{{ ai_gen_id }}-{{ i }}" 
+            class="ai-faq-answer-{{ ai_gen_id }}"
+          >
+            <div class="ai-faq-answer-inner-{{ ai_gen_id }}">
+              {{ block.settings[answer_key] }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    class FaqAccordion extends HTMLElement {
+      constructor() {
+        super();
+        this.faqItems = this.querySelectorAll('.ai-faq-item-{{ ai_gen_id }}');
+        this.init();
+      }
+
+      init() {
+        this.faqItems.forEach(item => {
+          const question = item.querySelector('.ai-faq-question-{{ ai_gen_id }}');
+          const answer = item.querySelector('.ai-faq-answer-{{ ai_gen_id }}');
+          
+          question.addEventListener('click', () => {
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+            
+            if (!isExpanded) {
+              if ({{ block.settings.toggle_multiple | json }} === false) {
+                // Close all other items if toggle_multiple is false
+                this.faqItems.forEach(otherItem => {
+                  if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.ai-faq-question-{{ ai_gen_id }}').setAttribute('aria-expanded', 'false');
+                  }
+                });
+              }
+            }
+            
+            // Toggle current item
+            item.classList.toggle('active');
+            question.setAttribute('aria-expanded', !isExpanded);
+          });
+        });
+      }
+    }
+
+    customElements.define('faq-accordion-{{ ai_gen_id }}', FaqAccordion);
+    
+    // Initialize the component
+    document.querySelectorAll('.ai-faq-container-{{ ai_gen_id }}').forEach(container => {
+      new FaqAccordion();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "tag": null,
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "faq_count",
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "label": "Number of FAQs",
+      "default": 6
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_multiple",
+      "label": "Allow multiple open at once",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "FAQ Items"
+    },
+    {
+      "type": "text",
+      "id": "question_1",
+      "label": "Question 1",
+      "default": "How do I track my order?"
+    },
+    {
+      "type": "richtext",
+      "id": "answer_1",
+      "label": "Answer 1",
+      "default": "<p>You can track your order by clicking the tracking link in your shipping confirmation email, or by logging into your account on our website and viewing the order details.</p>"
+    },
+    {
+      "type": "text",
+      "id": "question_2",
+      "label": "Question 2",
+      "default": "What is your return policy?"
+    },
+    {
+      "type": "richtext",
+      "id": "answer_2",
+      "label": "Answer 2",
+      "default": "<p>We offer a 30-day return policy. If you're not satisfied with your purchase, you can return it within 30 days for a full refund. The item must be unused and in its original packaging.</p>"
+    },
+    {
+      "type": "text",
+      "id": "question_3",
+      "label": "Question 3",
+      "default": "Do you ship internationally?"
+    },
+    {
+      "type": "richtext",
+      "id": "answer_3",
+      "label": "Answer 3",
+      "default": "<p>Yes, we ship to most countries worldwide. Shipping rates and delivery times vary depending on the destination.</p>"
+    },
+    {
+      "type": "text",
+      "id": "question_4",
+      "label": "Question 4",
+      "default": "How can I contact customer support?"
+    },
+    {
+      "type": "richtext",
+      "id": "answer_4",
+      "label": "Answer 4",
+      "default": "<p>You can contact our customer support team by email at support@example.com or by phone at (123) 456-7890, Monday through Friday, 9am-5pm EST.</p>"
+    },
+    {
+      "type": "text",
+      "id": "question_5",
+      "label": "Question 5",
+      "default": "Do you offer gift wrapping?"
+    },
+    {
+      "type": "richtext",
+      "id": "answer_5",
+      "label": "Answer 5",
+      "default": "<p>Yes, we offer gift wrapping for an additional $5 per item. You can select this option during checkout.</p>"
+    },
+    {
+      "type": "text",
+      "id": "question_6",
+      "label": "Question 6",
+      "default": "What payment methods do you accept?"
+    },
+    {
+      "type": "richtext",
+      "id": "answer_6",
+      "label": "Answer 6",
+      "default": "<p>We accept Visa, Mastercard, American Express, Discover, PayPal, and Apple Pay.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Section title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "question_bg_color",
+      "label": "Question background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "question_hover_bg_color",
+      "label": "Question hover background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "question_weight",
+      "label": "Question font weight",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "bold",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer text color",
+      "default": "#333333"
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion"
+    }
+  ]
+}
+{% endschema %}
