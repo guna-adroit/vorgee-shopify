@@ -15,15 +15,40 @@
       class="button button-unstyled search-modal__button header-actions__action"
       aria-label="{{ 'accessibility.open_search_modal' | t }}"
     >
-      <span
+      <div class="v-search-bar-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#07BED4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.0004 21L16.6504 16.65" stroke="#07BED4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <input type="search" name="" placeholder="Search" id="">
+      </div>
+      <!-- <span
         aria-hidden="true"
         class="svg-wrapper"
       >
         {{ 'icon-search.svg' | inline_asset_content }}
-      </span>
+      </span> -->
     </button>
   </search-button>
 {% endunless %}
+
+<style>
+        .v-search-bar-container{
+            background-color: #F6F6F6;
+            max-width: 340px;
+            height: 50px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+        .v-search-bar-container input[type='search']{
+            border: none;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+        }
+    </style>
 
 {% stylesheet %}
   .search-action {
