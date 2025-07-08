@@ -21,9 +21,9 @@
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
-            "weight": "",
+            "weight": "500",
             "letter_spacing": "normal",
-            "case": "none"
+            "case": "uppercase"
           },
           "blocks": {}
         }
