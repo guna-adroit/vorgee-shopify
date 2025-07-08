@@ -17,7 +17,7 @@
         "announcement_dQL9Rh": {
           "type": "_announcement",
           "settings": {
-            "text": "Shop our latest arrivals!",
+            "text": "Spring Sale Up to 10% Off Code：SPRING10",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
