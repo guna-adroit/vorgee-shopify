@@ -10,5 +10,5 @@
   font-weight: 600 !important;
 }
 .overflow-menu::part(list){
-  gap: 60px;
+  gap: 60px !important;
 }
