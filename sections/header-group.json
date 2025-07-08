@@ -26,10 +26,24 @@
             "case": "uppercase"
           },
           "blocks": {}
+        },
+        "announcement_rMMi9j": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Spring Sale Up to 10% Off Code：SPRING10",
+            "link": "",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "weight": "600",
+            "letter_spacing": "normal",
+            "case": "uppercase"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "announcement_dQL9Rh"
+        "announcement_dQL9Rh",
+        "announcement_rMMi9j"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
