@@ -1,7 +1,6 @@
 .announcement-bar__text{
     font-weight: 500;
-    font-style: Regular;
-    leading-trim: NONE;
+    font-style: regular;
     line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
