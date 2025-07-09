@@ -1,5 +1,5 @@
 .custom-page-width{
-  max-width: 120rem;
+  max-width: calc(var(--page-content-width) + (var(--page-margin) * 2));;
   margin: 0 auto;
 }
 .announcement-bar__text{
