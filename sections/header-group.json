@@ -11,34 +11,16 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "header_announcements_wtdfLq": {
-      "type": "header-announcements",
-      "blocks": {
-        "announcement_dQL9Rh": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Spring Sale Up to 10% Off Code：SPRING10",
-            "link": "",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "weight": "600",
-            "letter_spacing": "normal",
-            "case": "uppercase"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_dQL9Rh"
-      ],
-      "name": "t:names.announcement_bar",
+    "announcement_bar_static_4PF3QF": {
+      "type": "announcement-bar-static",
+      "name": "Announcement Bar Static",
       "settings": {
-        "speed": 5,
-        "section_width": "page-width",
+        "announcement_text": "Spring Sale Up to 10% Off Code：SPRING10",
+        "menu_links": "top-bar-menu",
         "color_scheme": "",
-        "divider_width": 0,
-        "padding-block-start": 15,
-        "padding-block-end": 15
+        "background_color": "#f4f4f4",
+        "text_color": "#333333",
+        "link_color": "#333333"
       }
     },
     "header_section": {
@@ -120,7 +102,7 @@
     }
   },
   "order": [
-    "header_announcements_wtdfLq",
+    "announcement_bar_static_4PF3QF",
     "header_section"
   ]
 }
