@@ -327,7 +327,7 @@
           "name": "t:names.menu",
           "settings": {
             "menu": "size-care-guides",
-            "heading": "ABOUT",
+            "heading": "SIZE & CARE GUIDES",
             "menu_spacing": 12,
             "show_as_accordion": false,
             "accordion_icon": "caret",
@@ -375,7 +375,7 @@
       "type": "divider",
       "name": "t:names.divider_section",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
         "section_width": "page-width",
         "thickness": 1,
         "corner_radius": "square",
