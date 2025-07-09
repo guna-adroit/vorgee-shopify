@@ -1,3 +1,4 @@
+{% if template.name == 'index' %}
 <style>
         .v-icon-text-wrapper{
             background-color: #DFF3F8;
@@ -26,20 +27,15 @@
     </style>
     <div class="v-icon-text-wrapper section section--page-width section-background color-{{ section.settings.color_scheme }}">
         <div class="v-icon-text-container">
+          {% for block in section.blocks %}
             <div class="v-icon-text-item">
-                <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/icon-australia.svg?v=1752068548" alt="">
-                <p>AUSTRALIAN OWNED</p>
+                <img src="{{ block.settings.icon | image_url: width: 100  }}" alt="">
+                <p>{{ block.settings.title }}</p>
             </div>
-            <div class="v-icon-text-item">
-                <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/icon-australia.svg?v=1752068548" alt="">
-                <p>AUSTRALIAN OWNED</p>
-            </div>
-            <div class="v-icon-text-item">
-                <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/icon-australia.svg?v=1752068548" alt="">
-                <p>AUSTRALIAN OWNED</p>
-            </div>
+          {% endfor %}
         </div>
     </div>
+{% endif %}
 
 {% schema %}
 {
@@ -76,7 +72,7 @@
   ],
   "blocks": [
     {
-      "type": "text",
+      "type": "icon_text",
       "name": "Icon Text",
       "settings": [
         {
@@ -96,7 +92,18 @@
   "presets": [
     {
       "name": "Top bar icons",
-      "category": "Header"
+      "category": "Header",
+      "blocks": [
+        {
+          "type": "icon_text"
+        },
+        {
+          "type": "icon_text"
+        },
+        {
+          "type": "icon_text"
+        }
+      ]
     }
   ]
 }
