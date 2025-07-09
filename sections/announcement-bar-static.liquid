@@ -1,5 +1,5 @@
 {% stylesheet %}
-.announcement-bar {
+.v-announcement-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,31 +10,31 @@
   font-weight: 500;
 }
 
-.announcement-text {
+.v-announcement-text {
   flex: 1;
   text-align: center;
 }
 
-.menu-links {
+.v-menu-links {
   display: flex;
   gap: 20px;
 }
 
-.menu-links a {
+.v-menu-links a {
   color: {{ section.settings.link_color }};
   text-decoration: none;
 }
 
-.menu-links a:hover {
+.v-menu-links a:hover {
   text-decoration: underline;
 }
 {% endstylesheet %}
 
-<div class="announcement-bar section-background color-{{ section.settings.color_scheme }}">
-  <div class="announcement-text">
+<div class="v-announcement-bar section-background color-{{ section.settings.color_scheme }}">
+  <div class="v-announcement-text">
     {{ section.settings.announcement_text }}
   </div>
-  <div class="menu-links">
+  <div class="v-menu-links">
     {% for link in section.settings.menu_links.links %}
       <a href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}
