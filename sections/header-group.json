@@ -129,11 +129,47 @@
         "padding-block-start": 15,
         "padding-block-end": 15
       }
+    },
+    "top_bar_icon_text_474R7D": {
+      "type": "top-bar-icon-text",
+      "blocks": {
+        "icon_text_akeEh4": {
+          "type": "icon_text",
+          "settings": {
+            "title": "Fast Delivery"
+          }
+        },
+        "icon_text_DLgeif": {
+          "type": "icon_text",
+          "settings": {
+            "title": "Fast Delivery"
+          }
+        },
+        "icon_text_V3YNk8": {
+          "type": "icon_text",
+          "settings": {
+            "title": "Fast Delivery"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_akeEh4",
+        "icon_text_DLgeif",
+        "icon_text_V3YNk8"
+      ],
+      "name": "Top bar icons",
+      "settings": {
+        "color_scheme": "",
+        "background_color": "#f4f4f4",
+        "text_color": "#000000",
+        "link_color": "#000000"
+      }
     }
   },
   "order": [
     "announcement_bar_static_4PF3QF",
     "header_section",
-    "header_announcements_qgpzNJ"
+    "header_announcements_qgpzNJ",
+    "top_bar_icon_text_474R7D"
   ]
 }
