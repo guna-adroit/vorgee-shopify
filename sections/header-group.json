@@ -143,14 +143,14 @@
         "icon_text_DLgeif": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify://shop_images/icon-immersive.svg",
+            "icon": "shopify://shop_images/attachmentb_1.png",
             "title": "IMMERSIVE DESIGN"
           }
         },
         "icon_text_V3YNk8": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify://shop_images/icon-premium.svg",
+            "icon": "shopify://shop_images/attachmentbb_1.png",
             "title": "PREMIUM MATERIALS"
           }
         }
