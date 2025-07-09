@@ -32,12 +32,13 @@
 {% endstylesheet %}
 
 <div class="v-announcement-bar section-background color-{{ section.settings.color_scheme }}">
-  <div>
+  <div class="v-announcement-left">
+    <span></span>
   </div>
   <div class="v-announcement-text">
     {{ section.settings.announcement_text }}
   </div>
-  <div class="v-menu-links">
+  <div class="v-menu-links v-announcement-right">
     {% for link in section.settings.menu_links.links %}
       <a href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}
