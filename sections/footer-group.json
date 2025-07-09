@@ -273,123 +273,12 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "email_signup_BKKdX4": {
-          "type": "email-signup",
-          "name": "t:names.email_signup",
-          "settings": {
-            "width": "custom",
-            "custom_width": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border_style": "underline",
-            "border_width": 1,
-            "border_radius": 100,
-            "input_type_preset": "paragraph",
-            "style_class": "button",
-            "display_type": "text",
-            "label": "Sign up",
-            "integrated_button": false,
-            "button_type_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "footer_utilities_KRaGcH": {
-          "type": "footer-utilities",
-          "name": "t:names.footer_utilities",
-          "settings": {
-            "divider_thickness": 0,
-            "padding-block-start": 12,
-            "padding-block-end": 0
-          },
-          "blocks": {
-            "copyright": {
-              "type": "_footer-copyright",
-              "static": true,
-              "settings": {
-                "font_size": "0.75rem",
-                "case": "none"
-              },
-              "blocks": {}
-            },
-            "policy_list": {
-              "type": "_footer-policy-list",
-              "static": true,
-              "settings": {
-                "font_size": "0.75rem",
-                "case": "none"
-              },
-              "blocks": {}
-            },
-            "social_icons": {
-              "type": "_footer-social-icons",
-              "disabled": true,
-              "static": true,
-              "settings": {},
-              "blocks": {
-                "social_link_JnLXB6": {
-                  "type": "_social-link",
-                  "name": "Facebook",
-                  "settings": {
-                    "link": "https://www.facebook.com/shopify"
-                  },
-                  "blocks": {}
-                },
-                "social_link_9i9EqD": {
-                  "type": "_social-link",
-                  "name": "Instagram ",
-                  "settings": {
-                    "link": "https://www.instagram.com/shopify/#"
-                  },
-                  "blocks": {}
-                },
-                "social_link_kd8UUt": {
-                  "type": "_social-link",
-                  "name": "TikTok",
-                  "settings": {
-                    "link": "https://www.tiktok.com/@shopify"
-                  },
-                  "blocks": {}
-                },
-                "social_link_Qw9AXL": {
-                  "type": "_social-link",
-                  "name": "X / Twitter",
-                  "settings": {
-                    "link": "https://x.com/shopify"
-                  },
-                  "blocks": {}
-                },
-                "social_link_aAH768": {
-                  "type": "_social-link",
-                  "name": "YouTube",
-                  "settings": {
-                    "link": "https://www.youtube.com/shopify"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "social_link_JnLXB6",
-                "social_link_9i9EqD",
-                "social_link_kd8UUt",
-                "social_link_Qw9AXL",
-                "social_link_aAH768"
-              ]
-            }
-          },
-          "block_order": []
         }
       },
       "block_order": [
         "group_cqyA3F",
         "menu_Ayfd8Y",
-        "menu_eteECE",
-        "email_signup_BKKdX4",
-        "footer_utilities_KRaGcH"
+        "menu_eteECE"
       ],
       "name": "Footer",
       "settings": {
