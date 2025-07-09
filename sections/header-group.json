@@ -136,18 +136,21 @@
         "icon_text_akeEh4": {
           "type": "icon_text",
           "settings": {
-            "title": "Fast Delivery"
+            "icon": "shopify://shop_images/icon-australia.svg",
+            "title": "AUSTRALIAN OWNED"
           }
         },
         "icon_text_DLgeif": {
           "type": "icon_text",
           "settings": {
+            "icon": "shopify://shop_images/icon-immersive.svg",
             "title": "Fast Delivery"
           }
         },
         "icon_text_V3YNk8": {
           "type": "icon_text",
           "settings": {
+            "icon": "shopify://shop_images/icon-premium.svg",
             "title": "Fast Delivery"
           }
         }
