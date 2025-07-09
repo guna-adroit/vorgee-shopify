@@ -11,7 +11,7 @@
   text-transform: uppercase;
 }
 .v-announcement-bar.section{
-  position: relative;
+  position: relative !important;
 }
 .v-announcement-right, .v-announcement-left {
     width: 25%;
@@ -37,7 +37,7 @@
 }
 {% endstylesheet %}
 
-<div class="header-section">
+
 <div class="v-announcement-bar section section--page-width  section-background color-{{ section.settings.color_scheme }}">
   <div class="v-announcement-left">
     <span></span>
@@ -51,7 +51,7 @@
     {% endfor %}
   </div>
 </div>
-</div>
+
 
 {% schema %}
 {
