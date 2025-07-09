@@ -30,7 +30,7 @@
 }
 {% endstylesheet %}
 
-<div class="announcement-bar">
+<div class="announcement-bar section-background color-{{ section.settings.color_scheme }}">
   <div class="announcement-text">
     {{ section.settings.announcement_text }}
   </div>
@@ -45,6 +45,9 @@
 {
   "name": "Announcement Bar",
   "tag": "section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
   "settings": [
     {
       "type": "text",
@@ -57,6 +60,12 @@
       "id": "menu_links",
       "label": "Menu Links",
       "default": "main-menu"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-4",
+      "label": "t:settings.color_scheme"
     },
     {
       "type": "color",
