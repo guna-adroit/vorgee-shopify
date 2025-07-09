@@ -1,6 +1,103 @@
+<style>
+        .v-icon-text-wrapper{
+            background-color: #DFF3F8;
+            height: 48px;
+        }
+        .v-icon-text-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .v-icon-text-item{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        @media screen and (max-width: 768px){
+            .v-icon-text-wrapper{
+                height: auto;
+            }
+            .v-icon-text-container{
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    <div class="v-icon-text-wrapper section section--page-width section-background color-{{ section.settings.color_scheme }}">
+        <div class="v-icon-text-container">
+            <div class="v-icon-text-item">
+                <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/icon-australia.svg?v=1752068548" alt="">
+                <p>AUSTRALIAN OWNED</p>
+            </div>
+            <div class="v-icon-text-item">
+                <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/icon-australia.svg?v=1752068548" alt="">
+                <p>AUSTRALIAN OWNED</p>
+            </div>
+            <div class="v-icon-text-item">
+                <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/icon-australia.svg?v=1752068548" alt="">
+                <p>AUSTRALIAN OWNED</p>
+            </div>
+        </div>
+    </div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Top bar icons",
+  "tag": "section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-4",
+      "label": "t:settings.color_scheme"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#000000"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Icon Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Fast Delivery"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Top bar icons",
+      "category": "Header"
+    }
+  ]
+}
 {% endschema %}
