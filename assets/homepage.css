@@ -46,6 +46,10 @@ li.menu__item.paragraph a{
     border-radius: 100px;
     height: 55px;
 }
+.email-signup__input{
+  height: fit-content;
+  border: none;
+}
 .email-signup__button:not(.button-unstyled) {
     border-radius: 100px;
     margin: 5px;
