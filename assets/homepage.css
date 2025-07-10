@@ -70,7 +70,7 @@ li.menu__item.paragraph a{
 }
 @media screen and (max-width: 768px){
   .email-signup__input-group {
-      display: flex;
+      display: flex !important;
   }
   .email-signup__button.button-secondary {
     width: 190px;
