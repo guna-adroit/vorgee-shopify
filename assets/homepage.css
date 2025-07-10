@@ -50,6 +50,11 @@ li.menu__item.paragraph a{
   height: fit-content;
   border: none;
 }
+.email-signup__button.button-secondary{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+}
 .email-signup__button:not(.button-unstyled) {
     border-radius: 100px;
     margin: 5px;
