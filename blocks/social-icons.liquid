@@ -1,17 +1,32 @@
+<style>
+  .social-icons-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+  }
+  .social-icon {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .social-icon a{
+    display: flex;
+  }
+</style>
 <div class="social-icons-block">
     <div class="social-icons-container">
         <div class="social-icon">
-          <a href="" target="_blank">
-            <span class="svg-wrapper icon-success">
+          <a href="#" target="_blank">
               {{ 'icon-facebook.svg' | inline_asset_content }}
-            </span>
           </a>
         </div>
          <div class="social-icon">
-          <a href="" target="_blank">
-            <span class="svg-wrapper icon-success">
+          <a href="#" target="_blank">
               {{ 'icon-instagram.svg' | inline_asset_content }}
-            </span>
           </a>
         </div>
     </div>
