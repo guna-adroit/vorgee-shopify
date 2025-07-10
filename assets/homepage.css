@@ -106,6 +106,18 @@ slideshow-controls[controls-on-media] {
 .slideshow-controls__dots, .slideshow-controls__counter{
   flex-direction: column;
 }
+a.size-style.custom-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #333;
+    padding: 10px 21px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
