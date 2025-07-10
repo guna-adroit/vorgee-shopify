@@ -27,7 +27,12 @@
   {%- endif -%}
   {{ block.shopify_attributes }}
 >
-  {{ block.settings.label }} {% if block.settings.style_class == 'custom-btn' %} {{ 'icon-chevron-right.svg' | inline_asset_content }} {% endif %}
+  {{ block.settings.label }} 
+  {% if block.settings.style_class == 'custom-btn' %} 
+  <span class="icon-round">
+    {{ 'icon-chevron-right.svg' | inline_asset_content }}
+  </span>
+  {% endif %}
 </a>
 
 {% stylesheet %}
