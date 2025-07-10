@@ -133,7 +133,7 @@
                     "label": "FIND YOUR ZONE NOW",
                     "link": "shopify://collections/all",
                     "open_in_new_tab": false,
-                    "style_class": "button",
+                    "style_class": "custom-btn",
                     "width": "fit-content",
                     "custom_width": 100,
                     "width_mobile": "fit-content",
