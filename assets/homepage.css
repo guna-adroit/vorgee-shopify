@@ -28,7 +28,7 @@ summary.menu__heading.h4{
   line-height: 28px;
   vertical-align: middle;
 }
-li.menu__item.paragraph{
+li.menu__item.paragraph a{
   font-weight: 500;
   font-style: Regular;
   font-size: 18px;
