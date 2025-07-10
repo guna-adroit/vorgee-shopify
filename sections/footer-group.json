@@ -11,6 +11,11 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "footer_bottom_kANWdV": {
+      "type": "footer-bottom",
+      "name": "Footer Bottom",
+      "settings": {}
+    },
     "section_gaAg3W": {
       "type": "section",
       "blocks": {
@@ -390,6 +395,7 @@
     "section_gaAg3W",
     "divider_Qtq6yg",
     "footer",
-    "divider_ErDRFt"
+    "divider_ErDRFt",
+    "footer_bottom_kANWdV"
   ]
 }
