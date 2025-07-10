@@ -64,4 +64,7 @@ li.menu__item.paragraph a{
     border: none;
     outline: none;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
