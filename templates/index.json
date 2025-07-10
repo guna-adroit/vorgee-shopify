@@ -105,8 +105,8 @@
                   "type": "text",
                   "settings": {
                     "text": "<p>Find out which Vorgee products are recommended for you</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "width": "100%",
+                    "max_width": "narrow",
                     "alignment": "left",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
