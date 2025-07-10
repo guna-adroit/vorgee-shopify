@@ -102,6 +102,9 @@ slideshow-controls[controls-on-media] {
     right: 0;
     width: 100px !important;
 }
+.slideshow-controls__dots, .slideshow-controls__counter{
+  flex-direction: column;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
