@@ -11,11 +11,6 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
-    "footer_bottom_kANWdV": {
-      "type": "footer-bottom",
-      "name": "Footer Bottom",
-      "settings": {}
-    },
     "section_gaAg3W": {
       "type": "section",
       "blocks": {
@@ -276,7 +271,7 @@
             "accordion_dividers": false,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "heading_preset": "h4",
+            "heading_preset": "h5",
             "link_preset": "paragraph",
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -389,6 +384,11 @@
         "padding-block-start": 16,
         "padding-block-end": 16
       }
+    },
+    "footer_bottom_kANWdV": {
+      "type": "footer-bottom",
+      "name": "Footer Bottom",
+      "settings": {}
     }
   },
   "order": [
