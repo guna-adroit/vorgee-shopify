@@ -118,7 +118,7 @@ a.size-style.custom-btn {
     font-size: 16px;
     line-height: 30px;
 }
-.custom-btn .icon-round{
+span.icon-round{
     width: 22px;
     height: 22px;
     background-color: #07BED4;
