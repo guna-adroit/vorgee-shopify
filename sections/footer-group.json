@@ -25,6 +25,7 @@
             "type_preset": "rte",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
+            "font_weight": "400",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -50,6 +51,7 @@
             "type_preset": "paragraph",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
+            "font_weight": "400",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -94,6 +96,7 @@
         "text_grDeNa",
         "email_signup_zQ79bB"
       ],
+      "disabled": true,
       "name": "t:names.email_signup",
       "settings": {
         "content_direction": "column",
@@ -213,6 +216,7 @@
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_size": "1.125rem",
+                "font_weight": "400",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
