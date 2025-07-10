@@ -21,3 +21,10 @@
         padding-right: 40px;
     }
 }
+summary.menu__heading.h4{
+  font-weight: 600;
+  font-style: Semibold;
+  font-size: 18px;
+  line-height: 28px;
+  vertical-align: middle;
+}
