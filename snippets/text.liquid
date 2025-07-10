@@ -56,6 +56,7 @@
     {% render 'typography-style', settings: block.settings %}
     --width: {{ text_width }};
     --max-width: var(--max-width--{{ type }}-{{ block.settings.max_width }});
+    --font-weight: {{ block.settings.font_weight }};
     {% if text_width == "100%" %}
       --text-align: {{ block.settings.alignment }};
     {% endif %}
