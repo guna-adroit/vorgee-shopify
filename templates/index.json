@@ -317,6 +317,7 @@
         "column_prF4TD": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/competition.png",
             "title": "Competition",
             "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
@@ -326,8 +327,9 @@
         "column_6k8dqd": {
           "type": "column",
           "settings": {
-            "title": "Competition",
-            "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
+            "image": "shopify://shop_images/Fitness.png",
+            "title": "FITNESS",
+            "description": "A range of streamlined products designed to help you move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
             "button_link": "shopify://collections"
           }
@@ -335,7 +337,8 @@
         "column_pXYykb": {
           "type": "column",
           "settings": {
-            "title": "Competition",
+            "image": "shopify://shop_images/junior.png",
+            "title": "JUNIOR",
             "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
             "button_link": "shopify://collections"
