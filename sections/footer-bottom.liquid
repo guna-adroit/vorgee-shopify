@@ -1,6 +1,46 @@
+<style>
+        .v-footer-bottom-wrapper{
+            background-color: #06B5D2;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .v-footer-bottom-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+    <div class="v-footer-bottom-wrapper">
+        <div class="v-footer-bottom-container section section--page-width">
+            <div class="v-payment-icons">
+                <ul class="list list-payment" role="list">
+                    {%- for type in shop.enabled_payment_types -%}
+                        <li class="list-payment__item">
+                        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+            <div class="v-site-copyright">
+                <p>© 2025 VORGEE</p>
+            </div>
+        </div>
+        <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Vorgee_-_Wave_-_Current_1.png?v=1752118263" width="100%" alt="">
+    </div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Footer Bottom",
+    "tag": "section",
+    "enabled_on": {
+      "groups": ["footer"]
+    },
+    "settings": [],
+    "presets": [
+      {
+        "name": "Footer Bottom"
+      }
+    ]
   }
 {% endschema %}
