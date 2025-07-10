@@ -68,6 +68,9 @@ li.menu__item.paragraph a{
     align-items: center;
     gap: 10px;
 }
+span.menu-list__link-title:hover {
+    border-bottom: 2px solid #07BED4;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
