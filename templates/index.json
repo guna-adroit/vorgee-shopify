@@ -16,6 +16,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
+            "image_1": "shopify://shop_images/image.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -27,7 +28,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "toggle_overlay": true,
-            "overlay_color": "#00000026",
+            "overlay_color": "#00000044",
             "overlay_style": "solid",
             "gradient_direction": "to top",
             "padding-block-start": 0,
