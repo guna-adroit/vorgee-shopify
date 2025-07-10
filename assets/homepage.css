@@ -72,4 +72,7 @@ li.menu__item.paragraph a{
   .email-signup__input-group {
       display: flex;
   }
+  .email-signup__button.button-secondary {
+    width: 190px;
+  }
 }
