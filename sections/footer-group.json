@@ -251,12 +251,19 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "social_icons_DXjFad": {
+              "type": "social-icons",
+              "name": "social_icons",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
             "image_QxAyMM",
             "text_jTx4NP",
-            "email_signup_B8c9hP"
+            "email_signup_B8c9hP",
+            "social_icons_DXjFad"
           ]
         },
         "menu_Ayfd8Y": {
