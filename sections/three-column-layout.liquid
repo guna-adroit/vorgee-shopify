@@ -54,7 +54,9 @@
         {% if block.settings.button_text and block.settings.button_link %}
           <a class="more-button" href="{{ block.settings.button_link }}">
             {{ block.settings.button_text }}
-            <span aria-hidden="true">›</span>
+            <span class="icon-round">
+              {{ 'icon-chevron-right.svg' | inline_asset_content }}
+            </span>
           </a>
         {% endif %}
       </div>
