@@ -136,6 +136,7 @@ span.icon-round{
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  color: #333;
 }
 @media screen and (max-width: 768px){
   .email-signup__input-group {
