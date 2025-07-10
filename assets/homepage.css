@@ -36,5 +36,5 @@ li.menu__item.paragraph a{
   vertical-align: middle;
 }
 .menu:not(:has(.menu__heading--empty)) .details-content {
-    margin-block-start: 0;
+    margin-block-start: 0 !important;
 }
