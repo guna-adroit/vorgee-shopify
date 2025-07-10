@@ -16,3 +16,8 @@
 .overflow-menu::part(list){
   gap: 60px !important;
 }
+.header__column--center {
+    header-menu:only-child .overflow-menu::part(list) {
+        padding-right: 40px;
+    }
+}
