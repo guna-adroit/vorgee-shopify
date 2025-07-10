@@ -600,6 +600,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".product-media {background-color: white;}"
+      ],
       "name": "Product list",
       "settings": {
         "collection": "all",
