@@ -80,6 +80,10 @@ span.menu-list__link-title:hover {
 .menu-list__submenu.color-scheme-matches-parent {
     padding-top: 30px;
 }
+.mega-menu__grid{
+  max-width: 968px;
+  margin: 0 auto;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
