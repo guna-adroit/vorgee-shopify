@@ -68,3 +68,8 @@ li.menu__item.paragraph a{
     align-items: center;
     gap: 10px;
 }
+@media screen and (max-width: 768px){
+  .email-signup__input-group {
+      display: flex;
+  }
+}
