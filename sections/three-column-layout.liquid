@@ -52,7 +52,7 @@
         <h3 class="column-title">{{ block.settings.title }}</h3>
         <p class="column-description">{{ block.settings.description }}</p>
         {% if block.settings.button_text and block.settings.button_link %}
-          <a class="more-button" href="{{ block.settings.button_link }}">
+          <a class="more-button custom-btn-link" href="{{ block.settings.button_link }}">
             {{ block.settings.button_text }}
             <span class="icon-round">
               {{ 'icon-chevron-right.svg' | inline_asset_content }}
