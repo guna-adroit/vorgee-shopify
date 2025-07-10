@@ -71,6 +71,11 @@ li.menu__item.paragraph a{
 span.menu-list__link-title:hover {
     border-bottom: 2px solid #07BED4;
 }
+.mega-menu__link--parent{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
