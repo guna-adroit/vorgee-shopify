@@ -56,4 +56,5 @@ li.menu__item.paragraph a{
     background-color: #07BED4;
     border: none;
     outline: none;
+    overflow: hidden;
 }
