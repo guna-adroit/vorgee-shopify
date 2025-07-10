@@ -77,6 +77,9 @@ span.menu-list__link-title:hover {
     line-height: 100% !important;
     color: #333 !important;
 }
+.menu-list__submenu.color-scheme-matches-parent {
+    padding-top: 30px;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
