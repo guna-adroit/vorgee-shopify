@@ -49,6 +49,7 @@ li.menu__item.paragraph a{
 .email-signup__input{
   height: fit-content;
   border: none;
+  border-width: 0px !important;
 }
 .email-signup__button.button-secondary{
   font-weight: 600 !important;
