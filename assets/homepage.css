@@ -41,3 +41,14 @@ li.menu__item.paragraph a{
 .shopify-section-group-footer-group .group-block-content{
   width: 350px;
 }
+.email-signup__input-group {
+    background-color: white;
+    border-radius: 100px;
+}
+.email-signup__button:not(.button-unstyled) {
+    border-radius: 100px;
+    margin: 5px;
+    background-color: #07BED4;
+    border: none;
+    outline: none;
+}
