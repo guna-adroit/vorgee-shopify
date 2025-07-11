@@ -163,6 +163,9 @@ span.icon-round{
 .product-media-container .product-media {
   background-color: white;
 }
+.slideshow-control .svg-wrapper{
+  color: #07BED4;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group {
       display: flex !important;
