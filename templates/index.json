@@ -733,6 +733,7 @@
         "group_E4NxjQ": {
           "type": "group",
           "name": "t:names.header",
+          "disabled": true,
           "settings": {
             "link": "",
             "open_in_new_tab": false,
