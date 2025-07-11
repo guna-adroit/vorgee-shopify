@@ -844,11 +844,11 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>New arrivals</h2>",
+                "text": "<p>SHOP THE RANGE</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "h2",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "font_weight": "400",
@@ -871,7 +871,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -898,7 +898,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "Shop now",
+                "label": "SHOP ALL",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn-2",
@@ -915,71 +915,6 @@
             "text_mNTgzQ",
             "button_Ch7h3h"
           ]
-        },
-        "static-heading": {
-          "type": "_heading",
-          "static": true,
-          "settings": {
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "text": "<p>SHOP THE RANGE</p>",
-            "read_only": false,
-            "alignment": "left",
-            "show_alignment": true,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "static-text": {
-          "type": "text",
-          "static": true,
-          "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "font_weight": "400",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "static-button": {
-          "type": "button",
-          "static": true,
-          "settings": {
-            "label": "SHOP ALL",
-            "link": "",
-            "open_in_new_tab": false,
-            "style_class": "custom-btn-2",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
         },
         "static-collection-card": {
           "type": "_collection-card",
