@@ -801,6 +801,21 @@
             "text_Vt7LVb"
           ]
         },
+        "static-text": {
+          "type": "button",
+          "static": true,
+          "settings": {
+            "label": "Shop now",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "custom-btn-2",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
         "static-collection-card": {
           "type": "_collection-card",
           "name": "t:names.collection_card",
