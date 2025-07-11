@@ -28,7 +28,7 @@
   {{ block.shopify_attributes }}
 >
   {{ block.settings.label }} 
-  {% if block.settings.style_class == 'custom-btn' %} 
+  {% if block.settings.style_class == 'custom-btn' or block.settings.style_class == 'custom-btn-2' %} 
   <span class="icon-round">
     {{ 'icon-chevron-right.svg' | inline_asset_content }}
   </span>
