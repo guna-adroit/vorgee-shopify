@@ -806,9 +806,9 @@
           "name": "t:names.collection_card",
           "static": true,
           "settings": {
-            "placement": "below_image",
+            "placement": "on_image",
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
+            "vertical_alignment": "flex-end",
             "collection_card_gap": 8,
             "inherit_color_scheme": true,
             "color_scheme": "",
@@ -889,8 +889,8 @@
               "static": true,
               "settings": {
                 "image_ratio": "portrait",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
+                "toggle_overlay": true,
+                "overlay_color": "#0000001a",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
                 "border": "none",
