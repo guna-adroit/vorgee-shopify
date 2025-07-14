@@ -213,7 +213,7 @@ search-button.search-action{
 }
 
 @media screen and (max-width: 768px){
-  .text-banner-heading{
+  .text-banner-heading h2{
     font-weight: 600;
     font-size: 40px;
     line-height: 100%;
