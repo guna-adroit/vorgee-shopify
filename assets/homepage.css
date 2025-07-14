@@ -176,7 +176,9 @@ span.icon-round{
 .hide-desktop {
     display: none !important;
 }
-
+search-button.search-action{
+  justify-content: center;
+}
 @media screen and (max-width: 768px){
   .header-logo__image{
     width: 135px !important;
