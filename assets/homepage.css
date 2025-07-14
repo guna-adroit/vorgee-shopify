@@ -160,6 +160,11 @@ span.icon-round{
   line-height: 28px;
   color: #333;
 }
+.section-heading h2{
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 54px;;
+}
 @media screen and (max-width: 768px){
   a.size-style.custom-btn, a.size-style.custom-btn-2{
     padding: 9px 16px;
@@ -173,6 +178,11 @@ span.icon-round{
   }
   slideshow-controls[controls-on-media]{
     right: 0;
+  }
+  .section-heading h2{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
   }
 }
 .product-media-container .product-media {
