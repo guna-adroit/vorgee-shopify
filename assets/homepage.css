@@ -160,6 +160,18 @@ span.icon-round{
   line-height: 28px;
   color: #333;
 }
+@media screen and (max-width: 768px){
+  a.size-style.custom-btn{
+    padding: 9px 16px;
+    font-size: 12px;
+    line-height: 100%;
+    height: 36px;
+  }
+  span.icon-round{
+    width: 14px;
+    height: 14px;
+  }
+}
 .product-media-container .product-media {
   background-color: white;
 }
@@ -197,4 +209,5 @@ search-button.search-action{
   .hide-desktop {
     display: unset !important;
   }
+  
 }
