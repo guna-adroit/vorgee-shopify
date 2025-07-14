@@ -176,8 +176,8 @@ span.icon-round{
 
 @media screen and (max-width: 768px){
   .header-logo__image{
-    width: 135px;
-    height: 35px;
+    width: 135px !important;
+    height: 35px !important;
   }
   .email-signup__input-group {
       display: flex !important;
