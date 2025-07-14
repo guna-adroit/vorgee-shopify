@@ -218,4 +218,9 @@ search-button.search-action{
     font-size: 40px;
     line-height: 100%;
   }
+  .text-banner-heading p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+  }
 }
