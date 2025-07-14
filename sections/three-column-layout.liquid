@@ -75,12 +75,12 @@
     # Create an array from the list items to be used for different layout types
     assign list_items_array = list_items | strip | split: '<!--@list/split-->'
   %}
-  {% render 'resource-list-carousel',
+  <!-- {% render 'resource-list-carousel',
           ref: 'collectionListCarousel',
           slides: list_items_array,
           settings: section.settings,
           slide_width_max: '450px'
-        %}
+        %} -->
 </div>
 {% schema %}
 {
