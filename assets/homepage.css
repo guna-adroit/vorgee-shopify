@@ -173,7 +173,12 @@ span.icon-round{
   width: 22px !important;
   height: 22px !important;
 }
+
 @media screen and (max-width: 768px){
+  .header-logo__image{
+    width: 135px;
+    height: 35px;
+  }
   .email-signup__input-group {
       display: flex !important;
   }
