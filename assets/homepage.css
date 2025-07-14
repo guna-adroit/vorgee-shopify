@@ -161,9 +161,9 @@ span.icon-round{
   color: #333;
 }
 .section-heading h2, .section-heading p{
-  font-weight: 600;
-  font-size: 44px;
-  line-height: 54px;;
+  font-weight: 600 !important;
+  font-size: 44px !important;
+  line-height: 54px !important;
 }
 @media screen and (max-width: 768px){
   a.size-style.custom-btn, a.size-style.custom-btn-2{
@@ -180,9 +180,9 @@ span.icon-round{
     right: 0;
   }
   .section-heading h2, .section-heading p{
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 100%;
+    font-weight: 600 !important;
+    font-size: 28px !important;
+    line-height: 100% !important;
   }
 }
 .product-media-container .product-media {
