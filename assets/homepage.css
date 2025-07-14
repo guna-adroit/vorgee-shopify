@@ -177,4 +177,7 @@ span.icon-round{
   .email-signup__button.button-secondary {
     width: 190px;
   }
+  .hide-mobile{
+    display: none !important;
+  }
 }
