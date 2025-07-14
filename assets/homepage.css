@@ -222,5 +222,6 @@ search-button.search-action{
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
+    padding: 0;
   }
 }
