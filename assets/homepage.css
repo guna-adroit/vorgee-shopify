@@ -193,6 +193,6 @@ span.icon-round{
     display: none !important;
   }
   .hide-desktop {
-    display: unset;
+    display: unset !important;
   }
 }
