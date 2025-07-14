@@ -47,7 +47,7 @@
   <div class="v-announcement-text">
     {{ section.settings.announcement_text }}
   </div>
-  <div class="v-menu-links v-announcement-right">
+  <div class="v-menu-links v-announcement-right hide-mobile">
     {% for link in section.settings.menu_links.links %}
       <a href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}
