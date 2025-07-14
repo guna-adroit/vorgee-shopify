@@ -161,13 +161,13 @@ span.icon-round{
   color: #333;
 }
 @media screen and (max-width: 768px){
-  a.size-style.custom-btn{
+  a.size-style.custom-btn, a.size-style.custom-btn-2{
     padding: 9px 16px;
     font-size: 12px;
     line-height: 100%;
     height: 36px;
   }
-  span.icon-round{
+  span.icon-round, .custom-btn-2 span.icon-round{
     width: 18px;
     height: 18px;
   }
