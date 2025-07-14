@@ -173,6 +173,9 @@ span.icon-round{
   width: 22px !important;
   height: 22px !important;
 }
+.hide-desktop {
+    display: none !important;
+}
 
 @media screen and (max-width: 768px){
   .header-logo__image{
@@ -188,5 +191,8 @@ span.icon-round{
   }
   .hide-mobile{
     display: none !important;
+  }
+  .hide-desktop {
+    display: unset;
   }
 }
