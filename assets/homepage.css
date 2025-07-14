@@ -178,6 +178,7 @@ span.icon-round{
   .header-logo__image{
     width: 135px !important;
     height: 35px !important;
+    margin: 0;
   }
   .email-signup__input-group {
       display: flex !important;
