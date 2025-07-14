@@ -211,3 +211,11 @@ search-button.search-action{
   }
   
 }
+
+@media screen and (max-width: 768px){
+  .text-banner-heading{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+  }
+}
