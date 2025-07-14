@@ -171,6 +171,9 @@ span.icon-round{
     width: 18px;
     height: 18px;
   }
+  slideshow-controls[controls-on-media]{
+    right: 0;
+  }
 }
 .product-media-container .product-media {
   background-color: white;
