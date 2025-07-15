@@ -248,6 +248,13 @@ search-button.search-action{
   line-height: 100%;
 }
 
+.subscribe-title{
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 100%;
+}
+
 @media screen and (max-width: 768px){
   .header-logo__image{
     width: 135px !important;
