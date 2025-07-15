@@ -301,5 +301,10 @@ search-button.search-action{
   slideshow-slide:has(> .resource-list__item.hide-mobile) {
     display: none;
   }
+  summary.menu__heading.h4{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;\
+  }
 }
 
