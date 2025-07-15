@@ -524,6 +524,24 @@
                 {%- endif -%}
               </li>
             {%- endfor -%}
+
+            {% for link in linklists.top-bar-menu.links %}
+            <li
+                style="--menu-drawer-animation-index: {{ animation_index }};"
+                class="{%- if block.settings.drawer_accordion -%}menu-drawer__list-item--deep{%- else -%}menu-drawer__list-item--flat{%- endif -%}{% if block.settings.drawer_dividers %} menu-drawer__list-item--divider{% endif %}"
+              >
+               <a
+                    id="HeaderDrawer-{{ link.handle }}"
+                    href="{{ link.url }}"
+                    class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                    {% if link.current %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
+                  </a>
+            </li>
+            {% endfor %}
           {% endif %} 
         </ul>
       </nav>
