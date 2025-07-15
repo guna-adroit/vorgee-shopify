@@ -311,5 +311,8 @@ search-button.search-action{
     font-size: 16px;
     line-height: 16px;
   }
+  .shopify-section-group-footer-group .group-block-content{
+    width: 100%;
+  }
 }
 
