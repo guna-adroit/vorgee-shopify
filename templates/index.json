@@ -1068,6 +1068,7 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
+                "custom_classes": "collection-title",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "",
