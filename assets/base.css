@@ -1962,7 +1962,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 
   @media screen and (min-width: 750px) {
     /* desktop values */
-    --max-swatch-size: 32px;
+    --max-swatch-size: 18px;
     --max-pill-size: 16px;
     --max-filter-size: 28px;
     --scaling-factor: 0.65;
@@ -3650,7 +3650,7 @@ slideshow-component[disabled='true'] slideshow-arrows {
 
 slideshow-arrows .slideshow-control {
   pointer-events: auto;
-  opacity: 0;
+  /* opacity: 0; */
   min-height: var(--minimum-touch-target);
   padding: 0 var(--padding-xs);
 }
@@ -3660,7 +3660,7 @@ slideshow-arrows .slideshow-control.slideshow-control--shape-none {
 }
 
 slideshow-arrows .slideshow-control.slideshow-control--style-none {
-  display: none;
+  /* display: none; */
 }
 
 .media-gallery--carousel slideshow-arrows .slideshow-control {
@@ -3833,7 +3833,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   --slide-width: 60vw;
 
   .slideshow-control[disabled] {
-    display: none;
+    /* display: none; */
   }
 
   .slideshow-control--next {
