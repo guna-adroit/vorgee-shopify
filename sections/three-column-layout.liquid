@@ -7,6 +7,9 @@
 .three-column-section .column-item {
   width: calc(33.3% - 2rem);
 }
+.three-column-section .column-item.slider {
+  width: 100%;
+}
 .three-column-section .column-item img {
   max-width: 100%;
   height: auto;
@@ -51,7 +54,7 @@
   </div>
   {% capture list_items %}
     {% for block in section.blocks %}
-      <div class="column-item" {{ block.shopify_attributes }}>
+      <div class="column-item slider" {{ block.shopify_attributes }}>
         {% if block.settings.image %}
           <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}">
         {% endif %}
