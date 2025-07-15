@@ -109,6 +109,10 @@ span.menu-list__link-title:hover {
     align-items: center;
     justify-content: center;
   }
+  .menu-drawer__menu--childlist:not(.menu-drawer__menu--grid) {
+    flex-grow: 0;
+    padding-bottom: 30px;
+  }
 }
 slideshow-controls[controls-on-media] {
     position: absolute;
