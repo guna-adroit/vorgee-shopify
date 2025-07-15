@@ -213,6 +213,18 @@ search-button.search-action{
   line-height: 32px;
   color: white;
 }
+.menu-drawer__menu-item{
+  border-top: 1px solid #F6F6F6;
+}
+.menu-drawer__menu-item-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+}
+* {
+    box-sizing: border-box;
+    font-family: boxedbook !important;
+}
 @media screen and (max-width: 768px){
   .header-logo__image{
     width: 135px !important;
