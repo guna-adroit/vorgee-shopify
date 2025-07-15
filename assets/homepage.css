@@ -231,6 +231,12 @@ search-button.search-action{
   .hide-desktop {
     display: unset !important;
   }
+  .collection-title p{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+
+  }
   
 }
 
