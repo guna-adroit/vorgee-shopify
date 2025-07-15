@@ -33,7 +33,7 @@
 </style>
 
 <div class="three-column-section section section--page-width color-scheme-1">
-  <div class="columns-wrapper">
+  <div class="columns-wrapper hide-mobile">
     {% for block in section.blocks %}
       <div class="column-item" {{ block.shopify_attributes }}>
         {% if block.settings.image %}
@@ -78,12 +78,14 @@
     # Create an array from the list items to be used for different layout types
     assign list_items_array = list_items | strip | split: '<!--@list/split-->'
   %}
+  <div class="columns-wrapper hide-desktop">
   {% render 'resource-list-carousel',
           ref: 'collectionListCarousel',
           slides: list_items_array,
           settings: section.settings,
           slide_width_max: '450px'
         %}
+  </div>
 </div>
 {% schema %}
 {
