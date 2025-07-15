@@ -221,9 +221,8 @@ search-button.search-action{
     font-size: 14px;
     line-height: 100%;
 }
-* {
-    box-sizing: border-box;
-    font-family: boxedbook !important;
+.menu-drawer__menu--grandchildlist .menu-drawer__menu-item--child {
+  padding: 10px;
 }
 @media screen and (max-width: 768px){
   .header-logo__image{
