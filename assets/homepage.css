@@ -237,11 +237,11 @@ search-button.search-action{
     line-height: 120%;
     padding: 0;
   }
+  slideshow-slide:has(> .resource-list__item.hide-mobile) {
+    display: none;
+  }
 }
 
 .menu--accordion summary{
   padding-block: 0;
-}
-slideshow-slide:has(> .resource-list__item.hide-mobile) {
-  display: none;
 }
