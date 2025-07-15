@@ -6,7 +6,6 @@
   @example
   {% render 'variant-swatches', product_resource: product %}
 {%- enddoc -%}
-
 <swatches-variant-picker-component
   data-product-id="{{ product_resource.id }}"
   data-product-url="{{ product_resource.url }}"
@@ -22,7 +21,7 @@
         {% continue %}
       {% endif %}
 
-      <fieldset class="variant-option variant-option--buttons variant-option--swatches">
+      <fieldset class="variant-option variant-option--buttons variant-option--swatches" style="max-width: 175px;">
         {% capture children %}
         {%- for product_option_value in product_option.values -%}
           {% liquid
