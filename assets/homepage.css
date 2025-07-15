@@ -238,3 +238,7 @@ search-button.search-action{
     padding: 0;
   }
 }
+
+.menu--accordion summary{
+  padding-block: 0;
+}
