@@ -204,6 +204,15 @@ span.icon-round{
 search-button.search-action{
   justify-content: center;
 }
+.menu--accordion summary{
+  padding-block: 0;
+}
+.collection-title p{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: white;
+}
 @media screen and (max-width: 768px){
   .header-logo__image{
     width: 135px !important;
@@ -242,6 +251,3 @@ search-button.search-action{
   }
 }
 
-.menu--accordion summary{
-  padding-block: 0;
-}
