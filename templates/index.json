@@ -636,8 +636,8 @@
           "type": "text",
           "settings": {
             "text": "<h1>TAKE THE PRESSURE OFF</h1>",
-            "width": "fit-content",
-            "max_width": "narrow",
+            "width": "100%",
+            "max_width": "none",
             "alignment": "left",
             "custom_classes": "text-banner-heading",
             "type_preset": "h2",
