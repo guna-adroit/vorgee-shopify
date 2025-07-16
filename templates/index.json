@@ -635,7 +635,7 @@
         "text_ADKmnL": {
           "type": "text",
           "settings": {
-            "text": "<h1>TAKE THE PRESSURE OFF</h1>",
+            "text": "<h2>TAKE THE PRESSURE OFF</h2>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
