@@ -732,7 +732,7 @@
         "toggle_overlay": true,
         "overlay_color": "#000000cf",
         "overlay_style": "gradient",
-        "gradient_direction": "to bottom",
+        "gradient_direction": "to right",
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
