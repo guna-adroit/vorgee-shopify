@@ -136,6 +136,34 @@
     },
     "section_Be484w": {
       "type": "section",
+      "blocks": {
+        "breadcrumbs_JVkjia": {
+          "type": "breadcrumbs",
+          "name": "Breadcrumbs",
+          "settings": {
+            "show_home_icon": false,
+            "home_text": "Home",
+            "home_icon_size": 16,
+            "separator": "/",
+            "separator_spacing": 8,
+            "separator_size": 14,
+            "font_size": 16,
+            "current_font_weight": "500",
+            "hover_underline": "underline",
+            "text_color": "#000000",
+            "link_color": "#000000",
+            "link_hover_color": "#333333",
+            "current_color": "#000000",
+            "separator_color": "#000000cf",
+            "padding_top": 20,
+            "padding_bottom": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "breadcrumbs_JVkjia"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
