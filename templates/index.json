@@ -357,7 +357,10 @@
         "column_pXYykb"
       ],
       "name": "Three Column Blocks",
-      "settings": {}
+      "settings": {
+        "icons_style": "chevron",
+        "icons_shape": "circle"
+      }
     },
     "product_list_qU3bEB": {
       "type": "product-list",
@@ -1143,7 +1146,7 @@
               "settings": {
                 "image_ratio": "portrait",
                 "toggle_overlay": true,
-                "overlay_color": "#0000004e",
+                "overlay_color": "#0000004f",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
                 "border": "none",
