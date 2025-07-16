@@ -707,6 +707,9 @@
         "text_V37LWH",
         "button_4ABQxy"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.hero {--hero-min-height: 42svh !important; }}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "link": "",
