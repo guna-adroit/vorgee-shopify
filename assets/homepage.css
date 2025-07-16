@@ -100,6 +100,9 @@ span.menu-list__link-title:hover {
   .email-signup__input-group{
     height: 40px;
   }
+  .email-signup__input{
+    height: auto;
+  }
   .resource-card--overlay .resource-card__title{
     font-size: 12px;
     line-height: 12px;
