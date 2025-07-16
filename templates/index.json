@@ -359,7 +359,8 @@
       "name": "Three Column Blocks",
       "settings": {
         "icons_style": "chevron",
-        "icons_shape": "circle"
+        "icons_shape": "circle",
+        "color_scheme": "scheme-2"
       }
     },
     "product_list_qU3bEB": {
