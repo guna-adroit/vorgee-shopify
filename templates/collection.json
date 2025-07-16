@@ -67,11 +67,42 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "ai_gen_block_510643c_wwBbeU": {
+          "type": "ai_gen_block_510643c",
+          "settings": {
+            "alignment": "center",
+            "gap": 15,
+            "stack_on_mobile": false,
+            "mobile_gap": 10,
+            "min_width": 150,
+            "padding_vertical": 15,
+            "padding_horizontal": 30,
+            "font_size": 16,
+            "font_weight": "500",
+            "border_width": 2,
+            "background_color": "#ffffff",
+            "hover_background_color": "#f02a2a",
+            "button_1_text": "Shop Now",
+            "button_1_link": "",
+            "button_1_style": "outline",
+            "button_2_text": "Learn More",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_3_text": "Contact Us",
+            "button_3_link": "",
+            "button_3_style": "outline",
+            "button_4_text": "About Us",
+            "button_4_link": "",
+            "button_4_style": "outline"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "text_tqQTNE",
-        "text_twGGkJ"
+        "text_twGGkJ",
+        "ai_gen_block_510643c_wwBbeU"
       ],
       "name": "Heading",
       "settings": {
