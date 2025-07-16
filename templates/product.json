@@ -207,7 +207,7 @@
                   "type": "add-to-cart",
                   "static": true,
                   "settings": {
-                    "style_class": "button"
+                    "style_class": "button-secondary"
                   },
                   "blocks": {}
                 },
@@ -481,7 +481,7 @@
         "equal_columns": false,
         "limit_details_width": false,
         "gap": 48,
-        "color_scheme": "",
+        "color_scheme": "scheme-748d7d80-ed4b-4548-989d-429dd2a49364",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
