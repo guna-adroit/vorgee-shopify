@@ -257,7 +257,7 @@ search-button.search-action{
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
-            --sidebar-width: 40rem !important;
+            --sidebar-width: 40% !important;
             grid-template-columns: 1fr min(50vw, var(--sidebar-width));
         }
     }
