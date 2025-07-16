@@ -266,7 +266,7 @@ search-button.search-action{
       display: flex !important;
   }
   .email-signup__button.button-secondary {
-    width: 190px;
+    width: 150px;
   }
   .hide-mobile{
     display: none !important;
