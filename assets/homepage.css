@@ -298,12 +298,12 @@ search-button.search-action{
 @media screen and (max-width: 768px){
   .text-banner-heading h2{
     font-weight: 600;
-    font-size: 40px;
+    font-size: 40px !important;
     line-height: 100%;
   }
   .text-banner-heading-hero h2{
     font-weight: 600;
-    font-size: 30px;
+    font-size: 30px !important;
     line-height: 100%;
   }
   .text-banner-heading p{
