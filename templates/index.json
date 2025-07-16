@@ -639,7 +639,7 @@
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
-            "custom_classes": "text-banner-heading",
+            "custom_classes": "text-banner-heading-hero",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "4rem",
