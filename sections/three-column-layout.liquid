@@ -95,7 +95,7 @@
     # Create an array from the list items to be used for different layout types
     assign list_items_array = list_items | strip | split: '<!--@list/split-->'
   %}
-  <div class="columns-wrapper hide-desktop">
+  <div class="columns-wrapper hide-desktop color-{{ section.settings.color_scheme }}">
   {% render 'resource-list-carousel',
           ref: 'collectionListCarousel',
           slides: list_items_array,
