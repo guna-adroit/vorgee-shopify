@@ -377,7 +377,7 @@ search-button.search-action{
   line-height: 100%;
   color: #121212;
 }
-.variant-option__button-label--has-swatch:has(:checked){
+.variant-option__button-label--has-swatch:has(:checked), .variant-option__button-label--has-swatch:hover{
   outline: 3px solid #333333;
   outline-offset: 0;
 }
