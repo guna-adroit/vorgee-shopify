@@ -367,7 +367,7 @@ search-button.search-action{
     .variant-option__button-label {
         min-width: var(--variant-min-width);
         width: 113px;
-        height: 33px;
+        min-height: 33px;
         padding: 8px 16px;
     }
 }
