@@ -363,6 +363,14 @@ search-button.search-action{
       text-transform: uppercase;
     }
 }
+.variant-option--equal-width-buttons {
+    .variant-option__button-label {
+        min-width: var(--variant-min-width);
+        width: 113px;
+        height: 33px;
+        padding: 8px 16px;
+    }
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
