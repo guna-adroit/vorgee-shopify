@@ -381,7 +381,10 @@ search-button.search-action{
   outline: 3px solid #333333;
   outline-offset: 0;
 }
-
+.swatch.swatch--unscaled {
+    --swatch-width: 33px;
+    --swatch-height: 33px;
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
