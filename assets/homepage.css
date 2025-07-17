@@ -352,6 +352,7 @@ search-button.search-action{
   font-weight: 500;
   font-size: 25px;
   line-height: 100%;
+  color: #121212;
 }
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
