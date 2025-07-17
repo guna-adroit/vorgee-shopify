@@ -393,6 +393,9 @@ search-button.search-action{
   background-color: white;
   text-transform: uppercase !important;
 }
+.accelerated-checkout-block {
+    text-transform: uppercase;
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
