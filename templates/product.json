@@ -226,6 +226,7 @@
             "group_JbmQwr": {
               "type": "group",
               "name": "Policies",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
