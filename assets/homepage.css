@@ -254,14 +254,6 @@ search-button.search-action{
   line-height: 100%;
 }
 
-@media screen and (min-width: 750px) {
-    .product-information__grid:not(:has(.product-information__media:empty)) {
-        &.product-information--media-left {
-            --sidebar-width: 40% !important;
-            grid-template-columns: 1fr min(50vw, var(--sidebar-width));
-        }
-    }
-}
 
 @media screen and (max-width: 768px){
   .header-logo__image{
@@ -337,4 +329,15 @@ search-button.search-action{
   }
 }
 
+/* PDP CSS Start  */
+@media screen and (min-width: 750px) {
+    .product-information__grid:not(:has(.product-information__media:empty)) {
+        &.product-information--media-left {
+            --sidebar-width: 30% !important;
+            grid-template-columns: 1fr min(50vw, var(--sidebar-width));
+        }
+    }
+}
+
+/* PDP CSS End */
 
