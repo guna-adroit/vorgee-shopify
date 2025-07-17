@@ -20,6 +20,7 @@
             "media_columns": "two",
             "image_gap": 4,
             "large_first_image": false,
+            "color_scheme": "scheme-2",
             "icons_style": "chevron",
             "icons_shape": "circle",
             "slideshow_controls_style": "thumbnails",
@@ -482,7 +483,7 @@
         "equal_columns": false,
         "limit_details_width": false,
         "gap": 48,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-748d7d80-ed4b-4548-989d-429dd2a49364",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
