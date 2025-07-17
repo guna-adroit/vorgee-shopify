@@ -104,6 +104,9 @@
         "text_twGGkJ",
         "ai_gen_block_510643c_wwBbeU"
       ],
+      "custom_css": [
+        ".spacing-style.text-block p {color: white;}"
+      ],
       "name": "Heading",
       "settings": {
         "content_direction": "column",
