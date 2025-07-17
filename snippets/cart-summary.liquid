@@ -11,7 +11,7 @@
         <span class="cart__original-total-value cart-secondary-typography">
           {{- cart.original_total_price | money -}}
         </span>
-      </span>
+      </span> 
       <div class="cart__summary-discounts">
         <ul
           class="discounts list-unstyled"
@@ -67,7 +67,7 @@
         {% comment %} Used by payment_terms web component {% endcomment %}
         data-cart-subtotal
       >
-        {{ total_price }}
+        {{ cart.total_price | money }}
       </text-component>
     </span>
     {% if settings.show_installments %}
@@ -109,11 +109,15 @@
     display: flex;
     flex-direction: column;
     gap: var(--gap-2xs);
-    border-block: 1px solid var(--color-border);
+    /* border-block: 1px solid var(--color-border); */
+    border-block: 2px solid #D0D0D0;
     padding-block: var(--padding-sm);
     margin-block-start: var(--margin-3xs);
   }
-
+  span.cart-discount__label.h6, span.cart__total-label.cart-primary-typography{
+    font-size: 15px;
+    text-transform: uppercase;
+  }
   .cart__summary-totals:not(:has(.cart-actions)) {
     margin-block-start: var(--margin-3xs);
     border-block-start: 1px solid var(--color-border);

@@ -25,7 +25,6 @@
           {%- content_for 'block', id: 'cart-page-summary', type: '_cart-summary' -%}
         </div>
       {%- endunless -%}
-
       <div class="cart-page__more-blocks">
         {%- content_for 'blocks' -%}
       </div>
@@ -39,7 +38,7 @@
     --cart-font-size--xs: var(--font-size--xs);
     --cart-font-size--sm: var(--font-size--sm);
     --cart-font-size--md: var(--font-size--md);
-    --cart-font-size--2xl: var(--font-size--2xl);
+    --cart-font-size--2xl: 25px;
 
     display: grid;
     grid-template-columns: 1fr;

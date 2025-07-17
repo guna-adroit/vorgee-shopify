@@ -8,7 +8,7 @@
   {% if block.settings.extend_summary == false and block.settings.border_radius > 0 -%}
     has-border-radius
   {%- endif -%}
-{%- endcapture -%}
+{%- endcapture -%} 
 
 {% if block.settings.extend_summary %}
   <div
@@ -16,10 +16,10 @@
   ></div>
 {% endif %}
 <div
-  class="cart__summary-container border-style{% if block.settings.extend_summary == true %} cart__container--extend {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }} inherit-parent-scheme--mobile{% endif %}{% endif %}{% if block.settings.border_radius > 0 %} has-border-radius{% endif %}"
+  class="cart__summary-container sree border-style{% if block.settings.extend_summary == true %} cart__container--extend {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }} inherit-parent-scheme--mobile{% endif %}{% endif %}{% if block.settings.border_radius > 0 %} has-border-radius{% endif %}"
   style="{% render 'border-override', settings: block.settings %}"
   {{ block.shopify_attributes }}
->
+> 
   <div class="{{ cart_summary_inner_class }}">
     {% render 'cart-summary' %}
   </div>
@@ -110,17 +110,6 @@
     @media screen and (min-width: 750px) {
       border-top: none;
       border-bottom: none;
-    }
-  }
-
-  .cart__container--extend .cart__summary-inner {
-    height: 100%;
-    padding: var(--padding-md) 0 var(--padding-4xl);
-
-    @media screen and (min-width: 750px) {
-      grid-row: 2 / -1;
-      padding-inline: var(--page-margin);
-      width: var(--sidebar-width);
     }
   }
 

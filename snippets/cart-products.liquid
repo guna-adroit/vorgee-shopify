@@ -166,7 +166,7 @@
                           <div class="cart-items__variant">
                             <dt class="visually-hidden">{{ option.name }}:</dt>
                             <dd>
-                              {{- option.value -}}
+                              <span class="option-name bold">{{ option.name }}:</span>{{- option.value -}}
                               {%- if forloop.last != true %},&nbsp;{% endif -%}
                             </dd>
                           </div>
@@ -592,6 +592,7 @@
 
   .cart__total-value {
     font-size: var(--cart-font-size--2xl);
+    font-weight: 600;
   }
 
   .cart-primary-typography {
@@ -603,7 +604,8 @@
   .cart-secondary-typography {
     font-family: var(--cart-secondary-font-family);
     font-style: var(--cart-secondary-font-style);
-    font-weight: var(--cart-secondary-font-weight);
+    /* font-weight: var(--cart-secondary-font-weight); */
+    font-weight: 600;
   }
 
   .cart__ctas {
@@ -622,6 +624,16 @@
     width: 100%;
     height: clamp(25px, var(--height-buy-buttons), 55px);
     padding-inline: var(--padding-4xl);
+    border-radius: 100px;
+    background: #07BED4;
+    color: #333;
+    text-transform: uppercase;
+  }
+  button.button.button--primary.cart-discount__button{
+    border-radius: 100px;
+    background: #07BED4;
+    color: #333;
+    text-transform: uppercase;
   }
 
   shopify-accelerated-checkout-cart {
