@@ -396,6 +396,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".product-badges.product-badges--top-right {top: 85%; left: 5%; width: fit-content;}"
+      ],
       "settings": {
         "layout_type": "grid",
         "product_card_size": "medium",
