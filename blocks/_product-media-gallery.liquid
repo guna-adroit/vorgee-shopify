@@ -591,6 +591,27 @@
       "default": "arrow",
       "visible_if": "{{ block.settings.media_presentation == 'carousel' }}"
     },
+     {
+      "type": "select",
+      "id": "icons_shape",
+      "label": "t:settings.icon_background",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "circle",
+          "label": "t:options.circle"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.media_presentation == 'carousel' }}"
+    },
     {
       "type": "select",
       "id": "slideshow_controls_style",
