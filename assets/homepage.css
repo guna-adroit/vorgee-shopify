@@ -354,6 +354,15 @@ search-button.search-action{
   line-height: 100%;
   color: #121212;
 }
+.variant-option--equal-width-buttons {
+    .variant-option__button-label__text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
