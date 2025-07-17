@@ -385,6 +385,9 @@ search-button.search-action{
     --swatch-width: 33px;
     --swatch-height: 33px;
 }
+.product-form-buttons--stacked > *:not(.quantity-selector){
+  flex-basis: 100%;
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
