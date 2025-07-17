@@ -195,6 +195,7 @@
     {% endcapture %}
   {% endif %}
 
+  <div class="color-{{ section.settings.color_scheme }}">
   {% render 'slideshow',
     ref: 'slideshow',
     class: slideshow_class,
@@ -204,7 +205,7 @@
     arrows_position: icons_position,
     controls: controls
   %}
-
+</div>
   {% if block.settings.media_presentation == 'grid' %}
     <ul
       class="media-gallery__grid list-unstyled"
@@ -565,6 +566,12 @@
     {
       "type": "header",
       "content": "t:content.carousel"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
     },
     {
       "type": "select",
