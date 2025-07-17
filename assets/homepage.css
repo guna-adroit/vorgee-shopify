@@ -377,6 +377,11 @@ search-button.search-action{
   line-height: 100%;
   color: #121212;
 }
+.variant-option__button-label--has-swatch:has(:checked){
+  outline: 3px solid #333333;
+  outline-offset: 0;
+}
+
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
