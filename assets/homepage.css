@@ -342,6 +342,11 @@ search-button.search-action{
   border: 1px solid #0000001A;
   margin: 5px;
 }
+.product-page-title{
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 100%;
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
