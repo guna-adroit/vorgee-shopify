@@ -366,6 +366,9 @@
         "menu_fFkeHa",
         "menu_ab8etb"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.social-icons-container {display: none; }}"
+      ],
       "name": "Footer",
       "settings": {
         "content_direction": "row",
