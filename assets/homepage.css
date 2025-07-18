@@ -426,6 +426,13 @@ search-button.search-action{
 media-gallery .slideshow-controls__dots, .slideshow-controls__counter {
     flex-direction: row;
 }
+media-gallery slideshow-controls[controls-on-media] {
+    position: absolute;
+    top: unset;
+    right: unset;
+    width: unset;
+    transform: unset;
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
