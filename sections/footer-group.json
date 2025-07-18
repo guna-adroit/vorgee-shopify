@@ -401,7 +401,7 @@
       ],
       "custom_css": [
         ".social-icons-container {display: none;}",
-        "@media screen and (max-width: 768px) {.social-icons-container {display: block;}}"
+        "@media screen and (max-width: 768px) {.social-icons-container {display: flex; }}"
       ],
       "name": "t:names.custom_section",
       "settings": {
