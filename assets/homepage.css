@@ -411,6 +411,11 @@ search-button.search-action{
   letter-spacing: 4%;
   color: #333333;
 }
+.accordion.product-accordion .details__header{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
