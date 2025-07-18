@@ -433,6 +433,11 @@ media-gallery slideshow-controls[controls-on-media] {
     width: unset;
     transform: unset;
 }
+@media screen and (max-width: 768px) {
+    slideshow-controls[controls-on-media] {
+        right: unset;
+    }
+}
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
