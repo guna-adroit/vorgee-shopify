@@ -283,7 +283,7 @@
                     "text_QBrkfP": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                        "text": "{{ closest.product.metafields.custom.features | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
