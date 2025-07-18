@@ -338,7 +338,6 @@ search-button.search-action{
 
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
-  --thumbnail-width: 140px;
   border: 1px solid #D9D9D9;
 }
 .product-media-container .product-media{
