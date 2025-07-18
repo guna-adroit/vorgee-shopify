@@ -392,10 +392,10 @@ search-button.search-action{
   outline: 2px solid #333333;
   background-color: white;
   text-transform: uppercase !important;
-font-weight: 600;
-font-size: 16px;
-line-height: 15px;
-color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 15px;
+  color: #333;
 }
 .accelerated-checkout-block {
     text-transform: uppercase;
@@ -403,6 +403,12 @@ color: #333;
     font-size: 16px;
     line-height: 15px;
     color: #333 !important;
+}
+.product-description{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 172%;
+  letter-spacing: 4%;
 }
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
