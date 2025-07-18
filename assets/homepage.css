@@ -404,13 +404,14 @@ search-button.search-action{
   line-height: 15px;
   color: #333;
 }
-.accelerated-checkout-block {
+.accelerated-checkout-block, .product-form-buttons .shopify-payment-button__button {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 16px;
     line-height: 15px;
     color: #333 !important;
 }
+
 .product-description{
   font-weight: 500;
   font-size: 16px;
