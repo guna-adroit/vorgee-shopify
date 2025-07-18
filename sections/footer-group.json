@@ -378,7 +378,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 48,
+        "gap": 40,
         "section_width": "page-width",
         "section_height": "",
         "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
