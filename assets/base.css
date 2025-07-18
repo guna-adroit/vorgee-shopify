@@ -4241,6 +4241,17 @@ span.cart-drawer__heading.h3{
     border-color: #ffffff;
 
 }
+.cart-continue-btn.mobile-only {
+    display: none;
+}
+@media screen and (max-width: 749px) {
+  .cart-continue-btn.mobile-only {
+    display: block;
+  }
+  .cart-continue-btn.desktop-only {
+    display: none;
+  }
+}
   .cart-page__summary .cart__container--extend .cart__summary-inner {
     height: 100%;
     background: #F6F6F6;
