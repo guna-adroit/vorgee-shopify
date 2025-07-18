@@ -423,7 +423,7 @@ search-button.search-action{
   font-size: 15px;
   line-height: 100%;
 }
-media-gallery .slideshow-controls__dots, .slideshow-controls__counter {
+media-gallery .slideshow-controls__dots, media-gallery .slideshow-controls__counter {
     flex-direction: row;
 }
 media-gallery slideshow-controls[controls-on-media] {
