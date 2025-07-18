@@ -386,6 +386,52 @@
         "padding-block-end": 48
       }
     },
+    "section_a6XTgK": {
+      "type": "section",
+      "blocks": {
+        "social_icons_4BaLwy": {
+          "type": "social-icons",
+          "name": "social_icons",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "social_icons_4BaLwy"
+      ],
+      "custom_css": [
+        ".social-icons-container {display: none;}",
+        "@media screen and (max-width: 768px) {.social-icons-container {display: block;}}"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "divider_ErDRFt": {
       "type": "divider",
       "name": "t:names.divider_section",
@@ -410,6 +456,7 @@
     "section_gaAg3W",
     "divider_Qtq6yg",
     "footer",
+    "section_a6XTgK",
     "divider_ErDRFt",
     "footer_bottom_kANWdV"
   ]
