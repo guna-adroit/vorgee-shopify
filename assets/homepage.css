@@ -328,7 +328,7 @@ search-button.search-action{
     width: 100%;
   }
   .social-icons-container {
-    display: none;
+    display: none !important;
   }
 }
 
