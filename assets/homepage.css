@@ -430,7 +430,7 @@ media-gallery slideshow-controls[controls-on-media] {
     position: absolute;
     top: unset;
     right: unset;
-    width: 100%;
+    width: 100% !important;
     transform: unset;
 }
 @media screen and (max-width: 768px) {
