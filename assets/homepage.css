@@ -424,6 +424,10 @@ search-button.search-action{
         }
     }
 }
-
+@media screen and (max-width: 768px){
+  .accordion.product-accordion .details__header{
+      font-size: 14px;
+  }
+}
 /* PDP CSS End */
 
