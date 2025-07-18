@@ -327,6 +327,9 @@ search-button.search-action{
   .shopify-section-group-footer-group .group-block-content{
     width: 100%;
   }
+  .social-icons-container {
+    display: none;
+  }
 }
 
 /* PDP CSS Start  */
