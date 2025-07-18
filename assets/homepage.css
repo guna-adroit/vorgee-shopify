@@ -434,7 +434,7 @@ media-gallery slideshow-controls[controls-on-media] {
     transform: unset;
 }
 @media screen and (max-width: 768px) {
-    slideshow-controls[controls-on-media] {
+    media-gallery slideshow-controls[controls-on-media] {
         right: unset;
     }
 }
