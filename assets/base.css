@@ -4251,6 +4251,20 @@ span.cart-drawer__heading.h3{
   .cart-continue-btn.desktop-only {
     display: none;
   }
+  .cart-continue-btn {
+    padding: 10px 40px 10px 16px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .cart-continue-btn:after {
+    right: 16px;
+    height: 18px;
+    width: 18px;
+  }
+  .cart-continue-btn:before {
+    right: 24px;
+    top: 16px;
+  }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
     height: 100%;
