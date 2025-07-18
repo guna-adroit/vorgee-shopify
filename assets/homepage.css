@@ -99,6 +99,9 @@ span.menu-list__link-title:hover {
 .cart-bubble__background{
   background-color: #95D8E7;
 }
+.span.cart-bubble__text-count{
+  color: #333333;
+}
 @media screen and (max-width: 768px){
   .email-signup__input-group{
     height: 40px;
