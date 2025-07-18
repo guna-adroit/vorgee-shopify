@@ -260,6 +260,7 @@
                 "type_preset": "h5",
                 "inherit_color_scheme": true,
                 "color_scheme": "",
+                "custom_classes": "product-accordion",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
