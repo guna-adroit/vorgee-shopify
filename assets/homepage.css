@@ -335,6 +335,9 @@ search-button.search-action{
   }
  
 }
+.header-logo__image{
+  border-radius: 0;
+}
 
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
