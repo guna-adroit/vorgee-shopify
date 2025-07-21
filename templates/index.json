@@ -325,7 +325,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/competition.png",
-            "title": "Competition",
+            "title": "COMPETITION",
             "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
             "button_link": "shopify://collections"
@@ -1507,7 +1507,7 @@
             "background_color": "#ffffff",
             "border_color": "#e6e6e6",
             "title_background_color": "#f5f5f5",
-            "title_hover_background_color": "#ebebeb",
+            "title_hover_background_color": "rgba(0,0,0,0)",
             "title_color": "#333333",
             "content_color": "#333333"
           },
