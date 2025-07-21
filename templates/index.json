@@ -17,6 +17,7 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/Group_1000008588.png",
+            "image_2": "shopify://shop_images/image_2.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
