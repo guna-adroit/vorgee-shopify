@@ -69,6 +69,7 @@
         sizes: sizes
     }}
 
+    {% if  section.settings.image_1_mobile != blank %}
     {{
       section.settings.image_1_mobile
       | image_url: width: 3840
@@ -80,6 +81,7 @@
         class: 'hero__image hero_mobile_image',
         sizes: sizes
     }}
+      {%- endif -%}
   {%- endif -%}
 
   {%- if has_video_1 -%}
