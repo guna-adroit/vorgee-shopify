@@ -29,7 +29,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "toggle_overlay": true,
-            "overlay_color": "#00000085",
+            "overlay_color": "#00000066",
             "overlay_style": "gradient",
             "gradient_direction": "to right",
             "padding-block-start": 0,
