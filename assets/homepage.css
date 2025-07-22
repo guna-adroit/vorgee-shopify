@@ -383,7 +383,10 @@ search-button.search-action{
   .slideshow-control .svg-wrapper{
     width: 14px;
   }
-  
+  .product-list-carousel slideshow-arrows {
+    align-items: anchor-center;
+    top: -25%;
+  }
 }
 .product-list-carousel slideshow-arrows{
   align-items: anchor-center;
