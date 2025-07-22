@@ -357,6 +357,9 @@
         "column_6k8dqd",
         "column_pXYykb"
       ],
+      "custom_css": [
+        "p.column-description {font-family: 'boxedlight' !important; font-family: boxedlight !important;}"
+      ],
       "name": "Three Column Blocks",
       "settings": {
         "icons_style": "chevron",
