@@ -303,9 +303,8 @@ search-button.search-action{
     font-size: 12px;
   }
   .product-list-carousel slideshow-arrows {
-    align-items: anchor-center;
     top: -25%;
-}
+  }
   
 }
 
