@@ -260,7 +260,12 @@ search-button.search-action{
   line-height: 100%;
 }
 
-
+.slideshow-control--previous {
+    margin-left: -20px;
+}
+.slideshow-control--next {
+    margin-right: -20px;
+}
 @media screen and (max-width: 768px){
   .header-logo__image{
     width: 135px !important;
