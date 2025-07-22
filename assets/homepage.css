@@ -347,6 +347,14 @@ search-button.search-action{
 .slideshow-control--next {
     margin-right: -22px;
 }
+@media screen and (max-width: 768px){
+  .slideshow-control--previous {
+    margin-left: unset;
+  }
+  .slideshow-control--next {
+      margin-right: unset;
+  }
+}
 .product-list-carousel slideshow-arrows{
   align-items: anchor-center;
   top: -20%;
