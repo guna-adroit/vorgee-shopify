@@ -358,6 +358,9 @@ search-button.search-action{
     width: 28px;
     min-height: 28px;
   }
+  .slideshow-control .svg-wrapper{
+    width: 14px;
+  }
 }
 .product-list-carousel slideshow-arrows{
   align-items: anchor-center;
