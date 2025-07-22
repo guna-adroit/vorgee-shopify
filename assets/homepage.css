@@ -30,6 +30,7 @@ summary.menu__heading.h4{
   font-size: 18px;
   line-height: 28px;
   vertical-align: middle;
+  padding-bottom: 15px;
 }
 li.menu__item.paragraph a{
   font-weight: 500;
