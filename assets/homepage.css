@@ -349,7 +349,7 @@ search-button.search-action{
 }
 @media screen and (max-width: 768px){
   .slideshow-control--previous {
-    margin-left: unset;
+    margin-left: -14px;
   }
   .slideshow-control--next {
       margin-right: unset;
