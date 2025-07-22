@@ -354,6 +354,10 @@ search-button.search-action{
   .slideshow-control--next {
       margin-right: unset;
   }
+  .resource-list__carousel .slideshow-control{
+    width: 28px;
+    min-height: 28px;
+  }
 }
 .product-list-carousel slideshow-arrows{
   align-items: anchor-center;
