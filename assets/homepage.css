@@ -351,6 +351,9 @@ search-button.search-action{
   align-items: anchor-center;
   top: -20%;
 }
+slideshow-controls:has(.slideshow-controls__dots) {
+    mix-blend-mode: unset;
+}
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   --thumbnail-width: 140px;
