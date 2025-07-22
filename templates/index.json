@@ -1171,6 +1171,9 @@
         "group_CmEMgp",
         "group_E4NxjQ"
       ],
+      "custom_css": [
+        ".overlay--gradient {background: linear-gradient( 0deg, rgba(0, 0, 0, 0.7) 0%, rgba(102, 102, 102, 0) 50% );}"
+      ],
       "name": "t:names.collections_carousel",
       "settings": {
         "collection_list": [
