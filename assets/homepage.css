@@ -284,7 +284,7 @@ search-button.search-action{
   .header__drawer{
     display: flex !important;
   }
-  .overflow-menu{
+  .overflow-menu, .v-menu-links{
     display: none;
   }
 }
