@@ -1150,8 +1150,8 @@
               "settings": {
                 "image_ratio": "portrait",
                 "toggle_overlay": true,
-                "overlay_color": "#0000004f",
-                "overlay_style": "solid",
+                "overlay_color": "#000000b3",
+                "overlay_style": "gradient",
                 "gradient_direction": "to top",
                 "border": "none",
                 "border_width": 1,
