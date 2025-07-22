@@ -354,6 +354,9 @@ search-button.search-action{
   .slideshow-control--next {
       margin-right: unset;
   }
+  .three-column-section .slideshow-control--previous {
+    margin-left: -24px;
+  }
   .resource-list__carousel .slideshow-control{
     width: 28px;
     min-height: 28px;
