@@ -354,6 +354,9 @@ search-button.search-action{
 slideshow-controls:has(.slideshow-controls__dots) {
     mix-blend-mode: unset;
 }
+:is(.slideshow-controls__dots,.slideshow-controls__counter) button{
+  --color: #95D8E7;
+}
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   --thumbnail-width: 140px;
