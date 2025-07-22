@@ -201,7 +201,7 @@ span.icon-round{
   font-size: 44px !important;
   line-height: 54px !important;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 820px){
   a.size-style.custom-btn, a.size-style.custom-btn-2{
     padding: 9px 16px;
     font-size: 12px;
