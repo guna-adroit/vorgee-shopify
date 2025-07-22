@@ -287,6 +287,9 @@ search-button.search-action{
   .overflow-menu, .v-menu-links{
     display: none;
   }
+  .v-announcement-bar{
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 768px){
