@@ -284,6 +284,9 @@ search-button.search-action{
   .header__drawer{
     display: flex !important;
   }
+  .overflow-menu{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px){
