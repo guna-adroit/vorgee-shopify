@@ -347,7 +347,10 @@ search-button.search-action{
 .slideshow-control--next {
     margin-right: -22px;
 }
-
+.product-list-carousel slideshow-arrows{
+  align-items: anchor-center;
+  top: -25%;
+}
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   --thumbnail-width: 140px;
