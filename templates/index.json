@@ -357,6 +357,9 @@
         "column_6k8dqd",
         "column_pXYykb"
       ],
+      "custom_css": [
+        "p.column-description {}"
+      ],
       "name": "Three Column Blocks",
       "settings": {
         "icons_style": "chevron",
@@ -1150,8 +1153,8 @@
               "settings": {
                 "image_ratio": "portrait",
                 "toggle_overlay": true,
-                "overlay_color": "#0000004f",
-                "overlay_style": "solid",
+                "overlay_color": "#000000b3",
+                "overlay_style": "gradient",
                 "gradient_direction": "to top",
                 "border": "none",
                 "border_width": 1,
@@ -1171,6 +1174,9 @@
         "group_CmEMgp",
         "group_E4NxjQ"
       ],
+      "custom_css": [
+        ".overlay--gradient {background: linear-gradient( 0deg, rgba(0, 0, 0, 0.7) 0%, rgba(102, 102, 102, 0) 50% );}"
+      ],
       "name": "t:names.collections_carousel",
       "settings": {
         "collection_list": [
@@ -1184,7 +1190,7 @@
         "carousel_on_mobile": false,
         "columns": 3,
         "mobile_columns": "2",
-        "columns_gap": 8,
+        "columns_gap": 16,
         "bento_gap": 8,
         "rows_gap": 8,
         "max_collections": 4,

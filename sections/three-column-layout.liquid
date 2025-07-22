@@ -31,7 +31,12 @@
   margin-bottom: 1rem;
   color: #585858;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 600px){
+  .three-column-section slideshow-arrows{
+    top: -40%;
+  }
+}
+@media screen and (max-width: 769px){
   .three-column-section .column-title{
     font-weight: 600;
     font-size: 20px;
@@ -47,10 +52,14 @@
     font-size: 14px;
     line-height: 100%;
   }
+  
 }
-  .three-column-section .column-description{
-    font-family:'boxedlight' !important;
+  @media screen and (min-width: 600px) and (max-width: 769px) {
+    .three-column-section slideshow-arrows{
+      top: -18%;
+    }
   }
+
 </style>
 
 <div class="three-column-section section section--page-width color-scheme-1">
