@@ -358,7 +358,7 @@
         "column_pXYykb"
       ],
       "custom_css": [
-        "p.column-description {font-family: \"BoxedLight 1\" !important; font-family: BoxedLight 1 !important;}"
+        "p.column-description {font-family: \"BoxedLight-new\" !important; font-family: BoxedLight-new !important;}"
       ],
       "name": "Three Column Blocks",
       "settings": {
