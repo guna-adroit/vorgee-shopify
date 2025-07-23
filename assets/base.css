@@ -4268,6 +4268,16 @@ span.cart-drawer__heading.h3{
 .product-card .text-block p, .product-card .text-block div[ref="priceContainer"] {
     font-size: 18px;
 }
+.product-card .product-media {
+    padding: 45px;
+}
+.slideshow-control .svg-wrapper.icon-arrow {
+    color: #ffffff;
+    opacity: 0;
+}
+span.facets__summary.filter-label {
+    align-items: center;
+}
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
     display: block;
