@@ -408,50 +408,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
 :is(.slideshow-controls__dots,.slideshow-controls__counter) button{
   --color: #95D8E7;
 }
-.header__column {
-    @media screen and (max-width: 1024px) {
-        display: contents;
-    }
-}
-.header__columns {
-    @media screen and (max-width: 1024px) {
-        .header-logo {
-            grid-area: center;
-        }
-    }
-}
 
-@media screen and (max-width: 1024px) {
-      --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
-        var(--header-mobile-bookend) var(--header-mobile-bookend);
-      grid-template-areas: 'leftA leftB center rightA rightB';
-      grid-column: span 3;
-      column-gap: 0;
-      align-items: center;
-      padding-block: 0;
-      padding-inline: 0 var(--padding-3xs);
-
-      .header-logo {
-        grid-area: center;
-      }
-
-      &:not(:has(header-actions)) .search-action {
-        grid-area: leftB;
-      }
-
-      &:not(:has(.account-actions)) .search-action {
-        grid-area: rightA;
-      }
-
-      .search-action {
-        grid-area: leftB;
-      }
-
-      header-actions {
-        grid-area: rightB;
-      }
-    }
-  }
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   --thumbnail-width: 140px;
