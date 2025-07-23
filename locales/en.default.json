@@ -275,5 +275,12 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable"
     }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "sort_title": "Sort By"
+      }
+    }
   }
 }
