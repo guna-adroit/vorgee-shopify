@@ -431,6 +431,13 @@ slideshow-controls:has(.slideshow-controls__dots) {
         padding-inline: 0 var(--padding-3xs);
     }
 }
+.header__columns {
+    @media screen and (max-width: 1024px) {
+        &:not(:has(.account-actions)) .search-action {
+            grid-area: rightA;
+        }
+    }
+}
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   --thumbnail-width: 140px;
