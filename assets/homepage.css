@@ -420,7 +420,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
         }
     }
 }
-
+.header__columns{
 @media screen and (max-width: 769px) {
       --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
         var(--header-mobile-bookend) var(--header-mobile-bookend);
@@ -452,6 +452,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
       }
     }
   }
+}
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   --thumbnail-width: 140px;
