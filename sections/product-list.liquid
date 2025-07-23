@@ -23,6 +23,7 @@
         echo '--resource-list-column-gap-desktop: ' | append: section.settings.columns_gap | append: 'px;'
         echo '--column-count: ' | append: section.settings.columns | append: ';'
         echo '--column-count-mobile: ' | append: section.settings.mobile_columns | append: ';'
+        echo '--mobile-card-size: ' | append: section.settings.mobile_card_size | append: ';'
       endcapture
   endcase
 %}
@@ -121,6 +122,7 @@
       style="
         --resource-list-column-gap-desktop: {{ mobile_carousel_gap }}px;
         --column-count: {{ section.settings.columns }};
+        --mobile-card-size: {{ section.settings.mobile_card_size }};
       "
     >
       {% render 'resource-list-carousel',
