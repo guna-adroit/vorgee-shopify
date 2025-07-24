@@ -3,6 +3,7 @@
   display: flex;
   gap: 2rem;
   padding: 2rem 0;
+  justify-content: center;
 }
 .three-column-section .column-item {
   width: calc(33.3% - 2rem);
@@ -30,7 +31,12 @@
   margin-bottom: 1rem;
   color: #585858;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 600px){
+  .three-column-section slideshow-arrows{
+    top: -40%;
+  }
+}
+@media screen and (max-width: 769px){
   .three-column-section .column-title{
     font-weight: 600;
     font-size: 20px;
@@ -46,7 +52,14 @@
     font-size: 14px;
     line-height: 100%;
   }
+  
 }
+  @media screen and (min-width: 600px) and (max-width: 769px) {
+    .three-column-section slideshow-arrows{
+      top: -18%;
+    }
+  }
+
 </style>
 
 <div class="three-column-section section section--page-width color-scheme-1">

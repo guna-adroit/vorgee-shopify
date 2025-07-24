@@ -23,6 +23,7 @@
         echo '--resource-list-column-gap-desktop: ' | append: section.settings.columns_gap | append: 'px;'
         echo '--column-count: ' | append: section.settings.columns | append: ';'
         echo '--column-count-mobile: ' | append: section.settings.mobile_columns | append: ';'
+        echo '--mobile-card-size: ' | append: section.settings.mobile_card_size | append: ';'
       endcapture
   endcase
 %}
@@ -81,7 +82,7 @@
     class="
       resource-list
       {% if section.settings.layout_type == 'carousel' %}
-        force-full-width
+        force-full-width product-list-carousel
       {% endif %}
       {% if section.settings.carousel_on_mobile and section.settings.layout_type != 'carousel' %}
         hidden--mobile
@@ -121,6 +122,7 @@
       style="
         --resource-list-column-gap-desktop: {{ mobile_carousel_gap }}px;
         --column-count: {{ section.settings.columns }};
+        --mobile-card-size: {{ section.settings.mobile_card_size }};
       "
     >
       {% render 'resource-list-carousel',
@@ -226,6 +228,23 @@
       ],
       "default": "2",
       "visible_if": "{{ section.settings.layout_type == 'grid' and section.settings.carousel_on_mobile == false }}"
+    },
+     {
+      "type": "select",
+      "id": "mobile_card_size",
+      "label": "t:settings.mobile_columns",
+      "options": [
+        {
+          "value": "60cqw",
+          "label": "t:options.one_number"
+        },
+        {
+          "value": "44cqw",
+          "label": "t:options.two_number"
+        }
+      ],
+      "default": "60cqw",
+      "visible_if": "{{ section.settings.layout_type == 'carousel' or section.settings.carousel_on_mobile == true }}"
     },
     {
       "type": "range",

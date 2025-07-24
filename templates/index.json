@@ -17,6 +17,7 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/Group_1000008588.png",
+            "image_2": "shopify://shop_images/Group_1000008590.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -28,7 +29,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "toggle_overlay": true,
-            "overlay_color": "#00000085",
+            "overlay_color": "#00000066",
             "overlay_style": "gradient",
             "gradient_direction": "to right",
             "padding-block-start": 0,
@@ -324,7 +325,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/competition.png",
-            "title": "Competition",
+            "title": "COMPETITION",
             "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
             "button_link": "shopify://collections"
@@ -355,6 +356,9 @@
         "column_prF4TD",
         "column_6k8dqd",
         "column_pXYykb"
+      ],
+      "custom_css": [
+        "p.column-description {}"
       ],
       "name": "Three Column Blocks",
       "settings": {
@@ -561,6 +565,20 @@
                   },
                   "blocks": {}
                 },
+                "swatches_k9YMgz": {
+                  "type": "swatches",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product_swatches_alignment": "flex-start",
+                    "product_swatches_alignment_mobile": "flex-start",
+                    "hide_padding": false,
+                    "product_swatches_padding_top": 4,
+                    "product_swatches_padding_bottom": 0,
+                    "product_swatches_padding_left": 0,
+                    "product_swatches_padding_right": 0
+                  },
+                  "blocks": {}
+                },
                 "price_h6P4AF": {
                   "type": "price",
                   "name": "t:names.product_price",
@@ -584,26 +602,12 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "swatches_k9YMgz": {
-                  "type": "swatches",
-                  "name": "t:names.swatches",
-                  "settings": {
-                    "product_swatches_alignment": "flex-start",
-                    "product_swatches_alignment_mobile": "flex-start",
-                    "hide_padding": false,
-                    "product_swatches_padding_top": 4,
-                    "product_swatches_padding_bottom": 0,
-                    "product_swatches_padding_left": 0,
-                    "product_swatches_padding_right": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_dMgTDL",
-                "price_h6P4AF",
-                "swatches_k9YMgz"
+                "swatches_k9YMgz",
+                "price_h6P4AF"
               ]
             }
           },
@@ -622,6 +626,7 @@
         "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
+        "mobile_card_size": "44cqw",
         "columns_gap": 12,
         "rows_gap": 24,
         "icons_style": "chevron",
@@ -721,6 +726,7 @@
         "open_in_new_tab": false,
         "media_type_1": "image",
         "image_1": "shopify://shop_images/Group_1000008589.png",
+        "image_1_mobile": "shopify://shop_images/Group_1000009051.png",
         "media_type_2": "image",
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -735,7 +741,7 @@
         "section_height_custom": 85,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
-        "overlay_color": "#000000cf",
+        "overlay_color": "#00000080",
         "overlay_style": "gradient",
         "gradient_direction": "to right",
         "blurred_reflection": false,
@@ -1148,8 +1154,8 @@
               "settings": {
                 "image_ratio": "portrait",
                 "toggle_overlay": true,
-                "overlay_color": "#0000004f",
-                "overlay_style": "solid",
+                "overlay_color": "#000000b3",
+                "overlay_style": "gradient",
                 "gradient_direction": "to top",
                 "border": "none",
                 "border_width": 1,
@@ -1169,6 +1175,9 @@
         "group_CmEMgp",
         "group_E4NxjQ"
       ],
+      "custom_css": [
+        ".overlay--gradient {background: linear-gradient( 0deg, rgba(0, 0, 0, 0.7) 0%, rgba(102, 102, 102, 0) 50% );}"
+      ],
       "name": "t:names.collections_carousel",
       "settings": {
         "collection_list": [
@@ -1182,7 +1191,8 @@
         "carousel_on_mobile": false,
         "columns": 3,
         "mobile_columns": "2",
-        "columns_gap": 8,
+        "mobile_card_size": "44cqw",
+        "columns_gap": 16,
         "bento_gap": 8,
         "rows_gap": 8,
         "max_collections": 4,
@@ -1393,6 +1403,20 @@
                   },
                   "blocks": {}
                 },
+                "swatches_ewBgER": {
+                  "type": "swatches",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product_swatches_alignment": "flex-start",
+                    "product_swatches_alignment_mobile": "flex-start",
+                    "hide_padding": false,
+                    "product_swatches_padding_top": 4,
+                    "product_swatches_padding_bottom": 0,
+                    "product_swatches_padding_left": 0,
+                    "product_swatches_padding_right": 0
+                  },
+                  "blocks": {}
+                },
                 "price_w3LYLg": {
                   "type": "price",
                   "name": "t:names.product_price",
@@ -1416,26 +1440,12 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "swatches_ewBgER": {
-                  "type": "swatches",
-                  "name": "t:names.swatches",
-                  "settings": {
-                    "product_swatches_alignment": "flex-start",
-                    "product_swatches_alignment_mobile": "flex-start",
-                    "hide_padding": false,
-                    "product_swatches_padding_top": 4,
-                    "product_swatches_padding_bottom": 0,
-                    "product_swatches_padding_left": 0,
-                    "product_swatches_padding_right": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_QaKdBU",
-                "price_w3LYLg",
-                "swatches_ewBgER"
+                "swatches_ewBgER",
+                "price_w3LYLg"
               ]
             }
           },
@@ -1453,6 +1463,7 @@
         "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
+        "mobile_card_size": "44cqw",
         "columns_gap": 12,
         "rows_gap": 24,
         "icons_style": "chevron",
@@ -1505,7 +1516,7 @@
             "background_color": "#ffffff",
             "border_color": "#e6e6e6",
             "title_background_color": "#f5f5f5",
-            "title_hover_background_color": "#ebebeb",
+            "title_hover_background_color": "rgba(0,0,0,0)",
             "title_color": "#333333",
             "content_color": "#333333"
           },

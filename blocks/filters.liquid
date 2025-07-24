@@ -155,6 +155,7 @@
               {% assign total_active_values = 0 %}
 
               {% capture rendered_filters %}
+                <span class="facets__summary filter-label">Filter:</span>
                 {%- for filter in filters -%}
                   {% case filter.type %}
                     {% when 'price_range' %}

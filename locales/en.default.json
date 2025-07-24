@@ -62,7 +62,6 @@
     "clear": "Clear",
     "clear_all": "Clear all",
     "close": "Close",
-    // Continue shopping link on the cart page which takes the user back to a collection page
     "continue_shopping": "Continue shopping",
     "enter_password": "Enter password",
     "log_in_html": "Have an account? <a href=\"{{ link }}\">Log in</a> to check out faster.",
@@ -90,7 +89,7 @@
     "sign_up": "Sign up",
     "submit": "Submit",
     "view_store_information": "View store information",
-    "sort": "Sort"
+    "sort": "Sort By"
   },
   "blocks": {
     "contact_form": {
@@ -174,8 +173,8 @@
     "inventory_in_stock": "In stock",
     "inventory_out_of_stock": "Out of stock",
     "item_count": {
-      "one": "{{ count }} item",
-      "other": "{{ count }} items"
+      "one": "{{ count }} Product",
+      "other": "{{ count }} Products"
     },
     "language": "Language",
     "localization_region_and_language": "Region and language",
@@ -275,6 +274,13 @@
       "add_to_cart_error": "Error adding to cart",
       "sold_out": "Sold out",
       "unavailable": "Unavailable"
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "sort_title": "Sort By"
+      }
     }
   }
 }
