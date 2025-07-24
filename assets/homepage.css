@@ -461,6 +461,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
 /* .product-media-container .product-media{
   border: 1px solid #D9D9D9;
 } */
+.card-gallery.spacing-style.border-style{
+  border: none;
+}
 .media-gallery--carousel slideshow-arrows .slideshow-control{
   padding-inline: 0;
   border: 1px solid #0000001A;
