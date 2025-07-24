@@ -73,11 +73,11 @@
           {%- render 'menu-font-styles', settings: block.settings, menu_type: 'drawer' %}
           {%- render 'submenu-font-styles', settings: block.settings %}
         "
-      >
+      >{{ linklist.levels }}
         <ul
           class="menu-drawer__menu has-submenu"
           role="list"
-        > {{ linklist.levels }}
+        > 
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
           {%- endcomment -%}
