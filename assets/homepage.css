@@ -458,9 +458,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
 .slideshow-controls__thumbnails .slideshow-control{
   border: 1px solid #D9D9D9;
 }
-.product-media-container .product-media{
+/* .product-media-container .product-media{
   border: 1px solid #D9D9D9;
-}
+} */
 .media-gallery--carousel slideshow-arrows .slideshow-control{
   padding-inline: 0;
   border: 1px solid #0000001A;
