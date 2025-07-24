@@ -1,3 +1,6 @@
+img{
+  border-radius: 0;
+}
 .custom-page-width{
   max-width: calc(var(--page-content-width) + (var(--page-margin) * 2));;
   margin: 0 auto;
@@ -27,6 +30,7 @@ summary.menu__heading.h4{
   font-size: 18px;
   line-height: 28px;
   vertical-align: middle;
+  padding-bottom: 15px;
 }
 li.menu__item.paragraph a{
   font-weight: 500;
@@ -51,6 +55,9 @@ li.menu__item.paragraph a{
   border: none;
   border-width: 0px !important;
 }
+.email-signup__input:focus-visible{
+  outline: none;
+}
 .email-signup__button.button-secondary{
   font-weight: 600 !important;
   font-size: 16px;
@@ -67,6 +74,20 @@ li.menu__item.paragraph a{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important; /* or any bg color */
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 span.menu-list__link-title:hover {
     border-bottom: 2px solid #07BED4;
@@ -195,7 +216,7 @@ span.icon-round{
   font-size: 44px !important;
   line-height: 54px !important;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 820px){
   a.size-style.custom-btn, a.size-style.custom-btn-2{
     padding: 9px 16px;
     font-size: 12px;
@@ -259,13 +280,18 @@ search-button.search-action{
   font-size: 14px;
   line-height: 100%;
 }
+@media screen and (max-width: 1024px){
+  .header__drawer{
+    display: flex !important;
+  }
+  .overflow-menu, .v-menu-links a{
+    display: none;
+  }
+  .v-announcement-bar{
+    justify-content: center;
+  }
+}
 
-.slideshow-control--previous {
-    margin-left: -20px;
-}
-.slideshow-control--next {
-    margin-right: -20px;
-}
 @media screen and (max-width: 768px){
   .header-logo__image{
     width: 135px !important;
@@ -303,7 +329,6 @@ search-button.search-action{
     font-size: 12px;
   }
   
-  
 }
 
 @media screen and (max-width: 768px){
@@ -340,6 +365,93 @@ search-button.search-action{
     width: 100%;
   }
  
+}
+.header-logo__image{
+  border-radius: 0;
+}
+.slideshow-control--previous {
+    margin-left: -22px;
+}
+.slideshow-control--next {
+    margin-right: -22px;
+}
+.product-list-carousel slideshow-arrows{
+  align-items: anchor-center;
+  top: -20%;
+}
+@media screen and (max-width: 768px){
+  .slideshow-control--previous {
+    margin-left: -14px;
+  }
+  .slideshow-control--next {
+      margin-right: unset;
+  }
+  .three-column-section .slideshow-control--previous {
+    margin-left: -30px;
+  }
+  .resource-list__carousel .slideshow-control{
+    width: 28px;
+    min-height: 28px;
+  }
+  .slideshow-control .svg-wrapper{
+    width: 14px;
+  }
+  .product-list-carousel slideshow-arrows {
+    align-items: anchor-center;
+    top: -35%;
+  }
+}
+
+slideshow-controls:has(.slideshow-controls__dots) {
+    mix-blend-mode: unset;
+}
+:is(.slideshow-controls__dots,.slideshow-controls__counter) button{
+  --color: #95D8E7;
+}
+.header__column {
+    @media screen and (max-width: 769px) {
+        display: contents;
+    }
+}
+.header__columns {
+    @media screen and (max-width: 769px) {
+        .header-logo {
+            grid-area: center;
+        }
+    }
+}
+.header__columns{
+@media screen and (max-width: 769px) {
+      --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
+        var(--header-mobile-bookend) var(--header-mobile-bookend);
+      grid-template-areas: 'leftA leftB center rightA rightB';
+      grid-column: span 3;
+      column-gap: 0;
+      align-items: center;
+      padding-block: 0;
+      padding-inline: 0 var(--padding-3xs);
+
+      .header-logo {
+        grid-area: center;
+      }
+
+      &:not(:has(header-actions)) .search-action {
+        grid-area: leftB;
+      }
+
+      &:not(:has(.account-actions)) .search-action {
+        grid-area: rightA;
+      }
+
+      .search-action {
+        grid-area: leftB;
+      }
+
+      header-actions {
+        grid-area: rightB;
+      }
+    }
+  }
 }
 
 /* PDP CSS Start  */
