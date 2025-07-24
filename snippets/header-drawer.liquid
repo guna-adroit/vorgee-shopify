@@ -89,7 +89,7 @@
               <li
                 style="--menu-drawer-animation-index: {{ animation_index }};"
                 class="{%- if block.settings.drawer_accordion -%}menu-drawer__list-item--deep{%- else -%}menu-drawer__list-item--flat{%- endif -%}{% if block.settings.drawer_dividers %} menu-drawer__list-item--divider{% endif %}"
-              >
+              > 
                 {% if block.settings.drawer_accordion and link.links != blank %}
                   {%- comment -%}
                     Accordion for links with children, in menus with fewer than 3 levels of links
