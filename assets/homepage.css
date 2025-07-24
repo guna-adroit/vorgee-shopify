@@ -368,6 +368,7 @@ search-button.search-action{
 }
 .header-logo__image{
   border-radius: 0;
+  margin-bottom: 0;
 }
 .slideshow-control--previous {
     margin-left: -22px;
