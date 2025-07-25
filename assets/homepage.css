@@ -19,6 +19,10 @@ img{
 .overflow-menu::part(list){
   gap: 60px !important;
 }
+.header__columns {
+    --padding-block-start: 10px;
+    --padding-block-end: 10px;
+}
 .header__column--center {
     header-menu:only-child .overflow-menu::part(list) {
         padding-right: 40px;
