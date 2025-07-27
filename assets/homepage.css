@@ -154,7 +154,7 @@ span.menu-list__link-title:hover {
 slideshow-controls[controls-on-media] {
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 0px;
     width: 100px !important;
     transform: translateY(-50%);
 }
