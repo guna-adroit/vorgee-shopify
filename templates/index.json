@@ -641,21 +641,8 @@
     },
     "hero_image_c9w4Lq": {
       "type": "hero-image",
-      "name": "Hero Banner",
-      "settings": {
-        "background_image": "shopify://shop_images/Group_1000008589.png",
-        "heading": "Welcome to Our Store",
-        "subheading": "Shop the latest collection",
-        "button_text": "Shop Now",
-        "button_link": "",
-        "gradient_color_start": "#00000080",
-        "gradient_color_end": "rgba(0,0,0,0)"
-      }
-    },
-    "hero_J6r34h": {
-      "type": "hero",
       "blocks": {
-        "text_ADKmnL": {
+        "text_FhEyXD": {
           "type": "text",
           "settings": {
             "text": "<h2>TAKE THE PRESSURE OFF</h2>",
@@ -682,7 +669,7 @@
           },
           "blocks": {}
         },
-        "text_V37LWH": {
+        "text_Rnh6qL": {
           "type": "text",
           "settings": {
             "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face</p>",
@@ -709,7 +696,7 @@
           },
           "blocks": {}
         },
-        "button_4ABQxy": {
+        "button_LMH7mH": {
           "type": "button",
           "name": "t:names.button",
           "settings": {
@@ -726,9 +713,98 @@
         }
       },
       "block_order": [
-        "text_ADKmnL",
-        "text_V37LWH",
-        "button_4ABQxy"
+        "text_FhEyXD",
+        "text_Rnh6qL",
+        "button_LMH7mH"
+      ],
+      "name": "Hero Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/Group_1000008589.png",
+        "heading": "Welcome to Our Store",
+        "subheading": "Shop the latest collection",
+        "button_text": "Shop Now",
+        "button_link": "",
+        "gradient_color_start": "#00000080",
+        "gradient_color_end": "rgba(0,0,0,0)"
+      }
+    },
+    "hero_J6r34h": {
+      "type": "hero",
+      "blocks": {
+        "text_JpP6Vr": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>TAKE THE PRESSURE OFF</h2>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "custom_classes": "text-banner-heading-hero",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "4rem",
+            "font_weight": "600",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_jw7VeX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "custom_classes": "text-banner-heading",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1.5rem",
+            "font_weight": "600",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 10,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_qeK38K": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "SHOP ALL",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "custom-btn",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_JpP6Vr",
+        "text_jw7VeX",
+        "button_qeK38K"
       ],
       "custom_css": [
         "@media screen and (max-width: 768px) {.hero {--hero-min-height: 42svh !important; }}"
