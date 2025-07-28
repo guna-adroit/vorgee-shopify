@@ -6,11 +6,7 @@
   background-position: center;
 ">
   <div class="hero-content">
-    <h1>{{ section.settings.heading }}</h1>
-    <p>{{ section.settings.subheading }}</p>
-    {% if section.settings.button_text != blank %}
-      <a href="{{ section.settings.button_link }}" class="hero-button">{{ section.settings.button_text }}</a>
-    {% endif %}
+    {% content_for 'blocks' %}
   </div>
 </section>
 
