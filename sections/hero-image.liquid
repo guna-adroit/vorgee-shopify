@@ -1,8 +1,8 @@
 
 <section class="hero-banner">
   {% if section.settings.hero_image %}
-    {{ section.settings.hero_image | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'hero-banner__img', sizes: 'auto' }}
-   
+    {{ section.settings.hero_image | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'hero-banner__img hero-desktop_image', sizes: 'auto' }}
+    {{ section.settings.mobile_image | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'hero-banner__img hero-mobile_image', sizes: 'auto' }}
   {% endif %}
 
   <div class="hero-banner__overlay"></div>
@@ -13,6 +13,22 @@
     </div>
   </div>
 </section>
+
+<style>
+  .hero-banner .hero-mobile_image{
+    display: none;
+  }
+  {% if section.settings.mobile_image != blank %}
+    @media screen and (max-width: 820px){
+      .hero-banner .hero-mobile_image{
+          display: block;
+        }
+      .hero-banner .hero-desktop_image{
+          display: none;
+        }
+    }
+  {% endif %}
+</style
 
 <style>
 .hero-banner {
