@@ -49,8 +49,11 @@
 
 /* content sits on top */
 .hero-banner__content {
-  position: relative;
+  position: absolute;
   z-index: 3;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   padding: 40px 20px 0;
   max-width: 800px;
   margin: 0 auto;
