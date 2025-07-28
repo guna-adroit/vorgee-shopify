@@ -47,7 +47,7 @@
   >
 {%- endunless -%}
 {% # theme-check-enable %}
-<style>
+<!-- <style>
   @font-face {
   font-family:'boxedbook';
   src:url("{{ 'boxedbook-italic-webfont.woff2' | asset_url }}") format("woff2"),
@@ -119,57 +119,36 @@
   font-style:normal;
 }
 
-</style> 
- <!-- <style>
-  @font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedBook-Italic.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedBook-Italic.otf' | asset_url }}") format("opentype");
-  font-weight:300;
-  font-style:italic;
-}
-@font-face {
+</style>  -->
+ <style>
+   @font-face {
   font-family: boxed;
-  src:url("{{ 'BoxedBook.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedBook.otf' | asset_url }}") format("opentype");
+  src:url("https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Tipo_Pe_Cpel_-_BoxedLight.otf?v=1753262262") format("opentype");
   font-weight:300;
   font-style:normal;
 }
-@font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedLight.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedLight.otf' | asset_url }}") format("opentype");
-  font-weight:200;
-  font-style:normal;
-}
-@font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedMedium-Italic.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedMedium-Italic.otf' | asset_url }}") format("opentype");
-  font-weight:500;
-  font-style:italic;
-}
-@font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedRegular.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedRegular.otf' | asset_url }}") format("opentype");
+   @font-face {
+  font-family: boxed;
+  src:url("https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Tipo_Pe_Cpel_-_BoxedRegular.otf?v=1753676304") format("opentype");
   font-weight:400;
   font-style:normal;
 }
 @font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedMedium.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedMedium.otf' | asset_url }}") format("opentype");
+  font-family: boxed;
+  src:url("https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Tipo_Pe_Cpel_-_BoxedMedium.otf?v=1753676304") format("opentype");
   font-weight:500;
   font-style:normal;
 }
-@font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedSemibold.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedSemibold.otf' | asset_url }}") format("opentype");
+ @font-face {
+  font-family: boxed;
+  src:url("https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Tipo_Pe_Cpel_-_BoxedSemibold.otf?v=1753443980") format("opentype");
   font-weight:600;
   font-style:normal;
 }
 @font-face {
-  font-family:'boxedbook';
-  src:url("{{ 'BoxedRegular-Bold.otf' | asset_url }}") format("woff2"), url("{{ 'BoxedRegular-Bold.otf' | asset_url }}") format("otf");
+  font-family: boxed;
+  src:url("https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Tipo_Pe_Cpel_-_BoxedRegular-Bold.otf?v=1753676465") format("opentype");
   font-weight:700;
   font-style:normal;
 }
-*{
-  font-family: 'boxedbook' !important;
-}
-</style>  -->
+ </style>
