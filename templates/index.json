@@ -639,6 +639,19 @@
         "padding-block-end": 96
       }
     },
+    "hero_image_c9w4Lq": {
+      "type": "hero-image",
+      "name": "Hero Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/Group_1000008589.png",
+        "heading": "Welcome to Our Store",
+        "subheading": "Shop the latest collection",
+        "button_text": "Shop Now",
+        "button_link": "",
+        "gradient_color_start": "#000000",
+        "gradient_color_end": "transparent"
+      }
+    },
     "hero_J6r34h": {
       "type": "hero",
       "blocks": {
@@ -1742,6 +1755,7 @@
     "slideshow_hj97Af",
     "three_column_layout_C3x97k",
     "product_list_qU3bEB",
+    "hero_image_c9w4Lq",
     "hero_J6r34h",
     "collection_list_wUbDkw",
     "product_list_hjmjpT",
