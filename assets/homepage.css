@@ -150,6 +150,9 @@ span.menu-list__link-title:hover {
     flex-grow: 0;
     padding-bottom: 30px;
   }
+  .slideshow-section slideshow-controls[pagination-position=center]{
+    justify-content: flex-end;
+  }
 }
 slideshow-controls[controls-on-media] {
     position: absolute;
