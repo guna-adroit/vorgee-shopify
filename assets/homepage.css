@@ -298,8 +298,10 @@ search-button.search-action{
   font-size: 25px;
   line-height: 30px;
 }
-.product-card-title{
-  
+.product-card-title p{
+font-weight: 300;
+font-size: 18px;
+line-height: 28px;
 }
 @media screen and (max-width: 1024px){
   .header__drawer{
