@@ -720,6 +720,7 @@
       "name": "Hero Banner",
       "settings": {
         "background_image": "shopify://shop_images/Group_1000008589.png",
+        "color_scheme": "scheme-6",
         "heading": "Welcome to Our Store",
         "subheading": "Shop the latest collection",
         "button_text": "Shop Now",
