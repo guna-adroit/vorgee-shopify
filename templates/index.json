@@ -548,7 +548,7 @@
                     "max_width": "normal",
                     "alignment": "left",
                     "custom_classes": "product-card-title",
-                    "type_preset": "rte",
+                    "type_preset": "custom",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
