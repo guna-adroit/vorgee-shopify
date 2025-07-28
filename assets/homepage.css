@@ -293,6 +293,14 @@ search-button.search-action{
   font-size: 60px;
   line-height: 60px;
 }
+.text-banner-heading p{
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+}
+.product-card-title{
+  
+}
 @media screen and (max-width: 1024px){
   .header__drawer{
     display: flex !important;
