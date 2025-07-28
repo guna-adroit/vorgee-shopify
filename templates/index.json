@@ -853,6 +853,7 @@
         "text_jw7VeX",
         "button_qeK38K"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 768px) {.hero {--hero-min-height: 42svh !important; }}"
       ],
