@@ -648,8 +648,8 @@
         "subheading": "Shop the latest collection",
         "button_text": "Shop Now",
         "button_link": "",
-        "gradient_color_start": "#000000",
-        "gradient_color_end": "transparent"
+        "gradient_color_start": "#00000080",
+        "gradient_color_end": "rgba(0,0,0,0)"
       }
     },
     "hero_J6r34h": {
