@@ -295,7 +295,7 @@ search-button.search-action{
 }
 .text-banner-heading p{
   font-weight: 600;
-  font-size: 25px;
+  font-size: 25px !important;
   line-height: 30px;
 }
 .product-card-title p, .product-card .text-block p{
