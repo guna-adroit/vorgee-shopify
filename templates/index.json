@@ -765,6 +765,7 @@
       "name": "Hero Banner",
       "settings": {
         "hero_image": "shopify://shop_images/Group_1000008589.png",
+        "mobile_image": "shopify://shop_images/Group_1000009051.png",
         "color_scheme": "scheme-6",
         "heading": "Welcome to Our Store",
         "subheading": "Shop the latest collection",
