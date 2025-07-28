@@ -1,12 +1,8 @@
 
 <section class="hero-banner">
-  {% if section.settings.background_image %}
-    {{ section.settings.background_image | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'hero-banner__img', sizes: 'auto' }}
-    <!-- <img 
-      src="{{ section.settings.background_image | image_url: width: 2000 }}" 
-      alt="{{ section.settings.heading }}" 
-      class="hero-banner__img"
-    /> -->
+  {% if section.settings.hero_image %}
+    {{ section.settings.hero_image | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'hero-banner__img', sizes: 'auto' }}
+   
   {% endif %}
 
   <div class="hero-banner__overlay"></div>
