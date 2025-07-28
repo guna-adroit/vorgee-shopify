@@ -12,7 +12,9 @@
   <div class="hero-banner__overlay"></div>
 
   <div class="hero-banner__content color-{{ section.settings.color_scheme }}">
-    {% content_for 'blocks' %}
+    <div class="spacing-style section section--full-width" style="      --padding-block-start: max(20px, calc(var(--spacing-scale) * 40px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));">
+      {% content_for 'blocks' %}
+    </div>
   </div>
 </section>
 
