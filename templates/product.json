@@ -696,6 +696,9 @@
       "block_order": [
         "recently_viewed_ifLddi"
       ],
+      "custom_css": [
+        "*{display: none;}"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
