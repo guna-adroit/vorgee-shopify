@@ -651,6 +651,7 @@
           ]
         }
       },
+      "disabled": true,
       "custom_css": [
         ".product-badges.product-badges--top-right {top: 85%; left: 5%; width: fit-content;}"
       ],
@@ -662,6 +663,7 @@
         "max_products": 6,
         "columns": 4,
         "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 36,
         "icons_style": "chevron",
