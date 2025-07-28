@@ -304,9 +304,9 @@ font-size: 18px;
 line-height: 28px;
 }
 .text-banner-heading-hero h2{
-  font-weight: 600;
-  font-size: 60px;
-  line-height: 100%;
+  font-weight: 600 !important;
+  font-size: 60px !important;
+  line-height: 100% !important;
 }
 @media screen and (max-width: 1024px){
   .header__drawer{
