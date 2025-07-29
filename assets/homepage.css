@@ -516,7 +516,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   margin: 5px;
   background-color: white;
 }
-.product-page-title{
+.product-page-title h1{
   font-weight: 500;
   font-size: 35px;
   line-height: 100%;
