@@ -440,6 +440,11 @@ line-height: 28px;
     align-items: anchor-center;
     top: -35%;
   }
+  .shop-range-description p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 slideshow-controls:has(.slideshow-controls__dots) {
