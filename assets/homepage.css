@@ -504,7 +504,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
 .slideshow-controls__thumbnails .slideshow-control{
   border: 1px solid #D9D9D9;
 }
-..product-information .product-media-container .product-media{
+.product-information .product-media-container .product-media{
   border: 1px solid #D9D9D9;
 }
 .card-gallery.spacing-style.border-style{
