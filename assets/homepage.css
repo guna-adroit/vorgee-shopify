@@ -517,10 +517,10 @@ slideshow-controls:has(.slideshow-controls__dots) {
   background-color: white;
 }
 .product-page-title h1{
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 100%;
-  color: #121212;
+  font-weight: 500 !important;
+  font-size: 35px !important;
+  line-height: 100% !important;
+  color: #121212 !important;
 }
 .product-page-price .price{
   font-weight: 500;
