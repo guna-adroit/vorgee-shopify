@@ -501,6 +501,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
     }
   }
 }
+
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   border: 1px solid #D9D9D9;
