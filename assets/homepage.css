@@ -409,11 +409,11 @@ line-height: 28px;
   align-items: anchor-center;
   top: -20%;
 }
-@media screen and (min-width: 821px) {
+/* @media screen and (min-width: 821px) {
     slideshow-slides[size=large] {
         min-height: calc(100vh - 161px);;
     }
-}
+} */
 @media screen and (max-width: 768px){
   .slideshow-control--previous {
     margin-left: -14px;
