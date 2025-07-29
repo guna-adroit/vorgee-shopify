@@ -356,7 +356,7 @@ line-height: 28px;
   .email-signup__button.button-secondary{
     font-size: 12px;
   }
-  .card-gallery .product-card .product-media{
+  slideshow-slide .product-card .product-media{
     padding: 0px;
   }
 }
