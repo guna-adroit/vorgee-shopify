@@ -502,6 +502,11 @@ slideshow-controls:has(.slideshow-controls__dots) {
   }
 }
 
+@media (min-width: 1025px) and (max-width: 1080px) {
+  .v-menu-links a {
+      font-size: 13px;
+   }
+}
 /* PDP CSS Start  */
 .slideshow-controls__thumbnails .slideshow-control{
   border: 1px solid #D9D9D9;
