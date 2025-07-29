@@ -414,6 +414,11 @@ line-height: 28px;
         min-height: calc(100vh - 161px);;
     }
 } */
+.shop-range-description p{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
 @media screen and (max-width: 768px){
   .slideshow-control--previous {
     margin-left: -14px;
