@@ -4343,3 +4343,15 @@ span.facets__summary.filter-label {
 div#shop-hcaptcha-badge-container {
     display: none;
 }
+.product-page-title h1{
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 100%;
+  color: #121212;
+}
+.product-page-price .price{
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 100%;
+  color: #121212;
+}
