@@ -409,7 +409,7 @@ line-height: 28px;
   align-items: anchor-center;
   top: -20%;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 820px) {
     slideshow-slides[size=large] {
         min-height: calc(100vh - 161px);;
     }
