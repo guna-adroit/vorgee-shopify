@@ -631,6 +631,9 @@ media-gallery slideshow-controls[controls-on-media] {
   .accordion.product-accordion .details__header{
       font-size: 14px;
   }
+  .product-information__media media-gallery{
+    padding: 15px;
+  }
 }
 /* PDP CSS End */
 
