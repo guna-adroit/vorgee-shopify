@@ -1,4 +1,9 @@
 <style>
+    {% if template.name == 'collection' or template.name == 'list-collections' %}
+        .breadcrumb-container{
+            display: none;
+        }
+    {% endif %}
   .breadcrumb-container{
     max-height: 100px;
     
