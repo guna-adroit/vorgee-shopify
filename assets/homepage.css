@@ -634,6 +634,12 @@ media-gallery slideshow-controls[controls-on-media] {
   .product-information__media media-gallery{
     padding: 15px;
   }
+  .product-information__media :is(.slideshow-controls__dots,.slideshow-controls__counter) button{
+    --color: #eee;
+  }
+  .product-information__media .slideshow-controls__dots button[aria-selected=true]{
+    --color: #07BED4;
+  }
 }
 /* PDP CSS End */
 
