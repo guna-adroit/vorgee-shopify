@@ -425,6 +425,7 @@ line-height: 28px;
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
+  color: #333333;
 }
 @media screen and (max-width: 768px){
   .slideshow-control--previous {
