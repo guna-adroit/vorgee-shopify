@@ -9,7 +9,6 @@
     
   }
   .breadcrumbs {
-    margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 10px;
     color: #121212;
@@ -54,7 +53,7 @@
 
 {%- unless template == 'index' or template == 'list-collections' or template == '404' -%}
 {%- assign t = template | split: '.' | first -%}
-<div class="breadcrumb-container">
+<div class="breadcrumb-container section section--page-width">
 <nav class="breadcrumbs page-width" role="navigation" aria-label="breadcrumbs">
   <div class="breadcrumbs__list">
     <span class="breadcrumbs__item">
