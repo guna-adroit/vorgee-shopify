@@ -421,6 +421,11 @@ line-height: 28px;
   font-size: 18px;
   line-height: 28px;
 }
+.menu-third-level .menu-drawer__menu-item-text{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
 @media screen and (max-width: 768px){
   .slideshow-control--previous {
     margin-left: -14px;
