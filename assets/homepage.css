@@ -462,6 +462,11 @@ slideshow-controls:has(.slideshow-controls__dots) {
 :is(.slideshow-controls__dots,.slideshow-controls__counter) button{
   --color: #95D8E7;
 }
+.eapps-instagram-feed-title{
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+}
 .header__column {
     @media screen and (max-width: 769px) {
         display: contents;
