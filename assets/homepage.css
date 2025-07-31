@@ -362,6 +362,9 @@ line-height: 28px;
   slideshow-slide .product-card .product-media{
     padding: 15px;
   }
+  .menu-drawer__menu{
+    padding-left: 45px;
+  }
 }
 
 @media screen and (max-width: 768px){
