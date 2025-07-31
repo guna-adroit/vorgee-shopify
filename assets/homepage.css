@@ -362,7 +362,7 @@ line-height: 28px;
   slideshow-slide .product-card .product-media{
     padding: 15px;
   }
-  .menu-drawer__menu{
+  .menu-drawer__inner-submenu .menu-drawer__menu{
     padding-left: 45px;
   }
 }
