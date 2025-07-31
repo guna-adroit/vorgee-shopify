@@ -669,6 +669,13 @@ media-gallery slideshow-controls[controls-on-media] {
     font-size: 13px;
     line-height: 13px;
   }
+  .variant-option--equal-width-buttons {
+    .variant-option__button-label__text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+    }
+  }
 }
 /* PDP CSS End */
 
