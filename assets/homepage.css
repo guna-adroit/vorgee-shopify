@@ -614,6 +614,11 @@ media-gallery slideshow-controls[controls-on-media] {
     width: 100% !important;
     transform: unset;
 }
+.quantity-option-title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
