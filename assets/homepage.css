@@ -627,6 +627,9 @@ media-gallery slideshow-controls[controls-on-media] {
   line-height: 100%;
   margin: 0;
 }
+quantity-selector-component.quantity-selector{
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
@@ -687,6 +690,9 @@ media-gallery slideshow-controls[controls-on-media] {
         min-height: 28px;
         padding: 8px 4px;
     }
+  }
+  quantity-selector-component.quantity-selector{
+    margin-bottom: 22px;
   }
 }
 /* PDP CSS End */
