@@ -653,6 +653,11 @@ media-gallery slideshow-controls[controls-on-media] {
   .product-information__media .slideshow-controls__dots button[aria-selected=true]{
     --color: #07BED4;
   }
+  .product-page-title h1{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 100%;
+  }
 }
 /* PDP CSS End */
 
