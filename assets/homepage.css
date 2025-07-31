@@ -563,6 +563,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   font-size: 16px;
   line-height: 100%;
   color: #121212;
+  text-transform: uppercase;
 }
 .variant-option__button-label--has-swatch:has(:checked), .variant-option__button-label--has-swatch:hover{
   outline: 3px solid #333333;
