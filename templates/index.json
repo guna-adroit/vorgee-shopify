@@ -1622,12 +1622,12 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+            "text": "<p>FOLLOW US @VORGEE</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
             "custom_classes": "",
-            "type_preset": "rte",
+            "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "font_weight": "400",
@@ -1650,7 +1650,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>"
+            "custom_liquid": "<div class=\"full-width\"><div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>"
           },
           "blocks": {}
         }
@@ -1690,6 +1690,7 @@
     },
     "custom_liquid_CdzV6P": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "<div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>",
