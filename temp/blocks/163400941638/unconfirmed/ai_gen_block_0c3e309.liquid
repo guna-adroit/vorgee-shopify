@@ -1,6 +1,521 @@
+{% doc %}
+  @prompt
+    shopify product page share icon, create share button like in the dawn theme
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-share-button-{{ ai_gen_id }} {
+    position: relative;
+    display: inline-block;}
+
+  .ai-share-button-trigger-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: {{ block.settings.button_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};}
+
+  .ai-share-button-trigger-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-share-button-trigger-{{ ai_gen_id }} svg {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+  }
+
+  .ai-share-button-trigger-{{ ai_gen_id }}:focus-visible {
+    outline: 2px solid {{ block.settings.button_color }};
+    outline-offset: 2px;
+  }
+
+  .ai-share-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background-color: {{ block.settings.dropdown_background }};
+    border: 1px solid {{ block.settings.dropdown_border_color }};
+    border-radius: {{ block.settings.dropdown_border_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    min-width: 200px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  }
+
+  .ai-share-dropdown-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-share-options-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-share-option-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: {{ block.settings.option_border_radius }}px;
+    text-decoration: none;
+    color: {{ block.settings.option_text_color }};
+    font-size:14px;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;width: 100%;text-align: left;
+  }
+
+  .ai-share-option-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.option_hover_background }};
+    color: {{ block.settings.option_hover_text_color }};
+  }
+
+  .ai-share-option-{{ ai_gen_id }} svg {
+    width: 18px;
+    height: 18px;flex-shrink: 0;
+  }
+
+  .ai-copy-feedback-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: {{ block.settings.feedback_background }};
+    color: {{ block.settings.feedback_text_color }};
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 101;
+    pointer-events: none;
+  }
+
+  .ai-copy-feedback-{{ ai_gen_id }}.show {
+    opacity: 1;
+    visibility: visible;}
+
+  @media screen and (max-width: 749px) {
+    .ai-share-dropdown-{{ ai_gen_id }} {
+      right: 0;
+      left: auto;
+      min-width: 180px;
+    }
+  }
+{% endstyle %}<share-button-{{ ai_gen_id }} class="ai-share-button-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <button
+    type="button"
+    class="ai-share-button-trigger-{{ ai_gen_id }}"
+    aria-expanded="false"
+    aria-haspopup="true"
+    aria-label="Share product"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935 2.186l-9.566 5.314m00a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.9332.185zm0 0l9.566 5.314a2.25 2.25 0 103.935-2.186 2.25 2.25 0 00-3.935 2.186l-9.566-5.314z" />
+    </svg>
+    {% if block.settings.show_text %}
+      <span>{{ block.settings.button_text }}</span>
+    {% endif %}
+  </button>
+
+  <div class="ai-share-dropdown-{{ ai_gen_id }}">
+    <div class="ai-share-options-{{ ai_gen_id }}">
+      {% if block.settings.show_copy_link %}
+        <button
+          type="button"
+          class="ai-share-option-{{ ai_gen_id }}"
+          data-copy-url="{{ request.origin }}{{ product.url }}">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+          </svg>
+          {{ block.settings.copy_link_text }}
+        </button>
+      {% endif %}
+
+      {% if block.settings.show_facebook %}<a
+          href="https://www.facebook.com/sharer/sharer.php?u={{ request.origin }}{{ product.url | url_encode }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ai-share-option-{{ ai_gen_id }}"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          {{ block.settings.facebook_text }}
+        </a>
+      {% endif %}
+
+      {% if block.settings.show_twitter %}
+        <a
+          href="https://twitter.com/intent/tweet?url={{ request.origin }}{{ product.url | url_encode }}&text={{ product.title | url_encode }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ai-share-option-{{ ai_gen_id }}"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          {{ block.settings.twitter_text }}
+        </a>
+      {% endif %}
+
+      {% if block.settings.show_pinterest %}
+        <a
+          href="https://pinterest.com/pin/create/button/?url={{ request.origin }}{{ product.url | url_encode }}&media={{ product.featured_image | image_url: width: 1200 | url_encode }}&description={{ product.title | url_encode }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ai-share-option-{{ ai_gen_id }}"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.2931.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378 0 0-.599 2.282-.744 2.840-.2691.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24.001 12.017 24.001c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+          </svg>
+          {{ block.settings.pinterest_text }}
+        </a>
+      {% endif %}
+
+      {% if block.settings.show_email %}
+        <a
+          href="mailto:?subject={{ product.title | url_encode }}&body=Check out this product: {{ request.origin }}{{ product.url | url_encode }}"
+          class="ai-share-option-{{ ai_gen_id }}"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+          {{ block.settings.email_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-copy-feedback-{{ ai_gen_id }}">{{ block.settings.copy_feedback_text }}</div>
+</share-button-{{ ai_gen_id }}><script>
+  (function() {
+    class ShareButton{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.button = this.querySelector('.ai-share-button-trigger-{{ ai_gen_id }}');
+        this.dropdown = this.querySelector('.ai-share-dropdown-{{ ai_gen_id }}');
+        this.copyButton = this.querySelector('[data-copy-url]');
+        this.feedback = this.querySelector('.ai-copy-feedback-{{ ai_gen_id }}');
+
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.button.addEventListener('click', this.toggleDropdown.bind(this));
+        
+        if (this.copyButton) {
+          this.copyButton.addEventListener('click', this.copyToClipboard.bind(this));
+        }document.addEventListener('click', this.handleOutsideClick.bind(this));
+        document.addEventListener('keydown', this.handleKeydown.bind(this));
+      }
+
+      toggleDropdown() {
+        const isOpen = this.dropdown.classList.contains('active');
+        
+        if (isOpen) {
+          this.closeDropdown();
+        } else {
+          this.openDropdown();
+        }
+      }
+
+      openDropdown() {
+        this.dropdown.classList.add('active');
+        this.button.setAttribute('aria-expanded', 'true');
+      }
+
+      closeDropdown() {
+        this.dropdown.classList.remove('active');
+        this.button.setAttribute('aria-expanded', 'false');
+      }
+
+      handleOutsideClick(event) {
+        if (!this.contains(event.target)) {
+          this.closeDropdown();
+        }
+      }
+
+      handleKeydown(event) {
+        if (event.key === 'Escape') {
+          this.closeDropdown();
+          this.button.focus();
+        }
+      }
+
+      async copyToClipboard() {
+        const url = this.copyButton.getAttribute('data-copy-url');
+        
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(url);
+          } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = url;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand('copy');
+            textArea.remove();
+          }
+          
+          this.showFeedback();this.closeDropdown();
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+
+      showFeedback() {
+        this.feedback.classList.add('show');
+        setTimeout(() => {
+          this.feedback.classList.remove('show');
+        }, 2000);
+      }
+    }
+
+    customElements.define('share-button-{{ ai_gen_id }}', ShareButton{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Share Button",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text",
+      "label": "Show button text",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Share"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Share Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copy_link",
+      "label": "Show copy link",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "copy_link_text",
+      "label": "Copy link text",
+      "default": "Copy link"
+    },
+    {
+      "type": "text",
+      "id": "copy_feedback_text",
+      "label": "Copy feedback text",
+      "default": "Link copied!"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_facebook",
+      "label": "Show Facebook",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "facebook_text",
+      "label": "Facebook text",
+      "default": "Share on Facebook"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_twitter",
+      "label": "Show Twitter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "twitter_text",
+      "label": "Twitter text",
+      "default": "Tweet on Twitter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pinterest",
+      "label": "Show Pinterest",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "pinterest_text",
+      "label": "Pinterest text",
+      "default": "Pin on Pinterest"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_email",
+      "label": "Show Email",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "email_text",
+      "label": "Email text",
+      "default": "Share by email"
+    },
+    {
+      "type": "header",
+      "content": "Dropdown Style"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_background",
+      "label": "Dropdown background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_border_color",
+      "label": "Dropdown border color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "range",
+      "id": "dropdown_border_radius",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Dropdown border radius",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "option_text_color",
+      "label": "Option text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "option_hover_background",
+      "label": "Option hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "option_hover_text_color",
+      "label": "Option hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "option_border_radius",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "label": "Option border radius",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Feedback"
+    },
+    {
+      "type": "color",
+      "id": "feedback_background",
+      "label": "Feedback background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "feedback_text_color",
+      "label": "Feedback text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Share Button"
+    }
+  ]
+}
 {% endschema %}
