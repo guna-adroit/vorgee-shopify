@@ -466,6 +466,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   font-weight: 600;
   font-size: 48px;
   line-height: 100%;
+  text-align: left;
 }
 .header__column {
     @media screen and (max-width: 769px) {
