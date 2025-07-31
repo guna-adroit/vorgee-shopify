@@ -475,12 +475,6 @@
                 "feedback_text_color": "#ffffff"
               },
               "blocks": {}
-            },
-            "share_button_WfgKpq": {
-              "type": "share-button",
-              "name": "Share",
-              "settings": {},
-              "blocks": {}
             }
           },
           "block_order": [
@@ -490,8 +484,7 @@
             "buy_buttons_eYQEYi",
             "text_aEtTtq",
             "accordion_CXxcbH",
-            "ai_gen_block_0c3e309_jHNfnt",
-            "share_button_WfgKpq"
+            "ai_gen_block_0c3e309_jHNfnt"
           ]
         }
       },
