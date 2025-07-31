@@ -1659,6 +1659,7 @@
         "text_FcV9fY",
         "custom_liquid_gtkWAE"
       ],
+      "disabled": true,
       "name": "Instagram",
       "settings": {
         "content_direction": "column",
@@ -1690,7 +1691,6 @@
     },
     "custom_liquid_CdzV6P": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:names.custom_liquid",
       "settings": {
         "custom_liquid": "<div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>",
