@@ -1875,6 +1875,17 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "custom_liquid_CdzV6P": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 20
+      }
     }
   },
   "order": [
@@ -1885,6 +1896,7 @@
     "hero_J6r34h",
     "collection_list_wUbDkw",
     "product_list_hjmjpT",
+    "custom_liquid_CdzV6P",
     "section_aAXd8P",
     "section_mqE6g4",
     "section_WnxWmg"
