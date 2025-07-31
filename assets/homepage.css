@@ -463,10 +463,10 @@ slideshow-controls:has(.slideshow-controls__dots) {
   --color: #95D8E7;
 }
 .eapps-instagram-feed-title{
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 100%;
-  text-align: left;
+  font-weight: 600 !important;
+  font-size: 48px !important;
+  line-height: 100% !important;
+  text-align: left !important;
 }
 .header__column {
     @media screen and (max-width: 769px) {
