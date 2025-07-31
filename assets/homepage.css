@@ -664,6 +664,11 @@ media-gallery slideshow-controls[controls-on-media] {
     line-height: 100%;
     color: #121212;
   }
+  .variant-option--buttons legend{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+  }
 }
 /* PDP CSS End */
 
