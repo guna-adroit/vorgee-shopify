@@ -470,7 +470,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   padding: 24px 0 !important;
 }
 @media screen and (max-width: 768px){
-  {
+  .eapps-instagram-feed-title{
     font-weight: 600;
     font-size: 30px !important;
     line-height: 100%;
