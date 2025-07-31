@@ -679,7 +679,7 @@ quantity-selector-component.quantity-selector{
         font-size: 12px;
         line-height: 100%;
     }
-  }
+  } 
   .variant-option--equal-width-buttons{
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
