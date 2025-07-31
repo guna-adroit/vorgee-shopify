@@ -450,7 +450,7 @@
                 "button_text": "Share",
                 "button_text_size": 14,
                 "button_font_weight": "400",
-                "icon_size": 20,
+                "icon_size": 16,
                 "button_color": "#000000",
                 "button_hover_color": "#666666",
                 "show_copy_link": true,
