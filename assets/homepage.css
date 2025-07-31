@@ -658,6 +658,12 @@ media-gallery slideshow-controls[controls-on-media] {
     font-size: 28px;
     line-height: 100%;
   }
+  .product-page-price .price{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: #121212;
+  }
 }
 /* PDP CSS End */
 
