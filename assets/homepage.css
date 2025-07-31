@@ -646,6 +646,7 @@ media-gallery slideshow-controls[controls-on-media] {
   }
   .product-information__media media-gallery{
     padding: 15px;
+    padding-top: 0;
   }
   .product-information__media :is(.slideshow-controls__dots,.slideshow-controls__counter) button{
     --color: #eee;
