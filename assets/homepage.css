@@ -676,6 +676,17 @@ media-gallery slideshow-controls[controls-on-media] {
         line-height: 100%;
     }
   }
+  .variant-option--equal-width-buttons{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .variant-option--equal-width-buttons {
+    .variant-option__button-label {
+        min-width: var(--variant-min-width);
+        width: 93px;
+        min-height: 28px;
+        padding: 8px 4px;
+    }
+  }
 }
 /* PDP CSS End */
 
