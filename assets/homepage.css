@@ -655,7 +655,7 @@ media-gallery slideshow-controls[controls-on-media] {
   }
   .product-page-title h1{
     font-weight: 500;
-    font-size: 28px;
+    font-size: 28px !important;
     line-height: 100%;
   }
   .product-page-price .price{
