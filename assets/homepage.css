@@ -288,6 +288,9 @@ search-button.search-action{
   font-size: 14px;
   line-height: 100%;
 }
+.menu-drawer__nav-buttons{
+  text-transform: uppercase;
+}
 .text-banner-heading h2{
   font-weight: 600;
   font-size: 60px;
