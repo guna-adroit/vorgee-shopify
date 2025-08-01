@@ -658,6 +658,9 @@ quantity-selector-component.quantity-selector{
   color: #121212BF;
   font-size: 16px;
 }
+.variant-picker__form{
+  gap: 30px;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
