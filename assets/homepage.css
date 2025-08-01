@@ -650,6 +650,9 @@ media-gallery slideshow-controls[controls-on-media] {
 quantity-selector-component.quantity-selector{
   margin-bottom: 30px;
 }
+.quantity-selector{
+  border-radius: 0px !important;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
