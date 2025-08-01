@@ -598,6 +598,10 @@ slideshow-controls:has(.slideshow-controls__dots) {
   outline: 3px solid #333333;
   outline-offset: 0;
 }
+.variant-option__button-label--has-swatch:has(:checked), .variant-option__button-label--has-swatch:hover{
+  outline: 1px solid #333333;
+  outline-offset: 0;
+}
 .swatch.swatch--unscaled {
     --swatch-width: 33px;
     --swatch-height: 33px;
