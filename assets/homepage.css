@@ -653,6 +653,10 @@ quantity-selector-component.quantity-selector{
 .quantity-selector{
   border-radius: 0px !important;
 }
+.quantity-selector input[type=number]{
+  color: #121212BF;
+  font-size: 16px;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
