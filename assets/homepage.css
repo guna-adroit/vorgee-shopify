@@ -594,7 +594,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
 .variant-option__button-label--has-swatch{
   outline: 1px solid #D9D9D9;
 }
-.variant-option__button-label--has-swatch:has(:checked), .variant-option__button-label--has-swatch:hover{
+.product-information .variant-option__button-label--has-swatch:has(:checked), .variant-option__button-label--has-swatch:hover{
   outline: 3px solid #333333;
   outline-offset: 0;
 }
