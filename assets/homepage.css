@@ -634,8 +634,11 @@ slideshow-controls:has(.slideshow-controls__dots) {
   font-size: 15px;
   line-height: 100%;
 }
+.product-information accordion-custom .details:first-child{
+  border-top: 1px solid  #D0D0D0 !important;
+}
 .product-information accordion-custom .details{
-  border-bottom: 1px solid  #D0D0D0;
+  border-bottom: 1px solid  #D0D0D0 !important;
 }
 media-gallery .slideshow-controls__dots, media-gallery .slideshow-controls__counter {
     flex-direction: row;
