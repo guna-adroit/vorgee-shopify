@@ -704,6 +704,9 @@ quantity-selector-component.quantity-selector{
       font-size: 14px;
       padding: 0;
   }
+  .accordion.product-accordion .details{
+    padding: 22px;
+  }
   .product-information__media media-gallery{
     padding: 15px;
     padding-top: 0;
