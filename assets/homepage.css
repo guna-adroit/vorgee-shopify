@@ -591,6 +591,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
   line-height: 100%;
   text-transform: capitalize;
 }
+.variant-picker .variant-option--buttons label:has(.swatch){
+  outline: 1px solid #D9D9D9;
+}
 .variant-option__button-label--has-swatch:has(:checked), .variant-option__button-label--has-swatch:hover{
   outline: 3px solid #333333;
   outline-offset: 0;
@@ -661,9 +664,7 @@ quantity-selector-component.quantity-selector{
 .variant-picker__form{
   gap: 30px;
 }
-.variant-picker .variant-option--buttons label:has(.swatch){
-  outline: 1px solid #D9D9D9;
-}
+
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
