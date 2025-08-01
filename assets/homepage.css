@@ -639,6 +639,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
   padding: 0;
   min-height: auto;
 }
+.product-information accordion-custom .details .details-content{
+  padding-top: 10px;
+}
 .product-information accordion-custom .details:first-child{
   border-top: 1px solid  #D0D0D0 !important;
 }
