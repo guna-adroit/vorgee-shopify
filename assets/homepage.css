@@ -711,7 +711,7 @@ quantity-selector-component.quantity-selector{
       padding: 0;
   }
   .accordion.product-accordion .details{
-    padding: 22px;
+    padding: 22px 0;
   }
   .product-information__media media-gallery{
     padding: 15px;
