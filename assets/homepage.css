@@ -702,7 +702,7 @@ quantity-selector-component.quantity-selector{
 @media screen and (max-width: 768px){
   .accordion.product-accordion .details__header{
       font-size: 14px;
-      padding: 20px 0;
+      padding: 0;
   }
   .product-information__media media-gallery{
     padding: 15px;
