@@ -700,6 +700,9 @@ quantity-selector-component.quantity-selector{
     }
 }
 @media screen and (max-width: 768px){
+  .product-information accordion-custom .details .details-content{
+    font-size: 13px;
+  }
   .accordion.product-accordion .details__header{
       font-size: 14px;
       padding: 0;
