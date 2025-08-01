@@ -634,6 +634,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
   font-size: 15px;
   line-height: 100%;
 }
+.product-information accordion-custom{
+  border-bottom: 1px solid  #D0D0D0;
+}
 media-gallery .slideshow-controls__dots, media-gallery .slideshow-controls__counter {
     flex-direction: row;
 }
