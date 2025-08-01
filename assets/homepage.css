@@ -631,7 +631,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
 }
 .accordion.product-accordion .details__header{
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 100%;
   padding: 30px 0;
 }
