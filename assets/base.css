@@ -4339,6 +4339,18 @@ span.facets__summary.filter-label {
     .hide-tablet{
       display: none !important;
     }
+    .product-card .product-media {
+        padding: 32px;
+    }
+    .product-media-container.media-fit img {
+        object-fit: contain;
+    }
+    div#ResultsList {
+      padding: 0 20px;
+    }
+    .product-media-container .product-media{
+      border: none;
+    }
   }
 div#shop-hcaptcha-badge-container {
     display: none;
