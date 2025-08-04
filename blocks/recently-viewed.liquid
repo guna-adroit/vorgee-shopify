@@ -25,9 +25,8 @@
   }
 
   .ai-recently-viewed-container-{{ ai_gen_id }} {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    /* max-width: calc(100vw - 68px); */
+    /* margin: 0 auto; */
   }
 
   .ai-recently-viewed-header-{{ ai_gen_id }} {
@@ -144,7 +143,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: {{ block.settings.nav_button_color }};
-    border: none;
+    border: 1px solid #ccc;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -168,11 +167,11 @@
   }
 
   .ai-recently-viewed-nav-prev-{{ ai_gen_id }} {
-    left: -20px;
+    left: 0px;
   }
 
   .ai-recently-viewed-nav-next-{{ ai_gen_id }} {
-    right: -20px;
+    left: 66%;
   }
 
   .ai-recently-viewed-nav-{{ ai_gen_id }} svg {
@@ -242,9 +241,11 @@
         aria-label="Previous products"
         disabled
       >
-        <svg viewBox="0 0 24 24">
-          <path d="M15 18l-6-6 6-6"/>
+
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.28581 1L1.61914 8.66667L9.28581 16.3333" stroke="#07BED4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+
       </button>
 
       <div class="ai-recently-viewed-slider-{{ ai_gen_id }}">
@@ -254,9 +255,11 @@
         class="ai-recently-viewed-nav-{{ ai_gen_id }} ai-recently-viewed-nav-next-{{ ai_gen_id }}"
         aria-label="Next products"
       >
-        <svg viewBox="0 0 24 24">
-          <path d="M9 18l6-6-6-6"/>
+        
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.71419 17L9.38086 9.33333L1.71419 1.66667" stroke="#07BED4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+ 
       </button>
     </div>
   </div>
@@ -387,12 +390,13 @@
           option.name.toLowerCase().includes('color') || 
           option.name.toLowerCase().includes('colour')
         );
-
+        console.log(product);
+        const productUrl = `products/${product.handle}`;
         if (!colorOption || !colorOption.values) return '';
-
         const swatches = colorOption.values.slice(0, 5).map(color => {
           const colorValue = this.getColorValue(color);
-          return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};" title="${color}"></div>`;
+          const trimmedcolor = color.toLowerCase().trim().replace(/ /g,'');
+          return `<a href="../${productUrl}"><div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};background: ${trimmedcolor};" title="${color}"></div></a>`;
         }).join('');
 
         return `<div class="ai-recently-viewed-swatches-{{ ai_gen_id }}">${swatches}</div>`;
@@ -402,6 +406,7 @@
         const colorMap = {
           'black': '#000000',
           'white': '#ffffff',
+          'lightblue': '#72c0f5',
           'red': '#ff0000',
           'blue': '#0000ff',
           'green': '#008000',
@@ -417,7 +422,11 @@
         };
 
         const normalizedColor = colorName.toLowerCase().trim();
-        return colorMap[normalizedColor] || '#cccccc';
+        for (const key in colorMap) {
+          if (normalizedColor.includes(key)) {
+            return colorMap[key] || '#000000';
+          }
+        }
       }
 
       formatPrice(priceInCents) {
