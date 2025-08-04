@@ -765,5 +765,11 @@ quantity-selector-component.quantity-selector{
     margin-bottom: 22px;
   }
 }
+
+@media screen and (max-width: 428px) {
+    .variant-option--equal-width-buttons {
+        grid-template-columns: auto auto auto;;
+    }
+}
 /* PDP CSS End */
 
