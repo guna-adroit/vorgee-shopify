@@ -280,7 +280,7 @@ search-button.search-action{
   padding: 0 15px;
 }
 .menu-drawer__inner-submenu .menu-drawer__menu-item{
-  padding: 0;
+  padding-left: 0;
 }
 .menu-drawer__menu-item-text {
     font-weight: 600;
