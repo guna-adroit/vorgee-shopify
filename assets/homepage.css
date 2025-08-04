@@ -272,8 +272,12 @@ search-button.search-action{
   line-height: 32px;
   color: white;
 }
+.menu-drawer__menu{
+  padding: 0;
+}
 .menu-drawer__menu-item{
   border-top: 1px solid #F6F6F6;
+  padding: 0 15px;
 }
 .menu-drawer__menu-item-text {
     font-weight: 600;
