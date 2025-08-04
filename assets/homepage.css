@@ -689,6 +689,9 @@ quantity-selector-component.quantity-selector{
 .variant-picker__form{
   gap: 30px;
 }
+.product-recommendations product-card{
+  z-index: -1;
+}
 
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
