@@ -315,6 +315,7 @@
                 },
                 "accordion_row_yPtYiX": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Size Chart",
                     "open_by_default": false,
@@ -366,7 +367,7 @@
                     "text_94dFtJ": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                        "text": "{{ closest.product.metafields.custom.specification | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
