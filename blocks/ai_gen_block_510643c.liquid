@@ -62,6 +62,8 @@
       font-size: {{ block.settings.font_size | minus: 4 }}px;
       padding: 8px 16px;
     }
+    .button-{{ ai_gen_id }} {
+      min-width: {{ block.settings.min_width | divided_by: 2 }}px;
   }
 {% endstyle %}
 
