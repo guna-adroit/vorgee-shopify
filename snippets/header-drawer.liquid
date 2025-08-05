@@ -583,7 +583,7 @@
 
                             {% else %}
                               
-                              {% unless link.handle == link.title %}
+                              {% unless link.handle | downcase == link.title | downcase  %}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
                                 href="{{ link.url }}"
