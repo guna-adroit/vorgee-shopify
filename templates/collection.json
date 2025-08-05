@@ -48,7 +48,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "custom_classes": "",
+            "custom_classes": "banner-collection-description",
             "type_preset": "rte",
             "font": "var(--font-primary--family)",
             "font_size": "",
