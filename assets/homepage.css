@@ -708,6 +708,11 @@ fieldset.size-option legend{
     width: 100%;
     justify-content: space-between;
 }
+fieldset.size-option legend .size-option-button{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
