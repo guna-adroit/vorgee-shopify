@@ -581,6 +581,7 @@
                               {% comment %} Custom code end {% endcomment %}
 
                             {% else %}
+                              {% unless link.handle == link.title %}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
                                 href="{{ link.url }}"
@@ -591,6 +592,7 @@
                               >
                                 <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
                               </a>
+                              {% endunless %}
                             {% endif %}
                           {%- endfor -%}
                         </ul>
@@ -643,7 +645,7 @@
                   {%- comment -%}
                     Simple links for links with no children (regardless of accordion setting), in menus with 3 levels of links
                   {%- endcomment -%}
-                   {% unless link.handle == link.title %}
+                   
                   <a
                     id="HeaderDrawer-{{ link.handle }}"
                     href="{{ link.url }}"
@@ -654,7 +656,7 @@
                   >
                     <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
                   </a>
-                  {% endunless %}
+                  
                 {%- endif -%}
               </li>
             {%- endfor -%}
