@@ -4300,6 +4300,11 @@ span.facets__summary.filter-label {
 .collection-template .text-block.capitalize,.collection-template .capitalize p {
     text-transform: capitalize;
 }
+h2[class*="ai-recently-viewed-title"] {
+    font-size: 44px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
     display: block;
