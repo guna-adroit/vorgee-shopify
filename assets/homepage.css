@@ -702,7 +702,12 @@ quantity-selector-component.quantity-selector{
 .product-recommendations product-card{
   z-index: -1;
 }
-
+fieldset.size-option legend{
+     display: inline-flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
