@@ -57,6 +57,9 @@
           >
             <legend>
               {{ product_option.name | escape -}}
+              {% if product_option.name == 'Size' %}
+                Size-
+              {% endif %}
               {%- if variant_style == 'swatch' -%}
                 :<span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
               {%- endif %}
