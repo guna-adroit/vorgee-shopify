@@ -4342,6 +4342,14 @@ h2[class*="ai-recently-viewed-title"] {
     grid-row: auto / auto;
     padding-inline: var(--page-margin);
   }
+  .collection-template .custom-section-content .text-block.h2 p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .banner-collection-description p {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
     height: 100%;
