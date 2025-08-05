@@ -475,6 +475,7 @@
                                   {%- comment -%}
                                     Flat menus for links with children, in menus with 3 levels of links
                                   {%- endcomment -%}
+                                   {% if link.handle == link.title %} {{ link.title }} {% endif %}
                                   <a
                                     id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
                                     href="{{ childlink.url }}"
