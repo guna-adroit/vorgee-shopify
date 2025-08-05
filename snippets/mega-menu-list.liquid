@@ -57,6 +57,8 @@
   style="--menu-image-border-radius: {{ image_border_radius }}px;"
 >
   {% for link in parent_link.links %}
+    {% unless link.title == 'Swimwear' %}
+  
     {% liquid
       # Decide whether to open a column span, and how many columns of the grid to span
       if forloop.first or open_column_span == false
@@ -144,7 +146,9 @@
         echo '</li>'
       endif
     %}
+    {% endunless %}
   {% endfor %}
+  
 </ul>
 
 {% liquid
