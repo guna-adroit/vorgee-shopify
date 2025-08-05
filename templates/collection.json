@@ -171,7 +171,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "custom_classes": "",
+            "custom_classes": "uppercase",
             "type_preset": "h3",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
