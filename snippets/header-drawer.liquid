@@ -106,7 +106,7 @@
                       id="Details-menu-drawer-{{ link.handle }}"
                       {{ accordion_state }}
                     >
-                      <summary
+                      <summary 
                         id="HeaderDrawer-{{ link.handle }}"
                         class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset"
                       >
@@ -163,7 +163,7 @@
                   <a
                     id="HeaderDrawer-{{ link.handle }}"
                     href="{{ link.url }}"
-                    class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                    class="custom menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
                     {% if link.current %}
                       aria-current="page"
                     {% endif %}
@@ -475,7 +475,7 @@
                                   {%- comment -%}
                                     Flat menus for links with children, in menus with 3 levels of links
                                   {%- endcomment -%}
-                                   {% if link.handle == link.title %} {{ link.title }} {% endif %}
+                                   
                                   <a
                                     id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
                                     href="{{ childlink.url }}"
