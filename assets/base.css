@@ -4295,7 +4295,7 @@ span.facets__summary.filter-label {
 .collection-template .text-block.uppercase {
     text-transform: uppercase;
 }
-.collection-template .text-block.capitalize, .capitalize p {
+.collection-template .text-block.capitalize,.collection-template .capitalize p {
     text-transform: capitalize;
 }
 @media screen and (max-width: 749px) {
