@@ -582,8 +582,8 @@
                               {% comment %} Custom code end {% endcomment %}
 
                             {% else %}
-                              
-                              {% unless link.handle | downcase == link.title | downcase  %}
+                              {% assign link_title = link.title %}
+                              {% unless link.handle == link_title  %}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
                                 href="{{ link.url }}"
