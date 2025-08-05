@@ -581,7 +581,7 @@
                               {% comment %} Custom code end {% endcomment %}
 
                             {% else %}
-                              {% unless link.handle == link.title %}
+                              {% if link.handle == link.title %} {{ link.title }} {% endif %}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
                                 href="{{ link.url }}"
@@ -592,7 +592,7 @@
                               >
                                 <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
                               </a>
-                              {% endunless %}
+                              
                             {% endif %}
                           {%- endfor -%}
                         </ul>
