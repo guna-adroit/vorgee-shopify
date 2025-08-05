@@ -4290,6 +4290,9 @@ span.facets__summary.filter-label {
 .uppercase {
     text-transform: uppercase;
 }
+.capitalize, .capitalize p {
+    text-transform: capitalize;
+}
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
     display: block;
