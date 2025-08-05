@@ -313,6 +313,9 @@ font-weight: 300;
 font-size: 18px;
 line-height: 28px;
 }
+.menu-drawer__menu-container--divider{
+  border-block-end: none;
+}
 .text-banner-heading-hero h2{
   font-weight: 600 !important;
   font-size: 60px !important;
