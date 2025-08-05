@@ -4204,11 +4204,11 @@ span.cart-drawer__heading.h3{
   transform: none;
   box-shadow: none;
 }
-.custom-section-content .text-block.h2 p{
+.collection-template .custom-section-content .text-block.h2 p{
   text-transform: uppercase;
   font-size: 44px;
 }
-.banner-collection-description{
+.banner-collection-description p{
   font-size: 18px;
   line-height: 28px;
 }
