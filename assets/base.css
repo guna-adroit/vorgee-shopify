@@ -4292,8 +4292,10 @@ span.facets__summary.filter-label {
 .button.button.quick-add__button.quick-add__button--add:hover {
     background-color: #06b5d2;
 }
-.collection-template .text-block.uppercase {
+.collection-template .text-block.uppercase p{
     text-transform: uppercase;
+    font-size: 30px;
+    line-height: 32px;
 }
 .collection-template .text-block.capitalize,.collection-template .capitalize p {
     text-transform: capitalize;
