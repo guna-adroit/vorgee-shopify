@@ -703,7 +703,7 @@ quantity-selector-component.quantity-selector{
   z-index: -1;
 }
 fieldset.size-option legend{
-     display: inline-flex;
+    display: inline-flex;
     gap: 20px;
     width: 100%;
     justify-content: space-between;
