@@ -582,8 +582,8 @@
                               {% comment %} Custom code end {% endcomment %}
 
                             {% else %}
-                              
-                              {% unless link.title == 'SWIMWEAR'  %}
+                              {% assign link_title = link.title | downcase %}
+                              {% unless link_title == link.handle  %}
                                 {{ link.title }}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
