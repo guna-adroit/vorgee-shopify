@@ -4287,6 +4287,9 @@ span.facets__summary.filter-label {
 .button.button.quick-add__button.quick-add__button--add:hover {
     background-color: #06b5d2;
 }
+.uppercase {
+    text-transform: uppercase;
+}
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
     display: block;
