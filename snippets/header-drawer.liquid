@@ -643,7 +643,7 @@
                   {%- comment -%}
                     Simple links for links with no children (regardless of accordion setting), in menus with 3 levels of links
                   {%- endcomment -%}
-                   {% if link.handle == link.title %}
+                   {% unless link.handle == link.title %}
                   <a
                     id="HeaderDrawer-{{ link.handle }}"
                     href="{{ link.url }}"
@@ -654,7 +654,7 @@
                   >
                     <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
                   </a>
-                  {% endif %}
+                  {% endunless %}
                 {%- endif -%}
               </li>
             {%- endfor -%}
