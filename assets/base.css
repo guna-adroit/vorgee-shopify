@@ -4363,7 +4363,7 @@ h2[class*="ai-recently-viewed-title"] {
     line-height: 40px;
   }
   .facets-toggle {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
   .spacing-style.h3.uppercase {
     padding-bottom: 16px;
