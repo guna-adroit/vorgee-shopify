@@ -4289,7 +4289,8 @@ span.facets__summary.filter-label {
     font-weight: 600;
     color: #000;
 }
-.button.button.quick-add__button.quick-add__button--add:hover {
+.button.quick-add__button.quick-add__button--add:hover,
+.button.quick-add__button.quick-add__button--choose:hover {
     background-color: #06b5d2;
 }
 .collection-template .text-block.uppercase p{
@@ -4304,6 +4305,10 @@ h2[class*="ai-recently-viewed-title"] {
     font-size: 44px;
     line-height: 54px;
     text-transform: uppercase;
+    margin-top: 40px;
+}
+button.swiper-button-prev {
+    left: 0;
 }
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
@@ -4349,6 +4354,10 @@ h2[class*="ai-recently-viewed-title"] {
   .banner-collection-description p {
     font-size: 14px;
     line-height: 22px;
+  }
+  h2[class*=ai-recently-viewed-title]{ 
+    font-size: 30px;
+    line-height: 40px;
   }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
