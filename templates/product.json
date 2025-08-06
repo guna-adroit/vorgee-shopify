@@ -753,9 +753,7 @@
         "recently_viewed_ifLddi",
         "recently_viewed_MXc9tX"
       ],
-      "custom_css": [
-        "{display: none;}"
-      ],
+      "custom_css": [],
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
