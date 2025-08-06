@@ -754,7 +754,7 @@
         "recently_viewed_MXc9tX"
       ],
       "custom_css": [
-        "* {display: none;}"
+        "{display: none;}"
       ],
       "name": "t:names.custom_section",
       "settings": {
