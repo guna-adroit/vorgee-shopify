@@ -4353,6 +4353,10 @@ h2[class*="ai-recently-viewed-title"] {
     font-size: 14px;
     line-height: 22px;
   }
+  h2[class*=ai-recently-viewed-title]{ 
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
     height: 100%;
