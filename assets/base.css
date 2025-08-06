@@ -4281,6 +4281,7 @@ span.cart-drawer__heading.h3{
 }
 .product-card .text-block p, .product-card .text-block div[ref="priceContainer"] {
     font-size: 18px;
+    line-height: 28px;
 }
 .product-card .product-media {
     padding: 45px;
@@ -4367,6 +4368,11 @@ h2[class*="ai-recently-viewed-title"] {
   }
   .spacing-style.h3.uppercase {
     padding-bottom: 16px;
+  }
+  .collection-template .product-card-title p, .collection-template  .product-card .text-block p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
