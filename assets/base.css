@@ -4365,6 +4365,8 @@ h2[class*="ai-recently-viewed-title"] {
   }
   .facets-toggle {
     padding-top: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
   .spacing-style.h3.uppercase {
     padding-bottom: 16px;
@@ -4373,6 +4375,9 @@ h2[class*="ai-recently-viewed-title"] {
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
+  }
+  .header__columns.spacing-style {
+    padding-right: 20px;
   }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
