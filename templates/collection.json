@@ -347,6 +347,20 @@
                   },
                   "blocks": {}
                 },
+                "swatches_xWhL7M": {
+                  "type": "swatches",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product_swatches_alignment": "flex-start",
+                    "product_swatches_alignment_mobile": "flex-start",
+                    "hide_padding": false,
+                    "product_swatches_padding_top": 4,
+                    "product_swatches_padding_bottom": 0,
+                    "product_swatches_padding_left": 0,
+                    "product_swatches_padding_right": 0
+                  },
+                  "blocks": {}
+                },
                 "price": {
                   "type": "price",
                   "settings": {
@@ -369,26 +383,12 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "swatches_xWhL7M": {
-                  "type": "swatches",
-                  "name": "t:names.swatches",
-                  "settings": {
-                    "product_swatches_alignment": "flex-start",
-                    "product_swatches_alignment_mobile": "flex-start",
-                    "hide_padding": false,
-                    "product_swatches_padding_top": 4,
-                    "product_swatches_padding_bottom": 0,
-                    "product_swatches_padding_left": 0,
-                    "product_swatches_padding_right": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_3QjUff",
-                "price",
-                "swatches_xWhL7M"
+                "swatches_xWhL7M",
+                "price"
               ]
             }
           },
@@ -686,21 +686,19 @@
           "name": "Recently Viewed Products",
           "settings": {
             "heading": "Recently Viewed",
-            "max_products": 10,
-            "show_swatches": true,
             "heading_alignment": "left",
-            "section_padding": 40,
-            "card_border_radius": 8,
-            "background_color": "#fafafa",
+            "empty_message": "No recently viewed products",
+            "max_products": 10,
+            "heading_size": 32,
             "heading_color": "#000000",
-            "card_background": "#ffffff",
             "text_color": "#000000",
             "price_color": "#000000",
-            "link_hover_color": "#000f9f",
-            "nav_button_color": "#ffffff",
-            "nav_button_hover_color": "#f5f5f5",
+            "card_background": "#ffffff",
+            "card_border_color": "#e6e6e6",
+            "nav_background": "#ffffff",
+            "nav_hover_background": "#f5f5f5",
             "nav_icon_color": "#ffffff",
-            "heading_size": 32
+            "card_border_radius": 8
           },
           "blocks": {}
         }
