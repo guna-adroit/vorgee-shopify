@@ -1,96 +1,146 @@
 {% doc %}
   @prompt
-    Create a new section or block in the Horizon theme named "Recently viewed". It should be a responsive horizontal slider that displays a list of products recently viewed by the current user.
-    
     Functionality requirements:
-    - Use localStorage to track recently viewed product handles or IDs on the storefront.
-    - The block should retrieve these product handles and query them using Shopify’s `all_products` object or an AJAX call.
-    - Limit the slider to show a maximum of 10 recently viewed products.
-    - Use a swiper.js (or similar) implementation for horizontal sliding behavior.
-    - Include basic product information: product image, title, price, and link.
-    - Please use the existing product card styling with swatch circles if present. 
-    - Make sure it supports both mobile and desktop views.
-    - Only show the slider if there is at least 1 recently viewed products.
-    - Compatible with Online Store 2.0 block system and editable from the theme customizer.
+    Use localStorage to track recently viewed product handles or IDs on the storefront.
     
-    Use clean, semantic Liquid and JavaScript. Ensure the section has a `schema` for configurability.
+    
+    
+    The block should retrieve these product handles and query them using Shopify’s all_products object or an AJAX call.
+    Limit the slider to show a maximum of 10 recently viewed products.
+    A SLIDER SHOULD BE IMPLEMENTED for horizontal sliding behaviour and it need to have gesture controls. USE OF SWIPER SLIDER IS PREFFERED. It needs to be extremely smooth and responsive
+    
+    The product card should be strictly having the dimension of the "Product card" from the Collection. Also include the exact swatch circle and hover behaviour. THE SIZE SHOULD NOT BE SCALED
+    
+    
+    
+    Layout and styling fixes:
+    The slider should behave like a proper responsive Swiper instance:
+    On desktop, show 4 products per view, and on mobile, show 2 products per view.
+    
+    
+    
+    Fix the following UI issues:
+    On desktop, the products are currently listed side-by-side and overflowing the page. Fix this so they are contained within a Swiper slider and the page does not scroll horizontally.
+    
+    
+    
+    On mobile, the swipe/drag gesture should  work. Enable proper touch interaction using Swiper.js. On desktop, enable mouse drag/swipe as well as navigation arrows.
+    
+    
+    
+    Ensure the .swiper-wrapper and .swiper-slide are correctly structured and styled to prevent overflow or layout breaking.
+    
+    
+    
+    Wrap the section in a container with overflow-x: hidden to prevent horizontal scroll on the overall page layout.
+    
+    
+    
+    Additional requirements:
+    
+    
+    
+    Include basic product information: product image, title, price, and link.
+    
+    
+    Only show the slider if at least 1 recently viewed product is available.
+    This slider is rendered on the collection (PLP) page, so make sure tracking logic is in place when the user views a product
 
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
   .ai-recently-viewed-{{ ai_gen_id }} {
-    padding: {{ block.settings.section_padding }}px 0;
-    background-color: {{ block.settings.background_color }};
+    width: 100%;
+    overflow-x: hidden;
+    padding: 20px 0;
   }
 
   .ai-recently-viewed-container-{{ ai_gen_id }} {
-    /* max-width: calc(100vw - 68px); */
-    /* margin: 0 auto; */
+    {% comment %} max-width: 1200px; {% endcomment %}
+    margin: 0 auto;
+    {% comment %} padding: 0 20px; {% endcomment %}
   }
 
   .ai-recently-viewed-header-{{ ai_gen_id }} {
-    margin-bottom: 32px;
-    text-align: {{ block.settings.heading_alignment }};
+    margin-bottom: 18px;
   }
 
   .ai-recently-viewed-title-{{ ai_gen_id }} {
-    color: {{ block.settings.heading_color }};
     font-size: {{ block.settings.heading_size }}px;
-    margin: 0;}
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    text-align: {{ block.settings.heading_alignment }};
+  }
 
-  .ai-recently-viewed-slider-wrapper-{{ ai_gen_id }} {
+  .ai-recently-viewed-swiper-{{ ai_gen_id }} {
     position: relative;
     overflow: hidden;
+    margin: 0 -10px;
   }
 
-  .ai-recently-viewed-slider-{{ ai_gen_id }} {
+  .ai-recently-viewed-swiper-{{ ai_gen_id }} .swiper-wrapper {
     display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease;
-    will-change: transform;
+    align-items: stretch;
   }
 
-  .ai-recently-viewed-slide-{{ ai_gen_id }} {
-    flex: 0 0 auto;
-    width: calc((100% - 60px) / 4);
-    min-width: 250px;
+  .ai-recently-viewed-swiper-{{ ai_gen_id }} .swiper-slide {
+    height: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
-  .ai-recently-viewed-product-card-{{ ai_gen_id }} {
-    background: {{ block.settings.card_background }};
+  .ai-recently-viewed-card-{{ ai_gen_id }} {
+    position: relative;
     border-radius: {{ block.settings.card_border_radius }}px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .ai-recently-viewed-product-card-{{ ai_gen_id }}:hover {
+  .ai-recently-viewed-card-{{ ai_gen_id }}:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
 
-  .ai-recently-viewed-product-image-{{ ai_gen_id }} {
+  .ai-recently-viewed-image-container-{{ ai_gen_id }} {
+    background: {{ block.settings.card_background }};
+    border: 1px solid {{ block.settings.card_border_color }};
     position: relative;
     width: 100%;
     aspect-ratio: 1;
     overflow: hidden;
   }
 
-  .ai-recently-viewed-product-image-{{ ai_gen_id }} img {
+  .ai-recently-viewed-image-{{ ai_gen_id }} {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
 
-  .ai-recently-viewed-product-card-{{ ai_gen_id }}:hover .ai-recently-viewed-product-image-{{ ai_gen_id }} img {
+  .ai-recently-viewed-card-{{ ai_gen_id }}:hover .ai-recently-viewed-image-{{ ai_gen_id }} {
     transform: scale(1.05);
   }
 
-  .ai-recently-viewed-product-info-{{ ai_gen_id }} {
+  .ai-recently-viewed-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-recently-viewed-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.5;
+  }
+
+  .ai-recently-viewed-content-{{ ai_gen_id }} {
     padding: 16px;
     flex-grow: 1;
     display: flex;
@@ -98,35 +148,35 @@
   }
 
   .ai-recently-viewed-product-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 100;
     color: {{ block.settings.text_color }};
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0 0 8px;
-    line-height: 1.3;
-    text-decoration: none;
+    margin: 0 0 4px;
+    line-height: 28px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  .ai-recently-viewed-product-title-{{ ai_gen_id }}:hover {
-    color: {{ block.settings.link_hover_color }};
-  }
-
-  .ai-recently-viewed-product-price-{{ ai_gen_id }} {
-    color: {{ block.settings.price_color }};
+  .ai-recently-viewed-price-{{ ai_gen_id }} {
     font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 12px;
+    line-height:28px;
+    font-weight: 500;
+    color: {{ block.settings.price_color }};
+    margin-top: 8px;
   }
 
-  .ai-recently-viewed-swatches-{{ ai_gen_id }} {
+  .ai-recently-viewed-variants-{{ ai_gen_id }} {
     display: flex;
     gap: 6px;
+    margin-top: 8px;
     flex-wrap: wrap;
-    margin-top: auto;
   }
 
   .ai-recently-viewed-swatch-{{ ai_gen_id }} {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid #fff;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -142,84 +192,99 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: {{ block.settings.nav_button_color }};
-    border: 1px solid #ccc;
+    z-index: 10;
+    background: {{ block.settings.nav_background }};
+    border: none;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
-    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .ai-recently-viewed-nav-{{ ai_gen_id }}:hover {
-    opacity: 1;
-    background: {{ block.settings.nav_button_hover_color }};
+    background: {{ block.settings.nav_hover_background }};
+    transform: translateY(-50%) scale(1.1);
   }
 
   .ai-recently-viewed-nav-{{ ai_gen_id }}:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+    transform: translateY(-50%) scale(1);
   }
 
   .ai-recently-viewed-nav-prev-{{ ai_gen_id }} {
-    left: 0px;
+    left: -20px;
   }
 
   .ai-recently-viewed-nav-next-{{ ai_gen_id }} {
-    left: 66%;
+    right: -20px;
   }
 
   .ai-recently-viewed-nav-{{ ai_gen_id }} svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     fill: {{ block.settings.nav_icon_color }};
   }
 
-  .ai-recently-viewed-placeholder-{{ ai_gen_id }} {
-    width: 100%;
-    height: 100%;
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .ai-recently-viewed-empty-{{ ai_gen_id }} {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    color: {{ block.settings.text_color }};
   }
-
-  .ai-recently-viewed-placeholder-{{ ai_gen_id }} svg {
-    width: 60px;
-    height: 60px;
-    opacity: 0.3;
+  div[class*="ai-recently-viewed-container"] .swiper-button-next:after, div[class*="ai-recently-viewed-container"] .swiper-button-prev:after {
+    font-size: 16px;
+    color: #07BED4;
   }
-
-  @media screen and (max-width: 1024px) {
-    .ai-recently-viewed-slide-{{ ai_gen_id }} {
-      width: calc((100% - 40px) / 3);
-    }
+  div[class*="ai-recently-viewed-container"] .swiper-button-next, div[class*="ai-recently-viewed-container"] .swiper-button-prev {
+    width: 46px;
+    height: 46px;
   }
-
-  @media screen and (max-width: 768px) {
-    .ai-recently-viewed-slide-{{ ai_gen_id }} {
-      width: calc((100% - 20px) / 2);
-      min-width: 160px;
-    }
-
+  @media screen and (max-width: 749px) {
     .ai-recently-viewed-container-{{ ai_gen_id }} {
-      padding: 0 16px;
+      {% comment %} padding: 0 15px; {% endcomment %}
+    }
+
+    .ai-recently-viewed-swiper-{{ ai_gen_id }} {
+      margin: 0 -5px;
+    }
+
+    .ai-recently-viewed-swiper-{{ ai_gen_id }} .swiper-slide {
+      padding: 0 5px;
     }
 
     .ai-recently-viewed-nav-{{ ai_gen_id }} {
       display: none;
     }
-  }
 
-  @media screen and (max-width: 480px) {
-    .ai-recently-viewed-slide-{{ ai_gen_id }} {
-      width: calc(100% - 20px);
-      min-width: 200px;
+    .ai-recently-viewed-content-{{ ai_gen_id }} {
+      padding: 12px;
+    }
+
+    .ai-recently-viewed-product-title-{{ ai_gen_id }} {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .ai-recently-viewed-price-{{ ai_gen_id }} {
+      font-size: 14px;
+    }
+    div[class*="ai-recently-viewed-container"] .swiper-button-next, div[class*="ai-recently-viewed-container"] .swiper-button-prev {
+      width: 28px;
+      height: 28px;
+    }
+    div[class*="ai-recently-viewed-container"] .swiper-button-next:after, div[class*="ai-recently-viewed-container"] .swiper-button-prev:after {
+      font-size: 10px;
+      color: #07BED4;
+    }
+    .ai-recently-viewed-swatch-{{ ai_gen_id }} {
+      width: 14px;
+      height: 14px;
     }
   }
 {% endstyle %}
@@ -227,43 +292,34 @@
 <recently-viewed-products-{{ ai_gen_id }}
   class="ai-recently-viewed-{{ ai_gen_id }}"
   data-max-products="{{ block.settings.max_products }}"
-  data-show-swatches="{{ block.settings.show_swatches }}"
   {{ block.shopify_attributes }}
 >
   <div class="ai-recently-viewed-container-{{ ai_gen_id }}">
-    <div class="ai-recently-viewed-header-{{ ai_gen_id }}">
-      <h2 class="ai-recently-viewed-title-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
-    </div>
+    {% if block.settings.heading != blank %}
+      <div class="ai-recently-viewed-header-{{ ai_gen_id }}">
+        <h2 class="ai-recently-viewed-title-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+      </div>
+    {% endif %}
 
-    <div class="ai-recently-viewed-slider-wrapper-{{ ai_gen_id }}">
-      <button
-        class="ai-recently-viewed-nav-{{ ai_gen_id }} ai-recently-viewed-nav-prev-{{ ai_gen_id }}"
-        aria-label="Previous products"
-        disabled
-      >
-
-        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.28581 1L1.61914 8.66667L9.28581 16.3333" stroke="#07BED4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-
-      </button>
-
-      <div class="ai-recently-viewed-slider-{{ ai_gen_id }}">
+    <div class="ai-recently-viewed-swiper-{{ ai_gen_id }} swiper">
+      <div class="swiper-wrapper">
       </div>
 
-      <button
-        class="ai-recently-viewed-nav-{{ ai_gen_id }} ai-recently-viewed-nav-next-{{ ai_gen_id }}"
-        aria-label="Next products"
-      >
-        
-        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.71419 17L9.38086 9.33333L1.71419 1.66667" stroke="#07BED4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
- 
+      <button class="ai-recently-viewed-nav-{{ ai_gen_id }} ai-recently-viewed-nav-prev-{{ ai_gen_id }} swiper-button-prev" aria-label="Previous products">
       </button>
+
+      <button class="ai-recently-viewed-nav-{{ ai_gen_id }} ai-recently-viewed-nav-next-{{ ai_gen_id }} swiper-button-next" aria-label="Next products">
+      </button>
+    </div>
+
+    <div class="ai-recently-viewed-empty-{{ ai_gen_id }}">
+      <p>{{ block.settings.empty_message }}</p>
     </div>
   </div>
 </recently-viewed-products-{{ ai_gen_id }}>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <script>
   (function() {
@@ -271,51 +327,39 @@
       constructor() {
         super();
         this.maxProducts = parseInt(this.dataset.maxProducts) || 10;
-        this.showSwatches = this.dataset.showSwatches === 'true';
-        this.currentIndex = 0;
-        this.slideWidth = 0;
-        this.visibleSlides = 4;
+        this.storageKey = 'recently_viewed_products';
+        this.swiper = null;
       }
 
       connectedCallback() {
-        this.slider = this.querySelector('.ai-recently-viewed-slider-{{ ai_gen_id }}');
-        this.prevBtn = this.querySelector('.ai-recently-viewed-nav-prev-{{ ai_gen_id }}');
-        this.nextBtn = this.querySelector('.ai-recently-viewed-nav-next-{{ ai_gen_id }}');
-
-        this.setupEventListeners();
-        this.loadRecentlyViewed();
         this.trackCurrentProduct();
-      }
-
-      setupEventListeners() {
-        this.prevBtn.addEventListener('click', () => this.slidePrev());
-        this.nextBtn.addEventListener('click', () => this.slideNext());
-        
-        window.addEventListener('resize', () => this.updateSlideWidth());
+        this.loadRecentlyViewed();
       }
 
       trackCurrentProduct() {
         if (window.location.pathname.includes('/products/')) {
           const productHandle = window.location.pathname.split('/products/')[1].split('?')[0];
-          this.addToRecentlyViewed(productHandle);
+          if (productHandle) {
+            this.addToRecentlyViewed(productHandle);
+          }
         }
       }
 
       addToRecentlyViewed(productHandle) {
-        let recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+        let recentlyViewed = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
         
         recentlyViewed = recentlyViewed.filter(handle => handle !== productHandle);
         recentlyViewed.unshift(productHandle);
         recentlyViewed = recentlyViewed.slice(0, this.maxProducts);
         
-        localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+        localStorage.setItem(this.storageKey, JSON.stringify(recentlyViewed));
       }
 
       async loadRecentlyViewed() {
-        const recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+        const recentlyViewed = JSON.parse(localStorage.getItem(this.storageKey) || '[]');
         
         if (recentlyViewed.length === 0) {
-          this.style.display = 'none';
+          this.showEmptyState();
           return;
         }
 
@@ -323,170 +367,160 @@
           ? window.location.pathname.split('/products/')[1].split('?')[0] 
           : null;
 
-        const filteredProducts = recentlyViewed.filter(handle => handle !== currentProductHandle);
+        const filteredHandles = recentlyViewed.filter(handle => handle !== currentProductHandle);
 
-        if (filteredProducts.length === 0) {
-          this.style.display = 'none';
+        if (filteredHandles.length === 0) {
+          this.showEmptyState();
           return;
         }
 
         try {
-          const products = await this.fetchProducts(filteredProducts);
+          const products = await this.fetchProducts(filteredHandles);
           this.renderProducts(products);
-          this.updateSlideWidth();
-          this.updateNavigation();
+          this.initSwiper();
         } catch (error) {
-          console.error('Failed to load recently viewed products:', error);
-          this.style.display = 'none';
+          console.error('Error loading recently viewed products:', error);
+          this.showEmptyState();
         }
       }
 
       async fetchProducts(handles) {
-        const promises = handles.map(handle => 
-          fetch(`/products/${handle}.js`)
-            .then(response => response.ok ? response.json() : null)
-            .catch(() => null)
-        );
-
-        const results = await Promise.all(promises);
-        return results.filter(product => product !== null);
+        const products = [];
+        
+        for (const handle of handles) {
+          try {
+            const response = await fetch(`/products/${handle}.js`);
+            if (response.ok) {
+              const product = await response.json();
+              products.push(product);
+            }
+          } catch (error) {
+            console.error(`Error fetching product ${handle}:`, error);
+          }
+        }
+        
+        return products;
       }
 
       renderProducts(products) {
-        this.slider.innerHTML = products.map(product => this.createProductCard(product)).join('');
+        const wrapper = this.querySelector('.swiper-wrapper');
+        wrapper.innerHTML = '';
+
+        products.forEach(product => {
+          const slide = this.createProductSlide(product);
+          wrapper.appendChild(slide);
+        });
+
+        this.style.display = 'block';
       }
 
-      createProductCard(product) {
-        const featuredImage = product.featured_image || product.images[0];
-        const imageUrl = featuredImage ? featuredImage.replace('.jpg', '_300x300.jpg').replace('.png', '_300x300.png') : '';
-        
-        const swatchesHtml = this.showSwatches && product.options ? this.createSwatches(product) : '';
+      createProductSlide(product) {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
 
-        return `
-          <div class="ai-recently-viewed-slide-{{ ai_gen_id }}">
-            <div class="ai-recently-viewed-product-card-{{ ai_gen_id }}">
-              <div class="ai-recently-viewed-product-image-{{ ai_gen_id }}">
-                ${imageUrl ? 
-                  `<img src="${imageUrl}" alt="${product.title}" loading="lazy" width="300" height="300">` :
-                  `<div class="ai-recently-viewed-placeholder-{{ ai_gen_id }}">${'{{ "image" | placeholder_svg_tag }}'}</div>`
-                }
-              </div>
-              <div class="ai-recently-viewed-product-info-{{ ai_gen_id }}">
-                <a href="/products/${product.handle}" class="ai-recently-viewed-product-title-{{ ai_gen_id }}">
-                  ${product.title}
-                </a>
-                <div class="ai-recently-viewed-product-price-{{ ai_gen_id }}">
-                  ${this.formatPrice(product.price)}
-                </div>
-                ${swatchesHtml}
-              </div>
-            </div>
-          </div>
-        `;
-      }
+        const featuredImage = product.featured_image;
+        const imageHtml = featuredImage 
+          ? `<img src="${featuredImage}" alt="${product.title}" class="ai-recently-viewed-image-{{ ai_gen_id }}" loading="lazy">`
+          : `<div class="ai-recently-viewed-placeholder-{{ ai_gen_id }}">${this.getPlaceholderSvg()}</div>`;
 
-      createSwatches(product) {
-        const colorOption = product.options.find(option => 
+        const colorOptions = product.options.find(option => 
           option.name.toLowerCase().includes('color') || 
           option.name.toLowerCase().includes('colour')
         );
-        console.log(product);
-        const productUrl = `products/${product.handle}`;
-        if (!colorOption || !colorOption.values) return '';
-        const swatches = colorOption.values.slice(0, 5).map(color => {
-          const colorValue = this.getColorValue(color);
-          const trimmedcolor = color.toLowerCase().trim().replace(/ /g,'');
-          return `<a href="../${productUrl}"><div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};background: ${trimmedcolor};" title="${color}"></div></a>`;
-        }).join('');
+        console.log("Product Object:",product)
+        let badgeHtml = '';
+        if (product.compare_at_price) {
+          badgeHtml = `<span class="badge product-badges__badge--rectangle product-badges__badge ai-recently-viewed-badge-{{ ai_gen_id }}">SALE</span>`;
+        } else {
+          badgeHtml = '';
+        }
+        let swatchesHtml = '';
+        if (colorOptions && colorOptions.values.length > 1) {
+          const swatches = colorOptions.values.slice(0, 5).map(color => {
+            const colorValue = this.getColorValue(color);
+            return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};" title="${color}"></div>`;
+          }).join('');
+          swatchesHtml = `<div class="ai-recently-viewed-variants-{{ ai_gen_id }}">${swatches}</div>`;
+        }
 
-        return `<div class="ai-recently-viewed-swatches-{{ ai_gen_id }}">${swatches}</div>`;
+        slide.innerHTML = `
+          <a href="/products/${product.handle}" class="ai-recently-viewed-card-{{ ai_gen_id }}">
+            <div class="ai-recently-viewed-image-container-{{ ai_gen_id }}">
+              ${imageHtml}
+              ${badgeHtml}
+            </div>
+            <div class="ai-recently-viewed-content-{{ ai_gen_id }}">
+              <h3 class="ai-recently-viewed-product-title-{{ ai_gen_id }}">${product.title}</h3>
+              ${swatchesHtml}
+              <div class="ai-recently-viewed-price-{{ ai_gen_id }}">${this.formatPrice(product.price)}</div>
+            </div>
+          </a>
+        `;
+
+        return slide;
       }
 
       getColorValue(colorName) {
         const colorMap = {
-          'black': '#000000',
-          'white': '#ffffff',
-          'lightblue': '#72c0f5',
-          'red': '#ff0000',
-          'blue': '#0000ff',
-          'green': '#008000',
-          'yellow': '#ffff00',
-          'pink': '#ffc0cb',
-          'purple': '#800080',
-          'orange': '#ffa500',
-          'brown': '#a52a2a',
-          'grey': '#808080',
-          'gray': '#808080',
-          'navy': '#000080',
-          'beige': '#f5f5dc'
+          'red': '#FF0000', 'blue': '#0000FF', 'green': '#008000', 'yellow': '#FFFF00',
+          'orange': '#FFA500', 'purple': '#800080', 'pink': '#FFC0CB', 'brown': '#A52A2A',
+          'black': '#000000', 'white': '#FFFFFF', 'gray': '#808080', 'grey': '#808080',
+          'navy': '#000080', 'beige': '#F5F5DC', 'tan': '#D2B48C', 'olive': '#808000'
         };
-
-        const normalizedColor = colorName.toLowerCase().trim();
-        for (const key in colorMap) {
-          if (normalizedColor.includes(key)) {
-            return colorMap[key] || '#000000';
-          }
-        }
+        
+        const lowerColor = colorName.toLowerCase();
+        return colorMap[lowerColor] || '#CCCCCC';
       }
 
       formatPrice(priceInCents) {
-        const price = priceInCents / 100;
         return new Intl.NumberFormat('en-US', {
           style: 'currency',
           currency: 'USD'
-        }).format(price);
+        }).format(priceInCents / 100);
       }
 
-      updateSlideWidth() {
-        const containerWidth = this.slider.parentElement.offsetWidth;
-        const gap = 20;
-        if (window.innerWidth <= 480) {
-          this.visibleSlides = 1;
-        } else if (window.innerWidth <= 768) {
-          this.visibleSlides = 2;
-        } else if (window.innerWidth <= 1024) {
-          this.visibleSlides = 3;
-        } else {
-          this.visibleSlides = 4;
+      getPlaceholderSvg() {
+        return `<svg viewBox="0 0 525 525" xmlns="http://www.w3.org/2000/svg">
+          <rect fill="#f4f4f4" width="100%" height="100%"/>
+          <rect fill="#e0e0e0" x="50" y="50" width="425" height="425"/>
+          <circle fill="#cccccc" cx="262.5" cy="210" r="50"/>
+          <rect fill="#cccccc" x="162.5" y="280" width="200" height="20" rx="10"/>
+          <rect fill="#cccccc" x="187.5" y="320" width="150" height="15" rx="7.5"/>
+        </svg>`;
+      }
+
+      initSwiper() {
+        if (this.swiper) {
+          this.swiper.destroy(true, true);
         }
 
-        this.slideWidth = (containerWidth - (gap * (this.visibleSlides - 1))) / this.visibleSlides;
+        const swiperElement = this.querySelector('.swiper');
         
-        const slides = this.slider.querySelectorAll('.ai-recently-viewed-slide-{{ ai_gen_id }}');
-        slides.forEach(slide => {
-          slide.style.width = `${this.slideWidth}px`;
+        this.swiper = new Swiper(swiperElement, {
+          slidesPerView: 2,
+          spaceBetween: 0,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.ai-recently-viewed-nav-next-{{ ai_gen_id }}',
+            prevEl: '.ai-recently-viewed-nav-prev-{{ ai_gen_id }}',
+          },
+          breakpoints: {
+            750: {
+              slidesPerView: 4.25,
+              spaceBetween: 0,
+            }
+          },
+          on: {
+            init: function() {
+              this.update();
+            }
+          }
         });
       }
 
-      slidePrev() {
-        if (this.currentIndex > 0) {
-          this.currentIndex--;
-          this.updateSliderPosition();
-          this.updateNavigation();
-        }
-      }
-
-      slideNext() {
-        const totalSlides = this.slider.children.length;
-        const maxIndex = Math.max(0, totalSlides - this.visibleSlides);
-        if (this.currentIndex < maxIndex) {
-          this.currentIndex++;
-          this.updateSliderPosition();
-          this.updateNavigation();
-        }
-      }
-
-      updateSliderPosition() {
-        const translateX = -(this.currentIndex * (this.slideWidth +20));
-        this.slider.style.transform = `translateX(${translateX}px)`;
-      }
-
-      updateNavigation() {
-        const totalSlides = this.slider.children.length;
-        const maxIndex = Math.max(0, totalSlides - this.visibleSlides);
-        
-        this.prevBtn.disabled = this.currentIndex === 0;
-        this.nextBtn.disabled = this.currentIndex >= maxIndex || totalSlides <= this.visibleSlides;
+      showEmptyState() {
+        this.querySelector('.ai-recently-viewed-swiper-{{ ai_gen_id }}').style.display = 'none';
+        this.querySelector('.ai-recently-viewed-empty-{{ ai_gen_id }}').style.display = 'block';
       }
     }
 
@@ -510,25 +544,6 @@
       "default": "Recently Viewed"
     },
     {
-      "type": "range",
-      "id": "max_products",
-      "min": 4,
-      "max": 20,
-      "step": 1,
-      "label": "Maximum products to track",
-      "default": 10
-    },
-    {
-      "type": "checkbox",
-      "id": "show_swatches",
-      "label": "Show color swatches",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Layout"
-    },
-    {
       "type": "select",
       "id": "heading_alignment",
       "label": "Heading alignment",
@@ -549,24 +564,33 @@
       "default": "left"
     },
     {
-      "type": "range",
-      "id": "section_padding",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Section padding",
-      "default": 40
+      "type": "text",
+      "id": "empty_message",
+      "label": "Empty state message",
+      "default": "No recently viewed products"
     },
     {
       "type": "range",
-      "id": "card_border_radius",
-      "min": 0,
-      "max": 20,
+      "id": "max_products",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": "Maximum products to track",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
       "step": 2,
       "unit": "px",
-      "label": "Card border radius",
-      "default": 8
+      "label": "Heading size",
+      "default": 24
     },
     {
       "type": "header",
@@ -574,21 +598,9 @@
     },
     {
       "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
       "id": "heading_color",
       "label": "Heading color",
       "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "card_background",
-      "label": "Card background",
-      "default": "#ffffff"
     },
     {
       "type": "color",
@@ -604,21 +616,31 @@
     },
     {
       "type": "color",
-      "id": "link_hover_color",
-      "label": "Link hover color",
-      "default": "#000f9f"
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#FFFFFF"
     },
     {
       "type": "color",
-      "id": "nav_button_color",
-      "label": "Navigation button color",
-      "default": "#ffffff"
+      "id": "card_border_color",
+      "label": "Card border color",
+      "default": "#E6E6E6"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
     },
     {
       "type": "color",
-      "id": "nav_button_hover_color",
-      "label": "Navigation button hover color",
-      "default": "#f5f5f5"
+      "id": "nav_background",
+      "label": "Navigation background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "nav_hover_background",
+      "label": "Navigation hover background",
+      "default": "#F5F5F5"
     },
     {
       "type": "color",
@@ -628,17 +650,17 @@
     },
     {
       "type": "header",
-      "content": "Typography"
+      "content": "Style"
     },
     {
       "type": "range",
-      "id": "heading_size",
-      "min": 16,
-      "max": 48,
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
       "step": 2,
       "unit": "px",
-      "label": "Heading size",
-      "default": 32
+      "label": "Card border radius",
+      "default": 8
     }
   ],
   "presets": [
