@@ -708,32 +708,53 @@
         "recently_viewed_ifLddi": {
           "type": "recently-viewed",
           "name": "Recently Viewed Products",
+          "disabled": true,
           "settings": {
             "heading": "Recently Viewed",
-            "max_products": 10,
-            "show_swatches": true,
             "heading_alignment": "left",
-            "section_padding": 40,
-            "card_border_radius": 8,
-            "background_color": "#ffffff",
+            "empty_message": "No recently viewed products",
+            "max_products": 10,
+            "heading_size": 32,
             "heading_color": "#000000",
-            "card_background": "#ffffff",
             "text_color": "#000000",
             "price_color": "#000000",
-            "link_hover_color": "#000f9f",
-            "nav_button_color": "#ffffff",
-            "nav_button_hover_color": "#f5f5f5",
+            "card_background": "#ffffff",
+            "card_border_color": "#e6e6e6",
+            "nav_background": "#ffffff",
+            "nav_hover_background": "#f5f5f5",
             "nav_icon_color": "#000000",
-            "heading_size": 32
+            "card_border_radius": 8
+          },
+          "blocks": {}
+        },
+        "recently_viewed_MXc9tX": {
+          "type": "recently-viewed",
+          "name": "Recently Viewed Products",
+          "settings": {
+            "heading": "Recently Viewed",
+            "heading_alignment": "left",
+            "empty_message": "No recently viewed products",
+            "max_products": 8,
+            "heading_size": 24,
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "price_color": "#000000",
+            "card_background": "#FFFFFF",
+            "card_border_color": "#E6E6E6",
+            "nav_background": "#FFFFFF",
+            "nav_hover_background": "#F5F5F5",
+            "nav_icon_color": "#000000",
+            "card_border_radius": 8
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "recently_viewed_ifLddi"
+        "recently_viewed_ifLddi",
+        "recently_viewed_MXc9tX"
       ],
       "custom_css": [
-        "* {display: none;}"
+        "*{display: none;}"
       ],
       "name": "t:names.custom_section",
       "settings": {

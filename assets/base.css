@@ -4290,8 +4290,7 @@ span.facets__summary.filter-label {
     font-weight: 600;
     color: #000;
 }
-.button.quick-add__button.quick-add__button--add:hover,
-.button.quick-add__button.quick-add__button--choose:hover {
+.button.button.quick-add__button.quick-add__button--add:hover {
     background-color: #06b5d2;
 }
 .collection-template .text-block.uppercase p{
@@ -4306,10 +4305,9 @@ h2[class*="ai-recently-viewed-title"] {
     font-size: 44px;
     line-height: 54px;
     text-transform: uppercase;
-    margin-top: 40px;
 }
-button.swiper-button-prev {
-    left: 0;
+.product-media-container.media-fit img {
+    object-fit: contain;
 }
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
