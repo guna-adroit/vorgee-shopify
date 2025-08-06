@@ -4362,6 +4362,12 @@ h2[class*="ai-recently-viewed-title"] {
     font-size: 30px;
     line-height: 40px;
   }
+  .facets-toggle {
+    padding-top: 0;
+  }
+  .spacing-style.h3.uppercase {
+    padding-bottom: 16px;
+  }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
     height: 100%;
