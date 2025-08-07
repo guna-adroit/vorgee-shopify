@@ -187,8 +187,14 @@
       <div id="size-chart-modal" class="size-chart-modal-overlay" style="display:none;">
         <div class="size-chart-modal-content">
           <span class="size-chart-close-button" id="close-size-chart">&times;</span>
-          <h4>Size Chart</h4>
-          <p>Include your size chart content here. You can also use images, tables, or HTML.</p>
+          {% if product.metafields.custom.size_chart_page %}
+            {% assign size_chart_page = product.metafields.custom.size_chart_page.value %}
+            
+            <div class="size-chart-content">
+              <h4>{{ size_chart_page.title }}</h4>
+              <div>{{ size_chart_page.content }}</div>
+            </div>
+          {% endif %}
         </div>
       </div>
 
