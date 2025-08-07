@@ -712,6 +712,15 @@ fieldset.size-option legend .size-option-button{
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+fieldset.size-option legend .size-option-button p{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  margin: 0;
 }
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
