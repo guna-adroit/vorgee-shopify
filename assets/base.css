@@ -4389,7 +4389,7 @@ h2[class*="ai-recently-viewed-title"] {
     grid-template-columns: 6px var(--full-page-grid-central-column-width-margin) 6px;
   }
   .recently-viewed-wrapper .swiper-button-next, .recently-viewed-wrapper .swiper-rtl .swiper-button-prev{
-    right: 0;
+    right: 12px;
     left: auto;
   }
   .recently-viewed-wrapper .swiper-button-prev, .recently-viewed-wrapper .swiper-rtl .swiper-button-next{
