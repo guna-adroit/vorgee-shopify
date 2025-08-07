@@ -753,6 +753,16 @@ fieldset.size-option legend .size-option-button p{
   font-size: 24px;
   cursor: pointer;
 }
+.size-chart-modal-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0;
+    table-layout: auto;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    overflow: hidden;
+}
 
 .size-chart-modal-content table tr th {
     background: #000;
