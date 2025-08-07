@@ -4402,6 +4402,9 @@ h2[class*="ai-recently-viewed-title"] {
   .recently-viewed-wrapper .swiper-backface-hidden {
     padding: 0 8px;
   }
+  .recently-viewed-wrapper h2[class*="ai-recently-viewed-title"]{
+
+  }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
     height: 100%;
