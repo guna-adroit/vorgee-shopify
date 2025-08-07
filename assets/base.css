@@ -4403,7 +4403,7 @@ h2[class*="ai-recently-viewed-title"] {
     padding: 0 8px;
   }
   .recently-viewed-wrapper h2[class*="ai-recently-viewed-title"]{
-
+    padding: 0 10px;
   }
 }
   .cart-page__summary .cart__container--extend .cart__summary-inner {
