@@ -799,6 +799,9 @@ fieldset.size-option legend .size-option-button p{
 div#scfw_size-chart-tab-1{
   overflow: scroll;
 }
+p.quantity-option-title {
+    color: #121212;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
