@@ -60,7 +60,7 @@
               <span>{{ product_option.name | escape -}}</span>
               {% if product_option.name == 'Size' %}
                <div class="size-option-button">
-                  <p>Size Chart</p>
+                  {{ 'icon-ruler.svg' | inline_asset_content }}<p>Size Chart</p>
                </div>
               {% endif %}
               {%- if variant_style == 'swatch' -%}
