@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "slideshow_hj97Af": {
@@ -16,8 +7,8 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/Group_1000008588_1.png",
-            "image_2": "shopify://shop_images/Group_1000008590.png",
+            "image_1": "shopify:\/\/shop_images\/Group_1000008588_1.png",
+            "image_2": "shopify:\/\/shop_images\/Group_1000008590.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -80,7 +71,7 @@
                 "text_xEYK3z": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>FIND YOUR ZONE</h2>",
+                    "text": "<h2>FIND YOUR ZONE<\/h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -107,7 +98,7 @@
                 "text_48tEyX": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Find out which Vorgee products are recommended for you</p>",
+                    "text": "<p>Find out which Vorgee products are recommended for you<\/p>",
                     "width": "100%",
                     "max_width": "narrow",
                     "alignment": "left",
@@ -135,7 +126,7 @@
                   "type": "button",
                   "settings": {
                     "label": "FIND YOUR ZONE NOW",
-                    "link": "shopify://collections/all",
+                    "link": "shopify:\/\/collections\/all",
                     "open_in_new_tab": false,
                     "style_class": "custom-btn",
                     "width": "fit-content",
@@ -223,7 +214,7 @@
                 "text_wxkjqP": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Bestsellers</h2>",
+                    "text": "<h2>Bestsellers<\/h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -250,7 +241,7 @@
                 "text_7EHfYp": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Discover the bestsellers that have captured the hearts of our customers with their perfect blend of functionality and style.</p>",
+                    "text": "<p>Discover the bestsellers that have captured the hearts of our customers with their perfect blend of functionality and style.<\/p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -278,7 +269,7 @@
                   "type": "button",
                   "settings": {
                     "label": "Shop now",
-                    "link": "shopify://collections/all",
+                    "link": "shopify:\/\/collections\/all",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -324,31 +315,31 @@
         "column_prF4TD": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/competition.png",
+            "image": "shopify:\/\/shop_images\/competition.png",
             "title": "COMPETITION",
             "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
-            "button_link": "shopify://collections"
+            "button_link": "shopify:\/\/collections"
           }
         },
         "column_6k8dqd": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Fitness.png",
+            "image": "shopify:\/\/shop_images\/Fitness.png",
             "title": "FITNESS",
             "description": "A range of streamlined products designed to help you move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
-            "button_link": "shopify://collections"
+            "button_link": "shopify:\/\/collections"
           }
         },
         "column_pXYykb": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/junior.png",
+            "image": "shopify:\/\/shop_images\/junior.png",
             "title": "JUNIOR",
             "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
-            "button_link": "shopify://collections"
+            "button_link": "shopify:\/\/collections"
           }
         }
       },
@@ -407,7 +398,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>TRENDING</p>",
+                "text": "<p>TRENDING<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -450,7 +441,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "SHOP ALL PRODUCTS",
-                "link": "shopify://collections/all",
+                "link": "shopify:\/\/collections\/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn-2",
                 "width": "fit-content",
@@ -686,7 +677,7 @@
             "text_3tA4HH": {
               "type": "text",
               "settings": {
-                "text": "<h2>TAKE THE PRESSURE OFF</h2>",
+                "text": "<h2>TAKE THE PRESSURE OFF<\/h2>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -713,7 +704,7 @@
             "text_wNeUd8": {
               "type": "text",
               "settings": {
-                "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face</p>",
+                "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face<\/p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -742,7 +733,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "SHOP ALL",
-                "link": "shopify://collections/all",
+                "link": "shopify:\/\/collections\/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn",
                 "width": "fit-content",
@@ -765,8 +756,8 @@
       ],
       "name": "Hero Banner",
       "settings": {
-        "hero_image": "shopify://shop_images/Group_1000008589.png",
-        "mobile_image": "shopify://shop_images/Group_1000009051.png",
+        "hero_image": "shopify:\/\/shop_images\/Group_1000008589.png",
+        "mobile_image": "shopify:\/\/shop_images\/Group_1000009051.png",
         "color_scheme": "scheme-6",
         "heading": "Welcome to Our Store",
         "subheading": "Shop the latest collection",
@@ -782,7 +773,7 @@
         "text_JpP6Vr": {
           "type": "text",
           "settings": {
-            "text": "<h2>TAKE THE PRESSURE OFF</h2>",
+            "text": "<h2>TAKE THE PRESSURE OFF<\/h2>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
@@ -809,7 +800,7 @@
         "text_jw7VeX": {
           "type": "text",
           "settings": {
-            "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face</p>",
+            "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face<\/p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -838,7 +829,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "SHOP ALL",
-            "link": "shopify://collections/all",
+            "link": "shopify:\/\/collections\/all",
             "open_in_new_tab": false,
             "style_class": "custom-btn",
             "width": "fit-content",
@@ -863,8 +854,8 @@
         "link": "",
         "open_in_new_tab": false,
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/Group_1000008589.png",
-        "image_1_mobile": "shopify://shop_images/Group_1000009051.png",
+        "image_1": "shopify:\/\/shop_images\/Group_1000008589.png",
+        "image_1_mobile": "shopify:\/\/shop_images\/Group_1000009051.png",
         "media_type_2": "image",
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -935,7 +926,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>SHOP THE RANGE</p>",
+                "text": "<p>SHOP THE RANGE<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -963,7 +954,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -992,7 +983,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "SHOP ALL PRODUCTS",
-                "link": "shopify://collections/all",
+                "link": "shopify:\/\/collections\/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn-2",
                 "width": "fit-content",
@@ -1054,7 +1045,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h3>Shop by collection</h3>",
+                "text": "<h3>Shop by collection<\/h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1127,7 +1118,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>SHOP THE RANGE</p>",
+                "text": "<p>SHOP THE RANGE<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1155,7 +1146,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1184,7 +1175,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "SHOP ALL PRODUCTS",
-                "link": "shopify://collections/all",
+                "link": "shopify:\/\/collections\/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn-2",
                 "width": "fit-content",
@@ -1383,7 +1374,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<p>FEATURED PRODUCTS</p>",
+                "text": "<p>FEATURED PRODUCTS<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1426,7 +1417,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "SHOP ALL PRODUCTS",
-                "link": "shopify://collections/all",
+                "link": "shopify:\/\/collections\/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn-2",
                 "width": "fit-content",
@@ -1622,7 +1613,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>FOLLOW US @VORGEE</p>",
+            "text": "<p>FOLLOW US @VORGEE<\/p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -1650,7 +1641,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"full-width\"><div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>"
+            "custom_liquid": "<div class=\"full-width\"><div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"><\/div>"
           },
           "blocks": {}
         }
@@ -1693,7 +1684,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"></div>",
+        "custom_liquid": "<div class=\"elfsight-sapp-c78c9a48-2b0f-4e77-bcc4-f02dd9a27b6b\"><\/div>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 20,
@@ -1710,17 +1701,17 @@
             "heading_alignment": "left",
             "items_count": 6,
             "item_1_title": "What is your return policy?",
-            "item_1_content": "<p>We offer a 30-day return policy for all unused items in original packaging. Please contact our customer service team to initiate a return.</p>",
+            "item_1_content": "<p>We offer a 30-day return policy for all unused items in original packaging. Please contact our customer service team to initiate a return.<\/p>",
             "item_2_title": "How long does shipping take?",
-            "item_2_content": "<p>Standard shipping typically takes 3-5 business days within the continental US. Express shipping options are available at checkout.</p>",
+            "item_2_content": "<p>Standard shipping typically takes 3-5 business days within the continental US. Express shipping options are available at checkout.<\/p>",
             "item_3_title": "Do you ship internationally?",
-            "item_3_content": "<p>Yes, we ship to most countries worldwide. International shipping times vary by location, typically 7-14 business days.</p>",
+            "item_3_content": "<p>Yes, we ship to most countries worldwide. International shipping times vary by location, typically 7-14 business days.<\/p>",
             "item_4_title": "How can I track my order?",
-            "item_4_content": "<p>Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order in your account dashboard.</p>",
+            "item_4_content": "<p>Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order in your account dashboard.<\/p>",
             "item_5_title": "How long does shipping take?",
-            "item_5_content": "<p>Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order in your account dashboard.</p>",
+            "item_5_content": "<p>Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order in your account dashboard.<\/p>",
             "item_6_title": "How long does shipping take?",
-            "item_6_content": "<p>Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order in your account dashboard.</p>",
+            "item_6_content": "<p>Once your order ships, you'll receive a confirmation email with tracking information. You can also track your order in your account dashboard.<\/p>",
             "item_7_title": "",
             "item_7_content": "",
             "item_8_title": "",
@@ -1793,7 +1784,7 @@
             "alt": "",
             "custom_width": 100,
             "custom_width_mobile": 100,
-            "aspect_ratio": "16/9",
+            "aspect_ratio": "16\/9",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -1849,7 +1840,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Take a look behind the scenes of our latest product launch.</p>",
+                "text": "<p>Take a look behind the scenes of our latest product launch.<\/p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1878,7 +1869,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Discover the collection",
-                "link": "shopify://collections/all",
+                "link": "shopify:\/\/collections\/all",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
