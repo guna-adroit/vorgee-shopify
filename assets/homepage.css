@@ -754,6 +754,23 @@ fieldset.size-option legend .size-option-button p{
   cursor: pointer;
 }
 
+.size-chart-modal-content table tr th {
+    background: #000;
+    color: #fff;
+}
+.size-chart-modal-content table tr th, .size-chart-modal-content table tr td {
+    font-size: 14px;
+}
+.size-chart-modal-content table tr th, .size-chart-modal-content table tr td {
+    text-align: center;
+    word-wrap: break-word;
+    min-width: 120px;
+    position: relative;
+    background-color: transparent;
+    -webkit-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
