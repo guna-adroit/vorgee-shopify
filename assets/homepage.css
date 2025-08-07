@@ -762,10 +762,11 @@ fieldset.size-option legend .size-option-button p{
     width: 100%;
     border: 1px solid #d1d1d1;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .size-chart-modal-content table tr th {
-    background: #000;
+    background-color: black !important;
     color: #fff;
 }
 .size-chart-modal-content table tr th, .size-chart-modal-content table tr td {
