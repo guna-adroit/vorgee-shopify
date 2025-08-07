@@ -4367,7 +4367,7 @@ h2[class*="ai-recently-viewed-title"] {
     padding-top: 0 !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    padding-bottom: 20px !important;
+    padding-bottom: 12px !important;
   }
   .spacing-style.h3.uppercase {
     padding-bottom: 16px;
