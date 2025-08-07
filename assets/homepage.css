@@ -771,6 +771,14 @@ fieldset.size-option legend .size-option-button p{
     -o-transition: background-color .2s;
     transition: background-color .2s;
 }
+.size-chart-modal-content table tr th{
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px;
+}
+.size-chart-modal-content table, .size-chart-modal-content table th, .size-chart-modal-content table td{
+  border: 1px solid #d1d1d1;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
