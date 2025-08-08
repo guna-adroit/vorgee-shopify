@@ -73,12 +73,7 @@
           <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page"> {{ page.title }}</a>
         </span>
       {%- when 'product' -%}
-        {%- if collection -%}
-          <span class="breadcrumbs__item collection">
-            <a class="breadcrumbs__link" href="{{ collection.url }}">{{ collection.title }}</a>
-          </span>
-          <span>/ </span>
-        {%- endif -%}
+        {{ collection.title }}
         <span class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
         </span>
