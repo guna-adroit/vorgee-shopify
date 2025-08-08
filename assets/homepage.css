@@ -641,9 +641,10 @@ slideshow-controls:has(.slideshow-controls__dots) {
     font-size: 16px;
     line-height: 15px;
     color: #333 !important;
+    min-height: 60px;
 }
 .shopify-payment-button__button{
-  min-height: 60px;
+  
 }
 .product-description{
   font-weight: 500;
