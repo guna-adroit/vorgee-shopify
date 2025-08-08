@@ -47,7 +47,7 @@
     user-select: none;
   }
 
-  @media screen and (max-width: 749px) {
+  @media screen and (max-width: 786px) {
     .ai-breadcrumb-{{ ai_gen_id }} {
       padding: {{ block.settings.padding_vertical | times: 0.75 }}px {{ block.settings.padding_horizontal | times: 0.75 }}px;
     }
@@ -59,6 +59,18 @@
 
     .ai-breadcrumb-item-{{ ai_gen_id }} {
       gap: {{ block.settings.spacing | times: 0.8 }}px;
+    }
+    .ai-breadcrumb-current-{{ ai_gen_id }} {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 150%;
+      color: #121212;
+    }
+    .ai-breadcrumb-link-{{ ai_gen_id }} {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 150%;
+      color: #121212;
     }
   }
 {% endstyle %}
