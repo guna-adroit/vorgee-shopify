@@ -834,9 +834,11 @@ p.quantity-option-title {
     margin-top: 6px;
   }
   .add-to-cart-button{
+    min-height: unset;
     height: 40px;
   }
   .product-form-buttons .shopify-payment-button__button {
+    min-height: unset;
     height: 40px;
   }
 }
