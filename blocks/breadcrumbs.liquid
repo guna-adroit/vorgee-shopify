@@ -2,8 +2,9 @@
 
 {% style %}
   .ai-breadcrumb-{{ ai_gen_id }} {
-    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
     background-color: {{ block.settings.background_color }};
+    border-bottom: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
   }
 
   .ai-breadcrumb-nav-{{ ai_gen_id }} {
@@ -12,7 +13,7 @@
     flex-wrap: wrap;
     gap: {{ block.settings.spacing }}px;
     font-size: {{ block.settings.font_size }}px;
-    color: {{ block.settings.text_color }};
+    line-height: 1.4;
   }
 
   .ai-breadcrumb-item-{{ ai_gen_id }} {
@@ -22,13 +23,13 @@
   }
 
   .ai-breadcrumb-link-{{ ai_gen_id }} {
-    color: inherit;
+    color: {{ block.settings.link_color }};
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .ai-breadcrumb-link-{{ ai_gen_id }}:hover {
-    opacity: 0.7;
+    color: {{ block.settings.link_hover_color }};
     text-decoration: underline;
   }
 
@@ -39,58 +40,82 @@
 
   .ai-breadcrumb-separator-{{ ai_gen_id }} {
     color: {{ block.settings.separator_color }};
-    font-size: {{ block.settings.separator_size }}px;
+    font-size: {{ block.settings.font_size | times: 0.9 }}px;
     user-select: none;
   }
 
   @media screen and (max-width: 749px) {
+    .ai-breadcrumb-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_vertical | times: 0.75 }}px {{ block.settings.padding_horizontal | times: 0.75 }}px;
+    }
+
     .ai-breadcrumb-nav-{{ ai_gen_id }} {
       font-size: {{ block.settings.font_size | times: 0.9 }}px;
+      gap: {{ block.settings.spacing | times: 0.8 }}px;
+    }
+
+    .ai-breadcrumb-item-{{ ai_gen_id }} {
+      gap: {{ block.settings.spacing | times: 0.8 }}px;
     }
   }
 {% endstyle %}
 
-<div class="ai-breadcrumb-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
-  <nav class="ai-breadcrumb-nav-{{ ai_gen_id }}" aria-label="Breadcrumb">
+<breadcrumb-navigation-{{ ai_gen_id }}
+  class="ai-breadcrumb-{{ ai_gen_id }}"
+  data-current-url="{{ request.url }}"
+  {{ block.shopify_attributes }}
+>
+  <nav class="ai-breadcrumb-nav-{{ ai_gen_id }}" aria-label="Breadcrumb navigation">
     <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
       <a href="{{ routes.root_url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
         {{ block.settings.home_text }}
       </a>
     </div>
 
-    {% if collection %}
-      {% liquid
-        assign breadcrumb_collections = collection.id | split: ','
-        assign current_collection = collection
-        assign parent_collections = ''
+    {% liquid
+      assign referrer_collection = null
+      assign current_collection = null
+      
+      if request.headers['Referer'] and request.headers['Referer'] contains shop.permanent_domain
+        assign referer_url = request.headers['Referer']
+        assign referer_path = referer_url | split: shop.permanent_domain | last | split: '?' | first
         
-        comment
-          Check if collection has a parent by looking at collection handles
-          This is a simplified approach - in practice, you might need to implement
-          a more sophisticated parent-child relationship system
-        endcomment
-        
-        assign collection_handle_parts = collection.handle | split: '-'
-        if collection_handle_parts.size > 1
-          assign potential_parent_handle = collection_handle_parts | slice: 0, -1 | join: '-'
-          assign potential_parent = collections[potential_parent_handle]
-          if potential_parent and potential_parent.id != collection.id
-            assign parent_collections = potential_parent
-          endif
+        if referer_path contains '/collections/'
+          assign collection_handle = referer_path | split: '/collections/' | last | split: '/' | first
+          assign referrer_collection = collections[collection_handle]
         endif
-      %}
+      endif
+      
+      if referrer_collection
+        assign current_collection = referrer_collection
+      elsif collection
+        assign current_collection = collection
+      elsif product and product.collections.size > 0
+        assign current_collection = product.collections.first
+      endif
+    %}
 
-      {% if parent_collections != blank %}
-        <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
-          {{ block.settings.separator }}
+    {% if current_collection %}
+      <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+        {{ block.settings.separator }}
+      </span>
+      <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+        <a href="{{ current_collection.url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
+          {{ current_collection.title }}
+        </a>
+      </div>
+    {% endif %}
+
+    {% if product %}
+      <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+        {{ block.settings.separator }}
+      </span>
+      <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+        <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
+          {{ product.title }}
         </span>
-        <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
-          <a href="{{ parent_collections.url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
-            {{ parent_collections.title }}
-          </a>
-        </div>
-      {% endif %}
-
+      </div>
+    {% elsif collection %}
       <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
         {{ block.settings.separator }}
       </span>
@@ -99,13 +124,138 @@
           {{ collection.title }}
         </span>
       </div>
+    {% elsif page %}
+      <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+        {{ block.settings.separator }}
+      </span>
+      <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+        <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
+          {{ page.title }}
+        </span>
+      </div>
+    {% elsif blog %}
+      <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+        {{ block.settings.separator }}
+      </span>
+      <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+        <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
+          {{ blog.title }}
+        </span>
+      </div>
+    {% elsif article %}
+      {% if blog %}
+        <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+          {{ block.settings.separator }}
+        </span>
+        <div class="ai-breadcrumb-item-{{ ai_gen_id }}"><a href="{{ blog.url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
+            {{ blog.title }}
+          </a>
+        </div>
+      {% endif %}
+      <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+        {{ block.settings.separator }}
+      </span>
+      <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+        <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
+          {{ article.title }}
+        </span>
+      </div>
     {% endif %}
   </nav>
-</div>
+</breadcrumb-navigation-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class BreadcrumbNavigation{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.enhanceAccessibility();
+        this.trackAndUpdateBreadcrumb();
+      }
+
+      enhanceAccessibility() {
+        const links = this.querySelectorAll('.ai-breadcrumb-link-{{ ai_gen_id }}');
+        links.forEach((link, index) => {
+          if (index === 0) {
+            link.setAttribute('aria-label', 'Go to homepage');
+          } else {
+            const text = link.textContent.trim();
+            link.setAttribute('aria-label', `Go to ${text}`);
+          }
+        });
+      }
+
+      trackAndUpdateBreadcrumb() {
+        if (typeof sessionStorage === 'undefined') return;
+
+        try {
+          const currentUrl = window.location.href;
+          const currentPath = window.location.pathname;
+          const referrer = document.referrer;
+          
+          if (referrer && referrer.includes(window.location.hostname)) {
+            const referrerPath = new URL(referrer).pathname;
+            
+            if (referrerPath.includes('/collections/') && currentPath.includes('/products/')) {
+              const collectionHandle = referrerPath.split('/collections/')[1].split('/')[0].split('?')[0];
+              
+              sessionStorage.setItem('breadcrumb_collection_context', JSON.stringify({
+                handle: collectionHandle,
+                referrer: referrer,
+                timestamp: Date.now()
+              }));
+              
+              this.updateCollectionBreadcrumb(collectionHandle);
+            }
+          }
+          
+          const storedContext = sessionStorage.getItem('breadcrumb_collection_context');
+          if (storedContext && currentPath.includes('/products/')) {
+            const context = JSON.parse(storedContext);
+            const timeDiff = Date.now() - context.timestamp;
+            
+            if (timeDiff < 300000) {
+              this.updateCollectionBreadcrumb(context.handle);
+            } else {
+              sessionStorage.removeItem('breadcrumb_collection_context');
+            }
+          }
+          
+        } catch (e) {
+          console.warn('Unable to track breadcrumb context:', e);
+        }
+      }
+
+      updateCollectionBreadcrumb(collectionHandle) {
+        if (!collectionHandle) return;
+
+        fetch(`/collections/${collectionHandle}.json`)
+          .then(response => response.json())
+          .then(data => {
+            const collectionLink = this.querySelector('.ai-breadcrumb-link-{{ ai_gen_id }}[href*="/collections/"]');
+            if (collectionLink && data.collection) {
+              collectionLink.textContent = data.collection.title;
+              collectionLink.href = `/collections/${collectionHandle}`;
+              collectionLink.setAttribute('aria-label', `Go to ${data.collection.title}`);
+            }
+          })
+          .catch(e => {
+            console.warn('Unable to fetch collection data:', e);
+          });
+      }
+    }
+
+    customElements.define('breadcrumb-navigation-{{ ai_gen_id }}', BreadcrumbNavigation{{ ai_gen_id }});
+  })();
+</script>
 
 {% schema %}
 {
-  "name": "Collection breadcrumb",
+  "name": "Breadcrumb navigation",
+  "tag": null,
   "settings": [
     {
       "type": "header",
@@ -128,34 +278,34 @@
       "content": "Style"
     },
     {
-      "type": "range",
-      "id": "font_size",
-      "min": 10,
-      "max": 24,
-      "step": 1,
-      "unit": "px",
-      "label": "Font size",
-      "default": 14
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
     },
     {
-      "type": "range",
-      "id": "separator_size",
-      "min": 8,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Separator size",
-      "default": 14
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#666666"
     },
     {
-      "type": "range",
-      "id": "spacing",
-      "min": 4,
-      "max": 20,
-      "step": 2,
-      "unit": "px",
-      "label": "Item spacing",
-      "default": 8
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "current_color",
+      "label": "Current page color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator color",
+      "default": "#cccccc"
     },
     {
       "type": "select",
@@ -172,7 +322,7 @@
         },
         {
           "value": "600",
-          "label": "Semi bold"
+          "label": "Semi-bold"
         },
         {
           "value": "700",
@@ -182,32 +332,14 @@
       "default": "500"
     },
     {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text",
-      "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "current_color",
-      "label": "Current page",
-      "default": "#666666"
-    },
-    {
-      "type": "color",
-      "id": "separator_color",
-      "label": "Separator",
-      "default": "#999999"
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
     },
     {
       "type": "header",
@@ -215,30 +347,59 @@
     },
     {
       "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 50,
-      "step": 5,
+      "id": "spacing",
+      "min": 4,
+      "max": 20,
+      "step": 2,
       "unit": "px",
-      "label": "Top padding",
-      "default": 15
+      "label": "Item spacing",
+      "default": 8
     },
     {
       "type": "range",
-      "id": "padding_bottom",
+      "id": "padding_vertical",
       "min": 0,
-      "max": 50,
-      "step": 5,
+      "max": 40,
+      "step": 2,
       "unit": "px",
-      "label": "Bottom padding",
-      "default": 15
+      "label": "Vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Border"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e6e6e6"
     }
   ],
   "presets": [
     {
-      "name": "Collection breadcrumb"
+      "name": "Breadcrumb navigation"
     }
-  ],
-  "tag": null
+  ]
 }
 {% endschema %}
