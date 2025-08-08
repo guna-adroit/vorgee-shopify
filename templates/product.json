@@ -39,6 +39,7 @@
       "block_order": [
         "breadcrumbs_ntLLhM"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
