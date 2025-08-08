@@ -633,6 +633,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   font-size: 16px;
   line-height: 15px;
   color: #333;
+  min-height: 60px;
 }
 .accelerated-checkout-block, .product-form-buttons .shopify-payment-button__button {
     text-transform: uppercase;
