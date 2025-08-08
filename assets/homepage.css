@@ -643,7 +643,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
     color: #333 !important;
     
 }
-.shopify-payment-button__button{
+.product-form-buttons .shopify-payment-button__button{
   min-height: 60px;
 }
 .product-description{
