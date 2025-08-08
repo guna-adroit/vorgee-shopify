@@ -35,30 +35,10 @@
             "padding_bottom": 20
           },
           "blocks": {}
-        },
-        "ai_gen_block_caa1d50_N7438e": {
-          "type": "ai_gen_block_caa1d50",
-          "settings": {
-            "home_text": "Home",
-            "separator": "/",
-            "font_size": 14,
-            "spacing": 8,
-            "separator_size": 14,
-            "padding_top": 16,
-            "padding_bottom": 16,
-            "text_color": "#666666",
-            "link_color": "#000000",
-            "link_hover_color": "#333333",
-            "current_color": "#666666",
-            "separator_color": "#cccccc",
-            "current_font_weight": "500"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "breadcrumbs_ntLLhM",
-        "ai_gen_block_caa1d50_N7438e"
+        "breadcrumbs_ntLLhM"
       ],
       "name": "t:names.custom_section",
       "settings": {
