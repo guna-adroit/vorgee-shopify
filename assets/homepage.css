@@ -874,7 +874,7 @@ p.quantity-option-title {
     line-height: 100%;
     color: #121212;
   }
-  .variant-option--buttons legend{
+  .variant-option--buttons legend, fieldset.size-option legend .size-option-button p{
     font-weight: 500;
     font-size: 13px;
     line-height: 13px;
