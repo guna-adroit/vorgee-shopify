@@ -11,7 +11,7 @@
   case section.settings.layout_type
     when 'grid'
       assign classes = 'resource-list--grid'
-      capture styles
+      capture styles 
         echo '--resource-list-column-gap-desktop: ' | append: section.settings.columns_gap | append: 'px;'
         echo '--resource-list-row-gap-desktop: ' | append: section.settings.rows_gap | append: 'px;'
         echo '--resource-list-columns: repeat(' | append: section.settings.columns | append: ', 1fr);'
