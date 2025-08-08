@@ -373,6 +373,7 @@
                 },
                 "accordion_row_yPtYiX": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "Size Chart",
                     "open_by_default": false,
