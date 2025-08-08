@@ -803,7 +803,7 @@ p.quantity-option-title {
     color: #121212;
 }
 .shopify-payment-button__button:hover{
-  color: white;
+  color: white !important;
 }
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
