@@ -646,6 +646,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
 .product-form-buttons .shopify-payment-button__button{
   min-height: 60px;
 }
+.product-information .add-to-cart-button .add-to-cart-icon{
+  display: none;
+}
 .product-description{
   font-weight: 500;
   font-size: 16px;
