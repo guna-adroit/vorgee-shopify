@@ -162,6 +162,24 @@
           },
           "blocks": {}
         },
+        "ai_gen_block_53d69a0_dKB8Un": {
+          "type": "ai_gen_block_53d69a0",
+          "settings": {
+            "home_text": "Home",
+            "separator": "/",
+            "font_size": 14,
+            "spacing": 8,
+            "background_color": "#ffffff",
+            "text_color": "#333333",
+            "link_color": "#000f9f",
+            "link_hover_color": "#000000",
+            "current_color": "#666666",
+            "separator_color": "#999999",
+            "padding_top": 16,
+            "padding_bottom": 16
+          },
+          "blocks": {}
+        },
         "text_pKqJQm": {
           "type": "text",
           "name": "t:names.heading",
@@ -193,6 +211,7 @@
       },
       "block_order": [
         "breadcrumbs_yJ4WAn",
+        "ai_gen_block_53d69a0_dKB8Un",
         "text_pKqJQm"
       ],
       "name": "t:names.custom_section",
