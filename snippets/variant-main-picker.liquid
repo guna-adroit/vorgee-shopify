@@ -52,11 +52,17 @@
 
         {%- if variant_style == 'swatch' or block.settings.variant_style == 'buttons' -%}
           <fieldset
-            class="variant-option variant-option--buttons{% if variant_style == 'swatch' %} variant-option--swatches{% else %} variant-option--{{ settings.variant_button_width }}{% endif %}"
+            class="variant-option variant-option--buttons{% if variant_style == 'swatch' %} variant-option--swatches{% else %} variant-option--{{ settings.variant_button_width }}{% endif %} {% if product_option.name == 'Size' %} size-option {% endif %}"
             {{ option_id_attribute }}
           >
             <legend>
-              {{ product_option.name | escape -}}
+              
+              <span>{{ product_option.name | escape -}}</span>
+              {% if product_option.name == 'Size' %}
+               <div class="size-option-button" id="size-chart">
+                  {{ 'icon-ruler.svg' | inline_asset_content }}<p>Size Chart</p>
+               </div>
+              {% endif %}
               {%- if variant_style == 'swatch' -%}
                 :<span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
               {%- endif %}
@@ -115,6 +121,7 @@
               {% endstyle %}
             {% endif %}
           </fieldset>
+
         {%- elsif block.settings.variant_style == 'dropdowns' -%}
           {%
             # There is an opportunity to build a custom select component that will allow us to style the select element further (animation for dropdown, swatches shown in the dropdown options, etc)
@@ -175,7 +182,43 @@
             </div>
           </div>
         {%- endif -%}
+
       {%- endfor -%}
+      <div id="size-chart-modal" class="size-chart-modal-overlay" style="display:none;">
+        <div class="size-chart-modal-content">
+          <span class="size-chart-close-button" id="close-size-chart">&times;</span>
+          {% if product.metafields.custom.size_chart %}
+            {% assign size_chart_page = product.metafields.custom.size_chart.value %}
+            
+            <div class="size-chart-content">
+              <h4>{{ size_chart_page.title }}</h4>
+              <div>{{ size_chart_page.content }}</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const sizeChartTrigger = document.getElementById('size-chart');
+          const modal = document.getElementById('size-chart-modal');
+          const closeBtn = document.getElementById('close-size-chart');
+
+          sizeChartTrigger.addEventListener('click', function () {
+            modal.style.display = 'flex';
+          });
+
+          closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+          });
+
+          window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+      </script>
 
       <script type="application/json">
         {{ product_resource.selected_or_first_available_variant | json }}
