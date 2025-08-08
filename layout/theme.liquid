@@ -53,7 +53,8 @@
       data-product-transition="{{ settings.transition_to_main_product }}"
       data-template="{{ template }}"
     >
-      {% comment %} {% render 'breadcrumb' %} {% endcomment %}
+      {% sections 'breadcrumb' %}
+      
       {{ content_for_layout }}
     </main>
 
