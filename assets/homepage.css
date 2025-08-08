@@ -823,6 +823,9 @@ p.quantity-option-title {
     --swatch-width: 24px;
     --swatch-height: 24px;
   }
+  .accelerated-checkout-block{
+    margin-top: 3px;
+  }
 }
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
