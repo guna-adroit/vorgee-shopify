@@ -802,6 +802,9 @@ div#scfw_size-chart-tab-1{
 p.quantity-option-title {
     color: #121212;
 }
+.shopify-payment-button__button:hover{
+  color: white;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
