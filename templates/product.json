@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "section_idLfFX": {
@@ -10,7 +19,7 @@
             "show_home_icon": false,
             "home_text": "Home",
             "home_icon_size": 16,
-            "separator": "\/",
+            "separator": "/",
             "separator_spacing": 8,
             "separator_size": 14,
             "font_size": 14,
@@ -162,7 +171,7 @@
                 "text_xrnftG": {
                   "type": "text",
                   "settings": {
-                    "text": "<h1>{{ closest.product.title }}<\/h1>",
+                    "text": "<h1>{{ closest.product.title }}</h1>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -376,7 +385,7 @@
                     "text_Rh4q3P": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.<\/p>",
+                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -417,7 +426,7 @@
                     "text_94dFtJ": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.<\/p>",
+                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -458,7 +467,7 @@
                     "text_AEUq7f": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.<\/p>",
+                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -558,7 +567,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like <\/h3>",
+            "text": "<h3>You may also like </h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
