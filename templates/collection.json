@@ -141,6 +141,27 @@
     "section_Be484w": {
       "type": "section",
       "blocks": {
+        "breadcrumbs_yJ4WAn": {
+          "type": "breadcrumbs",
+          "name": "Breadcrumb navigation",
+          "settings": {
+            "home_text": "Home",
+            "separator": "/",
+            "background_color": "#ffffff",
+            "link_color": "#666666",
+            "link_hover_color": "#000000",
+            "current_color": "#000000",
+            "separator_color": "#cccccc",
+            "current_font_weight": "500",
+            "font_size": 14,
+            "spacing": 8,
+            "padding_vertical": 12,
+            "padding_horizontal": 20,
+            "border_width": 1,
+            "border_color": "#e6e6e6"
+          },
+          "blocks": {}
+        },
         "text_pKqJQm": {
           "type": "text",
           "name": "t:names.heading",
@@ -168,32 +189,11 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "breadcrumbs_yJ4WAn": {
-          "type": "breadcrumbs",
-          "name": "Breadcrumb navigation",
-          "settings": {
-            "home_text": "Home",
-            "separator": "/",
-            "background_color": "#ffffff",
-            "link_color": "#666666",
-            "link_hover_color": "#000000",
-            "current_color": "#000000",
-            "separator_color": "#cccccc",
-            "current_font_weight": "500",
-            "font_size": 14,
-            "spacing": 8,
-            "padding_vertical": 12,
-            "padding_horizontal": 20,
-            "border_width": 1,
-            "border_color": "#e6e6e6"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "text_pKqJQm",
-        "breadcrumbs_yJ4WAn"
+        "breadcrumbs_yJ4WAn",
+        "text_pKqJQm"
       ],
       "name": "t:names.custom_section",
       "settings": {
