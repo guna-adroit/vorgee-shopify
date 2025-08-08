@@ -824,7 +824,7 @@ p.quantity-option-title {
     --swatch-height: 24px;
   }
   .accelerated-checkout-block{
-    margin-top: 3px;
+    margin-top: 6px;
   }
 }
 @media screen and (min-width: 750px) {
