@@ -243,6 +243,10 @@ span.icon-round{
     font-size: 28px !important;
     line-height: 100% !important;
   }
+  .section-heading h3{
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 .product-media-container .product-media {
   background-color: white;
