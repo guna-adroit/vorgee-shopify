@@ -244,8 +244,8 @@ span.icon-round{
     line-height: 100% !important;
   }
   .section-heading h3{
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 30px !important;
+    line-height: 40px !important;
   }
 }
 .product-media-container .product-media {
