@@ -36,31 +36,29 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_2ee3a70_4kyGWf": {
-          "type": "ai_gen_block_2ee3a70",
+        "ai_gen_block_caa1d50_N7438e": {
+          "type": "ai_gen_block_caa1d50",
           "settings": {
             "home_text": "Home",
             "separator": "/",
-            "background_color": "#ffffff",
-            "text_color": "#333333",
-            "link_color": "#0066cc",
-            "link_hover_color": "#004499",
-            "current_color": "#666666",
-            "separator_color": "#999999",
             "font_size": 14,
+            "spacing": 8,
             "separator_size": 14,
-            "current_font_weight": "500",
-            "hover_underline": "underline",
             "padding_top": 16,
             "padding_bottom": 16,
-            "spacing": 8
+            "text_color": "#666666",
+            "link_color": "#000000",
+            "link_hover_color": "#333333",
+            "current_color": "#666666",
+            "separator_color": "#cccccc",
+            "current_font_weight": "500"
           },
           "blocks": {}
         }
       },
       "block_order": [
         "breadcrumbs_ntLLhM",
-        "ai_gen_block_2ee3a70_4kyGWf"
+        "ai_gen_block_caa1d50_N7438e"
       ],
       "name": "t:names.custom_section",
       "settings": {
