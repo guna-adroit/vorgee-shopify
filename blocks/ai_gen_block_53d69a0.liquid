@@ -52,6 +52,9 @@
     .ai-breadcrumb-nav-{{ ai_gen_id }} {
       font-size: {{ block.settings.font_size | minus: 2 }}px;
     }
+    .ai-breadcrumb-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | minus: 30 }}px 0 {{ block.settings.padding_bottom | minus: 30 }}px;
+    }
   }
 {% endstyle %}
 
