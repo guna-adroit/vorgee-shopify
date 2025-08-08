@@ -15,24 +15,21 @@
         "breadcrumbs_ntLLhM": {
           "type": "breadcrumbs",
           "name": "Breadcrumbs",
-          "disabled": true,
           "settings": {
-            "show_home_icon": false,
             "home_text": "Home",
-            "home_icon_size": 16,
             "separator": "/",
-            "separator_spacing": 8,
-            "separator_size": 14,
-            "font_size": 14,
-            "current_font_weight": "500",
-            "hover_underline": "underline",
-            "text_color": "#666666",
+            "background_color": "#ffffff",
             "link_color": "#000000",
             "link_hover_color": "#333333",
             "current_color": "#666666",
             "separator_color": "#cccccc",
-            "padding_top": 20,
-            "padding_bottom": 20
+            "current_font_weight": "500",
+            "font_size": 14,
+            "spacing": 8,
+            "padding_vertical": 12,
+            "padding_horizontal": 20,
+            "border_width": 1,
+            "border_color": "#e6e6e6"
           },
           "blocks": {}
         }
