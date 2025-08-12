@@ -923,3 +923,6 @@ p.quantity-option-title {
 .cart-items__quantity .quantity-selector{
   margin: 0;
 }
+.cart-items__quantity .quantity-option-title, .cart-items__quantity .cart-items__remove{
+  display: none;
+}
