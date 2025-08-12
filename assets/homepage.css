@@ -920,3 +920,6 @@ p.quantity-option-title {
 }
 /* PDP CSS End */
 
+.cart-items__quantity .quantity-selector{
+  margin: 0;
+}
