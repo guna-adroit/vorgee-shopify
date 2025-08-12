@@ -913,7 +913,7 @@ summary::-webkit-details-marker {
   }
 }
 @media screen and (min-width: 1200px) {
-  .product-grid {
+  .product-grid[product-grid-view="default"] {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
