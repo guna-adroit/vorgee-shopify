@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header",
@@ -37,8 +46,8 @@
           "settings": {
             "menu": "main-menu",
             "menu_style": "featured_collections",
-            "featured_products_aspect_ratio": "4 \/ 5",
-            "featured_collections_aspect_ratio": "1 \/ 1",
+            "featured_products_aspect_ratio": "4 / 5",
+            "featured_collections_aspect_ratio": "1 / 1",
             "image_border_radius": 0,
             "product_title_case": "default",
             "collection_title_case": "default",
@@ -97,21 +106,21 @@
         "icon_text_akeEh4": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/icon-australia.svg",
+            "icon": "shopify://shop_images/icon-australia.svg",
             "title": "AUSTRALIAN OWNED"
           }
         },
         "icon_text_DLgeif": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/attachmentb_1.png",
+            "icon": "shopify://shop_images/attachmentb_1.png",
             "title": "IMMERSIVE DESIGN"
           }
         },
         "icon_text_V3YNk8": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/attachmentbb_1.png",
+            "icon": "shopify://shop_images/attachmentbb_1.png",
             "title": "PREMIUM MATERIALS"
           }
         }
@@ -128,11 +137,40 @@
         "text_color": "#000000",
         "link_color": "#000000"
       }
+    },
+    "breadcrumb_4ehWhU": {
+      "type": "breadcrumb",
+      "blocks": {
+        "static-group": {
+          "type": "breadcrumbs",
+          "static": true,
+          "settings": {
+            "home_text": "Home",
+            "separator": "/",
+            "background_color": "#ffffff",
+            "link_color": "#666666",
+            "link_hover_color": "#000000",
+            "current_color": "#000000",
+            "separator_color": "#cccccc",
+            "current_font_weight": "500",
+            "font_size": 14,
+            "spacing": 8,
+            "padding_vertical": 12,
+            "padding_horizontal": 20,
+            "border_width": 1,
+            "border_color": "#e6e6e6"
+          },
+          "blocks": {}
+        }
+      },
+      "name": "Breadcrumb",
+      "settings": {}
     }
   },
   "order": [
     "announcement_bar_static_4PF3QF",
     "header_section",
-    "top_bar_icon_text_474R7D"
+    "top_bar_icon_text_474R7D",
+    "breadcrumb_4ehWhU"
   ]
 }
