@@ -164,6 +164,15 @@
           {{ blog.title }}
         </span>
       </div>
+    {% elsif cart %}
+      <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+        {{ block.settings.separator }}
+      </span>
+      <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+        <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
+          Cart
+        </span>
+      </div>
     {% elsif article %}
       {% if blog %}
         <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
