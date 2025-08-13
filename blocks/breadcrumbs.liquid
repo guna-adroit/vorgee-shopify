@@ -164,7 +164,7 @@
           {{ blog.title }}
         </span>
       </div>
-    {% elsif cart %}
+    {% elsif template.name == 'cart' %}
       <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
         {{ block.settings.separator }}
       </span>
