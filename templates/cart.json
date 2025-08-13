@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-section": {
@@ -11,7 +20,7 @@
             "show_count": true,
             "type_preset": "h3",
             "alignment": "left",
-            "padding-block-start": 60,
+            "padding-block-start": 0,
             "padding-block-end": 100,
             "padding-inline-start": 0,
             "padding-inline-end": 0
@@ -96,7 +105,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>You may also like<\/h3>",
+                "text": "<h3>You may also like</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -220,6 +229,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
+                    "custom_classes": "",
                     "type_preset": "h5",
                     "font": "var(--font-body--family)",
                     "font_size": "",
@@ -298,6 +308,7 @@
         "max_products": 4,
         "columns": 4,
         "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 36,
         "icons_style": "arrow",
