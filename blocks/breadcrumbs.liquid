@@ -1,6 +1,11 @@
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
+  {% if template.name == 'collection' or template.name == 'list-collections' %}
+        .ai-breadcrumb-{{ ai_gen_id }}{
+            display: none;
+        }
+    {% endif %}
   .ai-breadcrumb-{{ ai_gen_id }} {
     padding: 50px 0px;
     background-color: {{ block.settings.background_color }};
