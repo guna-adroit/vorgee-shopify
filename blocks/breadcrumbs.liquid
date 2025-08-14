@@ -75,7 +75,7 @@
 {% endstyle %}
 
 <style>
-  {% if template.name == 'collection' or template.name == 'list-collections' or template.name == 'index' %}
+  {% if template.name == 'collection' or template.name == 'list-collections' or template.name == 'index' or request.page_type == 'policy' %}
     .ai-breadcrumb-{{ ai_gen_id }}{
        display: none !important;
     }
