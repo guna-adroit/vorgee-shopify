@@ -1,6 +1,18 @@
 {% stylesheet %}
+.v-announcement-bar-section{
+  display: grid;
+  grid-template-columns:
+    minmax(40px, 1fr)  
+    min(
+      calc(120rem + (40px * 2)) - 40px * 2, 
+      calc(100% - 40px * 2)                 
+    )
+    minmax(40px, 1fr); 
+  gap: 0;
+}
 .v-announcement-bar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -41,6 +53,17 @@
   .v-announcement-bar {
     height: 32px;
   }
+  .v-announcement-bar-section{
+  display: grid;
+  grid-template-columns:
+    minmax(16px, 1fr)  
+    min(
+      calc(120rem + (16px * 2)) - 16px * 2, 
+      calc(100% - 16px * 2)                 
+    )
+    minmax(40px, 1fr); 
+  gap: 0;
+}
   .v-announcement-text{
     width: 100%;
     font-weight: 500;
