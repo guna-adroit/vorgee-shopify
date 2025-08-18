@@ -942,5 +942,8 @@ p.quantity-option-title {
   .shopify-policy__title h1{
     font-size: 30px;
   }
+  .shopify-policy__title h1{
+    font-size: 26px;
+  }
 }
 /* Policy page CSS End */
