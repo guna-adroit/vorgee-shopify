@@ -935,14 +935,14 @@ p.quantity-option-title {
 .shopify-policy__title h1{
   font-size: 60px;
 }
-.shopify-policy__title h2{
+.shopify-policy__title h2, .shopify-policy__title h2 span{
   font-size: 36px;
 }
 @media screen and (max-width: 768px){
   .shopify-policy__title h1{
     font-size: 30px;
   }
-  .shopify-policy__title h2{
+  .shopify-policy__title h2, .shopify-policy__title h2 span{
     font-size: 26px;
   }
 }
