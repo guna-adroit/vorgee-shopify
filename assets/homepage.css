@@ -926,3 +926,11 @@ p.quantity-option-title {
 .cart-drawer__inner .cart-items__quantity .quantity-option-title, .cart-drawer__inner .cart-items__quantity .cart-items__remove{
   display: none;
 }
+
+
+/* Policy Page CSS Start */
+.shopify-policy__container{
+  max-width: 105ch;
+}
+
+/* Policy page CSS End */
