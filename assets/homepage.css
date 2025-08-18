@@ -938,12 +938,18 @@ p.quantity-option-title {
 .shopify-policy__body h2, .shopify-policy__body h2 span{
   font-size: 36px;
 }
+.shopify-policy__body h3, .shopify-policy__body h3 span{
+  font-size: 28px;
+}
 @media screen and (max-width: 768px){
   .shopify-policy__title h1{
     font-size: 30px;
   }
   .shopify-policy__body h2, .shopify-policy__body h2 span{
     font-size: 26px;
+  }
+  .shopify-policy__body h3, .shopify-policy__body h3 span{
+    font-size: 20px;
   }
 }
 /* Policy page CSS End */
