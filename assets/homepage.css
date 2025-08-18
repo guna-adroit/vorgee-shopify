@@ -933,10 +933,10 @@ p.quantity-option-title {
   max-width: 105ch;
 }
 .shopify-policy__title h1{
-  font-size: 36px;
+  font-size: 60px;
 }
 .shopify-policy__title h2{
-  font-size: 60px;
+  font-size: 36px;
 }
 @media screen and (max-width: 768px){
   .shopify-policy__title h1{
