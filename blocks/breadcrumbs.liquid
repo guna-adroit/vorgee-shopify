@@ -191,6 +191,12 @@
         <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
           {% if request.path contains 'terms-of-service' %} 
             {{ shop.terms_of_service.title }} 
+          {% elsif request.path contains 'shipping-policy' %}
+            {{ shop.shipping_policy.title }} 
+          {% elsif request.path contains 'refund-policy' %}
+            {{ shop.refund_policy.title }} 
+          {% elsif request.path contains 'privacy_policy' %}
+            {{ shop.privacy_policy.title }} 
           {% endif %}
         </span>
       </div>
