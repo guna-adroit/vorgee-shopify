@@ -935,5 +935,9 @@ p.quantity-option-title {
 .shopify-policy__title h1{
   font-size: 60px;
 }
-
+@media screen and (max-width: 768px){
+  .shopify-policy__title h1{
+    font-size: 30px;
+  }
+}
 /* Policy page CSS End */
