@@ -75,7 +75,7 @@
 {% endstyle %}
 
 <style>
-  {% if template.name == 'collection' or template.name == 'list-collections' or template.name == 'index' or request.page_type == 'policy' %}
+  {% if template.name == 'collection' or template.name == 'list-collections' or template.name == 'index' %}
     .ai-breadcrumb-{{ ai_gen_id }}{
        display: none !important;
     }
@@ -182,6 +182,11 @@
           Search
         </span>
       </div>
+
+    {% elsif request.page_type contains 'policy' %}
+      {% if request.path contains 'terms-of-service' %} 
+        {{ shop.terms_of_service.title }} 
+      {% endif %}
     {% elsif article %}
       {% if blog %}
         <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
