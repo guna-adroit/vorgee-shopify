@@ -932,5 +932,8 @@ p.quantity-option-title {
 .shopify-policy__container{
   max-width: 105ch;
 }
+.shopify-policy__title h1{
+  font-size: 60px;
+}
 
 /* Policy page CSS End */
