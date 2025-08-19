@@ -70,8 +70,8 @@
                     
                 </div>
                 <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="1000">
-                    <h2>{{ block.settings.title }}</h2>
-                    <p>{{ block.settings.description }}</p>
+                    <div class="vorgee-image-text-title">{{ block.settings.title }}</div>
+                    <div class="vorgee-image-text-description">{{ block.settings.description }}</div>
                 </div>
             </div>
             {% endfor %}
@@ -101,16 +101,16 @@
                 "label": "Image"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "title",
                 "label": "Heading",
-                "default": "Heading"
+                "default": "<h2>Heading</h2>"
             },
             {
-                "type": "textarea",
+                "type": "richtext",
                 "id": "description",
                 "label": "Welcome message",
-                "default": "Welcome to my shop!"
+                "default": "<p>Welcome to my shop!</p>"
             },
             {
                 "type": "select",
