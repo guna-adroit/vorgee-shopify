@@ -114,10 +114,16 @@
       ],
       "name": "Icon with Text",
       "settings": {}
+    },
+    "image_text_timeline_LjwUtG": {
+      "type": "image-text-timeline",
+      "name": "Image Text Timeline",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "image_text_timeline_LjwUtG",
     "icon_with_text_4KB7Xh"
   ]
 }
