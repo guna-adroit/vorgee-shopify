@@ -60,7 +60,7 @@
     <div class="vorgee-image-text-wrapper section page-width-content">
         <div class="vorgee-image-text-container ">
             {% for block in section.blocks %}
-            <div class="vorgee-image-text-block-item">
+            <div class="vorgee-image-text-block-item {% if block.settings.image_alignment == 'right' %} image-right {% endif %}">
                 <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
                     {% if block.settings.image != blank %}
                         {{ block.settings.image | image_url: width: 750 | image_tag  }}
