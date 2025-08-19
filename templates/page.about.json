@@ -64,12 +64,53 @@
         "icon_text_mHtzmT": {
           "type": "icon_text",
           "settings": {
-            "description": "Welcome to my shop!"
+            "image": "shopify://shop_images/uEA16-quality-materials.svg",
+            "description": "Utilising only the highest quality materials"
+          }
+        },
+        "icon_text_gXjGCA": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA17-manufacturing-sources.svg",
+            "description": "Sourcing only the best, most respected manufacturers"
+          }
+        },
+        "icon_text_qnq4Lz": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA18-research.svg",
+            "description": "Researching the latest in product technologies and advancements"
+          }
+        },
+        "icon_text_WY7dKF": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA19-quality-control.svg",
+            "description": "Applying and adhering to strict quality control measures to produce products which meet their expectations"
+          }
+        },
+        "icon_text_TJcnUA": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA1A-consumer-trends.svg",
+            "description": "Identifying consumer trends and preferences to guide product development"
+          }
+        },
+        "icon_text_jijDxR": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA1B-fashion.svg",
+            "description": "Injecting bright colours and latest fashion trends into their designs"
           }
         }
       },
       "block_order": [
-        "icon_text_mHtzmT"
+        "icon_text_mHtzmT",
+        "icon_text_gXjGCA",
+        "icon_text_qnq4Lz",
+        "icon_text_WY7dKF",
+        "icon_text_TJcnUA",
+        "icon_text_jijDxR"
       ],
       "name": "Icon with Text",
       "settings": {}
