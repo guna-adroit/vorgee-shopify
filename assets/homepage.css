@@ -928,7 +928,7 @@ p.quantity-option-title {
 }
 
 .page-width-content {
-    --page-content-width: 55rem;
+    --page-content-width: 65rem;
     --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
 }
 
