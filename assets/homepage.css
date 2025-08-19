@@ -927,6 +927,10 @@ p.quantity-option-title {
   display: none;
 }
 
+.page-width-content {
+    --page-content-width: 55rem;
+    --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+}
 
 /* Policy Page CSS Start */
 .shopify-policy__container{
