@@ -70,21 +70,12 @@
                     
                 </div>
                 <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="1000">
-                    <h2>This is Go-To.</h2>
-                    <p>How can we make skincare as useful, simple, effective, trustworthy and fun, for as many people as possible? That's what we ask ourselves each day. That's why you're here, reading this self-aggrandising drivel.</p>
+                    <h2>{{ block.settings.title }}</h2>
+                    <p>{{ block.settings.description }}</p>
                 </div>
             </div>
             {% endfor %}
-            <div class="vorgee-image-text-block-item image-right">
-                <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
-                    <img src="https://gotoskincare.com/cdn/shop/files/2024_GT_thisisgt.jpg?v=1719296434&width=700" alt="">
-                </div>
-                <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="1000">
-                    <h2>This is Go-To.</h2>
-                    <p>How can we make skincare as useful, simple, effective, trustworthy and fun, for as many people as possible? That's what we ask ourselves each day. That's why you're here, reading this self-aggrandising drivel.</p>
-                </div>
-                
-            </div>
+           
         </div>
     </div>
     <script>
@@ -120,7 +111,23 @@
                 "id": "description",
                 "label": "Welcome message",
                 "default": "Welcome to my shop!"
-            }
+            },
+            {
+                "type": "select",
+                "id": "image_alignment",
+                "label": "Image alignment",
+                "options": [
+                    {
+                    "value": "left",
+                    "label": "Left"
+                    },
+                    {
+                    "value": "right",
+                    "label": "Right"
+                    }
+                ],
+                "default": "left"
+                }
         ]   
     }
   ],
