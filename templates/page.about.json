@@ -54,9 +54,14 @@
         "content_direction": "column",
         "gap": 32,
         "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
+    },
+    "image_text_timeline_LjwUtG": {
+      "type": "image-text-timeline",
+      "name": "Image Text Timeline",
+      "settings": {}
     },
     "icon_with_text_4KB7Xh": {
       "type": "icon-with-text",
@@ -113,11 +118,6 @@
         "icon_text_jijDxR"
       ],
       "name": "Icon with Text",
-      "settings": {}
-    },
-    "image_text_timeline_LjwUtG": {
-      "type": "image-text-timeline",
-      "name": "Image Text Timeline",
       "settings": {}
     }
   },
