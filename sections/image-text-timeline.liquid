@@ -1,0 +1,116 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .vorgee-image-text-wrapper{
+            position: relative;
+        }
+        .vorgee-image-text-block-item{
+            display: flex;
+            max-width: 945px;
+            margin: 0 auto;
+            gap: 16px;
+            position: relative;
+        }
+        .vorgee-image-text-wrapper::after{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: #00bbd1;
+            left: 50%;
+            top: 0;
+        }
+        .vorgee-image-block, .vorgee-text-block{
+            width: calc(50% - 8px);
+            padding: 16px;
+        }
+        .vorgee-image-block img{
+            width: 100%;
+        }
+        .vorgee-text-block{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        .vorgee-text-block p{
+            padding-left: 40px;
+        }
+        .vorgee-image-text-block-item.image-right{
+            flex-direction: row-reverse;
+        }
+        @media screen and (max-width: 768px){
+            .vorgee-image-text-block-item, .vorgee-image-text-block-item.image-right{
+                flex-direction: column;
+                gap: 0;
+            }
+            .vorgee-image-block, .vorgee-text-block{
+                width: 100%;
+                padding: 0;
+            }
+            .vorgee-image-text-wrapper::after{
+                display: none;
+            }
+        }
+    </style>
+    <div class="vorgee-image-text-wrapper">
+        <div class="vorgee-image-text-container">
+            <div class="vorgee-image-text-block-item">
+                <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
+                    <img src="https://gotoskincare.com/cdn/shop/files/2024_GT_thisisgt.jpg?v=1719296434&width=700" alt="">
+                </div>
+                <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="1000">
+                    <h2>This is Go-To.</h2>
+                    <p>How can we make skincare as useful, simple, effective, trustworthy and fun, for as many people as possible? That's what we ask ourselves each day. That's why you're here, reading this self-aggrandising drivel.</p>
+                </div>
+            </div>
+            <div class="vorgee-image-text-block-item image-right">
+                <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
+                    <img src="https://gotoskincare.com/cdn/shop/files/2024_GT_thisisgt.jpg?v=1719296434&width=700" alt="">
+                </div>
+                <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="4000">
+                    <h2>This is Go-To.</h2>
+                    <p>How can we make skincare as useful, simple, effective, trustworthy and fun, for as many people as possible? That's what we ask ourselves each day. That's why you're here, reading this self-aggrandising drivel.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+{% schema %}
+{
+  "name": "Image Text Timeline",
+  "class": "section-wrapper",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+        "type": "icon_text",
+        "name": "Icon Text",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Welcome message",
+                "default": "Welcome to my shop!"
+            }
+        ]   
+    }
+  ],
+  "presets": [
+    {
+        "name": "Image Text Timeline"
+    }
+  ]
+}
+{% endschema %} 
