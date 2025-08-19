@@ -29,6 +29,7 @@
         }
     </style>
     <div class="vorgee-icon-text-wrapper section page-width-content">
+        <div class="vorgee-icon-text-title">{{ section.settings.title }}</div>
         <div class="vorgee-icon-text-container">
             {% for block in section.blocks %}
               <div class="vorgee-icon-text-item">
@@ -50,7 +51,14 @@
   "name": "Icon with Text",
   "class": "section-wrapper",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "<h2>Title</h2>"
+    }
+  ],
   "blocks": [
     {
         "type": "icon_text",
