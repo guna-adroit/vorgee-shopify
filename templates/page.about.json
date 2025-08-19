@@ -144,11 +144,31 @@
       ],
       "name": "Icon with Text",
       "settings": {}
+    },
+    "image_text_timeline_h84M4n": {
+      "type": "image-text-timeline",
+      "blocks": {
+        "icon_text_dG4rrT": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
+            "title": "<h2><strong>Still Swimming Forward</strong></h2>",
+            "description": "<p>From a simple idea - to create well-considered, performance-driven products - we’ve grown into one of Australia’s most trusted aquatic brands. But our mission remains the same: to make swimming simpler, more enjoyable, and better for everyone.<br/></p>",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_dG4rrT"
+      ],
+      "name": "Image Text Timeline",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "image_text_timeline_LjwUtG",
-    "icon_with_text_4KB7Xh"
+    "icon_with_text_4KB7Xh",
+    "image_text_timeline_h84M4n"
   ]
 }
