@@ -1,0 +1,81 @@
+<style>
+        .vorgee-icon-text-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            gap: 12px;
+        }
+        .vorgee-icon-text-item img{
+            width: 72px;
+        }
+        @media screen and (max-width: 768px){
+            .vorgee-icon-text-container{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+    <div class="vorgee-icon-text-wrapper">
+        <div class="vorgee-icon-text-container">
+            {% for block in section.blocks %}
+              <div class="vorgee-icon-text-item">
+                {{ block.settings.image | image_url: width: 250 | image_tag  }}
+                <p>{{ block.settings.description }}</p>
+              </div>
+            {% endfor %}
+            
+            <div class="vorgee-icon-text-item">
+                <img src="https://vorgee.com/wp-content/uploads/2017/01/uEA16-quality-materials.svg" alt="">
+                <p>Utilising only the highest quality materials</p>
+            </div>
+            <div class="vorgee-icon-text-item">
+                <img src="https://vorgee.com/wp-content/uploads/2017/01/uEA16-quality-materials.svg" alt="">
+                <p>Utilising only the highest quality materials</p>
+            </div>
+            <div class="vorgee-icon-text-item">
+                <img src="https://vorgee.com/wp-content/uploads/2017/01/uEA16-quality-materials.svg" alt="">
+                <p>Utilising only the highest quality materials</p>
+            </div>
+            <div class="vorgee-icon-text-item">
+                <img src="https://vorgee.com/wp-content/uploads/2017/01/uEA16-quality-materials.svg" alt="">
+                <p>Utilising only the highest quality materials</p>
+            </div>
+            <div class="vorgee-icon-text-item">
+                <img src="https://vorgee.com/wp-content/uploads/2017/01/uEA16-quality-materials.svg" alt="">
+                <p>Utilising only the highest quality materials</p>
+            </div>
+        </div>
+    </div>
+
+{% schema %}
+{
+  "name": "Icon with Text",
+  "class": "section-wrapper",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+        "type": "icon_text",
+        "name": "Icon Text",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Welcome message",
+                "default": "Welcome to my shop!"
+            }
+        ]   
+    }
+  ],
+  "presets": [
+    {
+        "name": "Icon with Text"
+    }
+  ]
+}
+{% endschema %} 
