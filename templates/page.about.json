@@ -143,7 +143,9 @@
         "icon_text_jijDxR"
       ],
       "name": "Icon with Text",
-      "settings": {}
+      "settings": {
+        "title": "<h3>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</h3>"
+      }
     },
     "image_text_timeline_h84M4n": {
       "type": "image-text-timeline",
