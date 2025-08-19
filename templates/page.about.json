@@ -56,7 +56,7 @@
         "gap": 32,
         "color_scheme": "",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 30
       }
     },
     "image_text_timeline_LjwUtG": {
@@ -70,10 +70,20 @@
             "description": "<p>At Vorgee, we believe the best swim gear is the kind you don’t even notice. </p><p>Founded in 2005 and proudly Australian-owned and managed, we began with a simple mission: to create swim gear for <em>everyone</em>. Whether you were stepping into the water for the first time or onto the blocks going for gold, we set out to offer a full range of products that perform with style and reliability. </p><p>That mission hasn’t changed. Today, we continue to make swimming easier, more enjoyable, and more accessible at every level. </p>",
             "image_alignment": "left"
           }
+        },
+        "icon_text_UNbHU3": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/ZFB_29.jpg",
+            "title": "<h2><strong>Our Philosophy</strong> </h2><h2><strong>Designed to Feel Invisible</strong> </h2>",
+            "description": "<p>We create goggles and swim equipment that let you focus on what really matters: the freedom, flow, and joy of swimming. Our products are designed to feel like a natural extension of you, so you can swim free of discomfort, distraction, or second-guessing. </p><p>To us, <em>Immerse Yourself</em> means more than just diving in - it’s about fully experiencing the water, uninterrupted. </p>",
+            "image_alignment": "right"
+          }
         }
       },
       "block_order": [
-        "icon_text_KTpkJi"
+        "icon_text_KTpkJi",
+        "icon_text_UNbHU3"
       ],
       "name": "Image Text Timeline",
       "settings": {}
