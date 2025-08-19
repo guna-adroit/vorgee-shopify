@@ -8,6 +8,9 @@
         .vorgee-icon-text-item img{
             width: 72px;
         }
+        .vorgee-icon-text-item .placeholder-image{
+            width: 72px;
+        }
         @media screen and (max-width: 768px){
             .vorgee-icon-text-container{
                 display: grid;
@@ -19,7 +22,12 @@
         <div class="vorgee-icon-text-container">
             {% for block in section.blocks %}
               <div class="vorgee-icon-text-item">
-                {{ block.settings.image | image_url: width: 250 | image_tag  }}
+                {% if block.settings.image != blank %}
+                  {{ block.settings.image | image_url: width: 250 | image_tag  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-image' }}
+                {% endif %}
+                
                 <p>{{ block.settings.description }}</p>
               </div>
             {% endfor %}
