@@ -61,6 +61,19 @@
     },
     "image_text_timeline_LjwUtG": {
       "type": "image-text-timeline",
+      "blocks": {
+        "icon_text_KTpkJi": {
+          "type": "icon_text",
+          "settings": {
+            "title": "Heading",
+            "description": "Welcome to my shop!",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_KTpkJi"
+      ],
       "name": "Image Text Timeline",
       "settings": {}
     },
