@@ -28,6 +28,9 @@
         .vorgee-image-block img{
             width: 100%;
         }
+        .vorgee-image-block .placeholder-image{
+            width:100%;
+        }
         .vorgee-text-block{
             display: flex;
             flex-direction: column;
@@ -54,17 +57,24 @@
             }
         }
     </style>
-    <div class="vorgee-image-text-wrapper">
-        <div class="vorgee-image-text-container">
+    <div class="vorgee-image-text-wrapper section page-width-content">
+        <div class="vorgee-image-text-container ">
+            {% for block in section.blocks %}
             <div class="vorgee-image-text-block-item">
                 <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
-                    <img src="https://gotoskincare.com/cdn/shop/files/2024_GT_thisisgt.jpg?v=1719296434&width=700" alt="">
+                    {% if block.settings.image != blank %}
+                        {{ block.settings.image | image_url: width: 750 | image_tag  }}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-image' }}
+                    {% endif %}
+                    
                 </div>
                 <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="1000">
                     <h2>This is Go-To.</h2>
                     <p>How can we make skincare as useful, simple, effective, trustworthy and fun, for as many people as possible? That's what we ask ourselves each day. That's why you're here, reading this self-aggrandising drivel.</p>
                 </div>
             </div>
+            {% endfor %}
             <div class="vorgee-image-text-block-item image-right">
                 <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
                     <img src="https://gotoskincare.com/cdn/shop/files/2024_GT_thisisgt.jpg?v=1719296434&width=700" alt="">
@@ -98,6 +108,12 @@
                 "type": "image_picker",
                 "id": "image",
                 "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "default": "Heading"
             },
             {
                 "type": "textarea",
