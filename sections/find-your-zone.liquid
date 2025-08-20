@@ -1,9 +1,10 @@
-{% assign zoneMappings = shop.metaobjects['find_your_zone'] %}
+{% assign zone_mappings = shop.metaobjects['find_your_zone'] %}
 
 <div id="find-your-zone">
 
   <label>I swim __________</label>
   <select id="frequency" name="frequency">
+    <option value="">-- Select --</option>
     <option value="daily">Most days (5+ times a week)</option>
     <option value="regularly">Regularly (3-5 times a week)</option>
     <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
@@ -13,6 +14,7 @@
 
   <label>I'm immersed in __________</label>
   <select id="goal" name="goal">
+    <option value="">-- Select --</option>
     <option value="race_day_ready">Being race day ready</option>
     <option value="beating_pb">Beating my PB</option>
     <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
@@ -22,6 +24,7 @@
 
   <label>I'm happiest when I am __________</label>
   <select id="happiest_when" name="happiest_when">
+    <option value="">-- Select --</option>
     <option value="diving">Diving off the blocks at the starting pistol</option>
     <option value="in_the_zone">Following the black line</option>
     <option value="progress">Inching towards the horizon</option>
@@ -32,57 +35,62 @@
   <button id="quiz-submit">Show Collection</button>
 </div>
 
-<div id="quiz-collection"></div>
+<div id="quiz-collections">
+  {% for mapping in zone_mappings.values %}
+    <div class="collection-block" 
+         id="zone-{{ mapping.frequency }}-{{ mapping.goal }}-{{ mapping.happiest_when }}" 
+         style="display:none;">
+
+      <h2>{{ mapping.collection.title }}</h2>
+      <div class="collection-grid">
+        {% for product in mapping.collection.products %}
+          <div class="product-card">
+            <a href="{{ product.url }}">
+              {{ product.featured_image | image_url: width: 400 | image_tag }}
+              <h3>{{ product.title }}</h3>
+              <p>{{ product.price | money }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  {% endfor %}
+</div>
 
 <script>
-  window.zoneData = [
-    {% for mapping in zoneMappings.values %}
-      {
-        frequency: "{{ mapping.frequency }}",
-        goal: "{{ mapping.goal }}",
-        happiest_when: "{{ mapping.happiest_when }}",
-        collectionHandle: "{{ mapping.collection.handle }}"
-      },
-    {% endfor %}
-  ];
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const frequency = document.getElementById("frequency");
   const goal = document.getElementById("goal");
   const happiest = document.getElementById("happiest_when");
   const submit = document.getElementById("quiz-submit");
-  const container = document.getElementById("quiz-collection");
 
   submit.addEventListener("click", function() {
     const freqVal = frequency.value;
     const goalVal = goal.value;
     const happyVal = happiest.value;
 
+    // Hide all collections first
+    document.querySelectorAll(".collection-block").forEach(el => el.style.display = "none");
+
     if (!freqVal || !goalVal || !happyVal) {
-      container.innerHTML = "<p>Please select all options.</p>";
+      alert("Please select all options.");
       return;
     }
 
-    const match = window.zoneData.find(item =>
-      item.frequency === freqVal &&
-      item.goal === goalVal &&
-      item.happiest_when === happyVal
-    );
+    const targetId = `zone-${freqVal}-${goalVal}-${happyVal}`;
+    const targetEl = document.getElementById(targetId);
 
-    if (match) {
-      fetch(`/collections/${match.collectionHandle}?view=ajax`)
-        .then(res => res.text())
-        .then(html => {
-          container.innerHTML = html;
-        });
+    if (targetEl) {
+      targetEl.style.display = "block";
+      targetEl.scrollIntoView({ behavior: "smooth" });
     } else {
-      container.innerHTML = "<p>No matching collection found.</p>";
+      alert("No matching collection found.");
     }
   });
 });
-
 </script>
+
 {% schema %}
 {
   "name": "Find Your Zone",
