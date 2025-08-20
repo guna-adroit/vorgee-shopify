@@ -40,10 +40,10 @@
     <div class="collection-block" 
          id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
          style="display:none;">
-
-      <h2>{{ mapping.collection.title }}</h2>
+        {% assign collection = mapping.collection %}
+      <h2>{{ collection.title }}</h2>
       <div class="collection-grid">
-        {% for product in mapping.collection.products %}
+        {% for product in collection.products %}
           <div class="product-card">
             <a href="{{ product.url }}">
               {{ product.featured_image | image_url: width: 400 | image_tag }}
