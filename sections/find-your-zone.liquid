@@ -71,19 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
   const frequency = document.getElementById("frequency");
   const goal = document.getElementById("goal");
   const happiest = document.getElementById("happiest_when");
-  const submit = document.getElementById("quiz-submit");
 
-  submit.addEventListener("click", function() {
+  function showCollection() {
     const freqVal = frequency.value;
     const goalVal = goal.value;
     const happyVal = happiest.value;
 
-    // Hide all collections first
+    // Hide all first
     document.querySelectorAll(".collection-block").forEach(el => el.style.display = "none");
 
     if (!freqVal || !goalVal || !happyVal) {
-      alert("Please select all options.");
-      return;
+      return; // don’t show anything until all 3 are selected
     }
 
     const targetId = `zone-${freqVal}-${goalVal}-${happyVal}`;
@@ -92,10 +90,13 @@ document.addEventListener("DOMContentLoaded", function() {
     if (targetEl) {
       targetEl.style.display = "block";
       targetEl.scrollIntoView({ behavior: "smooth" });
-    } else {
-      alert("No matching collection found.");
     }
-  });
+  }
+
+  // Listen for change on all 3 selects
+  frequency.addEventListener("change", showCollection);
+  goal.addEventListener("change", showCollection);
+  happiest.addEventListener("change", showCollection);
 });
 </script>
 
