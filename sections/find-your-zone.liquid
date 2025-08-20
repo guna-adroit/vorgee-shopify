@@ -57,7 +57,13 @@
     </div>
   {% endfor %}
 </div>
-
+<style>
+    .collection-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+</style>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const frequency = document.getElementById("frequency");
