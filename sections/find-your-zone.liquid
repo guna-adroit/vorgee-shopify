@@ -1,0 +1,99 @@
+{% assign zoneMappings = shop.metaobjects['find_your_zone'] %}
+
+<div id="find-your-zone">
+
+  <label>I swim __________</label>
+  <select id="frequency" name="frequency">
+    <option value="daily">Most days (5+ times a week)</option>
+    <option value="regularly">Regularly (3-5 times a week)</option>
+    <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
+    <option value="occasionally">When it takes my fancy</option>
+    <option value="never">I prefer to bob about, but I like my eyes to be protected</option>
+  </select>
+
+  <label>I'm immersed in __________</label>
+  <select id="goal" name="goal">
+    <option value="race_day_ready">Being race day ready</option>
+    <option value="beating_pb">Beating my PB</option>
+    <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
+    <option value="learn">Growing my water wings (learning to swim)</option>
+    <option value="leisure">Enjoying poolside holidays and beach breaks</option>
+  </select>
+
+  <label>I'm happiest when I am __________</label>
+  <select id="happiest_when" name="happiest_when">
+    <option value="diving">Diving off the blocks at the starting pistol</option>
+    <option value="in_the_zone">Following the black line</option>
+    <option value="progress">Inching towards the horizon</option>
+    <option value="learning">In my swim class</option>
+    <option value="splashing_about">Splashing about in any body of water</option>
+  </select>
+
+  <button id="quiz-submit">Show Collection</button>
+</div>
+
+<div id="quiz-collection"></div>
+
+<script>
+  window.zoneData = [
+    {% for mapping in zoneMappings.values %}
+      {
+        frequency: "{{ mapping.frequency }}",
+        goal: "{{ mapping.goal }}",
+        happiest_when: "{{ mapping.happiest_when }}",
+        collectionHandle: "{{ mapping.collection.handle }}"
+      },
+    {% endfor %}
+  ];
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const frequency = document.getElementById("frequency");
+  const goal = document.getElementById("goal");
+  const happiest = document.getElementById("happiest_when");
+  const submit = document.getElementById("quiz-submit");
+  const container = document.getElementById("quiz-collection");
+
+  submit.addEventListener("click", function() {
+    const freqVal = frequency.value;
+    const goalVal = goal.value;
+    const happyVal = happiest.value;
+
+    if (!freqVal || !goalVal || !happyVal) {
+      container.innerHTML = "<p>Please select all options.</p>";
+      return;
+    }
+
+    const match = window.zoneData.find(item =>
+      item.frequency === freqVal &&
+      item.goal === goalVal &&
+      item.happiest_when === happyVal
+    );
+
+    if (match) {
+      fetch(`/collections/${match.collectionHandle}?view=ajax`)
+        .then(res => res.text())
+        .then(html => {
+          container.innerHTML = html;
+        });
+    } else {
+      container.innerHTML = "<p>No matching collection found.</p>";
+    }
+  });
+});
+
+</script>
+{% schema %}
+{
+  "name": "Find Your Zone",
+  "class": "section-wrapper",
+  "tag": "section",
+  "settings": [],
+  
+  "presets": [
+    {
+        "name": "Find Your Zone"
+    }
+  ]
+}
+{% endschema %} 
