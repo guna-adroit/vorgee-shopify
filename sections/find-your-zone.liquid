@@ -198,6 +198,7 @@
          style="display:none;">
         {% assign collection = collections[mapping.collection] %}
       <h2 class="find-your-zone-result-title"><span>Your zone is</span> {{ collection.title }}</h2>
+      <p>{{ collection.metafields.custom.find_zone_description }}</p>
       <div class="collection-grid">
         {% for product in collection.products %}
            <div class="product-card">
