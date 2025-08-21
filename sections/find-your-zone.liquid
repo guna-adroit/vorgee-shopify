@@ -91,6 +91,9 @@
         margin: 0 auto;
         padding: 15px 30px;
     }
+    .find-your-zone-result-title span{
+        font-weight: 300;
+    }
     @media screen and (max-width: 768px){
         .find-your-zone-field{
             flex-direction: column;
@@ -165,7 +168,7 @@
          id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
          style="display:none;">
         {% assign collection = collections[mapping.collection] %}
-      <h2>Your zone is {{ collection.title }}</h2>
+      <h2 class="find-your-zone-result-title"><span>Your zone is</span> {{ collection.title }}</h2>
       <div class="collection-grid">
         {% for product in collection.products %}
            <div class="product-card">
