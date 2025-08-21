@@ -156,7 +156,7 @@
             <div
         class="resource-list__item"
       >
-        {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+        {% render 'product-card', product: product %}
       </div>
           {% comment %} <div class="product-card">
             <a href="{{ product.url }}">
