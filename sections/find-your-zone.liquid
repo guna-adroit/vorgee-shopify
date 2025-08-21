@@ -1,39 +1,140 @@
+<style>
+    body{
+        margin: 0;
+    }
+    .vorgee-find-zone-bg-container{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .vorgee-find-zone-bg-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .vorgee-find-zone-bg-container::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 6;
+    }
+    .vorgee-find-zone-form-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+    .vorgee-find-zone-form-container label{
+        color: white;
+        font-size: 30px;
+    }
+    .vorgee-find-zone-form-container select{
+        font-size: 30px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 1px dotted #fff;
+    }
+    .vorgee-find-zone-form-container select option{
+        color: black;
+        font-size: 16px;
+    }
+    .vorgee-find-zone-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        height: 100%;
+    }
+    .find-your-zone-field{
+        display: flex;
+        gap: 15px;
+    }
+    .find-your-zone-field label{
+        width: 30%;
+        text-align: right;
+    }
+    .find-your-zone-field select{
+        width: 70%;
+    }
+    .find-your-zone-field select:focus{
+        border: none;
+        outline: none;
+    }
+    @media screen and (max-width: 768px){
+        .find-your-zone-field{
+            flex-direction: column;
+        }
+        .find-your-zone-field label, .find-your-zone-field select{
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        .vorgee-find-zone-form {
+            margin: 0 1.5rem;
+        }
+    }
+</style>
+
 <div class="section page-width-content">
 {% assign zone_mappings = shop.metaobjects['find_your_zone'] %}
 
 <div id="find-your-zone">
+    <div class="vorgee-find-zone-bg-container">
+        <img src="https://vorgee.com/wp-content/uploads/2017/01/bubbles.jpg" alt="">
+    </div>
+    <div class="vorgee-find-zone-form-container">
+        
+        <form class="vorgee-find-zone-form">
+            <div class="find-your-zone-field">
+            <label>I swim </label>
+            <select id="frequency" name="frequency">
+                <option value="">-- Select --</option>
+                <option value="daily">Most days (5+ times a week)</option>
+                <option value="regularly">Regularly (3-5 times a week)</option>
+                <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
+                <option value="occasionally">When it takes my fancy</option>
+                <option value="never">I prefer to bob about, but I like my eyes to be protected</option>
+            </select>
+            </div>
+            <div class="find-your-zone-field">
+            <label>I'm immersed in</label>
+            <select id="goal" name="goal">
+                <option value="">-- Select --</option>
+                <option value="race_day_ready">Being race day ready</option>
+                <option value="beating_pb">Beating my PB</option>
+                <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
+                <option value="learn">Growing my water wings (learning to swim)</option>
+                <option value="leisure">Enjoying poolside holidays and beach breaks</option>
+            </select>
+            </div>
+            <div class="find-your-zone-field">
+            <label>I'm happiest when I am </label>
+            <select id="happiest_when" name="happiest_when">
+                <option value="">-- Select --</option>
+                <option value="diving">Diving off the blocks at the starting pistol</option>
+                <option value="in_the_zone">Following the black line</option>
+                <option value="progress">Inching towards the horizon</option>
+                <option value="learning">In my swim class</option>
+                <option value="splashing_about">Splashing about in any body of water</option>
+            </select>
+            </div>
 
-  <label>I swim </label>
-  <select id="frequency" name="frequency">
-    <option value="">-- Select --</option>
-    <option value="daily">Most days (5+ times a week)</option>
-    <option value="regularly">Regularly (3-5 times a week)</option>
-    <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
-    <option value="occasionally">When it takes my fancy</option>
-    <option value="never">I prefer to bob about, but I like my eyes to be protected</option>
-  </select><br>
-
-  <label>I'm immersed in</label>
-  <select id="goal" name="goal">
-    <option value="">-- Select --</option>
-    <option value="race_day_ready">Being race day ready</option>
-    <option value="beating_pb">Beating my PB</option>
-    <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
-    <option value="learn">Growing my water wings (learning to swim)</option>
-    <option value="leisure">Enjoying poolside holidays and beach breaks</option>
-  </select><br>
-
-  <label>I'm happiest when I am </label>
-  <select id="happiest_when" name="happiest_when">
-    <option value="">-- Select --</option>
-    <option value="diving">Diving off the blocks at the starting pistol</option>
-    <option value="in_the_zone">Following the black line</option>
-    <option value="progress">Inching towards the horizon</option>
-    <option value="learning">In my swim class</option>
-    <option value="splashing_about">Splashing about in any body of water</option>
-  </select><br>
-
-  <button id="quiz-submit">Show Collection</button>
+            <button id="quiz-submit">Show Collection</button>
+        </form>
+        
+    </div>
 </div>
 
 <div id="quiz-collections">
