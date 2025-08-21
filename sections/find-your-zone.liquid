@@ -91,6 +91,10 @@
         margin: 0 auto;
         padding: 15px 30px;
     }
+    .find-your-zone-results{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     .find-your-zone-result-title{
         text-align: center;
     }
@@ -165,7 +169,7 @@
     </div>
 </div>
 
-<div id="quiz-collections " class="section section--page-width">
+<div id="quiz-collections " class="find-your-zone-results section section--page-width">
   {% for mapping in zone_mappings.values %}
     <div class="collection-block " 
          id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
