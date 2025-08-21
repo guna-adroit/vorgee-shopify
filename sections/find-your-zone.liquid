@@ -102,6 +102,11 @@
     .find-your-zone-result-title span{
         font-weight: 300;
     }
+    .collection-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
     @media screen and (max-width: 768px){
         .find-your-zone-field{
             flex-direction: column;
@@ -119,6 +124,11 @@
         }
         .find-your-zone-result-title{
             font-size: 36px;
+        }
+        .collection-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
     }
 </style>
@@ -196,13 +206,7 @@
   {% endfor %}
 </div>
 </div>
-<style>
-    .collection-grid{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-    }
-</style>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const frequency = document.getElementById("frequency");
