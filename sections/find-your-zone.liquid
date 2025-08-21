@@ -153,7 +153,11 @@
       <h2>Your zone is {{ collection.title }}</h2>
       <div class="collection-grid">
         {% for product in collection.products %}
-            {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+            <div
+        class="resource-list__item"
+      >
+        {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+      </div>
           {% comment %} <div class="product-card">
             <a href="{{ product.url }}">
               {{ product.featured_image | image_url: width: 400 | image_tag }}
