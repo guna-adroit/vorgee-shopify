@@ -4169,7 +4169,7 @@ text-component {
   -webkit-line-clamp: 3;
 }
 span.cart-drawer__heading.h3{
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 500;
 }
 /* Product card title truncation - applied on mobile regardless of view */
