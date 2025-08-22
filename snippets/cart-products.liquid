@@ -621,6 +621,7 @@
   }
 
   .cart__ctas .cart__checkout-button {
+    font-size: 16px;
     width: 100%;
     height: clamp(25px, var(--height-buy-buttons), 55px);
     padding-inline: var(--padding-4xl);
@@ -629,6 +630,11 @@
     color: #333;
     text-transform: uppercase;
   }
+  @media screen and (max-width: 749px) {
+    .cart__ctas .cart__checkout-button {
+        font-size: 12px;
+    }
+}
   button.button.button--primary.cart-discount__button{
     border-radius: 100px;
     background: #07BED4;
