@@ -21,6 +21,8 @@
         }
         .v-payment-icons img{
           border-radius: 0px;
+          width: 48px;
+          height: 38px;
         }
         .v-site-copyright p{
           font-weight: 500;
@@ -37,13 +39,13 @@
                 <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/vida.png?v=1752126809" class="payment-icon-img" alt="" width="" height="">
                 <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/afterpay.png?v=1752126809" class="payment-icon-img" alt="" width="" height="">
                 <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/paypal.png?v=1752126809" class="payment-icon-img" alt="" width="" height="">
-                <ul class="list list-payment" role="list">
+                {% comment %} <ul class="list list-payment" role="list">
                     {%- for type in shop.enabled_payment_types -%}
                         <li class="list-payment__item">
                         {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
                         </li>
                     {%- endfor -%}
-                </ul>
+                </ul> {% endcomment %}
             </div>
             <div class="v-site-copyright">
                 <p>© 2025 VORGEE</p>
