@@ -1,0 +1,283 @@
+<style>
+    .find-your-zone{
+        position: relative;
+    }
+    .vorgee-find-zone-bg-container{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .vorgee-find-zone-bg-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .vorgee-find-zone-bg-container::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 6;
+    }
+    .vorgee-find-zone-form-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 7;
+    }
+    .vorgee-find-zone-form-container label{
+        color: white;
+        font-size: 30px;
+    }
+    .vorgee-find-zone-form-container select{
+        font-size: 30px;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    .vorgee-find-zone-form-container select option{
+        color: black;
+        font-size: 16px;
+    }
+    .vorgee-find-zone-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        height: 100%;
+    }
+    .find-your-zone-field{
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjEyOS43cHgiIGhlaWdodD0iMTAwMHB4IiB2aWV3Qm94PSIwIDAgMjEyOS43IDEwMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIxMjkuNyAxMDAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTA2NC4yLDEwMDBMNTMuNSwyNDFjLTU5LjEtNDQuNC03MS0xMjguMy0yNi42LTE4Ny40YzQ0LjQtNTkuMSwxMjguMy03MSwxODcuNC0yNi42bDg1MC4xLDYzOC40bDg1MS4yLTYzOC40YzU5LjEtNDQuNCwxNDMtMzIuNCwxODcuNCwyNi44YzQ0LjMsNTkuMSwzMi40LDE0My0yNi44LDE4Ny40TDEwNjQuMiwxMDAweiIvPjwvZz48L3N2Zz4=);
+        background-position: center right;
+        background-size: 1em;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .find-your-zone-field label{
+        width: 30%;
+        text-align: right;
+    }
+    .find-your-zone-field select{
+        width: 70%;
+        vertical-align: middle;
+        appearance: none;
+        background: 0;
+        color: #FFF;
+        height: auto;
+        font-weight: 400;
+        padding: .25em 1em .25em 0;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTQuNXB4IiBoZWlnaHQ9IjQuOXB4IiB2aWV3Qm94PSIwIDAgMTQuNSA0LjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE0LjUgNC45OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwyLjRDMCwxLjEsMS4xLDAsMi41LDBsMCwwYzEuMywwLDIuNCwxLjEsMi40LDIuNGwwLDBjMCwxLjMtMS4xLDIuNC0yLjQsMi40bDAsMEMxLjEsNC45LDAsMy44LDAsMi40eiIvPjwvZz48L3N2Zz4=);
+        background-position: bottom left;
+        background-repeat: repeat-x;
+    }
+    .find-your-zone-field select:focus{
+        outline: none;
+    }
+    button#quiz-submit {
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 15px 55px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    button#quiz-submit:hover{
+        background-color: rgb(115, 190, 196);
+        color: rgb(255, 255, 255);
+    }
+    .find-your-zone-results{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .find-your-zone-result-title{
+        text-align: center;
+        font-size: 36px;
+    }
+    .find-your-zone-result-title span{
+        font-weight: 300;
+    }
+    .collection-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    .product-card {
+        border: 1px solid #F1F1F1;
+        padding: 5px;
+    }
+    .find-your-zone-result-description{
+        font-size: 18px;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    @media screen and (max-width: 768px){
+        .find-your-zone-field{
+            flex-direction: column;
+            gap: 2px;
+        }
+        .vorgee-find-zone-bg-container{
+            height: calc(100vh - 155px);
+        }
+        .find-your-zone-field label, .find-your-zone-field select{
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        .vorgee-find-zone-form {
+            margin: 0 1.5rem;
+        }
+        .find-your-zone-result-title{
+            font-size: 26px;
+        }
+        .collection-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .vorgee-find-zone-form {
+            gap: 32px;
+        }
+        .find-your-zone-result-description{
+            font-size: 16px;
+        }
+    }
+</style>
+
+<div class="">
+{% assign zone_mappings = shop.metaobjects['find_your_zone'] %}
+
+<div id="find-your-zone" class="find-your-zone">
+    <div class="vorgee-find-zone-bg-container">
+        <img src="https://vorgee.com/wp-content/uploads/2017/01/bubbles.jpg" alt="">
+    </div>
+    <div class="vorgee-find-zone-form-container section section--page-width">
+        
+        <form class="vorgee-find-zone-form">
+            <div class="find-your-zone-field">
+            <label>I swim </label>
+            <select id="frequency" name="frequency">
+                <option value="">-- Select --</option>
+                <option value="daily">Most days (5+ times a week)</option>
+                <option value="regularly">Regularly (3-5 times a week)</option>
+                <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
+                <option value="occasionally">When it takes my fancy</option>
+                <option value="never">I prefer to bob about, but I like my eyes to be protected</option>
+            </select>
+            </div>
+            <div class="find-your-zone-field">
+            <label>I'm immersed in</label>
+            <select id="goal" name="goal">
+                <option value="">-- Select --</option>
+                <option value="race_day_ready">Being race day ready</option>
+                <option value="beating_pb">Beating my PB</option>
+                <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
+                <option value="learn">Growing my water wings (learning to swim)</option>
+                <option value="leisure">Enjoying poolside holidays and beach breaks</option>
+            </select>
+            </div>
+            <div class="find-your-zone-field">
+            <label>I'm happiest when I am </label>
+            <select id="happiest_when" name="happiest_when">
+                <option value="">-- Select --</option>
+                <option value="diving">Diving off the blocks at the starting pistol</option>
+                <option value="in_the_zone">Following the black line</option>
+                <option value="progress">Inching towards the horizon</option>
+                <option value="learning">In my swim class</option>
+                <option value="splashing_about">Splashing about in any body of water</option>
+            </select>
+            </div>
+
+            <button id="quiz-submit">Find Your Zone</button>
+        </form>
+        
+    </div>
+</div>
+
+<div id="quiz-collections " class="find-your-zone-results section section--page-width">
+  {% for mapping in zone_mappings.values %}
+    <div class="collection-block " 
+         id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
+         style="display:none;">
+        {% assign collection = collections[mapping.collection] %}
+      <h2 class="find-your-zone-result-title"><span>Your zone is</span> {{ collection.title }}</h2>
+      <p class="find-your-zone-result-description">{{ collection.metafields.custom.find_zone_description }}</p>
+      <div class="collection-grid">
+        {% for product in collection.products %}
+           <div class="product-card">
+            <a href="{{ product.url }}">
+              {{ product.featured_image | image_url: width: 400 | image_tag }}
+              <h3>{{ product.title }}</h3>
+              <p>{{ product.price | money }}</p>
+            </a>
+          </div> 
+        {% endfor %}
+      </div>
+
+    </div>
+  {% endfor %}
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const frequency = document.getElementById("frequency");
+  const goal = document.getElementById("goal");
+  const happiest = document.getElementById("happiest_when");
+
+  function showCollection() {
+    const freqVal = frequency.value;
+    const goalVal = goal.value;
+    const happyVal = happiest.value;
+
+    // Hide all first
+    document.querySelectorAll(".collection-block").forEach(el => el.style.display = "none");
+
+    if (!freqVal || !goalVal || !happyVal) {
+      return; // don’t show anything until all 3 are selected
+    }
+
+    const targetId = `zone-${freqVal}-${goalVal}-${happyVal}`;
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      targetEl.style.display = "block";
+      targetEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Listen for change on all 3 selects
+  frequency.addEventListener("change", showCollection);
+  goal.addEventListener("change", showCollection);
+  happiest.addEventListener("change", showCollection);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Find Your Zone",
+  "class": "section-wrapper",
+  "tag": "section",
+  "settings": [],
+  
+  "presets": [
+    {
+        "name": "Find Your Zone"
+    }
+  ]
+}
+{% endschema %} 
