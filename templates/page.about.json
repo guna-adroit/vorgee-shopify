@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,14 +15,17 @@
         "heading": {
           "type": "text",
           "name": "Title",
+          "disabled": true,
           "settings": {
-            "text": "<h1>{{ closest.page.title }}<\/h1>",
+            "text": "<h1>{{ closest.page.title }}</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
+            "custom_classes": "",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_size": "",
+            "font_weight": "400",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -33,11 +45,55 @@
           "type": "page-content",
           "settings": {},
           "blocks": {}
+        },
+        "ai_gen_block_99f2c4a_zXCikK": {
+          "type": "ai_gen_block_99f2c4a",
+          "settings": {
+            "slider_height": 500,
+            "border_radius": 12,
+            "slide_gap": 0,
+            "background_color": "#f8f8f8",
+            "slides_desktop": "3",
+            "slides_tablet": "2",
+            "slides_mobile": "1",
+            "autoplay": true,
+            "autoplay_speed": 4000,
+            "show_arrows": true,
+            "show_dots": true,
+            "dot_active_color": "#ffffff",
+            "text_alignment": "center",
+            "title_size": 24,
+            "description_size": 14,
+            "image_1": "shopify://shop_images/women-collections.png",
+            "title_1": "",
+            "description_1": "",
+            "image_2": "shopify://shop_images/Fitness.png",
+            "title_2": "",
+            "description_2": "",
+            "image_3": "shopify://shop_images/competition.png",
+            "title_3": "",
+            "description_3": "",
+            "image_4": "shopify://shop_images/kids.jpg",
+            "title_4": "",
+            "description_4": "",
+            "image_5": "shopify://shop_images/ed2f311d9a02d5d75e228f2f2e547d01faef52b4.jpg",
+            "title_5": "",
+            "description_5": "",
+            "image_6": "shopify://shop_images/32419f9877f37a82dd6ab2b73aba105a2c0c30bb.png",
+            "title_6": "",
+            "description_6": "",
+            "title_7": "",
+            "description_7": "",
+            "title_8": "",
+            "description_8": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "heading",
-        "page-content"
+        "page-content",
+        "ai_gen_block_99f2c4a_zXCikK"
       ],
       "settings": {
         "content_direction": "column",
