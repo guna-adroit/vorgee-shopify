@@ -188,7 +188,8 @@
       ],
       "name": "Icon with Text",
       "settings": {
-        "title": "<p>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</p>"
+        "title": "<p>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</p>",
+        "color_scheme": "scheme-4"
       }
     }
   },
