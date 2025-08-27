@@ -50,7 +50,7 @@
           "type": "ai_gen_block_99f2c4a",
           "settings": {
             "slider_height": 500,
-            "border_radius": 12,
+            "border_radius": 0,
             "slide_gap": 0,
             "background_color": "#f8f8f8",
             "slides_desktop": "3",
