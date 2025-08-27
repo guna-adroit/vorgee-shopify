@@ -37,7 +37,8 @@
             }
         }
     </style>
-    <div class="vorgee-icon-text-wrapper section page-width-content color-{{ section.settings.color_scheme }} color-{{ section.settings.color_scheme }}" >
+    <div class="section page-width-content color-{{ section.settings.color_scheme }}">
+    <div class="vorgee-icon-text-wrapper  color-{{ section.settings.color_scheme }}" >
         <div class="vorgee-icon-text-title">{{ section.settings.title }}</div>
         <div class="vorgee-icon-text-container">
             {% for block in section.blocks %}
@@ -53,6 +54,7 @@
             {% endfor %}
             
         </div>
+    </div>
     </div>
 
 {% schema %}
