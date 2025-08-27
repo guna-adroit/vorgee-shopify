@@ -57,7 +57,7 @@
             "slides_tablet": "2",
             "slides_mobile": "1",
             "autoplay": true,
-            "autoplay_speed": 4000,
+            "autoplay_speed": 1500,
             "show_arrows": true,
             "show_dots": true,
             "dot_active_color": "#ffffff",
