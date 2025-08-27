@@ -91,6 +91,7 @@
         },
         "ai_gen_block_9851216_9BNe6r": {
           "type": "ai_gen_block_9851216",
+          "disabled": true,
           "settings": {
             "banner_image": "shopify://shop_images/image_-_2025-08-27T105315.619.png",
             "banner_height": 500,
