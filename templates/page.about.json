@@ -130,9 +130,69 @@
         "padding-block-start": 40,
         "padding-block-end": 80
       }
+    },
+    "icon_with_text_WEgVPH": {
+      "type": "icon-with-text",
+      "blocks": {
+        "icon_text_wckPip": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA16-quality-materials.svg",
+            "description": "Utilising only the highest quality materials"
+          }
+        },
+        "icon_text_RfVJV4": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA17-manufacturing-sources.svg",
+            "description": "Sourcing only the best, most respected manufacturers"
+          }
+        },
+        "icon_text_xTRWyG": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA18-research.svg",
+            "description": "Researching the latest in product technologies and advancements"
+          }
+        },
+        "icon_text_8dPyjA": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA19-quality-control.svg",
+            "description": "Applying and adhering to strict quality control measures to produce products which meet their expectations"
+          }
+        },
+        "icon_text_zkG8kV": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA1A-consumer-trends.svg",
+            "description": "Identifying consumer trends and preferences to guide product development"
+          }
+        },
+        "icon_text_eXWxk7": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA1B-fashion.svg",
+            "description": "Injecting bright colours and latest fashion trends into their designs"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_wckPip",
+        "icon_text_RfVJV4",
+        "icon_text_xTRWyG",
+        "icon_text_8dPyjA",
+        "icon_text_zkG8kV",
+        "icon_text_eXWxk7"
+      ],
+      "name": "Icon with Text",
+      "settings": {
+        "title": "<p>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</p>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "icon_with_text_WEgVPH"
   ]
 }
