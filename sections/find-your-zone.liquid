@@ -208,7 +208,7 @@
     </div>
 </div>
 <ol>
-{% for mapping in zone_mappings.values %}
+{% for mapping in zone_mappings.all_values %}
     
 <li>{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}</li>
     
