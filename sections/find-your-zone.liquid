@@ -207,7 +207,13 @@
         
     </div>
 </div>
-
+<ol>
+{% for mapping in zone_mappings.values %}
+    
+<li>{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}</li>
+    
+{% endfor %}
+</ol>
 <div id="quiz-collections " class="find-your-zone-results section section--page-width">
   {% for mapping in zone_mappings.values %}
     <div class="collection-block " 
