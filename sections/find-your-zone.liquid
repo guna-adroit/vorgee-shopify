@@ -207,13 +207,13 @@
         
     </div>
 </div>
-<ol>
-{% for mapping in zone_mappings.all_values %}
+{% comment %} <ol>
+{% for mapping in zone_mappings.values %}
     
 <li>{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}</li>
     
 {% endfor %}
-</ol>
+</ol> {% endcomment %}
 {% paginate shop.metaobjects['find_your_zone'].values by 200 %}
   <ol>
     {% for mapping in shop.metaobjects['find_your_zone'].values %}
@@ -222,7 +222,7 @@
   </ol>
 {% endpaginate %}
 <div id="quiz-collections " class="find-your-zone-results section section--page-width">
-  {% for mapping in zone_mappings.values %}
+  {% paginate shop.metaobjects['find_your_zone'].values by 200 %}
     <div class="collection-block " 
          id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
          style="display:none;">
@@ -242,7 +242,7 @@
       </div>
 
     </div>
-  {% endfor %}
+  {% endpaginate %}
 </div>
 </div>
 
