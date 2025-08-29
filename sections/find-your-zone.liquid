@@ -222,7 +222,7 @@
   </ol>
 {% endpaginate %}
 <div id="quiz-collections " class="find-your-zone-results section section--page-width">
-  {% paginate shop.metaobjects['find_your_zone'].values by 200 %}
+  {% for mapping in zone_mappings.values %}
     <div class="collection-block " 
          id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
          style="display:none;">
@@ -242,7 +242,7 @@
       </div>
 
     </div>
-  {% endpaginate %}
+  {% endfor %}
 </div>
 </div>
 
