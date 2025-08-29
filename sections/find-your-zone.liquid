@@ -158,6 +158,8 @@
     }
 </style>
 
+{% comment %}
+
 <div class="">
 {% assign zone_mappings = shop.metaobjects['find_your_zone'] %}
 
@@ -213,14 +215,14 @@
 <li>{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}</li>
     
 {% endfor %}
-</ol> {% endcomment %}
+</ol> 
 {% paginate shop.metaobjects['find_your_zone'].values by 200 %}
   <ol>
     {% for mapping in shop.metaobjects['find_your_zone'].values %}
       <li>{{ mapping.frequency }} - {{ mapping.immersion }} - {{ mapping.happiness }}</li>
     {% endfor %}
   </ol>
-{% endpaginate %}
+{% endpaginate %} {% endcomment %}
 <div id="quiz-collections " class="find-your-zone-results section section--page-width">
   {% for mapping in zone_mappings.values %}
     <div class="collection-block " 
@@ -277,6 +279,134 @@ document.addEventListener("DOMContentLoaded", function() {
   frequency.addEventListener("change", showCollection);
   goal.addEventListener("change", showCollection);
   happiest.addEventListener("change", showCollection);
+});
+</script>
+{% endcomment %}
+
+{% paginate shop.metaobjects['find_your_zone'].values by 200 %}
+{% comment %}
+This block ensures Shopify loads up to 200 entries, so all 125 mappings are available
+{% endcomment %}
+
+{% assign zone_mappings = shop.metaobjects['find_your_zone'].values %}
+
+<div id="find-your-zone" class="find-your-zone">
+  <div class="vorgee-find-zone-bg-container">
+    <img src="https://vorgee.com/wp-content/uploads/2017/01/bubbles.jpg" alt="">
+  </div>
+  <div class="vorgee-find-zone-form-container section section--page-width">
+
+    <form class="vorgee-find-zone-form">
+      <div class="find-your-zone-field">
+        <label>I swim </label>
+        <select id="frequency" name="frequency">
+          <option value="">-- Select --</option>
+          <option value="daily">Most days (5+ times a week)</option>
+          <option value="regularly">Regularly (3-5 times a week)</option>
+          <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
+          <option value="occasionally">When it takes my fancy</option>
+          <option value="never">I prefer to bob about, but I like my eyes to be protected</option>
+        </select>
+      </div>
+      <div class="find-your-zone-field">
+        <label>I'm immersed in</label>
+        <select id="goal" name="goal">
+          <option value="">-- Select --</option>
+          <option value="race_day_ready">Being race day ready</option>
+          <option value="beating_pb">Beating my PB</option>
+          <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
+          <option value="learn">Growing my water wings (learning to swim)</option>
+          <option value="leisure">Enjoying poolside holidays and beach breaks</option>
+        </select>
+      </div>
+      <div class="find-your-zone-field">
+        <label>I'm happiest when I am </label>
+        <select id="happiest_when" name="happiest_when">
+          <option value="">-- Select --</option>
+          <option value="diving">Diving off the blocks at the starting pistol</option>
+          <option value="in_the_zone">Following the black line</option>
+          <option value="progress">Inching towards the horizon</option>
+          <option value="learning">In my swim class</option>
+          <option value="splashing_about">Splashing about in any body of water</option>
+        </select>
+      </div>
+
+      <button id="quiz-submit" type="button">Find Your Zone</button>
+    </form>
+
+  </div>
+</div>
+
+<div id="quiz-collections" class="find-your-zone-results section section--page-width">
+  {% for mapping in zone_mappings %}
+    <div class="collection-block"
+         id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}"
+         style="display:none;">
+      {% assign collection = collections[mapping.collection] %}
+      {% if collection %}
+        <h2 class="find-your-zone-result-title">
+          <span>Your zone is</span> {{ collection.title }}
+        </h2>
+        <p class="find-your-zone-result-description">
+          {{ collection.metafields.custom.find_zone_description }}
+        </p>
+        <div class="collection-grid">
+          {% for product in collection.products %}
+            <div class="product-card">
+              <a href="{{ product.url }}">
+                {{ product.featured_image | image_url: width: 400 | image_tag }}
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.price | money }}</p>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+{% endpaginate %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const frequency = document.getElementById("frequency");
+  const goal = document.getElementById("goal");
+  const happiest = document.getElementById("happiest_when");
+  const resultsContainer = document.getElementById("quiz-collections");
+
+  function showCollection() {
+    const freqVal = frequency.value;
+    const goalVal = goal.value;
+    const happyVal = happiest.value;
+
+    // Hide all results first
+    resultsContainer.querySelectorAll(".collection-block").forEach(el => {
+      el.style.display = "none";
+    });
+
+    // Require all 3 selections
+    if (!freqVal || !goalVal || !happyVal) return;
+
+    const targetId = `zone-${freqVal}-${goalVal}-${happyVal}`;
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      targetEl.style.display = "block";
+      targetEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Run showCollection on button click
+  document.getElementById("quiz-submit").addEventListener("click", function(e) {
+    e.preventDefault();
+    showCollection();
+  });
+
+  // Optionally run live on dropdown change
+  [frequency, goal, happiest].forEach(select => {
+    select.addEventListener("change", showCollection);
+  });
 });
 </script>
 
