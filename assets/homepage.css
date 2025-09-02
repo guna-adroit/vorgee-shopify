@@ -871,7 +871,9 @@ p.quantity-option-title {
     font-weight: 500;
     font-size: 13px;
     line-height: 172%;
-
+  }
+  .product-information accordion-custom .details .details-content div ul li{
+    font-size: 13px;
   }
   .accordion.product-accordion .details__header{
       font-size: 14px;
