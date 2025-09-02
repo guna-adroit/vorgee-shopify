@@ -337,7 +337,8 @@
                     "heading": "Features",
                     "open_by_default": true,
                     "icon": "star",
-                    "width": 20
+                    "image_upload": "shopify://shop_images/star-icon.svg",
+                    "width": 14
                   },
                   "blocks": {
                     "text_QBrkfP": {
