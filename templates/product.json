@@ -194,6 +194,14 @@
                   },
                   "blocks": {}
                 },
+                "custom_liquid_tgxkN9": {
+                  "type": "custom-liquid",
+                  "name": "t:names.custom_liquid",
+                  "settings": {
+                    "custom_liquid": "{% assign min_price = product.price_min | money %}\n{% assign max_price = product.price_max | money %}\n\n{% if product.price_min != product.price_max %}\n  <p>Price: {{ min_price }} – {{ max_price }}</p>\n{% endif %}"
+                  },
+                  "blocks": {}
+                },
                 "price_tVjtKg": {
                   "type": "price",
                   "settings": {
@@ -220,6 +228,7 @@
               },
               "block_order": [
                 "text_xrnftG",
+                "custom_liquid_tgxkN9",
                 "price_tVjtKg"
               ]
             },
