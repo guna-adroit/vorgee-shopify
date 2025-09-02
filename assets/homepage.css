@@ -926,7 +926,7 @@ p.quantity-option-title {
 .cart-drawer__inner .cart-items__quantity .quantity-option-title,
 .cart-drawer__inner .cart-items__quantity .cart-items__remove,
 .cart-items__table .cart-items__quantity .quantity-option-title,
-.cart-items__table .cart-items__quantity .cart-items__remove{
+{
   display: none;
 }
 .cart-items__table .cart-items__quantity .quantity-option-title, 
