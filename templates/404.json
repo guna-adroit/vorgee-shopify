@@ -102,6 +102,7 @@
         "button_PAQMwR": {
           "type": "button",
           "name": "t:names.button",
+          "disabled": true,
           "settings": {
             "label": "Continue shopping",
             "link": "shopify://collections/all",
