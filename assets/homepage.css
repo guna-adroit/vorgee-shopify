@@ -929,7 +929,9 @@ p.quantity-option-title {
 {
   display: none;
 }
-.cart-items__table .cart-items__quantity .quantity-option-title, 
+.cart-items__table .cart-items__quantity .quantity-option-title{
+   display: none;
+}
 
 /* Policy Page CSS Start */
 .shopify-policy__container{
