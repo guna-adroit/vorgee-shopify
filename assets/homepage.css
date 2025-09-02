@@ -673,7 +673,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   min-height: auto;
 }
 .product-information accordion-custom .details .details-content{
-  padding: 0 16px;
+  padding: 0 20px;
   padding-top: 16px;
 }
 .product-information accordion-custom .details .details-content ul{
