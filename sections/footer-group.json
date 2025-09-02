@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer",
@@ -9,7 +18,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Subscribe to our emails<\/h2>",
+            "text": "<h2>Subscribe to our emails</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -36,7 +45,7 @@
         "text_grDeNa": {
           "type": "text",
           "settings": {
-            "text": "<p>Be the first to know about new collections and special offers. <\/p>",
+            "text": "<p>Be the first to know about new collections and special offers. </p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -100,6 +109,7 @@
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 16,
+        "custom_class": "",
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
@@ -181,7 +191,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/vorgee-logo-white.png",
+                "image": "shopify://shop_images/vorgee-logo-white.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "custom",
@@ -204,7 +214,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h5><strong>SUBSCRIBE FOR LATEST NEWS & SPECIAL OFFERS<\/strong><\/h5>",
+                "text": "<h5><strong>SUBSCRIBE FOR LATEST NEWS & SPECIAL OFFERS</strong></h5>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -408,6 +418,7 @@
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
+        "custom_class": "",
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
