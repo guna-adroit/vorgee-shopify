@@ -680,7 +680,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
   margin: 0;
 }
 .product-information accordion-custom .details .details-content p{
-
+  margin-bottom: 0;
 }
 .accordion.product-accordion .details__header .details__icon{
   margin-bottom: 0;
