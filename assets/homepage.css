@@ -676,6 +676,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
   padding: 0 20px;
   padding-top: 16px;
 }
+.quick-add-modal__content .product-form-buttons .shopify-payment-button__button{
+  color: white;
+}
 .product-information accordion-custom .details .details-content ul{
   margin: 0;
 }
