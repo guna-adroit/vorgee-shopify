@@ -420,7 +420,8 @@
                     "heading": "Specification",
                     "open_by_default": false,
                     "icon": "clipboard",
-                    "width": 20
+                    "image_upload": "shopify://shop_images/Vector.svg",
+                    "width": 14
                   },
                   "blocks": {
                     "text_94dFtJ": {
@@ -461,7 +462,8 @@
                     "heading": "Contact Us",
                     "open_by_default": false,
                     "icon": "chat_bubble",
-                    "width": 20
+                    "image_upload": "shopify://shop_images/chat-icon.svg",
+                    "width": 14
                   },
                   "blocks": {
                     "text_AEUq7f": {
