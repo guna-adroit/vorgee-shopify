@@ -1393,7 +1393,9 @@ shopify-accelerated-checkout-cart {
   --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-secondary);
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
-
+  .collection-template .product-form-buttons .shopify-payment-button__button{
+    color: #fff;
+  }
 /* Collapsible row */
 
 .icon-caret svg {
@@ -2449,7 +2451,9 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   opacity: var(--checkbox-path-opacity);
   transition: opacity var(--animation-speed) var(--animation-easing);
 }
-
+.cart-drawer__items .minicart-unit-price{
+  margin-top: 10px;
+}
 .checkbox__input:disabled + .checkbox__label {
   color: var(--input-disabled-text-color);
 }
