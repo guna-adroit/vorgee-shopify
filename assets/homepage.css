@@ -851,10 +851,12 @@ p.quantity-option-title {
     }
 }
 @media screen and (max-width: 768px){
+  .product-description
   .product-information accordion-custom .details .details-content, 
   .product-information accordion-custom .details .details-content p,
   .product-information accordion-custom .details .details-content ul li,
-  .product-information accordion-custom .details .details-content span {
+  .product-information accordion-custom .details .details-content span,
+  .product-information .product-description p {
     font-size: 13px;
   }
   .accordion.product-accordion .details__header{
