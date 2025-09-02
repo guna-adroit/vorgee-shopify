@@ -856,8 +856,14 @@ p.quantity-option-title {
   .product-information accordion-custom .details .details-content p,
   .product-information accordion-custom .details .details-content ul li,
   .product-information accordion-custom .details .details-content span,
-  .product-information .product-description p {
+  {
     font-size: 13px;
+  }
+  .product-information .product-description p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 172%;
+
   }
   .accordion.product-accordion .details__header{
       font-size: 14px;
