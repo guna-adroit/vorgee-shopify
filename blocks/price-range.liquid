@@ -1,0 +1,20 @@
+{% assign min_price = product.price_min | money %}
+{% assign max_price = product.price_max | money %}
+
+{% if product.price_min != product.price_max %}
+  <p>Price: {{ min_price }} – {{ max_price }}</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:names.product_price",
+  "tag": null,
+  "settings":[],
+  "presets": [
+    {
+      "name": "t:names.product_price",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}
