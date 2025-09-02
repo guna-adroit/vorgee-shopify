@@ -2,9 +2,13 @@
 {% assign max_price = product.price_max | money %}
 
 {% if product.price_min != product.price_max %}
-  <p>Price: {{ min_price }} – {{ max_price }}</p>
+  <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
 {% endif %}
-
+<style>
+.price-range-block{
+    margin: 0;
+}
+</style>
 {% schema %}
 {
   "name": "Price Range",
