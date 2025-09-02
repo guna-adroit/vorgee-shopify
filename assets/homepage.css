@@ -679,6 +679,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
 .product-information accordion-custom .details .details-content ul{
   margin: 0;
 }
+.product-information accordion-custom .details .details-content p{
+
+}
 .accordion.product-accordion .details__header .details__icon{
   margin-bottom: 0;
 }
@@ -825,6 +828,9 @@ p.quantity-option-title {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
     }
+    .product-information accordion-custom .details .details-content p{
+      font-size: 13px;
+    } 
     .size-chart-modal-content{
       padding: 20px;
     }
