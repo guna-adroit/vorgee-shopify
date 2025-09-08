@@ -1,0 +1,147 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
+    <style>
+        .vorgee-image-text-wrapper{
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .vorgee-image-text-block-item{
+            display: flex;
+            max-width: 65rem;
+            margin: 0 auto;
+            gap: 16px;
+            position: relative;
+        }
+        .vorgee-image-text-wrapper::after{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: #00bbd1;
+            left: 50%;
+            top: 0;
+        }
+        .vorgee-image-block, .vorgee-text-block{
+            width: calc(50% - 8px);
+            padding: 16px;
+        }
+        .vorgee-image-block img{
+            width: 100%;
+        }
+        .vorgee-image-block .placeholder-image{
+            width:100%;
+        }
+        .vorgee-text-block{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        .vorgee-text-block p{
+            padding-left: 40px;
+        }
+        .vorgee-image-text-block-item.image-right{
+            flex-direction: row-reverse;
+        }
+        .vorgee-image-text-title h2{
+            margin: 0;
+            font-size: 36px;
+        }
+        .vorgee-image-text-description{
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 768px){
+            .vorgee-image-text-block-item, .vorgee-image-text-block-item.image-right{
+                flex-direction: column;
+                gap: 0;
+            }
+            .vorgee-image-block, .vorgee-text-block{
+                width: 100%;
+                padding: 0;
+            }
+            .vorgee-image-text-wrapper::after{
+                display: none;
+            }
+        }
+    </style>
+    <div class="vorgee-image-text-wrapper section page-width-content">
+        <div class="vorgee-image-text-container ">
+            {% for block in section.blocks %}
+            <div class="vorgee-image-text-block-item {% if block.settings.image_alignment == 'right' %} image-right {% endif %}">
+                <div class="vorgee-image-block" data-aos="fade-up" data-aos-duration="2000">
+                    {% if block.settings.image != blank %}
+                        {{ block.settings.image | image_url: width: 750 | image_tag  }}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-image' }}
+                    {% endif %}
+                    
+                </div>
+                <div class="vorgee-text-block" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="vorgee-image-text-title">{{ block.settings.title }}</div>
+                    <div class="vorgee-image-text-description">{{ block.settings.description }}</div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+{% schema %}
+{
+  "name": "Image Text Timeline",
+  "class": "section-wrapper",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+        "type": "icon_text",
+        "name": "Icon Text",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "richtext",
+                "id": "title",
+                "label": "Heading",
+                "default": "<h2>Heading</h2>"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Welcome message",
+                "default": "<p>Welcome to my shop!</p>"
+            },
+            {
+                "type": "select",
+                "id": "image_alignment",
+                "label": "Image alignment",
+                "options": [
+                    {
+                    "value": "left",
+                    "label": "Left"
+                    },
+                    {
+                    "value": "right",
+                    "label": "Right"
+                    }
+                ],
+                "default": "left"
+                }
+        ]   
+    }
+  ],
+  "presets": [
+    {
+        "name": "Image Text Timeline"
+    }
+  ]
+}
+{% endschema %} 
