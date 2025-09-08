@@ -187,6 +187,7 @@
             },
             "text_MqpFAP": {
               "type": "text",
+              "disabled": true,
               "settings": {
                 "text": "<p>Every Vorgee product is built with purpose. Here's what goes into our gear: </p><ul><li><strong>High-quality materials</strong> for durability, comfort and performance </li><li><strong>Top-tier manufacturing partners</strong> trusted around the world </li><li><strong>Innovative swim technology</strong> and user-led design </li><li><strong>Strict quality control</strong>, from concept to final product </li><li><strong>Bold colours and modern styles</strong> that stand out in and out of the pool </li><li><strong>A commitment to every swimmer</strong>, no matter your level, style or swim goal </li></ul>",
                 "width": "100%",
@@ -211,12 +212,21 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "custom_liquid_iWFUeJ": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<p>Every Vorgee product is built with purpose. Here's what goes into our gear: </p><ul class=\"why-choose-vorgee\" style=\"font-size: 16px;\"><li><strong>High-quality materials</strong> for durability, comfort and performance&nbsp;</li><li><strong>Top-tier manufacturing partners</strong> trusted around the world&nbsp;</li><li><strong>Innovative swim technology</strong> and user-led design&nbsp;</li><li><strong>Strict quality control</strong>, from concept to final product&nbsp;</li><li><strong>Bold colours and modern styles</strong> that stand out in and out of the pool&nbsp;</li><li><strong>A commitment to every swimmer</strong>, no matter your level, style or swim goal&nbsp;</li></ul>"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_PN9tcY",
             "text_ztmMUa",
-            "text_MqpFAP"
+            "text_MqpFAP",
+            "custom_liquid_iWFUeJ"
           ]
         }
       },
