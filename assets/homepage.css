@@ -988,7 +988,7 @@ p.quantity-option-title {
   font-weight: 400 !important;
 }
 .quick-add-modal__content .price-range-block{
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
 }
 /* Fit Indicator CSS Start */
 .fit-indicator-container{
