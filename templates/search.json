@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "search": {
@@ -149,6 +158,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
+                    "custom_classes": "",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
@@ -167,6 +177,12 @@
                   },
                   "blocks": {}
                 },
+                "price_range_KD4FF4": {
+                  "type": "price-range",
+                  "name": "Price Range",
+                  "settings": {},
+                  "blocks": {}
+                },
                 "price_CTHraa": {
                   "type": "price",
                   "name": "t:names.product_price",
@@ -174,6 +190,7 @@
                     "show_sale_price_first": true,
                     "show_installments": false,
                     "show_tax_info": false,
+                    "custom_classes": "",
                     "type_preset": "h6",
                     "width": "100%",
                     "alignment": "left",
@@ -207,6 +224,7 @@
               },
               "block_order": [
                 "product_title_ECggnD",
+                "price_range_KD4FF4",
                 "price_CTHraa",
                 "swatches_hndnaD"
               ]
