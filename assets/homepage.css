@@ -1153,3 +1153,7 @@ button#fit-indicator-btn{
             }
         }
 /* Fit Indicator CSS End */
+
+price-range p{
+  margin: 0;
+}
