@@ -984,6 +984,8 @@ p.quantity-option-title {
 /* Policy page CSS End */
 .price-range-block{
   margin: 0 !important; 
+  font-size: 14px;
+  font-weight: 400;
 }
 /* Fit Indicator CSS Start */
 .fit-indicator-container{
