@@ -1094,6 +1094,36 @@ p.quantity-option-title {
         .active-fit .fit-title-block{
             border-bottom: none !important;
         }
+        .fit-indicator-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fit-indicator-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  text-align: left;
+}
+
+.fit-indicator-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
 
         @media screen and (max-width: 600px){
             .fit-indicator-container{
