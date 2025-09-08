@@ -8,11 +8,64 @@
   <div class="fit-indicator-modal-content">
     <span class="fit-indicator-close-button" id="close-fit-indicator">&times;</span>
     
-    {% assign fit_indicator_page = pages['fit-indicator'] %}
     
     <div class="fit-indicator-content">
-      {% comment %} <h4>{{ fit_indicator_page.title }}</h4> {% endcomment %}
-      <div>{{ pages['fit-indicator'].content }}</div>
+      {% comment %} <h4>{{ fit_indicator_page.title }}</h4>
+      <div>{{ pages['fit-indicator'].content }}</div> {% endcomment %}
+      <div class="fit-indicator-wrapper">
+        <div class="fit-indicator-container">
+
+            <div class="fit-indicator-column fit--broad-block {% if product.tags contains 'Broad Fit' %}active-fit{% endif %}">
+            <img class="fit-image" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/broad-fit.svg?v=1756817173" alt="">
+            <div class="fit-title-block fit--broad">
+                <h3 class="fit-name">Broad Fit</h3>
+                <img class="fit-icon" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/broad-fit-icon.svg?v=1756818803" alt="">
+            </div>
+            <span class="are-this-fit">These goggles are this fit!</span>
+            <div class="fit-content">
+                <p>Ideal for fitness swimmers who like a wider lens and broader fit. The cushioned, universally shaped, gasket sits and fits securely outside the eye socket.</p>
+            </div>
+            </div>
+
+            <div class="fit-indicator-column fit--snug-block {% if product.tags contains 'Snug Fit' %}active-fit{% endif %}">
+            <img class="fit-image" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/snug-fit.svg?v=1756817173" alt="">
+            <div class="fit-title-block fit--snug">
+                <h3 class="fit-name">Snug Fit</h3>
+                <img class="fit-icon" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/snug-fit-icon.svg?v=1756818803" alt="">
+            </div>
+            <span class="are-this-fit">These goggles are this fit!</span>
+            <div class="fit-content">
+                <p>Perfect for swimmers who like a closer, secure fit inside the eye socket.</p>
+            </div>
+            </div>
+
+            <div class="fit-indicator-column fit--mid-block {% if product.tags contains 'Mid Fit' %}active-fit{% endif %}">
+            <img class="fit-image" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/mid-fit.svg?v=1756817173" alt="">
+            <div class="fit-title-block fit--mid">
+                <h3 class="fit-name">Mid Fit</h3>
+                <img class="fit-icon" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/mid-fit-icon.svg?v=1756818803" alt="">
+            </div>
+            <span class="are-this-fit">These goggles are this fit!</span>
+            <div class="fit-content">
+                <p>A balanced fit option between broad and snug, offering comfort and security.</p>
+            </div>
+            </div>
+
+            <div class="fit-indicator-column fit--mask-block {% if product.tags contains 'Mask Fit' %}active-fit{% endif %}">
+            <img class="fit-image" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/mask-fit.svg?v=1756817172" alt="">
+            <div class="fit-title-block fit--mask">
+                <h3 class="fit-name">Mask Fit</h3>
+                <img class="fit-icon" src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/mask-fit-icon.svg?v=1756818804" alt="">
+            </div>
+            <span class="are-this-fit">These goggles are this fit!</span>
+            <div class="fit-content">
+                <p>Great for open water swimmers who want a larger, mask-like seal for comfort.</p>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
     </div>
     
   </div>
