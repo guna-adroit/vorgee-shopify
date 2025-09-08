@@ -151,6 +151,7 @@ export class QuickAddComponent extends Component {
       productHeader.appendChild(productTitle);
       productHeader.appendChild(productPrice);
       productGrid.appendChild(productHeader);
+      productGrid.appendChild(productRange);
       productGrid.appendChild(variantPicker);
       productGrid.appendChild(productFormComponent);
       productDetails.remove();
