@@ -103,10 +103,10 @@
         "ai_gen_block_fd42fa6_CebxaE": {
           "type": "ai_gen_block_fd42fa6",
           "settings": {
-            "banner_image": "shopify://shop_images/image_2.png",
+            "banner_image": "shopify://shop_images/image.png",
             "show_overlay": true,
             "overlay_color": "#000000",
-            "overlay_opacity": 25,
+            "overlay_opacity": 35,
             "heading": "404 Page Not Found",
             "description": "The page you were looking for does not exist. You may have mistyped the address or the page may have moved.",
             "continue_shopping_text": "Continue Shopping",
