@@ -231,35 +231,27 @@
                     <span class="visually-hidden">Remove</span>
                   </button>
                 </td>
-                <td>
-                  <div class="minicart-unit-price">
-                    {% if item.original_price != item.final_price %}
-                      <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
-                      <span>{{ item.final_price | money }}</span>
-                      <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
-                      <s class="compare-at-price">
-                        {% if item.variant.compare_at_price > item.original_price %}
-                          {{ item.variant.compare_at_price | money }}
-                        {% else %}
-                          {{ item.original_price | money }}
-                        {% endif %}
-                      </s>
-                    {% else %}
-                      {% if item.variant.compare_at_price > item.original_price %}
-                        <span class="visually-hidden">{{ 'content.price_sale' | t }}</span>
-                      {% else %}
-                        <span class="visually-hidden">{{ 'content.price' | t }}</span>
-                      {% endif %}
-
-                      <span>{{ item.original_price | money }}</span>
-
-                      {% if item.variant.compare_at_price > item.original_price %}
-                        <span class="visually-hidden">{{ 'content.price_regular' | t }}</span>
-                        <s class="compare-at-price">{{ item.variant.compare_at_price | money }}</s>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                </td>
+                <td
+                  class="cart-items__price cart-secondary-typography"
+                  role="cell"
+                  headers="productTotal"
+                >
+                  {%- liquid
+                    if settings.currency_code_enabled_cart_items
+                      assign price = item.final_line_price | money_with_currency
+                      assign unit_price = item.unit_price | money_with_currency
+                    else
+                      assign price = item.final_line_price | money
+                      assign unit_price = item.unit_price | money
+                    endif
+                  -%}
+                  <text-component value="{{ price | strip_html }}">{{ price }}</text-component>
+                  {%- if item.unit_price_measurement -%}
+                    <div class="cart-items__price-unit cart-secondary-typography">
+                      {% render 'unit-price', price: unit_price, measurement: item.unit_price_measurement %}
+                    </div>
+                  {%- endif -%}
+                </td> 
                 <td
                   class="cart-items__error hidden"
                   role="cell"
@@ -452,11 +444,15 @@
     display: block;
     font-size: var(--cart-font-size--md);
   }
-
+  .cart-template .cart-items__price{
+    text-align: start;
+  }
   .cart-items__price-unit {
     font-size: var(--cart-font-size--xs);
   }
-
+  .cart-drawer__inner .cart-items__price{
+    display: none;
+  }
   .cart-items__media-container {
     display: flex;
     aspect-ratio: var(--ratio);
