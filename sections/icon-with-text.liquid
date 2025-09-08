@@ -1,7 +1,4 @@
 <style>
-        .vorge-icon-text-wrapper{
-            background: #eaeade !important;
-        }
         .vorgee-icon-text-container{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -37,8 +34,7 @@
             }
         }
     </style>
-    <div class="color-{{ section.settings.color_scheme }}">
-    <div class="vorgee-icon-text-wrapper section page-width-content " >
+    <div class="vorgee-icon-text-wrapper section page-width-content">
         <div class="vorgee-icon-text-title">{{ section.settings.title }}</div>
         <div class="vorgee-icon-text-container">
             {% for block in section.blocks %}
@@ -55,7 +51,6 @@
             
         </div>
     </div>
-    </div>
 
 {% schema %}
 {
@@ -68,12 +63,6 @@
         "id": "title",
         "label": "Title",
         "default": "<h2>Title</h2>"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "default": "scheme-4",
-      "label": "t:settings.color_scheme"
     }
   ],
   "blocks": [
