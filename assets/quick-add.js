@@ -134,8 +134,11 @@ export class QuickAddComponent extends Component {
       const productFormComponent = productGrid.querySelector('product-form-component');
       const variantPicker = productGrid.querySelector('variant-picker');
       const productPrice = productGrid.querySelector('product-price');
+      const productRange = productGrid.querySelector('product-range');
       const productTitle = document.createElement('a');
       productTitle.textContent = this.dataset.productTitle || '';
+
+      console.log(productRange);
 
       // Make product title as a link to the product page
       productTitle.href = this.productPageUrl;
