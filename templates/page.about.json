@@ -67,7 +67,7 @@
           "settings": {
             "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
             "title": "<h2><strong>Our Story</strong></h2><h2>Immerse Yourself. </h2>",
-            "description": "<p>At Vorgee, we believe the best swim gear is the kind you don’t even notice. </p><p>Founded in 2005 and proudly Australian-owned and managed, we began with a simple mission: to create swim gear for <em>everyone</em>. Whether you were stepping into the water for the first time or onto the blocks going for gold, we set out to offer a full range of products that perform with style and reliability. </p><p>That mission hasn’t changed. Today, we continue to make swimming easier, more enjoyable, and more accessible at every level. </p>",
+            "description": "<p>At Vorgee, we believe the best swim gear is the kind you don’t even notice. </p><p>Founded in 2005 and proudly Australian-owned and managed, we began with a simple mission: to create swim gear for <em>everyone</em>. Whether you were stepping into the water for the first time or onto the blocks going for gold, we set out to offer a full range of products that perform with style and reliability. </p><p><em>That mission hasn’t changed. Today, we continue to make swimming easier, more enjoyable, and more accessible at every level. </em></p>",
             "image_alignment": "left"
           }
         },
@@ -320,7 +320,7 @@
           "settings": {
             "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
             "title": "<h2><strong>Still Swimming Forward</strong></h2>",
-            "description": "<p>From a simple idea - to create well-considered, performance-driven products - we’ve grown into one of Australia’s most trusted aquatic brands. But our mission remains the same: to make swimming simpler, more enjoyable, and better for everyone.<br/></p>",
+            "description": "<p>From a simple idea - to create well-considered, performance-driven products - we’ve grown into one of Australia’s most trusted aquatic brands. <em>But our mission remains the same: to make swimming simpler, more enjoyable, and better for everyone.</em><br/></p>",
             "image_alignment": "left"
           }
         }
