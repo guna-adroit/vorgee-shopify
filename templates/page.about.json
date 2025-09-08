@@ -192,7 +192,7 @@
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
-                "custom_classes": "",
+                "custom_classes": "about-page-custom-content",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
