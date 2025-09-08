@@ -956,6 +956,9 @@ p.quantity-option-title {
 .cart-drawer__inner .cart-items__quantity .cart-items__remove{
   display: none;
 }
+.about-page-custom-content li {
+    font-size: 16px;
+}
 .page-width-content, .about-page-custom-content-wrapper {
     --page-content-width: 65rem;
     --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
