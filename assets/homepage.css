@@ -596,7 +596,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
 .variant-option--equal-width-buttons {
     .variant-option__button-label {
         min-width: var(--variant-min-width);
-        min-width: 113px;
+        /* min-width: 113px; */
         min-height: 33px;
         padding: 8px 16px;
     }
