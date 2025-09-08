@@ -15,7 +15,6 @@
         "heading": {
           "type": "text",
           "name": "Title",
-          "disabled": true,
           "settings": {
             "text": "<h1>{{ closest.page.title }}</h1>",
             "width": "100%",
@@ -43,134 +42,91 @@
         },
         "page-content": {
           "type": "page-content",
-          "settings": {},
-          "blocks": {}
-        },
-        "ai_gen_block_99f2c4a_zXCikK": {
-          "type": "ai_gen_block_99f2c4a",
-          "settings": {
-            "slider_height": 500,
-            "border_radius": 0,
-            "slide_gap": 0,
-            "background_color": "#f8f8f8",
-            "slides_desktop": "3",
-            "slides_tablet": "2",
-            "slides_mobile": "1",
-            "autoplay": true,
-            "autoplay_speed": 1500,
-            "show_arrows": true,
-            "show_dots": true,
-            "dot_active_color": "#ffffff",
-            "text_alignment": "center",
-            "title_size": 24,
-            "description_size": 14,
-            "image_1": "shopify://shop_images/women-collections.png",
-            "title_1": "",
-            "description_1": "",
-            "image_2": "shopify://shop_images/Fitness.png",
-            "title_2": "",
-            "description_2": "",
-            "image_3": "shopify://shop_images/competition.png",
-            "title_3": "",
-            "description_3": "",
-            "image_4": "shopify://shop_images/kids.jpg",
-            "title_4": "",
-            "description_4": "",
-            "image_5": "shopify://shop_images/ed2f311d9a02d5d75e228f2f2e547d01faef52b4.jpg",
-            "title_5": "",
-            "description_5": "",
-            "image_6": "shopify://shop_images/32419f9877f37a82dd6ab2b73aba105a2c0c30bb.png",
-            "title_6": "",
-            "description_6": "",
-            "title_7": "",
-            "description_7": "",
-            "title_8": "",
-            "description_8": ""
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_9851216_9BNe6r": {
-          "type": "ai_gen_block_9851216",
           "disabled": true,
-          "settings": {
-            "banner_image": "shopify://shop_images/image_-_2025-08-27T105315.619.png",
-            "banner_height": 500,
-            "mobile_image": "shopify://shop_images/Section.png",
-            "mobile_banner_height": 400,
-            "show_overlay": true,
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "heading": "",
-            "text": "",
-            "button_text": "",
-            "button_link": "",
-            "text_alignment": "center",
-            "content_max_width": 600,
-            "text_color": "#ffffff",
-            "heading_size": 48,
-            "text_size": 16,
-            "button_color": "#000f9f",
-            "button_hover_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_text_size": 14,
-            "button_border_radius": 4
-          },
+          "settings": {},
           "blocks": {}
         }
       },
       "block_order": [
         "heading",
-        "page-content",
-        "ai_gen_block_99f2c4a_zXCikK",
-        "ai_gen_block_9851216_9BNe6r"
+        "page-content"
       ],
       "settings": {
         "content_direction": "column",
         "gap": 32,
         "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 0
+        "padding-block-start": 0,
+        "padding-block-end": 30
       }
     },
-    "icon_with_text_WEgVPH": {
-      "type": "icon-with-text",
+    "image_text_timeline_LjwUtG": {
+      "type": "image-text-timeline",
       "blocks": {
-        "icon_text_wckPip": {
+        "icon_text_KTpkJi": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/quatlity-material-svg_5b0651df-2f73-4648-af34-c43d72956338.svg",
+            "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
+            "title": "<h2><strong>Our Story</strong></h2><h2>Immerse Yourself. </h2>",
+            "description": "<p>At Vorgee, we believe the best swim gear is the kind you don’t even notice. </p><p>Founded in 2005 and proudly Australian-owned and managed, we began with a simple mission: to create swim gear for <em>everyone</em>. Whether you were stepping into the water for the first time or onto the blocks going for gold, we set out to offer a full range of products that perform with style and reliability. </p><p>That mission hasn’t changed. Today, we continue to make swimming easier, more enjoyable, and more accessible at every level. </p>",
+            "image_alignment": "left"
+          }
+        },
+        "icon_text_UNbHU3": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/ZFB_29.jpg",
+            "title": "<h2><strong>Our Philosophy</strong> </h2><h2><strong>Designed to Feel Invisible</strong> </h2>",
+            "description": "<p>We create goggles and swim equipment that let you focus on what really matters: the freedom, flow, and joy of swimming. Our products are designed to feel like a natural extension of you, so you can swim free of discomfort, distraction, or second-guessing. </p><p>To us, <em>Immerse Yourself</em> means more than just diving in - it’s about fully experiencing the water, uninterrupted. </p>",
+            "image_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_KTpkJi",
+        "icon_text_UNbHU3"
+      ],
+      "name": "Image Text Timeline",
+      "settings": {}
+    },
+    "icon_with_text_4KB7Xh": {
+      "type": "icon-with-text",
+      "blocks": {
+        "icon_text_mHtzmT": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/uEA16-quality-materials.svg",
             "description": "Utilising only the highest quality materials"
           }
         },
-        "icon_text_RfVJV4": {
+        "icon_text_gXjGCA": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA17-manufacturing-sources.svg",
             "description": "Sourcing only the best, most respected manufacturers"
           }
         },
-        "icon_text_xTRWyG": {
+        "icon_text_qnq4Lz": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA18-research.svg",
             "description": "Researching the latest in product technologies and advancements"
           }
         },
-        "icon_text_8dPyjA": {
+        "icon_text_WY7dKF": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA19-quality-control.svg",
             "description": "Applying and adhering to strict quality control measures to produce products which meet their expectations"
           }
         },
-        "icon_text_zkG8kV": {
+        "icon_text_TJcnUA": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA1A-consumer-trends.svg",
             "description": "Identifying consumer trends and preferences to guide product development"
           }
         },
-        "icon_text_eXWxk7": {
+        "icon_text_jijDxR": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA1B-fashion.svg",
@@ -179,154 +135,48 @@
         }
       },
       "block_order": [
-        "icon_text_wckPip",
-        "icon_text_RfVJV4",
-        "icon_text_xTRWyG",
-        "icon_text_8dPyjA",
-        "icon_text_zkG8kV",
-        "icon_text_eXWxk7"
+        "icon_text_mHtzmT",
+        "icon_text_gXjGCA",
+        "icon_text_qnq4Lz",
+        "icon_text_WY7dKF",
+        "icon_text_TJcnUA",
+        "icon_text_jijDxR"
       ],
       "name": "Icon with Text",
       "settings": {
-        "title": "<p>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</p>",
-        "color_scheme": "scheme-e1364156-917c-4979-a298-182fc4810c34"
+        "title": "<h3>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</h3>"
       }
     },
-    "section_PmHTyY": {
-      "type": "section",
+    "image_text_timeline_h84M4n": {
+      "type": "image-text-timeline",
       "blocks": {
-        "image_zmW3Yg": {
-          "type": "image",
+        "icon_text_dG4rrT": {
+          "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/swimwear.jpg",
-            "link": "",
-            "image_ratio": "landscape",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_FqNjEp": {
-          "type": "group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "custom_classes": "",
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_HbwgDz": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Vorgee have a strong desire to give back to the community and thus are committed to supporting the swimming and wider community. Their community involvement focuses on health and safety, swimming development, leisure and competition.</p><p>The story began with a desire to bring that something special to the Australian swim market, and has evolved to Vorgee becoming a brand synonymous with swimming. Today, Vorgee are excited to share their products, passion, philosophy, culture and service with you.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "custom_classes": "",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "font_weight": "400",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_HbwgDz"
-          ]
+            "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
+            "title": "<h2><strong>Still Swimming Forward</strong></h2>",
+            "description": "<p>From a simple idea - to create well-considered, performance-driven products - we’ve grown into one of Australia’s most trusted aquatic brands. But our mission remains the same: to make swimming simpler, more enjoyable, and better for everyone.<br/></p>",
+            "image_alignment": "left"
+          }
         }
       },
       "block_order": [
-        "image_zmW3Yg",
-        "group_FqNjEp"
+        "icon_text_dG4rrT"
       ],
-      "name": "t:names.image_with_text",
-      "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "custom_class": "",
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
+      "name": "Image Text Timeline",
+      "settings": {}
+    },
+    "find_your_zone_L9VEb9": {
+      "type": "find-your-zone",
+      "name": "Find Your Zone",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "icon_with_text_WEgVPH",
-    "section_PmHTyY"
+    "image_text_timeline_LjwUtG",
+    "icon_with_text_4KB7Xh",
+    "image_text_timeline_h84M4n",
+    "find_your_zone_L9VEb9"
   ]
 }
