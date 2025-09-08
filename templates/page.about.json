@@ -165,18 +165,12 @@
       ],
       "name": "Image Text Timeline",
       "settings": {}
-    },
-    "find_your_zone_L9VEb9": {
-      "type": "find-your-zone",
-      "name": "Find Your Zone",
-      "settings": {}
     }
   },
   "order": [
     "main",
     "image_text_timeline_LjwUtG",
     "icon_with_text_4KB7Xh",
-    "image_text_timeline_h84M4n",
-    "find_your_zone_L9VEb9"
+    "image_text_timeline_h84M4n"
   ]
 }
