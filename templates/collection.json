@@ -344,6 +344,12 @@
                   },
                   "blocks": {}
                 },
+                "price_range_9Dpf8M": {
+                  "type": "price-range",
+                  "name": "Price Range",
+                  "settings": {},
+                  "blocks": {}
+                },
                 "swatches_xWhL7M": {
                   "type": "swatches",
                   "name": "t:names.swatches",
@@ -384,6 +390,7 @@
               },
               "block_order": [
                 "product_title_3QjUff",
+                "price_range_9Dpf8M",
                 "swatches_xWhL7M",
                 "price"
               ]
