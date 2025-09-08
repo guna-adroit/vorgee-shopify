@@ -188,7 +188,7 @@
             "text_MqpFAP": {
               "type": "text",
               "settings": {
-                "text": "<p>Every Vorgee product is built with purpose. Here's what goes into out gear:</p><ul><li><strong>High Quality materials</strong> for durability, comfort, and performance</li><li><strong>Top-tier manufacturing partners</strong> trusted around the world</li><li><strong>Innovative swim technology</strong> and user led design</li><li><strong>Strict quality control</strong>, from concept to final product</li><li><strong>Bold colours and modern styles</strong> that stand out in and out of the pool</li><li><strong>A commitment to every swimmer</strong>, no matter your level, style or swim goal</li></ul>",
+                "text": "<p>Every Vorgee product is built with purpose. Here's what goes into our gear: </p><ul><li><strong>High-quality materials</strong> for durability, comfort and performance </li><li><strong>Top-tier manufacturing partners</strong> trusted around the world </li><li><strong>Innovative swim technology</strong> and user-led design </li><li><strong>Strict quality control</strong>, from concept to final product </li><li><strong>Bold colours and modern styles</strong> that stand out in and out of the pool </li><li><strong>A commitment to every swimmer</strong>, no matter your level, style or swim goal </li></ul>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
