@@ -2454,6 +2454,9 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 .cart-drawer__items .minicart-unit-price{
   margin-top: 10px;
 }
+.cart-drawer__inner .minicart-unit-price{
+  display: none;
+}
 .checkbox__input:disabled + .checkbox__label {
   color: var(--input-disabled-text-color);
 }
@@ -4472,6 +4475,7 @@ div#shop-hcaptcha-badge-container {
   line-height: 100%;
   color: #121212;
 }
+
 @media screen and (max-width: 749px){
   .cart-form .cart-items__table-row {
     --cart-item-price-width: 2rem;

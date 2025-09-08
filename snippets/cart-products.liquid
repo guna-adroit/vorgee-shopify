@@ -279,7 +279,8 @@
                     ></small>
                   </div>
                 </td>
-                <td
+                
+                {% comment %} <td
                   class="cart-items__price cart-secondary-typography"
                   role="cell"
                   headers="productTotal"
@@ -299,7 +300,7 @@
                       {% render 'unit-price', price: unit_price, measurement: item.unit_price_measurement %}
                     </div>
                   {%- endif -%}
-                </td>
+                </td> {% endcomment %}
               </tr>
             {% endfor %}
           </tbody>
@@ -336,16 +337,14 @@
 
     display: grid;
     grid-template-columns: clamp(2.5rem, 24cqi, 7.5rem) minmax(0, 1fr) minmax(var(--cart-item-price-width), auto);
-    grid-template-areas:
-      'media details price'
-      'media quantity price'
-      'media error error';
+    grid-template-areas:'media details details'
+'media quantity quantity '
+'media price error ';
     column-gap: var(--gap-md);
     align-items: start;
     padding-bottom: var(--cart-items-gap);
     margin-bottom: var(--margin-lg);
   }
-
   html:active-view-transition-type(page-navigation) .cart-items__table-row {
     view-transition-name: none !important;
   }
@@ -635,6 +634,19 @@
   @media screen and (max-width: 749px) {
     .cart__ctas .cart__checkout-button {
         font-size: 12px;
+    }
+    .cart-template .minicart-unit-price{
+      margin-top: 10px;
+    }
+    .cart-template .quantity-selector {
+      min-width: 75px;
+      max-width: 100px;
+    } 
+    .cart-template .quantity-selector :is(.quantity-minus,.quantity-plus){
+          flex-shrink: 1;
+    }
+    .cart-items__remove{
+      --minimum-touch-target: 30px;
     }
 }
   button.button.button--primary.cart-discount__button{
