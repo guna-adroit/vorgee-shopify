@@ -46,18 +46,33 @@
   "
   {{ block.shopify_attributes }}
 >
-  {% assign min_price = closest.product.price_min | money %}
-  {% assign max_price = closest.product.price_max | money %}
-  {% if closest.product.price_min != closest.product.price_max %}
-    <price-range>
-        <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
-    </price-range>
-   {% endif %}
-    {% render 'price',
-      show_unit_price: true,
-      product_resource: product_resource,
-      show_sale_price_first: block.settings.show_sale_price_first
-    %}
+
+  {% if template.name == 'collection' %}
+    {% assign min_price = closest.product.price_min | money %}
+    {% assign max_price = closest.product.price_max | money %}
+      {% if closest.product.price_min != closest.product.price_max %}
+        <price-range>
+            <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
+        </price-range>
+      {% else %}
+        {% render 'price',
+          show_unit_price: true,
+          product_resource: product_resource,
+          show_sale_price_first: block.settings.show_sale_price_first
+        %}
+      {% endif %}
+    {% else %}
+      {% if closest.product.price_min != closest.product.price_max %}
+        <price-range>
+            <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
+        </price-range>
+      {% endif %}
+      {% render 'price',
+          show_unit_price: true,
+          product_resource: product_resource,
+          show_sale_price_first: block.settings.show_sale_price_first
+        %}
+  {% endif %}
  
 
   {% if block.settings.show_tax_info %}
