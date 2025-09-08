@@ -8,8 +8,9 @@
   @param {number} [min] - the minimum quantity the input supports
   @param {string} [class] - custom class for the quantity selector, optional
 {%- enddoc -%}
-
+{% if product.title contains 'lens' %}
 <button class="fit-indicator-btn" id="fit-indicator-btn">Fit Indicator</button>
+{% endif %}
 
 {% liquid
   assign variant = product.selected_or_first_available_variant
