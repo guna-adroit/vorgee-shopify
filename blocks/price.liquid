@@ -62,6 +62,8 @@
         %}
       {% endif %}
     {% else %}
+      {% assign min_price = closest.product.price_min | money %}
+      {% assign max_price = closest.product.price_max | money %}
       {% if closest.product.price_min != closest.product.price_max %}
         <price-range>
             <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
