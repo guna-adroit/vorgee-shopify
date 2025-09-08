@@ -52,13 +52,13 @@
     <price-range>
         <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
     </price-range>
-  {% else %}
+   {% endif %}
     {% render 'price',
       show_unit_price: true,
       product_resource: product_resource,
       show_sale_price_first: block.settings.show_sale_price_first
     %}
-  {% endif %}
+ 
 
   {% if block.settings.show_tax_info %}
     <div class="tax-note">
