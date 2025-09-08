@@ -956,6 +956,10 @@ p.quantity-option-title {
 .cart-drawer__inner .cart-items__quantity .cart-items__remove{
   display: none;
 }
+.page-width-content {
+    --page-content-width: 65rem;
+    --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
+}
 
 /* Policy Page CSS Start */
 .shopify-policy__container{
