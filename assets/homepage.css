@@ -987,6 +987,9 @@ p.quantity-option-title {
   font-size: 14px !important;
   font-weight: 400 !important;
 }
+.quick-add-modal__content .price-range-block{
+  margin-bottom: 12px;
+}
 /* Fit Indicator CSS Start */
 .fit-indicator-container{
             display: flex;
