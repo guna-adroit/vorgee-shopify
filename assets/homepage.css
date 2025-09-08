@@ -1069,8 +1069,9 @@ p.quantity-option-title {
 
 
         .fit-title-block .fit-icon{
-            width: auto;
-            height: 1.2em; 
+            width: 28px;
+            object-fit: unset;
+            margin-bottom: 0;
         }
         .fit-indicator-column .fit-content p{
             font-size: 14px;
