@@ -982,3 +982,125 @@ p.quantity-option-title {
   }
 }
 /* Policy page CSS End */
+
+/* Fit Indicator CSS Start */
+.fit-indicator-container{
+            display: flex;
+            gap: 30px;
+        }
+        .fit-indicator-column{
+            order: 2;
+            width: 25%;
+            transform: scale(0.8);
+            opacity: .7;
+            transition: all .4s;
+            padding: 15px;
+        }
+        .fit-indicator-column .fit-image{
+            width: 100%;
+            border-radius: 50%;
+        }
+        .fit-title-block{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 8px 0;        
+        }
+        .fit-title-block h3{
+            margin: 0;
+        }
+        .are-this-fit{
+            display: none;
+            font-size: 11px;
+            color: white;
+            padding: 4.5px;
+            text-align: center;
+            background-color: black;
+            width: 100%;
+            border-radius: 50px
+        }
+        
+        .fit-title-block.fit--broad{
+            border-top: 3px dashed #c1d560;
+            border-bottom: 3px dashed #c1d560;
+        }
+        .fit-title-block.fit--broad h3{
+            color: #c1d560;
+        }
+        .fit--broad-block .are-this-fit{
+            background-color: #c1d560;
+        }
+
+
+        .fit-title-block.fit--snug{
+            border-top: 3px dashed #00BBD1;
+            border-bottom: 3px dashed #00BBD1;
+        }
+        .fit-title-block.fit--snug h3{
+            color: #00BBD1;
+        }
+        .fit--snug-block .are-this-fit{
+            background-color: #00BBD1;
+        }
+
+
+        .fit-title-block.fit--mid{
+            border-top: 3px dashed #F1743D;
+            border-bottom: 3px dashed #F1743D;
+        }
+        .fit-title-block.fit--mid h3{
+            color: #F1743D;
+        }
+        .fit--mid-block .are-this-fit{
+            background-color: #F1743D;
+        }
+
+        .fit-title-block.fit--mask{
+            border-top: 3px dashed #262D61;
+            border-bottom: 3px dashed #262D61;
+        }
+        .fit-title-block.fit--mask h3{
+            color: #262D61;
+        }
+        .fit--mask-block .are-this-fit{
+            background-color: #262D61;
+        }
+
+
+        .fit-title-block .fit-icon{
+            width: auto;
+            height: 1.2em; 
+        }
+        .fit-indicator-column .fit-content p{
+            font-size: 1rem;
+            color: #58595b;
+            margin-top: 8px;
+        }
+
+        .fit-indicator-column.active-fit, .fit-indicator-column:hover{
+            transform: scale(1);
+            opacity: 1;
+            box-shadow: 0px 0px 15px #ddd;
+            border-radius: 16px;
+        }
+        .fit-indicator-column.active-fit{
+            order: 1;
+        }
+
+        .active-fit .are-this-fit{
+            display: inline-block;
+        }
+        .active-fit .fit-title-block{
+            border-bottom: none !important;
+        }
+
+        @media screen and (max-width: 600px){
+            .fit-indicator-container{
+                flex-direction: column;
+            }
+            .fit-indicator-column{
+                width: 100%;
+            }
+        }
+/* Fit Indicator CSS End */
