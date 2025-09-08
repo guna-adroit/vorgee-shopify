@@ -51,6 +51,13 @@
     product_resource: product_resource,
     show_sale_price_first: block.settings.show_sale_price_first
   %}
+  <price-range>
+  {% assign min_price = closest.product.price_min | money %}
+  {% assign max_price = closest.product.price_max | money %}
+{% if closest.product.price_min != closest.product.price_max %}
+  <p class="price-range-block">Price: {{ min_price }} – {{ max_price }}</p>
+{% endif %}
+</price-range>
 
   {% if block.settings.show_tax_info %}
     <div class="tax-note">
