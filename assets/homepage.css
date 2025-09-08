@@ -984,12 +984,13 @@ p.quantity-option-title {
 /* Policy page CSS End */
 .price-range-block{
   margin: 0 !important; 
-  font-size: 14px !important;
-  font-weight: 400 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 .quick-add-modal__content .price-range-block, .product-information__grid .price-range-block{
   margin-bottom: 12px !important;
   font-size: 16px !important;
+  font-weight: 400 !important;
 }
 /* Fit Indicator CSS Start */
 .fit-indicator-container{
