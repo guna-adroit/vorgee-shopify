@@ -1,0 +1,62 @@
+{% if product.title contains 'lens' %}
+  <div class="">
+    <button class="fit-indicator-btn" id="fit-indicator-btn">Fit Indicator</button>
+  </div>
+{% endif %}
+
+<div id="size-chart-modal" class="size-chart-modal-overlay" style="display:none;">
+        <div class="size-chart-modal-content">
+          <span class="size-chart-close-button" id="close-size-chart">&times;</span>
+          {% if product.metafields.custom.size_chart %}
+            {% assign fit_indicator_page = product.metafields.custom.fit_indicator.value %}
+            
+            <div class="size-chart-content">
+              <h4>{{ fit_indicator_page.title }}</h4>
+              <div>{{ fit_indicator_page.content }}</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const sizeChartTrigger = document.getElementById('fit-indicator-btn');
+          const modal = document.getElementById('size-chart-modal');
+          const closeBtn = document.getElementById('close-size-chart');
+
+          sizeChartTrigger.addEventListener('click', function () {
+            modal.style.display = 'flex';
+          });
+
+          closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+          });
+
+          window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+      </script>
+
+{% schema %}
+{
+  "name": "Fit Indicator",
+  "tag": null,
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:settings.custom_liquid",
+      "info": "t:info.custom_liquid"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fit Indicator",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
