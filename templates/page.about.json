@@ -161,7 +161,7 @@
             "text_ztmMUa": {
               "type": "text",
               "settings": {
-                "text": "<h3><br/>See What Better Looks Like</h3>",
+                "text": "<h3><br/>See What Better Looks Like</h3><h3></h3>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "center",
