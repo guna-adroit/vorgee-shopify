@@ -88,6 +88,171 @@
       "name": "Image Text Timeline",
       "settings": {}
     },
+    "section_wfpgEL": {
+      "type": "section",
+      "blocks": {
+        "group_HbYt7Y": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "custom_classes": "",
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_PN9tcY": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Why Choose Vorgee?</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "custom_classes": "",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_weight": "400",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_ztmMUa": {
+              "type": "text",
+              "settings": {
+                "text": "<h3><br/>See What Better Looks Like</h3>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "custom_classes": "",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_weight": "400",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_MqpFAP": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Every Vorgee product is built with purpose. Here's what goes into out gear:</p><ul><li><strong>High Quality materials</strong> for durability, comfort, and performance</li><li><strong>Top-tier manufacturing partners</strong> trusted around the world</li><li><strong>Innovative swim technology</strong> and user led design</li><li><strong>Strict quality control</strong>, from concept to final product</li><li><strong>Bold colours and modern styles</strong> that stand out in and out of the pool</li><li><strong>A commitment to every swimmer</strong>, no matter your level, style or swim goal</li></ul>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "custom_classes": "",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_weight": "400",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_PN9tcY",
+            "text_ztmMUa",
+            "text_MqpFAP"
+          ]
+        }
+      },
+      "block_order": [
+        "group_HbYt7Y"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "custom_class": "",
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "icon_with_text_4KB7Xh": {
       "type": "icon-with-text",
       "blocks": {
@@ -170,6 +335,7 @@
   "order": [
     "main",
     "image_text_timeline_LjwUtG",
+    "section_wfpgEL",
     "icon_with_text_4KB7Xh",
     "image_text_timeline_h84M4n"
   ]
