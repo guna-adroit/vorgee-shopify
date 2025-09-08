@@ -1135,7 +1135,7 @@ p.quantity-option-title {
   cursor: pointer;
 }
 button#fit-indicator-btn{
-  height: 2rem;
+  height: 2.25rem;
 }
 
         @media screen and (max-width: 600px){
