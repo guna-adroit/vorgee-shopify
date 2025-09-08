@@ -1145,6 +1145,8 @@ p.quantity-option-title {
             .fit-indicator-modal-overlay{
               align-items: baseline;
               overflow: scroll;
+              top: 20px;
+              bottom: 20px;
             }
         }
 /* Fit Indicator CSS End */
