@@ -256,6 +256,14 @@
               },
               "blocks": {}
             },
+            "fit_indicator_xAPDUQ": {
+              "type": "fit-indicator",
+              "name": "Fit Indicator",
+              "settings": {
+                "custom_liquid": ""
+              },
+              "blocks": {}
+            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -552,6 +560,7 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "fit_indicator_xAPDUQ",
             "buy_buttons_eYQEYi",
             "text_aEtTtq",
             "accordion_CXxcbH",
