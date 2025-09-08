@@ -1945,9 +1945,6 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
     --swatch-width: var(--variant-picker-swatch-width);
     --swatch-height: var(--variant-picker-swatch-height);
   }
-  .swatch.swatch--unscaled {
-    background-size: auto;
-  }
   &.swatch--filter {
     --swatch-width: var(--max-filter-size);
     --swatch-height: var(--max-filter-size);
@@ -1982,7 +1979,9 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
     --max-swatch-size: 14px;
   }
 }
-
+  .swatch.swatch--unscaled {
+    background-size: auto;
+  }
 .variant-picker .variant-option--buttons label:has(.swatch) {
   border-radius: var(--variant-picker-swatch-radius);
 }
