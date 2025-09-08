@@ -8,7 +8,7 @@
         <div class="size-chart-modal-content">
           <span class="size-chart-close-button" id="close-size-chart">&times;</span>
           {% if product.metafields.custom.size_chart %}
-            {% assign fit_indicator_page = product.metafields.custom.fit_indicator.value %}
+            {% assign fit_indicator_page = pages['fit-indicator'] %}
             
             <div class="size-chart-content">
               <h4>{{ fit_indicator_page.title }}</h4>
