@@ -986,7 +986,7 @@ p.quantity-option-title {
 /* Fit Indicator CSS Start */
 .fit-indicator-container{
             display: flex;
-            gap: 30px;
+            gap: 10px;
         }
         .fit-indicator-column{
             order: 2;
