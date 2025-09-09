@@ -4316,7 +4316,7 @@ span.facets__summary.filter-label {
     font-weight: 600;
     color: #000;
 }
-.button.button.quick-add__button.quick-add__button--add:hover {
+button.button.quick-add__button.quick-add__button--add:hover {
     background-color: #06b5d2;
 }
 .collection-template .text-block.uppercase p{
