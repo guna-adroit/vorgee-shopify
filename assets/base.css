@@ -4476,7 +4476,9 @@ div#shop-hcaptcha-badge-container {
   line-height: 100%;
   color: #121212;
 }
-
+label.variant-option__button-label--has-swatch .swatch {
+    background-size: auto;
+}
 @media screen and (max-width: 749px){
   .cart-form .cart-items__table-row {
     --cart-item-price-width: 2rem;
