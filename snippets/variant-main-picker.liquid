@@ -58,10 +58,12 @@
             <legend>
               
               <span>{{ product_option.name | escape -}}</span>
-              {% if product_option.name == 'Size' %}
-               <div class="size-option-button" id="size-chart">
-                  {{ 'icon-ruler.svg' | inline_asset_content }}<p>Size Chart</p>
-               </div>
+              {% if product.metafields.custom.size_chart != blank %}
+                {% if product_option.name == 'Size' %}
+                <div class="size-option-button" id="size-chart">
+                    {{ 'icon-ruler.svg' | inline_asset_content }}<p>Size Chart</p>
+                </div>
+                {% endif %}
               {% endif %}
               {%- if variant_style == 'swatch' -%}
                 :<span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
