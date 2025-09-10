@@ -325,8 +325,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/competition.png",
-            "title": "COMPETITION",
-            "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
+            "title": "COMPETITION : Designed to perform.",
+            "description": "Streamlined products designed to help you move through the water with minimal resistance and maximum speed.",
             "button_text": "More",
             "button_link": "shopify://collections"
           }
@@ -335,8 +335,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Fitness.png",
-            "title": "FITNESS",
-            "description": "A range of streamlined products designed to help you move through the water with minimal resistance and maximum speed.",
+            "title": "FITNESS : Designed to go the distance.",
+            "description": "Premium products designed to enrich your swimming experience.",
             "button_text": "More",
             "button_link": "shopify://collections"
           }
@@ -345,8 +345,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/junior.png",
-            "title": "JUNIOR",
-            "description": "A range of streamlined products that help you to move through the water with minimal resistance and maximum speed.",
+            "title": "JUNIOR : Designed to support and protect.",
+            "description": "Easy to wear products designed to aid younger swimmers as they develop their swim skills and build their water confidence.",
             "button_text": "More",
             "button_link": "shopify://collections"
           }
