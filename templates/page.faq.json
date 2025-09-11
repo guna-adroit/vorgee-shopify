@@ -17,9 +17,9 @@
           "name": "Title",
           "settings": {
             "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "fit-content",
+            "width": "100%",
             "max_width": "normal",
-            "alignment": "left",
+            "alignment": "center",
             "custom_classes": "",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
@@ -52,7 +52,7 @@
       ],
       "settings": {
         "content_direction": "column",
-        "gap": 32,
+        "gap": 0,
         "color_scheme": "",
         "padding-block-start": 40,
         "padding-block-end": 80
