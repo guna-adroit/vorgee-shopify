@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -7,13 +16,15 @@
           "type": "text",
           "name": "t:names.title",
           "settings": {
-            "text": "<h2>{{ closest.page.title }}<\/h2>",
+            "text": "<h2>{{ closest.page.title }}</h2>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
+            "custom_classes": "",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_size": "",
+            "font_weight": "400",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -33,13 +44,15 @@
           "type": "text",
           "name": "t:names.content",
           "settings": {
-            "text": "{{ closest.page.content }}",
+            "text": "<p>{{ closest.page.content }}</p>",
             "width": "100%",
-            "max_width": "narrow",
+            "max_width": "normal",
             "alignment": "center",
+            "custom_classes": "",
             "type_preset": "rte",
             "font": "var(--font-primary--family)",
             "font_size": "",
+            "font_weight": "400",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -116,6 +129,7 @@
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
+        "custom_class": "",
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
