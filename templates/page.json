@@ -112,7 +112,7 @@
             "accordion_row_neJpQz": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "How long should my goggles last?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -121,7 +121,7 @@
                 "text_7Rc7eX": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn’t the case, let us know and we’ll do our best to work with you to make it right. </p>",
+                    "text": "<p>Goggles, like most sports’ equipment, have a natural lifespan that depends on how often you use them and how well you care for them. A swimmer hitting the pool five or more times a week may only get 3-6 months out of their goggles, while someone swimming 2-3 times a week could see them last closer to a year. </p><p>To get the best life out of your goggles, rinse them in fresh water after every swim, dry them in the shade, and store them in their case rather than loose in your bag. With a little care, you’ll keep them clearer, fresher, and ready for more swims. </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -153,7 +153,7 @@
             "accordion_row_8ATnEe": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?",
+                "heading": "What are your best care tips?  ",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -162,7 +162,7 @@
                 "text_tAXM3J": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "text": "<p>Swimming pools can be tough on equipment, and that’s a good thing! Chlorine and other pool chemicals keep the water clean and safe for use, but they can also be harsh on fabric, silicone, and rubber. </p><p>To help your Vorgee gear go the distance: </p><ul><li>Rinse well after every swim with fresh, cold water to wash away chlorine or salt residue </li><li>Dry thoroughly in the shade before storing and avoid leaving items damp in your swim bag for too long. If you must store before dry, use breathable mesh bags or pouches.  </li><li>Handle with care by avoiding rough surfaces or excessive stretching of straps and caps. </li><li>Store in a cool, dry place, ideally using cases or pouches provided. </li></ul><p> </p><p>With the right care, your goggles, swimwear, and equipment will stay fresher, perform better, and last longer! </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -195,7 +195,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_dash_row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "How do I choose the right pair of goggles? ",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -205,7 +205,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>Choosing the right goggles is as simple as 1, 2, 3.  </p><p> </p><ol><li><strong>Find your Zone</strong> – We’ve grouped our goggles into four “zones,” so you can easily match them to your swim: </li></ol><ul><li><strong>Competition</strong> | Designed for racing and club training, with streamlined shapes to reduce drag. </li><li><strong>Fitness</strong> | Built for regular training sessions and open water swimming, balancing comfort and performance. </li><li><strong>Junior</strong> | Scaled for kids and learn-to-swim programs, with smaller fits for growing faces. </li><li><strong>Recreational</strong> | Perfect for casual swimming or lighter usage, with soft seals for all-day comfort. </li></ul><p> </p><ol><li><strong>Find your Fit</strong> – Every swimmer has their own comfort preference, so we offer four distinct fits: </li></ol><ul><li><strong>Snug | </strong>deal fit for swimmers or those who like their goggles to have a low profile and snug fit. The gasket sits and fits firmly inside the eye socket. </li><li><strong>Mid |</strong> Ideal fit for swimmers who like a firm, but comfortable fit. The cushioned gasket sits and fits securely inside the eye socket. </li><li><strong>Broad | </strong>Ideal for swimmers who like a wider lens and broader fit. The cushioned, universally shaped, gasket sits and fits securely outside the eye socket. </li><li><strong>Mask | </strong>Ideal for junior swimmers who like a mask like fit. The soft, silicone mask shaped gasket sits and sits securely on the brow line through to the tip of the cheek. </li></ul><p> </p><ol><li><strong>Choose your Goggle</strong> – Once you’ve matched your zone and fit, simply select the style, lens, and colour that suit your swim best. </li></ol><p> </p><p><strong>Hot tip:</strong> Before diving in, try the quick fit test. Firmly, but gently, press the over your eyes without using the strap. <strong>If they suction and stay in place for a second or two (even just on one side), you’ve found a pair of goggles that will give you a watertight, comfortable, and fog-free swim.</strong> </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
