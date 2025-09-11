@@ -238,7 +238,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_dash_row",
               "settings": {
-                "heading": "Where are your products manufactured?",
+                "heading": "Help – my goggles are the right fit, but they’re fogging at the start of my swim. ",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -248,7 +248,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value. </p>",
+                    "text": "<p>Fogging at the start of a swim is completely normal, so don’t ditch your goggles just yet. When you first hop into the water and start swimming, your body is warm and producing heat, while the goggles (and pool water) are typically much cooler. That temperature difference causes condensation to form inside the lenses, just like car windows misting up on a chilly morning. </p><p>Because goggles are a small, enclosed space, the warmth from your face can overwhelm the anti-fog coating until everything evens out. Usually, as your swim continues and temperatures balance, the fog will naturally clear. </p><p><strong>Quick tip:</strong> Adding a tiny drop of cool, clean water inside each lens at the start of your swim can help regulate the temperature difference and reduce condensation. </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -281,7 +281,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_dash_row",
               "settings": {
-                "heading": "How much does shipping cost?",
+                "heading": "I left my goggles in the car* (*insert any other spot where they’re subject to heat) and the seal is bent out of shape; can I save them?  ",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -291,7 +291,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
+                    "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm/hot (not boiling) water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face.  </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -319,6 +319,48 @@
               "block_order": [
                 "text_Chkngn"
               ]
+            },
+            "accordion_row_LYLtFL": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What are the safety specifications of your products?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_qMJ3eB": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Your health and water safety is our priority, which is why our products are independently tested for adherence to all relevant national and international safety standards. For the specific standards our products are compliant with, please refer to the specifications tab on their product page.  </p><p>We are pleased to advise our goggles, including anti-fog solutions are PFAS free.  </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_qMJ3eB"
+              ]
             }
           },
           "block_order": [
@@ -326,7 +368,8 @@
             "accordion_row_8ATnEe",
             "accordion_row_qBUCz6",
             "accordion_row_dy3D7a",
-            "accordion_row_dUmr7V"
+            "accordion_row_dUmr7V",
+            "accordion_row_LYLtFL"
           ]
         }
       },
