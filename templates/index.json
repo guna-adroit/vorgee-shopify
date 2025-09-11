@@ -1157,7 +1157,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>It started with a single mission: to create swim gear for everyone. Whether you're stepping into the water for the first time or<br/>training for competition, we have a full range of products that perform <strong>for<br/>you</strong>. Shop here. </p>",
+                "text": "<p>It started with a single mission: to create swim gear for everyone. Whether you're stepping into the water for the first time or<br/>training for competition, we have a full range of products that perform <strong>for you</strong>. Shop here. </p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
