@@ -70,6 +70,7 @@
         },
         "ai_gen_block_510643c_wwBbeU": {
           "type": "ai_gen_block_510643c",
+          "disabled": true,
           "settings": {
             "alignment": "center",
             "gap": 15,
@@ -325,6 +326,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
+                    "show_price_range": true,
                     "custom_classes": "",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -586,6 +588,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
+                    "show_price_range": true,
                     "custom_classes": "",
                     "type_preset": "h5",
                     "font": "var(--font-body--family)",
