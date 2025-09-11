@@ -361,6 +361,48 @@
               "block_order": [
                 "text_qMJ3eB"
               ]
+            },
+            "accordion_row_DCFFda": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "The product/s I want are out of stock. What happens now?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_jX3zNR": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the items returns to stock.  </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_jX3zNR"
+              ]
             }
           },
           "block_order": [
@@ -369,7 +411,8 @@
             "accordion_row_qBUCz6",
             "accordion_row_dy3D7a",
             "accordion_row_dUmr7V",
-            "accordion_row_LYLtFL"
+            "accordion_row_LYLtFL",
+            "accordion_row_DCFFda"
           ]
         }
       },
