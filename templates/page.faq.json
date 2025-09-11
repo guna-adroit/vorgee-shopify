@@ -54,8 +54,8 @@
         "content_direction": "column",
         "gap": 0,
         "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "padding-block-start": 15,
+        "padding-block-end": 40
       }
     },
     "section_ieEV4p": {
@@ -70,7 +70,7 @@
             "max_width": "narrow",
             "alignment": "left",
             "custom_classes": "",
-            "type_preset": "rte",
+            "type_preset": "h3",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "font_weight": "400",
@@ -348,7 +348,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
