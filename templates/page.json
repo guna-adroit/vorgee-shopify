@@ -113,7 +113,7 @@
               "type": "_accordion-row",
               "settings": {
                 "heading": "How long should my goggles last?",
-                "open_by_default": false,
+                "open_by_default": true,
                 "icon": "none",
                 "width": 20
               },
@@ -729,8 +729,8 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
+        "vertical_alignment_flex_direction_column": "flex-start",
+        "gap": 30,
         "custom_class": "",
         "section_width": "page-width",
         "section_height": "",
@@ -747,7 +747,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
+        "padding-block-start": 32,
         "padding-block-end": 48
       }
     }
