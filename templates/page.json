@@ -403,6 +403,300 @@
               "block_order": [
                 "text_jX3zNR"
               ]
+            },
+            "accordion_row_NjJn3j": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Whoops – I made a mistake on my order. Can I change it?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_gQcxia": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p> </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_gQcxia"
+              ]
+            },
+            "accordion_row_zMreFV": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Do you ship internationally?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_mdmjxh": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>vorgee.com offers Australia wide shipping only. If you require items shipped internationally, please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> and our team will work to assist. When shipping internationally, the receiver is responsible for all applicable duties and taxes at the destination. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_mdmjxh"
+              ]
+            },
+            "accordion_row_AHnbDk": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What is your returns policy?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_fLKyMJ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We offer a 30-day change of mind policy for products that are unused with all packaging intact. Please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> for a return authority number and return postage details.  </p><p>Where you believe a product is faulty, please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> and our team will work to assist.  </p><p>We do not offer exchanges. If you need to buy a different size, colour or model, please create a separate order for the item you require, and contact us as above regarding your return.  </p><p>For our full return policy, please <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><strong>click here</strong></a>.  </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_fLKyMJ"
+              ]
+            },
+            "accordion_row_qKXAfk": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "How can I track my order?  [Pending]",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_c7RUrY": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_c7RUrY"
+              ]
+            },
+            "accordion_row_fhahHA": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "How long will it take for my order to arrive?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_VGThVj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Orders received prior to 10am (AEST) on standard business days are typically dispatched same day via Australia Post, Aramex or Direct Freight. Delivery timeframes are dependent on where you live, but as a guide Standard Post delivery to metro areas is 3-5 business days, and Express Post is 1-3 business days. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_VGThVj"
+              ]
+            },
+            "accordion_row_nkqHfr": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What happens if I am not home when my parcel arrives?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_kH8aPq": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>All our online orders are delivered with Authority to Leave, so we recommend including your best parcel hiding spot in your order notes. If you don’t have somewhere your parcel can be left, please nominate an alternate address or let us know in your order notes. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_kH8aPq"
+              ]
+            },
+            "accordion_row_YWKVXb": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "My order has arrived, but it’s not correct.  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_DD8zLN": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. Please contact us at <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> (with your order number and an image of the items received) and we will immediately look into it for you. </p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_DD8zLN"
+              ]
             }
           },
           "block_order": [
@@ -412,7 +706,14 @@
             "accordion_row_dy3D7a",
             "accordion_row_dUmr7V",
             "accordion_row_LYLtFL",
-            "accordion_row_DCFFda"
+            "accordion_row_DCFFda",
+            "accordion_row_NjJn3j",
+            "accordion_row_zMreFV",
+            "accordion_row_AHnbDk",
+            "accordion_row_qKXAfk",
+            "accordion_row_fhahHA",
+            "accordion_row_nkqHfr",
+            "accordion_row_YWKVXb"
           ]
         }
       },
