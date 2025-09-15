@@ -1,18 +1,18 @@
 <style>
-    .find-your-zone{
+    .find-my-goggles{
         position: relative;
     }
-    .vorgee-find-zone-bg-container{
+    .vorgee-find-goggles-bg-container{
         width: 100%;
         height: 100vh;
         position: relative;
     }
-    .vorgee-find-zone-bg-container img{
+    .vorgee-find-goggles-bg-container img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .vorgee-find-zone-bg-container::before {
+    .vorgee-find-goggles-bg-container::before {
         content: '';
         display: block;
         position: absolute;
@@ -23,7 +23,7 @@
         background-color: rgba(0, 0, 0, 0.3);
         z-index: 6;
     }
-    .vorgee-find-zone-form-container{
+    .vorgee-find-goggles-form-container{
         position: absolute;
         top: 0;
         left: 0;
@@ -32,23 +32,23 @@
         background-color: rgba(0, 0, 0, 0.3);
         z-index: 7;
     }
-    .vorgee-find-zone-form-container label{
+    .vorgee-find-goggles-form-container label{
         color: white;
         font-size: 30px;
     }
-    .vorgee-find-zone-form-container select{
+    .vorgee-find-goggles-form-container select{
         font-size: 30px;
         background-color: transparent;
         color: white;
         border: none;
     }
-    .vorgee-find-zone-form-container select option{
+    .vorgee-find-goggles-form-container select option{
         color: black;
         font-size: 16px;
         font-family: 'boxed', sans-serif !important;
         background: white;
     }
-    .vorgee-find-zone-form {
+    .vorgee-find-goggles-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -58,7 +58,7 @@
         margin-right: 4rem;
         height: 100%;
     }
-    .find-your-zone-field{
+    .find-your-goggles-field{
         display: flex;
         gap: 25px;
         align-items: center;
@@ -68,11 +68,11 @@
         background-repeat: no-repeat;
         cursor: pointer;
     }
-    .find-your-zone-field label{
+    .find-your-goggles-field label{
         width: 30%;
         text-align: right;
     }
-    .find-your-zone-field select{
+    .find-your-goggles-field select{
         width: 70%;
         vertical-align: middle;
         font-weight: 600 !important;
@@ -86,10 +86,10 @@
         background-position: bottom left;
         background-repeat: repeat-x;
     }
-    .find-your-zone-field select:focus{
+    .find-your-goggles-field select:focus{
         outline: none;
     }
-    button#quiz-submit {
+    button#goggles-submit {
         max-width: fit-content;
         margin: 0 auto;
         padding: 15px 55px;
@@ -97,7 +97,7 @@
         cursor: pointer;
         margin-top: 20px;
     }
-    button#quiz-submit:hover{
+    button#goggles-submit:hover{
         background-color: rgb(115, 190, 196);
         color: rgb(255, 255, 255);
     }
