@@ -549,6 +549,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!swimzoneVal || !fitVal || !swimMostVal) return;
 
     const targetId = `zone-${swimzoneVal}-${fitVal}-${swimMostVal}`;
+    console.log(targetId);
     const targetEl = document.getElementById(targetId);
 
     if (targetEl) {
