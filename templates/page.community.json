@@ -178,7 +178,7 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-end": 20,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -217,6 +217,9 @@
         "group_cy8Dnm",
         "image_TQdE7B"
       ],
+      "custom_css": [
+        ".text-block > p {max-width: none;}"
+      ],
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "column",
@@ -228,7 +231,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
         "custom_class": "",
-        "section_width": "full-width",
+        "section_width": "page-width",
         "section_height": "custom",
         "section_height_custom": 34,
         "color_scheme": "",
