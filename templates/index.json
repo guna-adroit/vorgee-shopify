@@ -135,7 +135,7 @@
                   "type": "button",
                   "settings": {
                     "label": "FIND YOUR ZONE NOW",
-                    "link": "shopify://pages/find-your-zone",
+                    "link": "shopify://pages/find-my-goggles",
                     "open_in_new_tab": false,
                     "style_class": "custom-btn",
                     "width": "fit-content",
