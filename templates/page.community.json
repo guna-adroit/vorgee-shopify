@@ -69,10 +69,20 @@
             "description": "<p>At Vorgee, giving back has always been part of who we are. We believe the strength and longevity of the swimming community depends on the support of those who live and breathe it, and we’re proud to play our part.<br/>Our commitment to the community focuses on three core pillars: health and safety, swim development and swim events - all essential to building confident, capable swimmers for life.</p>",
             "image_alignment": "left"
           }
+        },
+        "icon_text_bMrnWp": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/ed2f311d9a02d5d75e228f2f2e547d01faef52b4.jpg",
+            "title": "<h2>Supporting the Foundations of Swimming in Australia</h2>",
+            "description": "<p>Vorgee is proud to support some of the organisations that are at the heart of Australian swimming:</p><ul><li><strong>Australian Swim Schools Association (ASSA)</strong> helping young swimmers build water confidence and safety from their very first lesson</li><li><strong>Kids Alive - Do the Five </strong>sharing life-saving water safety messages with children and families nationwide</li><li><strong>Masters Swimming Australia (MSA)</strong> empowering adult swimmers to stay fit, active, and connected through lifelong swimming</li><li><strong>Swim Coaches and Teachers Australia (SCTA</strong>) supporting the development of expert teachers and coaches across the country</li></ul><p>These partners shape the future of swimming in Australia, and we're honoured to stand alongside them.</p>",
+            "image_alignment": "right"
+          }
         }
       },
       "block_order": [
-        "icon_text_wCY8LV"
+        "icon_text_wCY8LV",
+        "icon_text_bMrnWp"
       ],
       "name": "Image Text Timeline",
       "settings": {}
