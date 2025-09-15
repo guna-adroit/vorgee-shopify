@@ -5,7 +5,7 @@
   class="
     section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}
     {% if section.settings.section_height != "" %} {{ section.settings.section_height | prepend: "section--height-" }}{% endif %}
-  footer___wrapper" {% if customer %} subscription_status="{{ customer.accepts_marketing }}"{% endif %}
+  footer___wrapper" {% if customer %} subscription_status="{{ customer.accepts_marketing }}" {% else %} subscription_status="false"{% endif %}
 >
   {% render 'background-media',
     background_media: section.settings.background_media,
