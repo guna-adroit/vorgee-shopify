@@ -249,11 +249,31 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "image_text_timeline_YaxCYa": {
+      "type": "image-text-timeline",
+      "blocks": {
+        "icon_text_HytCLV": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/e3c55c536185b585ada9fb0018bb506f8beb52eb.jpg",
+            "title": "<h2>In and Out of the Pool</h2>",
+            "description": "<p>In and Out of the Pool</p><p>Our broader community involvement includes:</p><ol><li>Custom-designed product ranges that raise awareness and funds for important causes</li><li>Product, financial, and team support for community events, clinics, and programs</li><li>Support of clubs and swim communities across Australia</li></ol><p>We are incredibly thankful for our ongoing relationships with swim schools, national and state swimming bodies, coaches, clubs, and athletes. Swimming is more than a sport, it's a culture, a community, and a vital life skill. And we're proud to be part of it.</p><p><strong>Vorgee is here for the swimmers - and the community that makes swimming possible.</strong></p>",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_HytCLV"
+      ],
+      "name": "Image Text Timeline",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "image_text_timeline_BU36Bw",
-    "section_D43CED"
+    "section_D43CED",
+    "image_text_timeline_YaxCYa"
   ]
 }
