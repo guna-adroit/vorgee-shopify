@@ -376,6 +376,11 @@ This block ensures Shopify loads up to 200 entries, so all mappings are availabl
 
       <!-- Print a field (replace field_name with actual field handle) -->
       <strong>Title:</strong> {{ entry.goggles_fit.value }} <br>
+      {% for product in entry.models.value %}
+
+        {{ product.title }}
+
+      {% endfor %}
 
       <!-- If it’s an image field -->
       {% if entry.image_field_name.value != blank %}
