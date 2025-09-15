@@ -365,6 +365,26 @@ This block ensures Shopify loads up to 200 entries, so all mappings are availabl
 
 {% endpaginate %}
 
+
+{% assign entries = shop.metaobjects['find_my_goggles'].values %}
+
+<ul>
+  {% for entry in entries %}
+    <li>
+      <!-- Print metaobject ID -->
+      <strong>ID:</strong> {{ entry.id }} <br>
+
+      <!-- Print a field (replace field_name with actual field handle) -->
+      <strong>Title:</strong> {{ entry.field_name.value }} <br>
+
+      <!-- If it’s an image field -->
+      {% if entry.image_field_name.value != blank %}
+        <img src="{{ entry.image_field_name.value | img_url: '300x' }}" alt="">
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const swimzone = document.getElementById("swimzone");
