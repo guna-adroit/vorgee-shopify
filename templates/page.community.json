@@ -282,35 +282,91 @@
         "icon_text_RFcGTm": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "image": "shopify://shop_images/hellofthewest.webp",
             "description": ""
           }
         },
         "icon_text_rHaFWw": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "image": "shopify://shop_images/seriestriathelon.webp",
             "description": ""
           }
         },
         "icon_text_AbkRKT": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "image": "shopify://shop_images/Kids-alive.webp",
             "description": ""
           }
         },
         "icon_text_HryryU": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "image": "shopify://shop_images/masters-swimming-239x300.webp",
             "description": ""
           }
         },
         "icon_text_J7DMEF": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "image": "shopify://shop_images/NBCF_PARTNER_LOGO_COLOUR_RGB-300x153.jpg",
+            "description": ""
+          }
+        },
+        "icon_text_9GnYUx": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/ocean-fit-300x193.webp",
+            "description": ""
+          }
+        },
+        "icon_text_hc8ibT": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/ocean-swim-300x290.webp",
+            "description": ""
+          }
+        },
+        "icon_text_6FjApC": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/scta-300x80.webp",
+            "description": ""
+          }
+        },
+        "icon_text_t4d44Y": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/Swim-Coaches-and-Teaches-Australia-Logo-22-300x154.webp",
+            "description": ""
+          }
+        },
+        "icon_text_3dL98J": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/Swimming-Brisbane-Web-Logo-01-300x183.webp",
+            "description": ""
+          }
+        },
+        "icon_text_eYAVhF": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/The-Event-Crew-Logo-300x194.webp",
+            "description": ""
+          }
+        },
+        "icon_text_4tFMzi": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/Tri-pink-logo-21-01-01-300x194.webp",
+            "description": ""
+          }
+        },
+        "icon_text_36PhB3": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/Triathlon-QLD-logo-224x300.webp",
             "description": ""
           }
         }
@@ -321,7 +377,15 @@
         "icon_text_rHaFWw",
         "icon_text_AbkRKT",
         "icon_text_HryryU",
-        "icon_text_J7DMEF"
+        "icon_text_J7DMEF",
+        "icon_text_9GnYUx",
+        "icon_text_hc8ibT",
+        "icon_text_6FjApC",
+        "icon_text_t4d44Y",
+        "icon_text_3dL98J",
+        "icon_text_eYAVhF",
+        "icon_text_4tFMzi",
+        "icon_text_36PhB3"
       ],
       "name": "Icon with Text",
       "settings": {
