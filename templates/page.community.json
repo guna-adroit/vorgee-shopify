@@ -197,7 +197,7 @@
             "link": "",
             "image_ratio": "landscape",
             "width": "custom",
-            "custom_width": 55,
+            "custom_width": 50,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
