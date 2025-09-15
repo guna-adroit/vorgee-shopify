@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -7,13 +16,15 @@
           "type": "text",
           "name": "Title",
           "settings": {
-            "text": "<h1>{{ closest.page.title }}<\/h1>",
+            "text": "<h1>{{ closest.page.title }}</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
+            "custom_classes": "",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_size": "",
+            "font_weight": "400",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -46,9 +57,29 @@
         "padding-block-start": 40,
         "padding-block-end": 80
       }
+    },
+    "image_text_timeline_BU36Bw": {
+      "type": "image-text-timeline",
+      "blocks": {
+        "icon_text_wCY8LV": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/32419f9877f37a82dd6ab2b73aba105a2c0c30bb.png",
+            "title": "<h2>Heading</h2>",
+            "description": "<p>Welcome to my shop!</p>",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_wCY8LV"
+      ],
+      "name": "Image Text Timeline",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_text_timeline_BU36Bw"
   ]
 }
