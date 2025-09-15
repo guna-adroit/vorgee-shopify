@@ -268,12 +268,72 @@
       ],
       "name": "Image Text Timeline",
       "settings": {}
+    },
+    "icon_with_text_qGYaP4": {
+      "type": "icon-with-text",
+      "blocks": {
+        "icon_text_thRKaM": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "description": ""
+          }
+        },
+        "icon_text_RFcGTm": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "description": ""
+          }
+        },
+        "icon_text_rHaFWw": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "description": ""
+          }
+        },
+        "icon_text_AbkRKT": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "description": ""
+          }
+        },
+        "icon_text_HryryU": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "description": ""
+          }
+        },
+        "icon_text_J7DMEF": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_thRKaM",
+        "icon_text_RFcGTm",
+        "icon_text_rHaFWw",
+        "icon_text_AbkRKT",
+        "icon_text_HryryU",
+        "icon_text_J7DMEF"
+      ],
+      "name": "Icon with Text",
+      "settings": {
+        "title": "<p>Please see below some of the organisations and events proudly supported by, and supporting, Vorgee.</p>"
+      }
     }
   },
   "order": [
     "main",
     "image_text_timeline_BU36Bw",
     "section_D43CED",
-    "image_text_timeline_YaxCYa"
+    "image_text_timeline_YaxCYa",
+    "icon_with_text_qGYaP4"
   ]
 }
