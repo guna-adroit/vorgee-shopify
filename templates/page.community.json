@@ -398,7 +398,8 @@
       ],
       "name": "Icon with Text",
       "settings": {
-        "title": "<p>Please see below some of the organisations and events proudly supported by, and supporting, Vorgee.</p>"
+        "title": "<p>Please see below some of the organisations and events proudly supported by, and supporting, Vorgee.</p>",
+        "columns": 7
       }
     }
   },
