@@ -506,7 +506,7 @@ This block ensures Shopify loads up to 200 entries, so all mappings are availabl
 <div id="goggles-results" class="find-my-goggles-results section section--page-width">
   {% for mapping in zone_mappings %}
     <div class="goggles-block hidden"
-         id="zone-{{ mapping.swim_zone }}-{{ mapping.goggles_fit }}-{{ mapping.swim_the_most }}">
+         id="zone-{{ mapping.swim_zone }}-{{ mapping.goggles_fit }}-{{ mapping.swim_the_most | replace: " ", "_"}}">
       <h2 class="find-my-goggles-result-title">
         <span>Your goggles match:</span>
       </h2>
@@ -538,7 +538,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function showProducts() {
     const swimzoneVal = swimzone.value;
     const fitVal = fit.value;
-    const swimMostVal = swimMost.value;
+    const swimMostVal = swimMost.value.replaceAll(" ", "_");
 
     // Hide all results first
     resultsContainer.querySelectorAll(".goggles-block").forEach(el => {
