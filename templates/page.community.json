@@ -65,8 +65,8 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/32419f9877f37a82dd6ab2b73aba105a2c0c30bb.png",
-            "title": "<h2>Heading</h2>",
-            "description": "<p>Welcome to my shop!</p>",
+            "title": "<h2>Our Community Commitment</h2>",
+            "description": "<p>At Vorgee, giving back has always been part of who we are. We believe the strength and longevity of the swimming community depends on the support of those who live and breathe it, and we’re proud to play our part.<br/>Our commitment to the community focuses on three core pillars: health and safety, swim development and swim events - all essential to building confident, capable swimmers for life.</p>",
             "image_alignment": "left"
           }
         }
