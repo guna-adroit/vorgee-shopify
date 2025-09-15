@@ -27,7 +27,66 @@
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-schemes' -%}
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  const formContainer = document.querySelector('.form-container');
 
+  const observer = new MutationObserver(() => {
+    const form = document.querySelector('form-embed');
+    if (form && form.shadowRoot) {
+      observer.disconnect();
+
+      // Create a <style> element
+      const style = document.createElement('style');
+      style.textContent = `
+        :host {
+          // font-size: 40px !important;
+        }
+        /* Example: change flex direction of container */
+        form._formFieldset_cit2d_82 {   /* replace with real class from shadow DOM */
+          flex-direction: row !important;
+          gap: 16px;
+          background: #fff;
+          padding: 2px 0px 2px 25px !important;
+          border-radius: 100px;
+          max-width: 300px;
+        }
+        h2._textHeading_2aowh_35 {
+          font-size: 18px;
+          color: #333;
+          font-family: 'boxed'!important;
+          text-align: left;
+        }
+        ._textBody_2aowh_10 p{
+          text-align: left;
+        }
+        button[data-testid="btn-form-submit"]{
+          border-radius: 100px !important;
+          font-weight: 600 !important;
+          font-size: 16px;
+          color: #000 !important;
+          text-transform: uppercase !important;
+        }
+        input._formInputField_nag3b_7{
+          box-shadow: none !important;
+        }
+      `;
+
+      // Inject style into shadow root
+      form.shadowRoot.appendChild(style);
+
+      // Mark container as ready
+      if (formContainer) {
+        formContainer.classList.add('loaded');
+      }
+    }
+  });
+
+  // Start observing the DOM for the form-embed being inserted
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+
+    </script>
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
     {% endif %}

@@ -4479,6 +4479,13 @@ div#shop-hcaptcha-badge-container {
 label.variant-option__button-label--has-swatch .swatch {
     background-size: auto;
 }
+form._formFieldset_cit2d_82 {
+    background: red;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    padding: 0px 2px;
+}
 @media screen and (max-width: 749px){
   .cart-form .cart-items__table-row {
     --cart-item-price-width: 2rem;
@@ -4497,4 +4504,17 @@ label.variant-option__button-label--has-swatch .swatch {
   .cart-page span.cart-discount__label.h6, .cart-page span.cart__total-label.cart-primary-typography {
     font-size: 13px;
   }
+}
+/* Form Unsubscribe */
+.footer___wrapper[subscription_status="false"] .unsubscribe_section {
+  display: none;
+}
+.footer___wrapper[subscription_status="true"] .subscribe_section {
+  display: none;
+}
+.footer___wrapper[subscription_status="false"] .email-signup__message {
+  display: none;
+}
+form-embed {
+  --button-background-color:#07BED4;
 }
