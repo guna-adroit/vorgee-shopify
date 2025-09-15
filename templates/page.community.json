@@ -86,10 +86,29 @@
       ],
       "name": "Image Text Timeline",
       "settings": {}
+    },
+    "icon_with_text_7pCnNy": {
+      "type": "icon-with-text",
+      "blocks": {
+        "icon_text_kDz8x7": {
+          "type": "icon_text",
+          "settings": {
+            "description": "A Cause Close to Our Hearts"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_kDz8x7"
+      ],
+      "name": "Icon with Text",
+      "settings": {
+        "title": "<p>A Cause Close to Our Hearts<br/></p>"
+      }
     }
   },
   "order": [
     "main",
-    "image_text_timeline_BU36Bw"
+    "image_text_timeline_BU36Bw",
+    "icon_with_text_7pCnNy"
   ]
 }
