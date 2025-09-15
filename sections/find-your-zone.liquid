@@ -510,6 +510,9 @@ This block ensures Shopify loads up to 200 entries, so all mappings are availabl
       <h2 class="find-my-goggles-result-title">
         <span>Your goggles match:</span>
       </h2>
+      {% if mapping.note != blank %}
+        <p>{{ mapping.note }}</p>
+      {% endif %}
 
       <div class="products-grid">
         {% for product in mapping.models.value %}
