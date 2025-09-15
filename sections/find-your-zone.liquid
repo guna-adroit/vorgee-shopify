@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script> {% endcomment %}
 
-{% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
+{% comment %} {% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
 {% comment %}
 This block ensures Shopify loads up to 200 entries, so all mappings are available
 {% endcomment %}
@@ -430,8 +430,145 @@ document.addEventListener("DOMContentLoaded", function() {
     select.addEventListener("change", showProducts);
   });
 });
-</script>
+</script> {% endcomment %}
 
+{% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
+{% comment %}
+This block ensures Shopify loads up to 200 entries, so all mappings are available
+{% endcomment %}
+
+{% assign zone_mappings = shop.metaobjects['find_my_goggles'].values %}
+
+<style>
+  .goggles-block.hidden {
+    display: none;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .product-card {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+  }
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<div id="find-my-goggles" class="find-my-goggles">
+  <div class="vorgee-find-goggles-bg-container">
+    <img src="https://vorgee.com/wp-content/uploads/2017/01/bubbles.jpg" alt="">
+  </div>
+  <div class="vorgee-find-goggles-form-container section section--page-width">
+
+    <form class="vorgee-find-goggles-form">
+      <div class="find-my-goggles-field">
+        <label>What’s your swim zone?</label>
+        <select id="swimzone" name="swimzone">
+          <option value="">-- Select --</option>
+          <option value="Competition">Competition: I need goggles that are built for speed and performance on race days and in training</option>
+          <option value="Fitness">Fitness: I need goggles that are built for comfort and endurance in my swim sessions</option>
+          <option value="Junior">Junior: I need goggles that are built for my smaller face, without restricting my underwater vision.</option>
+        </select>
+      </div>
+      <div class="find-my-goggles-field">
+        <label>What’s your goggles fit preference?</label>
+        <select id="fit" name="fit">
+          <option value="">-- Select --</option>
+          <option value="Snug">Snug: Ideal fit for squad and competitive swimmers</option>
+          <option value="Mid">Mid: Firm, but comfortable fit (fitness & junior swimmers)</option>
+          <option value="Broad">Broad: Wider lens and broader fit (fitness & junior swimmers)</option>
+          <option value="Mask">Mask: Soft, mask-shaped fit (mainly juniors)</option>
+        </select>
+      </div>
+      <div class="find-my-goggles-field">
+        <label>You swim the most in:</label>
+        <select id="swim_the_most" name="swim_the_most">
+          <option value="">-- Select --</option>
+          <option value="Indoor pools">Indoor pools</option>
+          <option value="Outdoor pools">Outdoor pools</option>
+          <option value="Open Waters">Open Waters</option>
+          <option value="Any pool or body of water">Any pool or body of water</option>
+        </select>
+      </div>
+
+      <button id="goggles-submit" type="button">Find My Goggles</button>
+    </form>
+
+  </div>
+</div>
+
+<div id="goggles-results" class="find-my-goggles-results section section--page-width">
+  {% for mapping in zone_mappings %}
+    <div class="goggles-block hidden"
+         id="zone-{{ mapping.swim_zone }}-{{ mapping.goggles_fit }}-{{ mapping.swim_the_most }}">
+      <h2 class="find-my-goggles-result-title">
+        <span>Your goggles match:</span>
+      </h2>
+
+      <div class="products-grid">
+        {% for product in mapping.models.value %}
+          <div class="product-card">
+            <a href="{{ product.url }}">
+              {{ product.featured_image | image_url: width: 400 | image_tag }}
+              <h3>{{ product.title }}</h3>
+              <p>{{ product.price | money }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endpaginate %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const swimzone = document.getElementById("swimzone");
+  const fit = document.getElementById("fit");
+  const swimMost = document.getElementById("swim_the_most");
+  const resultsContainer = document.getElementById("goggles-results");
+
+  function showProducts() {
+    const swimzoneVal = swimzone.value;
+    const fitVal = fit.value;
+    const swimMostVal = swimMost.value;
+
+    // Hide all results first
+    resultsContainer.querySelectorAll(".goggles-block").forEach(el => {
+      el.classList.add("hidden");
+    });
+
+    // Require all 3 selections
+    if (!swimzoneVal || !fitVal || !swimMostVal) return;
+
+    const targetId = `zone-${swimzoneVal}-${fitVal}-${swimMostVal}`;
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      targetEl.classList.remove("hidden");
+      targetEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Run showProducts on button click
+  document.getElementById("goggles-submit").addEventListener("click", function(e) {
+    e.preventDefault();
+    showProducts();
+  });
+
+  // Optionally run live on dropdown change
+  [swimzone, fit, swimMost].forEach(select => {
+    select.addEventListener("change", showProducts);
+  });
+});
+</script>
 
 {% schema %}
 {
