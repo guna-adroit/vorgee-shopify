@@ -161,132 +161,8 @@
     }
 </style>
 
-{% comment %}
 
-<div class="">
-{% assign zone_mappings = shop.metaobjects['find_your_zone'] %}
-
-<div id="find-your-zone" class="find-your-zone">
-    <div class="vorgee-find-zone-bg-container">
-        <img src="https://vorgee.com/wp-content/uploads/2017/01/bubbles.jpg" alt="">
-    </div>
-    <div class="vorgee-find-zone-form-container section section--page-width">
-        
-        <form class="vorgee-find-zone-form">
-            <div class="find-your-zone-field">
-            <label>I swim </label>
-            <select id="frequency" name="frequency">
-                <option value="">-- Select --</option>
-                <option value="daily">Most days (5+ times a week)</option>
-                <option value="regularly">Regularly (3-5 times a week)</option>
-                <option value="semi_regularly">Semi-regularly (1-2 times a week)</option>
-                <option value="occasionally">When it takes my fancy</option>
-                <option value="never">I prefer to bob about, but I like my eyes to be protected</option>
-            </select>
-            </div>
-            <div class="find-your-zone-field">
-            <label>I'm immersed in</label>
-            <select id="goal" name="goal">
-                <option value="">-- Select --</option>
-                <option value="race_day_ready">Being race day ready</option>
-                <option value="beating_pb">Beating my PB</option>
-                <option value="losing_kgs">Losing those last few kilos and/or counteracting the weekend indulgence</option>
-                <option value="learn">Growing my water wings (learning to swim)</option>
-                <option value="leisure">Enjoying poolside holidays and beach breaks</option>
-            </select>
-            </div>
-            <div class="find-your-zone-field">
-            <label>I'm happiest when I am </label>
-            <select id="happiest_when" name="happiest_when">
-                <option value="">-- Select --</option>
-                <option value="diving">Diving off the blocks at the starting pistol</option>
-                <option value="in_the_zone">Following the black line</option>
-                <option value="progress">Inching towards the horizon</option>
-                <option value="learning">In my swim class</option>
-                <option value="splashing_about">Splashing about in any body of water</option>
-            </select>
-            </div>
-
-            <button id="quiz-submit">Find Your Zone</button>
-        </form>
-        
-    </div>
-</div>
-{% comment %} <ol>
-{% for mapping in zone_mappings.values %}
-    
-<li>{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}</li>
-    
-{% endfor %}
-</ol> 
-{% paginate shop.metaobjects['find_your_zone'].values by 200 %}
-  <ol>
-    {% for mapping in shop.metaobjects['find_your_zone'].values %}
-      <li>{{ mapping.frequency }} - {{ mapping.immersion }} - {{ mapping.happiness }}</li>
-    {% endfor %}
-  </ol>
-{% endpaginate %} {% endcomment %}
-<div id="quiz-collections " class="find-your-zone-results section section--page-width">
-  {% for mapping in zone_mappings.values %}
-    <div class="collection-block " 
-         id="zone-{{ mapping.frequency }}-{{ mapping.immersion }}-{{ mapping.happiness }}" 
-         style="display:none;">
-        {% assign collection = collections[mapping.collection] %}
-      <h2 class="find-your-zone-result-title"><span>Your zone is</span> {{ collection.title }}</h2>
-      <p class="find-your-zone-result-description">{{ collection.metafields.custom.find_zone_description }}</p>
-      <div class="collection-grid">
-        {% for product in collection.products %}
-           <div class="product-card">
-            <a href="{{ product.url }}">
-              {{ product.featured_image | image_url: width: 400 | image_tag }}
-              <h3>{{ product.title }}</h3>
-              <p>{{ product.price | money }}</p>
-            </a>
-          </div> 
-        {% endfor %}
-      </div>
-
-    </div>
-  {% endfor %}
-</div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const frequency = document.getElementById("frequency");
-  const goal = document.getElementById("goal");
-  const happiest = document.getElementById("happiest_when");
-
-  function showCollection() {
-    const freqVal = frequency.value;
-    const goalVal = goal.value;
-    const happyVal = happiest.value;
-
-    // Hide all first
-    document.querySelectorAll(".collection-block").forEach(el => el.style.display = "none");
-
-    if (!freqVal || !goalVal || !happyVal) {
-      return; // don’t show anything until all 3 are selected
-    }
-
-    const targetId = `zone-${freqVal}-${goalVal}-${happyVal}`;
-    const targetEl = document.getElementById(targetId);
-
-    if (targetEl) {
-      targetEl.style.display = "block";
-      targetEl.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  // Listen for change on all 3 selects
-  frequency.addEventListener("change", showCollection);
-  goal.addEventListener("change", showCollection);
-  happiest.addEventListener("change", showCollection);
-});
-</script>
-{% endcomment %}
-
-{% paginate shop.metaobjects['find_your_zone'].values by 200 %}
+{% comment %} {% paginate shop.metaobjects['find_your_zone'].values by 200 %}
 {% comment %}
 This block ensures Shopify loads up to 200 entries, so all 125 mappings are available
 {% endcomment %}
@@ -411,7 +287,126 @@ document.addEventListener("DOMContentLoaded", function() {
     select.addEventListener("change", showCollection);
   });
 });
+</script> {% endcomment %}
+
+{% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
+{% comment %}
+This block ensures Shopify loads up to 200 entries, so all mappings are available
+{% endcomment %}
+
+{% assign zone_mappings = shop.metaobjects['find_my_goggles'].values %}
+
+<div id="find-my-goggles" class="find-my-goggles">
+  <div class="vorgee-find-goggles-bg-container">
+    <img src="https://vorgee.com/wp-content/uploads/2017/01/bubbles.jpg" alt="">
+  </div>
+  <div class="vorgee-find-goggles-form-container section section--page-width">
+
+    <form class="vorgee-find-goggles-form">
+      <div class="find-my-goggles-field">
+        <label>What’s your swim zone?</label>
+        <select id="swimzone" name="swimzone">
+          <option value="">-- Select --</option>
+          <option value="Competition">Competition: I need goggles that are built for speed and performance on race days and in training</option>
+          <option value="Fitness">Fitness: I need goggles that are built for comfort and endurance in my swim sessions</option>
+          <option value="Junior">Junior: I need goggles that are built for my smaller face, without restricting my underwater vision.</option>
+        </select>
+      </div>
+      <div class="find-my-goggles-field">
+        <label>What’s your goggles fit preference?</label>
+        <select id="fit" name="fit">
+          <option value="">-- Select --</option>
+          <option value="Snug">Snug: Ideal fit for squad and competitive swimmers</option>
+          <option value="Mid">Mid: Firm, but comfortable fit (fitness & junior swimmers)</option>
+          <option value="Broad">Broad: Wider lens and broader fit (fitness & junior swimmers)</option>
+          <option value="Mask">Mask: Soft, mask-shaped fit (mainly juniors)</option>
+        </select>
+      </div>
+      <div class="find-my-goggles-field">
+        <label>You swim the most in:</label>
+        <select id="swim_the_most" name="swim_the_most">
+          <option value="">-- Select --</option>
+          <option value="Indoor pools">Indoor pools</option>
+          <option value="Outdoor pools">Outdoor pools</option>
+          <option value="Open Waters">Open Waters</option>
+          <option value="Any pool or body of water">Any pool or body of water</option>
+        </select>
+      </div>
+
+      <button id="goggles-submit" type="button">Find My Goggles</button>
+    </form>
+
+  </div>
+</div>
+
+<div id="goggles-results" class="find-my-goggles-results section section--page-width">
+  {% for mapping in zone_mappings %}
+    <div class="goggles-block"
+         id="zone-{{ mapping.swim_zone }}-{{ mapping.goggles_fit }}-{{ mapping.swim_the_most }}"
+         style="display:none;">
+      <h2 class="find-my-goggles-result-title">
+        <span>Your goggles match:</span>
+      </h2>
+
+      <div class="products-grid">
+        {% for product in mapping.models.value %}
+          <div class="product-card">
+            <a href="{{ product.url }}">
+              {{ product.featured_image | image_url: width: 400 | image_tag }}
+              <h3>{{ product.title }}</h3>
+              <p>{{ product.price | money }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endpaginate %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const swimzone = document.getElementById("swimzone");
+  const fit = document.getElementById("fit");
+  const swimMost = document.getElementById("swim_the_most");
+  const resultsContainer = document.getElementById("goggles-results");
+
+  function showProducts() {
+    const swimzoneVal = swimzone.value;
+    const fitVal = fit.value;
+    const swimMostVal = swimMost.value;
+
+    // Hide all results first
+    resultsContainer.querySelectorAll(".goggles-block").forEach(el => {
+      el.style.display = "none";
+    });
+
+    // Require all 3 selections
+    if (!swimzoneVal || !fitVal || !swimMostVal) return;
+
+    const targetId = `zone-${swimzoneVal}-${fitVal}-${swimMostVal}`;
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      targetEl.style.display = "block";
+      targetEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Run showProducts on button click
+  document.getElementById("goggles-submit").addEventListener("click", function(e) {
+    e.preventDefault();
+    showProducts();
+  });
+
+  // Optionally run live on dropdown change
+  [swimzone, fit, swimMost].forEach(select => {
+    select.addEventListener("change", showProducts);
+  });
+});
 </script>
+
 
 {% schema %}
 {
