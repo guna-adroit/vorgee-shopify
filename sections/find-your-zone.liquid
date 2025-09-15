@@ -372,10 +372,10 @@ This block ensures Shopify loads up to 200 entries, so all mappings are availabl
   {% for entry in entries %}
     <li>
       <!-- Print metaobject ID -->
-      <strong>ID:</strong> {{ entry.id }} <br>
+      <strong>ID:</strong> {{ entry.swim_zone.value }} <br>
 
       <!-- Print a field (replace field_name with actual field handle) -->
-      <strong>Title:</strong> {{ entry.field_name.value }} <br>
+      <strong>Title:</strong> {{ entry.fit.value }} <br>
 
       <!-- If it’s an image field -->
       {% if entry.image_field_name.value != blank %}
