@@ -391,6 +391,7 @@
       "settings": {
         "title": "<p>Please see below some of the organisations and events proudly supported by, and supporting, Vorgee.</p>",
         "columns": 7,
+        "columns_mobile": 2,
         "custom_class": "colour-on-hover"
       }
     }
