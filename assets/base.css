@@ -4486,6 +4486,13 @@ form._formFieldset_cit2d_82 {
     flex-direction: row;
     padding: 0px 2px;
 }
+.colour-on-hover .vorgee-icon-text-item {
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+.colour-on-hover .vorgee-icon-text-item:hover {
+    filter: none;
+}
 @media screen and (max-width: 749px){
   .cart-form .cart-items__table-row {
     --cart-item-price-width: 2rem;
