@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function showProducts() {
     const swimzoneVal = swimzone.value;
     const fitVal = fit.value;
-    const swimMostVal = swimMost.value.replaceAll(" ", "_");
+    const swimMostVal = swimMost.value.trim().replace(/\s+/g, "_");;
 
     // Hide all results first
     resultsContainer.querySelectorAll(".goggles-block").forEach(el => {
