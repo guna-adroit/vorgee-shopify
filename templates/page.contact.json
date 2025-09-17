@@ -44,7 +44,7 @@
           "type": "text",
           "name": "t:names.content",
           "settings": {
-            "text": "<p>{{ closest.page.content }}</p>",
+            "text": "{{ closest.page.content }}",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -58,7 +58,7 @@
             "case": "none",
             "wrap": "pretty",
             "color": "",
-            "background": false,
+            "background": true,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
