@@ -88,7 +88,6 @@
         placeholder="{{ 'blocks.contact_form.email' | t }}"
       >
     </div>
-
     <label
       class="visually-hidden"
       for="ContactForm-phone"
@@ -105,6 +104,40 @@
       value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
       placeholder="{{ 'blocks.contact_form.phone' | t }}"
     >
+
+    <div class="contact-form__form-row">
+      <label
+        class="visually-hidden"
+        for="ContactForm-organisation"
+      >
+        Organisation
+      </label>
+      <input
+        type="text"
+        id="ContactForm-organisation"
+        class="contact-form__input"
+        name="contact[Organisation]"
+        placeholder="Organisation"
+      >
+
+      <label
+        class="visually-hidden"
+        for="ContactForm-subject"
+      >
+        Subject
+        <span aria-hidden="true">*</span></label
+      >
+      <select id="ContactForm-subject"
+          class="contact-form__input"
+          name="contact[Selected Subject]">
+          <option selected disabled required>Please Select a Subject</option>
+          <option value="General Enquiry">General Enquiry</option>
+          <option value="Product Enquiry">Product Enquiry</option>
+          <option value="Stockist Enquiry">Stockist Enquiry</option>
+          <option value="Website Feedback">Website Feedback</option>
+          <option value="Logo/Club Cap Enquiry">Logo/Club Cap Enquiry</option>
+        </select>
+    </div>
 
     <label
       class="visually-hidden"
