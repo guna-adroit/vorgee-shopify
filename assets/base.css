@@ -4493,6 +4493,10 @@ form._formFieldset_cit2d_82 {
 .colour-on-hover .vorgee-icon-text-item:hover {
     filter: none;
 }
+.variant-option__button-label input[checked]+span {
+    border: 4px solid #c1c1c1;
+    border-style: double;
+}
 @media screen and (max-width: 749px){
   .cart-form .cart-items__table-row {
     --cart-item-price-width: 2rem;
