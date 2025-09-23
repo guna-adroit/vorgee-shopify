@@ -856,8 +856,8 @@ p.quantity-option-title {
 @media screen and (min-width: 750px) {
     .product-information__grid:not(:has(.product-information__media:empty)) {
         &.product-information--media-left {
-            --sidebar-width: 33% !important;
-            grid-template-columns: 1fr min(50vw, var(--sidebar-width));
+            /* --sidebar-width: 33% !important;
+            grid-template-columns: 1fr min(50vw, var(--sidebar-width)); */
         }
     }
 }
