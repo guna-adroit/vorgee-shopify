@@ -827,6 +827,9 @@ p.quantity-option-title {
 .shopify-payment-button__button:hover{
   color: white !important;
 }
+.product-template .ai-breadcrumb-actfws1byumpkqzflbstatic-group{
+  padding: 15px 0px;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
