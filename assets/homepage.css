@@ -830,6 +830,10 @@ p.quantity-option-title {
 .product-template .ai-breadcrumb-actfws1byumpkqzflbstatic-group{
   padding: 15px 0px;
 }
+.product-template .variant-option__button-label input[checked]+span{
+  border: none;
+  border-style: none;
+}
 @media screen and (max-width: 768px) {
     media-gallery slideshow-controls[controls-on-media] {
         right: unset;
