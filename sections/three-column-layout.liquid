@@ -28,7 +28,7 @@
   font-size: 30px;
   line-height: 32px;
 }
-.three-column-section .column-description {
+.three-column-section .column-description *{
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
@@ -52,7 +52,7 @@
   .three-column-section .column-item{
     gap: 10px;
   }
-  .three-column-section .column-description{
+  .three-column-section .column-description *{
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
@@ -80,10 +80,10 @@
     {% for block in section.blocks %}
       <div class="column-item" {{ block.shopify_attributes }}>
         {% if block.settings.image %}
-          <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}">
+          <img src="{{ block.settings.image | image_url: width: 600 }}" width="" height="" alt="{{ block.settings.title | escape }}">
         {% endif %}
         <h3 class="column-title">{{ block.settings.title }}</h3>
-        <p class="column-description">{{ block.settings.description }}</p>
+        <div class="column-description">{{ block.settings.description }}</div>
         {% if block.settings.button_text and block.settings.button_link %}
           <a class="more-button custom-btn-link" href="{{ block.settings.button_link }}">
             {{ block.settings.button_text }}
