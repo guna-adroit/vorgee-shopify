@@ -1181,6 +1181,9 @@ price-range p, .price-range-block{
   margin: 0;
 }
 
+.page-template h2{
+  font-size: 30px;
+}
 .page-template ul li, .page-template p{
   font-size: 18px;
 }
