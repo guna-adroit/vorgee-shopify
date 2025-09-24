@@ -1184,6 +1184,6 @@ price-range p, .price-range-block{
 .page-template h2{
   font-size: 30px;
 }
-.page-template ul li, .page-template p{
+.page-template ul li, .page-template p, .shopify-policy__body ul li, .shopify-policy__body p{
   font-size: 18px;
 }
