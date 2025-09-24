@@ -965,7 +965,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<p>It started with a single mission: to create swim gear for everyone. Whether you're stepping into the water for the first time or training for competition, we have a full range of products that perform for you. </p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1157,7 +1157,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>It started with a single mission: to create swim gear for everyone. Whether you're stepping into the water for the first time or<br/>training for competition, we have a full range of products that perform <strong>for you</strong>. </p>",
+                "text": "<p>It started with a single mission: to create swim gear for everyone. Whether you're stepping into the water for the first time or training for competition, we have a full range of products that perform for you. </p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
