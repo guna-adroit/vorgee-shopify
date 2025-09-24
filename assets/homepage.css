@@ -1180,3 +1180,7 @@ button#fit-indicator-btn{
 price-range p, .price-range-block{
   margin: 0;
 }
+
+.page-template ul li{
+  font-size: 18px;
+}
