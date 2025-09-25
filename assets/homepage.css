@@ -1195,6 +1195,6 @@ price-range p, .price-range-block{
   color: #333333;
   padding: 15px 0;
 }
-.faq-page .details-content p .faq-page .details-content ul li{
+.faq-page .details-content p, .faq-page .details-content ul li{
   font-size: 16px !important;
 }
