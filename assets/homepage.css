@@ -1188,3 +1188,9 @@ price-range p, .price-range-block{
 .page-template ul li, .page-template p, .shopify-policy__body ul li, .shopify-policy__body p{
   font-size: 18px;
 }
+.accordion.faq-page .details__header{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #333333;
+}
