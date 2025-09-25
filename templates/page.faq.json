@@ -542,7 +542,7 @@
                 "text_VyFa9V": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. Please contact us at <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> (with your order number and an image of the items received) and we will immediatelylook into it for you. </p>",
+                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. Please contact us at <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> (with your order number and an image of the items received) and we will immediately look into it for you. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
