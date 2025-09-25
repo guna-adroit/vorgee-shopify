@@ -416,7 +416,7 @@
                 "text_VmtrHY": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p> </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
+                    "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
