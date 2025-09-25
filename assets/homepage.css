@@ -1195,6 +1195,6 @@ price-range p, .price-range-block{
   color: #333333;
   padding: 15px 0;
 }
-.accordion.faq-page p. .accordion.faq-page ul li{
+.accordion.faq-page .details-content p. .accordion.faq-page .details-content ul li{
   font-size: 16px !important;
 }
