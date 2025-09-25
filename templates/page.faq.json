@@ -124,7 +124,7 @@
                   "settings": {
                     "text": "<p>Goggles, like most sports’ equipment, have a natural lifespan that depends on how often you use them and how well you care for them. A swimmer hitting the pool five or more times a week may only get 3-6 months out of their goggles, while someone swimming 2-3 times a week could see them last closer to a year. </p><p>To get the best life out of your goggles, rinse them in fresh water after every swim, dry them in the shade, and store them in their case rather than loose in your bag. With a little care, you’ll keep them clearer, fresher, and ready for more swims. </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -166,7 +166,7 @@
                   "settings": {
                     "text": "<p>Swimming pools can be tough on equipment, and that’s a good thing! Chlorine and other pool chemicals keep the water clean and safe for use, but they can also be harsh on fabric, silicone, and rubber. </p><p>To help your Vorgee gear go the distance: </p><ul><li>Rinse well after every swim with fresh, cold water to wash away chlorine or salt residue </li><li>Dry thoroughly in the shade before storing and avoid leaving items damp in your swim bag for too long. If you must store before dry, use breathable mesh bags or pouches.  </li><li>Handle with care by avoiding rough surfaces or excessive stretching of straps and caps. </li><li>Store in a cool, dry place, ideally using cases or pouches provided. </li></ul><p> </p><p>With the right care, your goggles, swimwear, and equipment will stay fresher, perform better, and last longer! </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -208,7 +208,7 @@
                   "settings": {
                     "text": "<p>Choosing the right goggles is as simple as 1, 2, 3.  </p><p> </p><ol><li><strong>Find your Zone</strong> – We’ve grouped our goggles into four “zones,” so you can easily match them to your swim: </li></ol><ul><li><strong>Competition</strong> | Designed for racing and club training, with streamlined shapes to reduce drag. </li><li><strong>Fitness</strong> | Built for regular training sessions and open water swimming, balancing comfort and performance. </li><li><strong>Junior</strong> | Scaled for kids and learn-to-swim programs, with smaller fits for growing faces. </li><li><strong>Recreational</strong> | Perfect for casual swimming or lighter usage, with soft seals for all-day comfort. </li></ul><p> </p><ol><li><strong>Find your Fit</strong> – Every swimmer has their own comfort preference, so we offer four distinct fits: </li></ol><ul><li><strong>Snug | </strong>deal fit for swimmers or those who like their goggles to have a low profile and snug fit. The gasket sits and fits firmly inside the eye socket. </li><li><strong>Mid |</strong> Ideal fit for swimmers who like a firm, but comfortable fit. The cushioned gasket sits and fits securely inside the eye socket. </li><li><strong>Broad | </strong>Ideal for swimmers who like a wider lens and broader fit. The cushioned, universally shaped, gasket sits and fits securely outside the eye socket. </li><li><strong>Mask | </strong>Ideal for junior swimmers who like a mask like fit. The soft, silicone mask shaped gasket sits and sits securely on the brow line through to the tip of the cheek. </li></ul><p> </p><ol><li><strong>Choose your Goggle</strong> – Once you’ve matched your zone and fit, simply select the style, lens, and colour that suit your swim best. </li></ol><p> </p><p><strong>Hot tip:</strong> Before diving in, try the quick fit test. Firmly, but gently, press the over your eyes without using the strap. <strong>If they suction and stay in place for a second or two (even just on one side), you’ve found a pair of goggles that will give you a watertight, comfortable, and fog-free swim.</strong> </p><p> </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -250,7 +250,7 @@
                   "settings": {
                     "text": "<p>Fogging at the start of a swim is completely normal, so don’t ditch your goggles just yet. When you first hop into the water and start swimming, your body is warm and producing heat, while the goggles (and pool water) are typically much cooler. That temperature difference causes condensation to form inside the lenses, just like car windows misting up on a chilly morning. </p><p>Because goggles are a small, enclosed space, the warmth from your face can overwhelm the anti-fog coating until everything evens out. Usually, as your swim continues and temperatures balance, the fog will naturally clear. </p><p><strong>Quick tip:</strong> Adding a tiny drop of cool, clean water inside each lens at the start of your swim can help regulate the temperature difference and reduce condensation. </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -292,7 +292,7 @@
                   "settings": {
                     "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm/hot (not boiling) water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face.  </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -334,7 +334,7 @@
                   "settings": {
                     "text": "<p>Your health and water safety is our priority, which is why our products are independently tested for adherence to all relevant national and international safety standards. For the specific standards our products are compliant with, please refer to the specifications tab on their product page.  </p><p>We are pleased to advise our goggles, including anti-fog solutions are PFAS free.  </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -376,7 +376,7 @@
                   "settings": {
                     "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the items returns to stock.  </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -418,7 +418,7 @@
                   "settings": {
                     "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p> </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -460,7 +460,7 @@
                   "settings": {
                     "text": "<p>vorgee.com offers Australia wide shipping only. If you require items shipped internationally, please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> and our team will work to assist. When shipping internationally, the receiver is responsible for all applicable duties and taxes at the destination.<br/><br/></p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -502,7 +502,7 @@
                   "settings": {
                     "text": "<p>Orders received prior to 10am (AEST) on standard business days are typically dispatched same day via Australia Post, Aramex or Direct Freight. Delivery timeframes are dependent on where you live, but as a guide Standard Post delivery to metro areas is 3-5 business days, and Express Post is 1-3 business days.  </p><p> </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
@@ -544,7 +544,7 @@
                   "settings": {
                     "text": "<p>Our apologies – it sounds like something has gone wrong along the way. Please contact us at <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> (with your order number and an image of the items received) and we will immediatelylook into it for you. </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "custom_classes": "",
                     "type_preset": "rte",
