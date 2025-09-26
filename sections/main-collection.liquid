@@ -162,6 +162,19 @@
   }
 {% endstylesheet %}
 
+<script>
+const textContainer = document.getElementById("banner-collection-description");
+const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.addEventListener("click", () => {
+  textContainer.classList.toggle("expanded");
+  toggleBtn.textContent = textContainer.classList.contains("expanded")
+    ? "Show less"
+    : "Show more";
+});
+
+</script>
+
 {% schema %}
 {
   "name": "t:names.collection_container",
