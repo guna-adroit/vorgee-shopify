@@ -72,7 +72,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "{% if collection.description != blank %}\n<button class=\"collection-show-more-btn\" id=\"toggleBtn\">Show more</button>\n<style>\n.custom-collection-banner-block{\n--section-min-height: 600px;\n}\n</style>\n{% endif %}"
+            "custom_liquid": "{% if collection.description != blank %}\n<button class=\"collection-show-more-btn\" id=\"toggleBtn\">Show more</button>\n<style>\n.custom-collection-banner-block{\n--section-min-height: 600px !important;\n}\n</style>\n{% endif %}"
           },
           "blocks": {}
         },
