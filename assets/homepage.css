@@ -1215,4 +1215,5 @@ button#toggleBtn {
     border: none;
     color: white;
     text-decoration: underline;
+    font-weight: 600;
 }
