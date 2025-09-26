@@ -168,7 +168,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 
 toggleBtn.addEventListener("click", () => {
   collecDescription.classList.toggle("expanded");
-  toggleBtn.textContent = textContainer.classList.contains("expanded")
+  toggleBtn.textContent = collecDescription.classList.contains("expanded")
     ? "Show less"
     : "Show more";
 });
