@@ -163,11 +163,11 @@
 {% endstylesheet %}
 
 <script>
-const textContainer = document.getElementById("banner-collection-description");
+const collecDescription = document.getElementById("banner-collection-description");
 const toggleBtn = document.getElementById("toggleBtn");
 
 toggleBtn.addEventListener("click", () => {
-  textContainer.classList.toggle("expanded");
+  collecDescription.classList.toggle("expanded");
   toggleBtn.textContent = textContainer.classList.contains("expanded")
     ? "Show less"
     : "Show more";
