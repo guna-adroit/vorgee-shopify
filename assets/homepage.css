@@ -551,6 +551,14 @@ slideshow-controls:has(.slideshow-controls__dots) {
   }
 }
 
+.header__columns{
+@media screen and (max-width: 769px) {
+  header-actions{
+    grid-area: rightB;
+  }
+}
+}
+
 @media (min-width: 1025px) and (max-width: 1080px) {
   .v-menu-links a {
       font-size: 13px;
