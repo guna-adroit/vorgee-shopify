@@ -1210,3 +1210,9 @@ price-range p, .price-range-block{
 .banner-collection-description.expanded {
   -webkit-line-clamp: unset; 
 }
+button#toggleBtn {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+}
