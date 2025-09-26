@@ -1225,3 +1225,9 @@ button#toggleBtn {
     text-decoration: underline;
     font-weight: 600;
 }
+
+@media screen and (min-width: 820px){
+  .custom-collection-banner-block{
+    --section-min-height: 600px !important;
+  }
+}
