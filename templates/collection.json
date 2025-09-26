@@ -68,6 +68,14 @@
           },
           "blocks": {}
         },
+        "custom_liquid_zzdpn3": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<button class=\"collection-show-more-btn\" id=\"toggleBtn\">Show more</button>"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_510643c_wwBbeU": {
           "type": "ai_gen_block_510643c",
           "disabled": true,
@@ -103,6 +111,7 @@
       "block_order": [
         "text_tqQTNE",
         "text_twGGkJ",
+        "custom_liquid_zzdpn3",
         "ai_gen_block_510643c_wwBbeU"
       ],
       "custom_css": [
