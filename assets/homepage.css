@@ -1209,25 +1209,30 @@ price-range p, .price-range-block{
 .faq-page .details-content p, .faq-page .details-content ul li{
   font-size: 16px !important;
 }
-.banner-collection-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 2; 
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.banner-collection-description.expanded {
-  -webkit-line-clamp: unset; 
-}
+
 button#toggleBtn {
-    background: none;
-    border: none;
-    color: white;
-    text-decoration: underline;
-    font-weight: 600;
+    display: none;
 }
 
 @media screen and (min-width: 820px){
-  .custom-collection-banner-block{
-    --section-min-height: 600px !important;
+  .banner-collection-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
+  .banner-collection-description.expanded {
+    -webkit-line-clamp: unset; 
+  }
+  button#toggleBtn {
+      background: none;
+      border: none;
+      color: white;
+      text-decoration: underline;
+      font-weight: 600;
+  }
+  button#toggleBtn {
+    display: block;
+  }
+
 }
