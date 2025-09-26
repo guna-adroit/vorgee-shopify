@@ -78,7 +78,6 @@
         },
         "ai_gen_block_510643c_wwBbeU": {
           "type": "ai_gen_block_510643c",
-          "disabled": true,
           "settings": {
             "alignment": "center",
             "gap": 15,
@@ -92,17 +91,17 @@
             "border_width": 2,
             "background_color": "#050000",
             "hover_background_color": "#ffffff",
-            "button_1_text": "MEN",
-            "button_1_link": "shopify://collections/men-swimwear",
+            "button_1_text": "Bags",
+            "button_1_link": "shopify://collections/bags-pouches",
             "button_1_style": "outline",
-            "button_2_text": "WOMEN",
-            "button_2_link": "shopify://collections/women-swimwear",
+            "button_2_text": "Caps",
+            "button_2_link": "shopify://collections/caps",
             "button_2_style": "outline",
-            "button_3_text": "BOYS",
-            "button_3_link": "shopify://collections/boys-swimwear",
+            "button_3_text": "Ear & Nose",
+            "button_3_link": "shopify://collections/ear-nose",
             "button_3_style": "outline",
-            "button_4_text": "GIRLS",
-            "button_4_link": "shopify://collections/girls-swimwear",
+            "button_4_text": "Health & Beauty",
+            "button_4_link": "shopify://collections/health-beauty",
             "button_4_style": "outline"
           },
           "blocks": {}
