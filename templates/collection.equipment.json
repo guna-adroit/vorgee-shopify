@@ -78,7 +78,6 @@
         },
         "ai_gen_block_510643c_wwBbeU": {
           "type": "ai_gen_block_510643c",
-          "disabled": true,
           "settings": {
             "alignment": "center",
             "gap": 15,
@@ -92,8 +91,8 @@
             "border_width": 2,
             "background_color": "#050000",
             "hover_background_color": "#ffffff",
-            "button_1_text": "MEN",
-            "button_1_link": "shopify://collections/men-swimwear",
+            "button_1_text": "FINS",
+            "button_1_link": "shopify://collections/fins",
             "button_1_style": "outline",
             "button_2_text": "WOMEN",
             "button_2_link": "shopify://collections/women-swimwear",
