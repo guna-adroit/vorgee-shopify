@@ -8,7 +8,7 @@
 {% style %}
   .button-group-{{ ai_gen_id }} {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: {{ block.settings.gap }}px;
     justify-content: {{ block.settings.alignment }};
   }
@@ -28,6 +28,7 @@
     cursor: pointer;
     border-width: {{ block.settings.border_width }}px;
     border-style: solid;
+    flex: 0 0 auto;
   }
 
   .button-{{ ai_gen_id }}.solid {
