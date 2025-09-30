@@ -1,0 +1,217 @@
+<style>
+        
+        .collection-banner-links{
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: thin; /* For Firefox */
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 12px; /* Create space below content so scrollbar sits lower */
+            background-clip: padding-box; /* Ensures background doesn’t cover scrollbar area */
+            position: relative;
+        }
+        .collection-banner-link-item{
+            flex: 0 0 auto;
+        }
+        .collection-banner-link-item a{
+            display: block;
+            padding: 10px 21px;
+            border: 2px solid #000;
+            border-radius: 40px;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .collection-banner-links::-webkit-scrollbar {
+            height: 2px; /* Set the height of the scrollbar */
+        }
+
+        .collection-banner-links::-webkit-scrollbar-thumb {
+           background-color: #000 !important;
+           border-radius: 4px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        }
+        .collection-banner-links::-webkit-scrollbar-track {
+            background-color: #ccc; /* Track background */
+        }
+        .collection-banner-links::-webkit-scrollbar-button {
+            display: none;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #000;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #ff5e5e; /* Red scrollbar thumb */
+            border-radius: 10px;
+        }
+    </style>
+    <div class="collection-banner-links">
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+        <div class="collection-banner-link-item">
+            <a href="">Women</a>
+        </div>
+    </div>
+
+    {% schema %}
+{
+  "name": "Collection Buttons",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_1_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_2_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "outline"
+    },
+    {
+      "type": "header",
+      "content": "Button 3"
+    },
+    {
+      "type": "text",
+      "id": "button_3_text",
+      "label": "Text",
+      "default": "Contact Us"
+    },
+    {
+      "type": "url",
+      "id": "button_3_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_3_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "header",
+      "content": "Button 4"
+    },
+    {
+      "type": "text",
+      "id": "button_4_text",
+      "label": "Text",
+      "default": "About Us"
+    },
+    {
+      "type": "url",
+      "id": "button_4_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_4_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "outline"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Buttons"
+    }
+  ]
+}
+{% endschema %}
