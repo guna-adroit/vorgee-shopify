@@ -79,7 +79,7 @@
         "ai_gen_block_510643c_wwBbeU": {
           "type": "ai_gen_block_510643c",
           "settings": {
-            "alignment": "center",
+            "alignment": "flex-start",
             "gap": 15,
             "stack_on_mobile": false,
             "mobile_gap": 10,
