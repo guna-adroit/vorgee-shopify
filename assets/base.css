@@ -1968,7 +1968,6 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
     --style-border-swatch-style: var(--variant-picker-border-style);
     --color-border: rgb(from var(--color-foreground) r g b / var(--variant-picker-border-opacity));
   }
-
   @media screen and (min-width: 750px) {
     /* desktop values */
     --max-swatch-size: 18px;
@@ -4530,4 +4529,8 @@ form._formFieldset_cit2d_82 {
 }
 form-embed {
   --button-background-color:#07BED4;
+}
+
+.facets__item:has( .facets__inputs-list > li:nth-child(1):last-child) {
+  display: none;
 }
