@@ -79,6 +79,7 @@
         "collection_button_tPQWMf": {
           "type": "collection_button",
           "name": "Collection Buttons",
+          "disabled": true,
           "settings": {
             "button_1_text": "COMPETITION",
             "button_1_link": "shopify://collections/competition",
