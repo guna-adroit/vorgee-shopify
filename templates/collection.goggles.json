@@ -76,6 +76,25 @@
           },
           "blocks": {}
         },
+        "collection_button_tPQWMf": {
+          "type": "collection_button",
+          "name": "Collection Buttons",
+          "settings": {
+            "button_1_text": "Shop Now",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_2_text": "Learn More",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_3_text": "Contact Us",
+            "button_3_link": "",
+            "button_3_style": "solid",
+            "button_4_text": "About Us",
+            "button_4_link": "",
+            "button_4_style": "outline"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_510643c_wwBbeU": {
           "type": "ai_gen_block_510643c",
           "settings": {
@@ -111,6 +130,7 @@
         "text_tqQTNE",
         "text_twGGkJ",
         "custom_liquid_bCgRmk",
+        "collection_button_tPQWMf",
         "ai_gen_block_510643c_wwBbeU"
       ],
       "custom_css": [
