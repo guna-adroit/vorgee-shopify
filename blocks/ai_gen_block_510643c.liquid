@@ -13,7 +13,18 @@
     justify-content: {{ block.settings.alignment }};
     overflow-x: scroll;
   }
-
+  {% comment %} .collection-hero__links::-webkit-scrollbar {
+    height: 4px;
+  }
+  ::-webkit-scrollbar {
+    background-color: #eaeaea;
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
   .button-group-{{ ai_gen_id }}::-webkit-scrollbar {
     height: 2px; 
   }
@@ -32,7 +43,7 @@
 
   .button-group-{{ ai_gen_id }}::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+  } {% endcomment %}
 
   .button-{{ ai_gen_id }} {
     display: inline-flex;
