@@ -5,6 +5,17 @@
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
+<style>
+.collection-button-group{
+   display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.collection-button-group .collection-buttons{
+  flex: 0 0 auto;
+}
+</style>
+
 {% style %}
   .button-group-{{ ai_gen_id }} {
     display: flex;
@@ -13,6 +24,7 @@
     justify-content: {{ block.settings.alignment }};
     overflow-x: auto;
   }
+
   {% comment %} .collection-hero__links::-webkit-scrollbar {
     height: 4px;
   }
@@ -100,7 +112,7 @@
   }
 {% endstyle %}
 
-<div class="button-group-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+<div class="button-group-{{ ai_gen_id }} collection-button-group" {{ block.shopify_attributes }}>
   {% for i in (1..4) %}
     {% liquid
       assign button_text_key = 'button_' | append: i | append: '_text'
@@ -113,7 +125,7 @@
     %}
     
     {% if button_text != blank %}
-      <a href="{{ button_link }}" class="button-{{ ai_gen_id }} {{ button_style }}">
+      <a href="{{ button_link }}" class="button-{{ ai_gen_id }} collection-buttons {{ button_style }}">
         {{ button_text }}
       </a>
     {% endif %}
