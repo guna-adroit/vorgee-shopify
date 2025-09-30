@@ -152,7 +152,9 @@ select {
   .predictive-search-results__card .resource-card__image {
     transition: none;
   }
-
+  .predictive-search-results__card .resource-card__image{
+    object-fit: contain;
+  }
   .card-hover-effect-subtle-zoom .product-card:hover .card-gallery .product-media img,
   .card-hover-effect-subtle-zoom .collection-card:hover .collection-card__image,
   .card-hover-effect-subtle-zoom .product-card:hover .product-card__image,
