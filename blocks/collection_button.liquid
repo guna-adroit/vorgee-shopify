@@ -52,6 +52,23 @@
         }
     </style>
     <div class="collection-banner-links">
+        {% for i in (1..4) %}
+            {% liquid
+                assign button_text_key = 'button_' | append: i | append: '_text'
+                assign button_link_key = 'button_' | append: i | append: '_link'
+                
+                
+                assign button_text = block.settings[button_text_key]
+                assign button_link = block.settings[button_link_key]
+                
+                %}
+                
+                {% if button_text != blank %}
+                    <div class="collection-banner-link-item">
+                        <a href="{{ button_link }}">{{ button_text }}</a>
+                    </div>
+                {% endif %}
+        {% endfor %}
         <div class="collection-banner-link-item">
             <a href="">Women</a>
         </div>
