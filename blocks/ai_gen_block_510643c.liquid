@@ -5,16 +5,7 @@
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
-<style>
-.collection-button-group{
-   display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-}
-.collection-button-group .collection-buttons{
-  flex: 0 0 auto;
-}
-</style>
+
 
 {% style %}
   .button-group-{{ ai_gen_id }} {
@@ -24,38 +15,6 @@
     justify-content: {{ block.settings.alignment }};
     overflow-x: auto;
   }
-
-  {% comment %} .collection-hero__links::-webkit-scrollbar {
-    height: 4px;
-  }
-  ::-webkit-scrollbar {
-    background-color: #eaeaea;
-    width: 4px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #000;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-}
-  .button-group-{{ ai_gen_id }}::-webkit-scrollbar {
-    height: 2px; 
-  }
-
-  .button-group-{{ ai_gen_id }}::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 5px;
-  }
-
-
-  .button-group-{{ ai_gen_id }}::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-  }
-
-
-  .button-group-{{ ai_gen_id }}::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  } {% endcomment %}
 
   .button-{{ ai_gen_id }} {
     display: inline-flex;
@@ -111,6 +70,17 @@
       min-width: {{ block.settings.min_width | divided_by: 2 }}px;
   }
 {% endstyle %}
+
+<style>
+.collection-button-group{
+   display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.collection-button-group .collection-buttons{
+  flex: 0 0 auto;
+}
+</style>
 
 <div class="button-group-{{ ai_gen_id }} collection-button-group" {{ block.shopify_attributes }}>
   {% for i in (1..4) %}
