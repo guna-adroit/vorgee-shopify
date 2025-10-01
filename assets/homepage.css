@@ -1236,3 +1236,9 @@ button#toggleBtn {
   }
 
 }
+
+.product-information.section.section--page-width {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
