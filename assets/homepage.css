@@ -1243,5 +1243,10 @@ button#toggleBtn {
     margin-right: auto;
 }
 .gravity-button{
-  min-height: 60px !important
+  min-height: 60px !important;
+}
+@media screen and (max-width: 768px){
+  .gravity-button{
+    min-height: 40px !important;
+  }
 }
