@@ -1246,6 +1246,7 @@ button#toggleBtn {
   min-height: 60px !important;
 }
 .product-form-buttons:has(.add-to-cart-button.button-secondary) :is(shopify-accelerated-checkout,shopify-accelerated-checkout-cart){
+  --shopify-accelerated-checkout-button-block-size: 60px;
   min-height: 60px !important;
 }
 @media screen and (max-width: 768px){
