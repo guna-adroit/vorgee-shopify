@@ -74,7 +74,15 @@
     background: #f1f1f1; /* Track color */
     border-radius: 10px;
   }
+  .scroll-container:not(:hover)::-webkit-scrollbar {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
+/* Make scrollbar visible when hovering */
+.scroll-container:hover::-webkit-scrollbar {
+  opacity: 1;
+}
   @media screen and (max-width: 749px) {
     .button-group-{{ ai_gen_id }} {
       flex-direction: {{ block.settings.stack_on_mobile | default: false | plus: 0 | times: 1 | plus: 0 | at_least: 0 | at_most: 1 | times: 1 | plus: 0 | equals: 1 | ternary: 'column', 'row' }};
