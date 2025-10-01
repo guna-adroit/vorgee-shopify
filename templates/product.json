@@ -304,7 +304,7 @@
               "settings": {
                 "text": "{{ closest.product.description }}",
                 "width": "100%",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "left",
                 "custom_classes": "product-description",
                 "type_preset": "rte",
@@ -361,7 +361,7 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom.features | metafield_tag }}",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "custom_classes": "",
                         "type_preset": "rte",
@@ -488,7 +488,7 @@
                       "settings": {
                         "text": "<p>{{ closest.product.metafields.custom.materials_standards | metafield_tag }}</p>",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "custom_classes": "",
                         "type_preset": "rte",
@@ -530,7 +530,7 @@
                       "settings": {
                         "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
                         "width": "100%",
-                        "max_width": "normal",
+                        "max_width": "none",
                         "alignment": "left",
                         "custom_classes": "",
                         "type_preset": "rte",
