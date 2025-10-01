@@ -1245,6 +1245,9 @@ button#toggleBtn {
 .gravity-button, .accelerated-checkout-button{
   min-height: 60px !important;
 }
+.product-form-buttons:has(.add-to-cart-button.button-secondary) :is(shopify-accelerated-checkout,shopify-accelerated-checkout-cart){
+  min-height: 60px !important;
+}
 @media screen and (max-width: 768px){
   .gravity-button, .accelerated-checkout-button{
     min-height: 40px !important;
