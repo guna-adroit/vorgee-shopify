@@ -1242,18 +1242,16 @@ button#toggleBtn {
     margin-left: auto;
     margin-right: auto;
 }
-.gravity-button, .accelerated-checkout-button{
-  --gravity-button-height: 60px;
-  min-height: 65px !important;
+.accelerated-checkout-button {
+    --gravity-button-height:60px !important;
 }
 .product-form-buttons:has(.add-to-cart-button.button-secondary) :is(shopify-accelerated-checkout,shopify-accelerated-checkout-cart){
   --shopify-accelerated-checkout-button-block-size: 65px;
   min-height: 65px !important;
 }
 @media screen and (max-width: 768px){
-  .gravity-button, .accelerated-checkout-button{
+ .accelerated-checkout-button{
     --gravity-button-height: 40px;
-    min-height: 65px !important;
   }
   .product-form-buttons:has(.add-to-cart-button.button-secondary) :is(shopify-accelerated-checkout,shopify-accelerated-checkout-cart){
     --shopify-accelerated-checkout-button-block-size: 40px;
