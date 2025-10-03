@@ -555,11 +555,18 @@ slideshow-controls:has(.slideshow-controls__dots) {
 }
 
 .header__columns{
-@media screen and (min-width: 769px) {
+   @media only screen and (min-width: 600px) and (max-width: 769px)  {
   header-actions{
     grid-area: rightA;
   }
 }
+}
+.header__columns{
+  @media screen and (max-width: 600px){
+    header-actions{
+      grid-area: rightB;
+    }
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1080px) {
