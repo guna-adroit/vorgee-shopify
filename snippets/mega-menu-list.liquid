@@ -89,7 +89,7 @@
         href="{{ link.url }}"
         class="mega-menu__link {% if link.links != blank %}mega-menu__link--parent{% endif %}"
       >
-        {% assign shop_link = childLink.title | downcase %}
+        {% assign shop_link = link.title | downcase %}
         {% if menu_content_type == 'collection_images' %}
           {{
             link.object.featured_image
