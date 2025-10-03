@@ -569,11 +569,6 @@ slideshow-controls:has(.slideshow-controls__dots) {
   }
 }
 
-@media screen and (max-width: 768px){
-  .product-details{
-    padding-right: 0;
-  }
-}
 
 @media (min-width: 1025px) and (max-width: 1080px) {
   .v-menu-links a {
@@ -1232,6 +1227,12 @@ button#toggleBtn {
 .product-details{
   padding-right: 15%;
 }
+@media screen and (max-width: 768px){
+  .product-details{
+    padding-right: 0;
+  }
+}
+
 
 @media screen and (min-width: 820px){
   .banner-collection-description {
@@ -1277,6 +1278,7 @@ button#toggleBtn {
   --shopify-accelerated-checkout-button-block-size: 65px;
   min-height: 65px !important;
 }
+
 @media screen and (max-width: 768px){
  .accelerated-checkout-button{
     --gravity-button-height: 40px;
