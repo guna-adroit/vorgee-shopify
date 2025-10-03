@@ -569,6 +569,12 @@ slideshow-controls:has(.slideshow-controls__dots) {
   }
 }
 
+@media screen and (max-width: 768px){
+  .product-details{
+    padding-right: 0;
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1080px) {
   .v-menu-links a {
       font-size: 13px;
