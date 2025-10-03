@@ -1323,9 +1323,8 @@
         "collection_list": [
           "women",
           "men",
-          "kids",
-          "boys-swimwear",
-          "women-swimwear"
+          "girls",
+          "boys"
         ],
         "layout_type": "carousel",
         "carousel_on_mobile": false,
