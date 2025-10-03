@@ -555,9 +555,9 @@ slideshow-controls:has(.slideshow-controls__dots) {
 }
 
 .header__columns{
-@media screen and (max-width: 769px) {
+@media screen and (min: 768px) {
   header-actions{
-    grid-area: rightB;
+    grid-area: rightA;
   }
 }
 }
