@@ -945,7 +945,7 @@ p.quantity-option-title {
     }
   } 
   .variant-option--equal-width-buttons{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
   }
   .variant-option--equal-width-buttons {
     .variant-option__button-label {
