@@ -116,11 +116,12 @@
                 style="break-after: column;"
               {% endif %}
             >
+              {% assign shopLink = childLink.title | downcase %}
               <a
                 href="{{ childLink.url }}"
                 class="mega-menu__link"
               >
-                <span class="mega-menu__link-title {{ childLink.title | downcase }}-bold">{{- childLink.title -}}</span>
+                <span class="mega-menu__link-title {% if shopLink == 'shop all' %}shop-bold {% endif %}">{{- childLink.title -}}</span>
               </a>
             </li>
           {% endfor %}
