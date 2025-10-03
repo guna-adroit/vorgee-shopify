@@ -583,7 +583,7 @@
 
                             {% else %}
                               {% assign link_title = link.title | downcase %}
-                              {% unless link_title == link.handle  %}
+                              {% comment %} {% unless link_title == link.handle  %} {% endcomment %}
                                 {{ link.title }}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
@@ -595,7 +595,7 @@
                               >
                                 <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
                               </a>
-                              {% endunless %}
+                              {% comment %} {% endunless %} {% endcomment %}
                             {% endif %}
                           {%- endfor -%}
                         </ul>
