@@ -89,6 +89,7 @@
         href="{{ link.url }}"
         class="mega-menu__link {% if link.links != blank %}mega-menu__link--parent{% endif %}"
       >
+        {% assign shop_link = childLink.title | downcase %}
         {% if menu_content_type == 'collection_images' %}
           {{
             link.object.featured_image
@@ -97,7 +98,7 @@
           }}
         {% endif %}
         <span
-          class="mega-menu__link-title"
+          class="mega-menu__link-title {% if shop_link == 'shop all' %}shop-bold {% endif %}"
         >
           {{- link.title -}}
         </span>
