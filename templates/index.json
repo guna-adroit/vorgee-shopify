@@ -426,7 +426,7 @@
                   "type": "button",
                   "settings": {
                     "label": "GET IN THE ZONE",
-                    "link": "shopify://collections/all",
+                    "link": "shopify://collections/competition",
                     "open_in_new_tab": false,
                     "style_class": "custom-btn",
                     "width": "fit-content",
@@ -610,7 +610,7 @@
                       "type": "button",
                       "settings": {
                         "label": "Shop swimwear",
-                        "link": "shopify://pages/find-my-goggles",
+                        "link": "shopify://collections/swimwear",
                         "open_in_new_tab": false,
                         "style_class": "custom-btn",
                         "width": "fit-content",
@@ -624,7 +624,7 @@
                       "type": "button",
                       "settings": {
                         "label": "Shop goggles",
-                        "link": "shopify://pages/find-my-goggles",
+                        "link": "shopify://collections/goggles",
                         "open_in_new_tab": false,
                         "style_class": "custom-btn",
                         "width": "fit-content",
