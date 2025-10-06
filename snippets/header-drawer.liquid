@@ -528,6 +528,7 @@
                                     {%- endfor -%}
                                   </ul>
                                 {%- endif -%}
+
                               {%- endif -%}
                             </li>
                           {%- endfor -%}
@@ -584,7 +585,7 @@
                             {% else %}
                               {% assign link_title = link.title | downcase %}
                               {% unless link_title == link.handle  %} 
-                                {{ link.title }}
+                                {% comment %} {{ link.title }} {% endcomment %}
                               <a
                                 id="HeaderDrawer-{{ link.handle }}"
                                 href="{{ link.url }}"
