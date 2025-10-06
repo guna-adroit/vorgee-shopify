@@ -609,7 +609,7 @@
                     "button_YfcG9p": {
                       "type": "button",
                       "settings": {
-                        "label": "Shop swimwear",
+                        "label": "Shop Swimwear",
                         "link": "shopify://collections/swimwear",
                         "open_in_new_tab": false,
                         "style_class": "custom-btn",
@@ -623,7 +623,7 @@
                     "button_MWmPVD": {
                       "type": "button",
                       "settings": {
-                        "label": "Shop goggles",
+                        "label": "Shop Goggles",
                         "link": "shopify://collections/goggles",
                         "open_in_new_tab": false,
                         "style_class": "custom-btn",
