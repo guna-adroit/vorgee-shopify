@@ -398,11 +398,11 @@
                 "text_7EHfYp": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Vorgee’s swim goggles and equipment will get you in the zone and keep you there.<br/><br/></p>",
+                    "text": "<p>Vorgee’s swim goggles and equipment will get you in the zone and keep you there.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "custom_classes": "",
+                    "custom_classes": "text-banner-heading",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
@@ -542,7 +542,7 @@
                 "text_TNjefK": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>With the right goggles, swimwear, and equipment, you can train harder, swim smarter, and immerse yourself.<br/><br/><br/><br/></p>",
+                    "text": "<p>With the right goggles, swimwear, and equipment, you can train harder, swim smarter, and immerse yourself.</p>",
                     "width": "100%",
                     "max_width": "narrow",
                     "alignment": "left",
