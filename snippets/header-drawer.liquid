@@ -528,7 +528,7 @@
                                     {%- endfor -%}
                                   </ul>
                                 {%- endif -%}
-
+                                
                               {%- endif -%}
                             </li>
                           {%- endfor -%}
@@ -584,19 +584,19 @@
 
                             {% else %}
                               {% assign link_title = link.title | downcase %}
-                              {% unless link_title == link.handle  %} 
+                              {% comment %} {% unless link_title == link.handle  %}  {% endcomment %}
                                 {% comment %} {{ link.title }} {% endcomment %}
                               <a
-                                id="HeaderDrawer-{{ link.handle }}"
-                                href="{{ link.url }}"
-                                class="custom1 menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
-                                {% if link.current %}
+                                id="HeaderDrawer-{{ childlink.handle }}"
+                                href="{{ childlink.url }}"
+                                class="custom1 menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                {% if childlink.current %}
                                   aria-current="page"
                                 {% endif %}
                               >
-                                <span class="menu-drawer__menu-item-text">{{ link.title | escape }}</span>
+                                <span class="menu-drawer__menu-item-text">{{ childlink.title | escape }}</span>
                               </a>
-                              {% endunless %}
+                              {% comment %} {% endunless %} {% endcomment %}
                             {% endif %}
                           {%- endfor -%}
                         </ul>
