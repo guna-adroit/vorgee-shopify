@@ -65,7 +65,7 @@
         "icon_text_KTpkJi": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
+            "image": "shopify://shop_images/Vorgee_About_1.png",
             "title": "<h2><strong>Our Story</strong></h2><h2>Immerse Yourself. </h2>",
             "description": "<p>At Vorgee, we believe the best swim gear is the kind you don’t even notice. </p><p>Founded in 2005 and proudly Australian-owned and managed, we began with a simple mission: to create swim gear for everyone. Whether you were stepping into the water for the first time or onto the blocks going for gold, we set out to offer a full range of products that perform with style and reliability. </p><p><em>That mission hasn’t changed. Today, we continue to make swimming easier, more enjoyable, and more accessible at every level. </em></p>",
             "image_alignment": "left"
@@ -74,7 +74,7 @@
         "icon_text_UNbHU3": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/ZFB_29.jpg",
+            "image": "shopify://shop_images/Vorgee_About_2.png",
             "title": "<h2><strong>Our Philosophy</strong> </h2><h2><strong>Designed to Feel Invisible</strong> </h2>",
             "description": "<p>We create goggles and swim equipment that let you focus on what really matters: the freedom, flow, and joy of swimming. Our products are designed to feel like a natural extension of you, so you can swim free of discomfort, distraction, or second-guessing. </p><p>To us, Immerse Yourself means more than just diving in - it’s about fully experiencing the water, uninterrupted. </p>",
             "image_alignment": "right"
@@ -319,7 +319,10 @@
       ],
       "name": "Icon with Text",
       "settings": {
-        "title": "<h3>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</h3>"
+        "title": "<h3>Vorgee is commited to producing quality, innovative and stylish products, and achieves this by -</h3>",
+        "columns": 3,
+        "columns_mobile": 1,
+        "custom_class": ""
       }
     },
     "image_text_timeline_h84M4n": {
@@ -328,7 +331,7 @@
         "icon_text_dG4rrT": {
           "type": "icon_text",
           "settings": {
-            "image": "shopify://shop_images/2024_GT_thisisgt.jpg",
+            "image": "shopify://shop_images/Vorgee_About_3_-_product.png",
             "title": "<h2><strong>Still Swimming Forward</strong></h2>",
             "description": "<p>From a simple idea - to create well-considered, performance-driven products - we’ve grown into one of Australia’s most trusted aquatic brands. <em>But our mission remains the same: to make swimming simpler, more enjoyable, and better for everyone.</em><br/></p>",
             "image_alignment": "left"
