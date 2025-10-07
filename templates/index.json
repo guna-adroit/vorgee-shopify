@@ -637,8 +637,8 @@
                     "button_tWBtj6": {
                       "type": "button",
                       "settings": {
-                        "label": "Shop Goggles",
-                        "link": "shopify://collections/goggles",
+                        "label": "Shop Accessories",
+                        "link": "shopify://collections/accessories",
                         "open_in_new_tab": false,
                         "style_class": "custom-btn",
                         "width": "fit-content",
@@ -651,8 +651,8 @@
                     "button_XrRn6d": {
                       "type": "button",
                       "settings": {
-                        "label": "Shop Goggles",
-                        "link": "shopify://collections/goggles",
+                        "label": "Shop Training",
+                        "link": "shopify://collections/equipment",
                         "open_in_new_tab": false,
                         "style_class": "custom-btn",
                         "width": "fit-content",
