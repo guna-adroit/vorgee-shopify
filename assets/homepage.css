@@ -1281,6 +1281,9 @@ button#toggleBtn {
 .three-column-section .column-item.slider p {
     color: #333;
 }
+.flex-wrap .group-block-content{
+  flex-wrap: wrap;
+}
 @media screen and (max-width: 768px){
  .accelerated-checkout-button{
     --gravity-button-height: 40px;
