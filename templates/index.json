@@ -1042,7 +1042,7 @@
             "text_3tA4HH": {
               "type": "text",
               "settings": {
-                "text": "<h2>TAKE THE PRESSURE OFF</h2>",
+                "text": "<h2>IMMERSE YOURSELF.  </h2>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -1069,7 +1069,7 @@
             "text_wNeUd8": {
               "type": "text",
               "settings": {
-                "text": "<p>At 20% lighter than your standard fitness goggle, the Vortech floats on your face</p>",
+                "text": "<p>Swim goggles and equipment designed so you can immerse yourself in the joys of swimming.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -1097,7 +1097,7 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "SHOP ALL",
+                "label": "SHOP NOW!",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn",
