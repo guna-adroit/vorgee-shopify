@@ -15,7 +15,6 @@
         "text_tqQTNE": {
           "type": "text",
           "name": "Collection title",
-          "disabled": true,
           "settings": {
             "text": "<p>{{ closest.collection.title }}</p>",
             "width": "fit-content",
@@ -44,7 +43,6 @@
         "text_twGGkJ": {
           "type": "text",
           "name": "t:names.text",
-          "disabled": true,
           "settings": {
             "text": "{{ closest.collection.description }}",
             "width": "fit-content",
@@ -117,7 +115,6 @@
         "custom_liquid_zzdpn3",
         "ai_gen_block_510643c_wwBbeU"
       ],
-      "disabled": true,
       "custom_css": [
         ".spacing-style.text-block p {color: white;}"
       ],
