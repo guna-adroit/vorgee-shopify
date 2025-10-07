@@ -633,11 +633,41 @@
                         "custom_width_mobile": 100
                       },
                       "blocks": {}
+                    },
+                    "button_tWBtj6": {
+                      "type": "button",
+                      "settings": {
+                        "label": "Shop Goggles",
+                        "link": "shopify://collections/goggles",
+                        "open_in_new_tab": false,
+                        "style_class": "custom-btn",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    },
+                    "button_XrRn6d": {
+                      "type": "button",
+                      "settings": {
+                        "label": "Shop Goggles",
+                        "link": "shopify://collections/goggles",
+                        "open_in_new_tab": false,
+                        "style_class": "custom-btn",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
                     "button_YfcG9p",
-                    "button_MWmPVD"
+                    "button_MWmPVD",
+                    "button_tWBtj6",
+                    "button_XrRn6d"
                   ]
                 }
               },
