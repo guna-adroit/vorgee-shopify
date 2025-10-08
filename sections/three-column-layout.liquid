@@ -83,7 +83,9 @@
     {% for block in section.blocks %}
       <div class="column-item" {{ block.shopify_attributes }}>
         {% if block.settings.image %}
+          <a class="more-button custom-btn-link" href="{{ block.settings.button_link }}">
           <img src="{{ block.settings.image | image_url: width: 600 }}" width="" height="" alt="{{ block.settings.title | escape }}">
+          </a>
         {% endif %}
         <h3 class="column-title">{{ block.settings.title }}</h3>
         <div class="column-description">{{ block.settings.description }}</div>
@@ -102,7 +104,9 @@
     {% for block in section.blocks %}
       <div class="column-item slider" {{ block.shopify_attributes }}>
         {% if block.settings.image %}
-          <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}">
+          <a class="more-button custom-btn-link" href="{{ block.settings.button_link }}">
+          <img src="{{ block.settings.image | image_url: width: 600 }}" width="" height="" alt="{{ block.settings.title | escape }}">
+          </a>
         {% endif %}
         <h3 class="column-title">{{ block.settings.title }}</h3>
         <p class="column-description">{{ block.settings.description }}</p>
