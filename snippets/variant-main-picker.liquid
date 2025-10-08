@@ -115,6 +115,77 @@
                 {% render 'strikethrough-variant', product_option: product_option_value %}
               </label>
             {%- endfor -%}
+            {% comment %} Related Color Product code Start {% endcomment %}
+             
+            {% if product_option.name == 'COLOUR' %}
+              {% assign related_products = product.metafields.custom.related_color_variants.value %}
+              {%- for related_product in related_products -%}
+                
+                  {%- for product_option_value in related_product.options_by_name['Colour'].values %}
+                  {% comment %} <a href="{{ related_product.url }}" style="color: {{product_option_value }};"> {% endcomment %}
+                    <label class="variant-option__button-label related-swatch-label{% if variant_style == 'swatch' %} variant-option__button-label--has-swatch{% endif %}" data-url="{{ related_product.url }}">
+                <input
+                  type="radio"
+                  name="{{ product_option.name | escape }}-{{ block.id }}-{{ product_resource.id }}"
+                  value="{{ product_option_value | escape }}"
+                  aria-label="{{ product_option_value.name }}"
+                  {% if product_option_value.available == false %}
+                    aria-disabled="true"
+                  {% endif %}
+                  
+                  data-option-available="{{ product_option_value.available }}"
+                  data-connected-product-url="{{ product_option_value.product_url }}"
+                  {% if product_option_value.variant.id %}
+                    data-variant-id="{{ product_option_value.variant.id }}"
+                  {% endif %}
+                  
+                >
+                {% if variant_style == 'swatch' %}
+                  {% liquid
+                    assign featured_media = product_option_value.variant.featured_media
+
+                    # If the variant has no featured media, and we have a combined listing product, then fall back to
+                    # using the featured media of the child product that is linked to this option value.
+                    if featured_media == blank and product_option_value.product_url
+                      assign featured_media = product_option_value.variant.product.featured_media
+                    endif
+                  %}
+
+                  {% render 'swatch',
+                    swatch: product_option_value.swatch,
+                    variant_image: featured_media,
+                    mode: 'unscaled'
+                  %}
+                {% else %}
+                  <span class="variant-option__button-label__text">{{ product_option_value | escape }}</span>
+                {% endif %}
+                {% render 'strikethrough-variant', product_option: product_option_value %}
+              </label>
+                  {% comment %} </a> {% endcomment %}
+                  {%- endfor %}
+                
+              {%- endfor %}
+            {% endif %}
+            {% comment %} Related Color Product code end {% endcomment %}
+              <script>
+                document.querySelectorAll('.related-swatch-label').forEach((swatch) => {
+                  swatch.addEventListener('click', (e) => {
+                    const url = swatch.dataset.url;
+                    if (url) window.location.href = url;
+                  });
+                });
+
+                window.addEventListener('pageshow', function(event) {
+                if (event.persisted || performance.getEntriesByType('navigation')[0].type === 'back_forward') {
+                  document.querySelectorAll('.related-swatch-label input[type="radio"]').forEach((radio) => {
+                    radio.checked = false;
+                  });
+                  // Re-check the current color swatch
+                  document.querySelector('.variant-option__button-label input[type="radio"]')?.setAttribute('checked');
+                }
+              });
+              </script>
+              
             {% if option_id_attribute %}
               {% style %}
                 [data-option-id="{{ fieldset_id }}"] {
