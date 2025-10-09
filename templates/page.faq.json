@@ -364,6 +364,7 @@
             "accordion_row_HUx4Vm": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
+              "disabled": true,
               "settings": {
                 "heading": "The product/s I want are out of stock. What happens now?  ",
                 "open_by_default": false,
@@ -406,6 +407,7 @@
             "accordion_row_KgAmEi": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
+              "disabled": true,
               "settings": {
                 "heading": "Whoops – I made a mistake on my order. Can I change it?  ",
                 "open_by_default": false,
@@ -448,6 +450,7 @@
             "accordion_row_HwhfXQ": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
+              "disabled": true,
               "settings": {
                 "heading": "What is your returns policy?  ",
                 "open_by_default": false,
@@ -490,6 +493,7 @@
             "accordion_row_dJ8hV6": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
+              "disabled": true,
               "settings": {
                 "heading": "How long will it take for my order to arrive?  ",
                 "open_by_default": false,
@@ -532,6 +536,7 @@
             "accordion_row_hj9fi7": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
+              "disabled": true,
               "settings": {
                 "heading": "What happens if I am not home when my parcel arrives?  ",
                 "open_by_default": false,
@@ -591,7 +596,7 @@
         "text_44pXnK",
         "accordion_BAArCz"
       ],
-      "name": "t:names.faq_section",
+      "name": "FAQ PRODUCT",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1154,7 +1159,490 @@
         "text_rkiPGU",
         "accordion_XdThkF"
       ],
-      "name": "t:names.faq_section",
+      "name": "FAQ LOGO CAPS",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "custom_class": "",
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-2",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "section_wVb3Cg": {
+      "type": "section",
+      "blocks": {
+        "text_hyQtN6": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>LOGO CAPS </h3>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "custom_classes": "",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "font_weight": "400",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "accordion_dxAYaz": {
+          "type": "accordion",
+          "name": "t:names.accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "type_preset": "h5",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "custom_classes": "faq-page",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_row_BCdhXr": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "disabled": true,
+              "settings": {
+                "heading": "How long should my goggles last?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_BPadjh": {
+                  "type": "text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<p>Goggles, like most sports’ equipment, have a natural lifespan that depends on how often you use them and how well you care for them. A swimmer hitting the pool five or more times a week may only get 3-6 months out of their goggles, while someone swimming 2-3 times a week could see them last closer to a year. </p><p>To get the best life out of your goggles, rinse them in fresh water after every swim, dry them in the shade, and store them in their case rather than loose in your bag. With a little care, you’ll keep them clearer, fresher, and ready for more swims. </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_BPadjh"
+              ]
+            },
+            "accordion_row_zaLKVk": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "disabled": true,
+              "settings": {
+                "heading": "What are your best care tips?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_fqHyWm": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Swimming pools can be tough on equipment, and that’s a good thing! Chlorine and other pool chemicals keep the water clean and safe for use, but they can also be harsh on fabric, silicone, and rubber. </p><p>To help your Vorgee gear go the distance: </p><ul><li>Rinse well after every swim with fresh, cold water to wash away chlorine or salt residue </li><li>Dry thoroughly in the shade before storing and avoid leaving items damp in your swim bag for too long. If you must store before dry, use breathable mesh bags or pouches.  </li><li>Handle with care by avoiding rough surfaces or excessive stretching of straps and caps. </li><li>Store in a cool, dry place, ideally using cases or pouches provided. </li></ul><p>With the right care, your goggles, swimwear, and equipment will stay fresher, perform better, and last longer! </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_fqHyWm"
+              ]
+            },
+            "accordion_row_L3GmCa": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "disabled": true,
+              "settings": {
+                "heading": "How do I choose the right pair of goggles? ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_pCRf4R": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Choosing the right goggles is as simple as 1, 2, 3.  </p><p><strong>1. Find your Zone</strong> – We’ve grouped our goggles into four “zones,” so you can easily match them to your swim: </p><ul><li><strong>Competition</strong> | Designed for racing and club training, with streamlined shapes to reduce drag. </li><li><strong>Fitness</strong> | Built for regular training sessions and open water swimming, balancing comfort and performance. </li><li><strong>Junior</strong> | Scaled for kids and learn-to-swim programs, with smaller fits for growing faces. </li><li><strong>Recreational</strong> | Perfect for casual swimming or lighter usage, with soft seals for all-day comfort. </li></ul><p><strong>2. Find your Fit</strong> – Every swimmer has their own comfort preference, so we offer four distinct fits: </p><ul><li><strong>Snug | </strong>deal fit for swimmers or those who like their goggles to have a low profile and snug fit. The gasket sits and fits firmly inside the eye socket. </li><li><strong>Mid |</strong> Ideal fit for swimmers who like a firm, but comfortable fit. The cushioned gasket sits and fits securely inside the eye socket. </li><li><strong>Broad | </strong>Ideal for swimmers who like a wider lens and broader fit. The cushioned, universally shaped, gasket sits and fits securely outside the eye socket. </li><li><strong>Mask | </strong>Ideal for junior swimmers who like a mask like fit. The soft, silicone mask shaped gasket sits and sits securely on the brow line through to the tip of the cheek. </li></ul><p><strong>3. Choose your Goggle</strong> – Once you’ve matched your zone and fit, simply select the style, lens, and colour that suit your swim best. </p><p><strong>Hot tip:</strong> Before diving in, try the quick fit test. Firmly, but gently, press the over your eyes without using the strap. <strong>If they suction and stay in place for a second or two (even just on one side), you’ve found a pair of goggles that will give you a watertight, comfortable, and fog-free swim.</strong> </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_pCRf4R"
+              ]
+            },
+            "accordion_row_tWdwzJ": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "disabled": true,
+              "settings": {
+                "heading": "Help – my goggles are the right fit, but they’re fogging at the start of my swim. ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_zxLLKD": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Fogging at the start of a swim is completely normal, so don’t ditch your goggles just yet. When you first hop into the water and start swimming, your body is warm and producing heat, while the goggles (and pool water) are typically much cooler. That temperature difference causes condensation to form inside the lenses, just like car windows misting up on a chilly morning. </p><p>Because goggles are a small, enclosed space, the warmth from your face can overwhelm the anti-fog coating until everything evens out. Usually, as your swim continues and temperatures balance, the fog will naturally clear. </p><p><strong>Quick tip:</strong> Adding a tiny drop of cool, clean water inside each lens at the start of your swim can help regulate the temperature difference and reduce condensation. </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_zxLLKD"
+              ]
+            },
+            "accordion_row_YdWTeU": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "disabled": true,
+              "settings": {
+                "heading": "I left my goggles in the car* (*insert any other spot where they’re subject to heat) and the seal is bent out of shape; can I save them?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_TK9tzG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm/hot (not boiling) water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face.  </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_TK9tzG"
+              ]
+            },
+            "accordion_row_XeM8qX": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "I placed an order but haven’t received confirmation. What do I do? ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_EcnxKW": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Order confirmation emails are sent automatically. If you’ve not received an email within 30 minutes of placing your order, please: </p><ul><li>Check your junk or spam email folders</li><li>Check you have been charged for the order</li><li>Check hat you have supplied the correct email address at checkout If you can confirm you have been charged, please email <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> with the order email address and time/date the order was placed. </li></ul>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_EcnxKW"
+              ]
+            },
+            "accordion_row_Wfyhry": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "The product/s I want are out of stock. What happens now?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_dPLXU7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the items returns to stock.  </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_dPLXU7"
+              ]
+            },
+            "accordion_row_HJggGg": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Whoops – I made a mistake on my order. Can I change it?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_NKwcUD": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_NKwcUD"
+              ]
+            },
+            "accordion_row_LFJqXp": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What is your returns policy?  ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_tRYqHh": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>vorgee.com offers Australia wide shipping only. If you require items shipped internationally, please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> and our team will work to assist. When shipping internationally, the receiver is responsible for all applicable duties and taxes at the destination.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_tRYqHh"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_BCdhXr",
+            "accordion_row_zaLKVk",
+            "accordion_row_L3GmCa",
+            "accordion_row_tWdwzJ",
+            "accordion_row_YdWTeU",
+            "accordion_row_XeM8qX",
+            "accordion_row_Wfyhry",
+            "accordion_row_HJggGg",
+            "accordion_row_LFJqXp"
+          ]
+        }
+      },
+      "block_order": [
+        "text_hyQtN6",
+        "accordion_dxAYaz"
+      ],
+      "name": "FAQ ORDERS",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1188,6 +1676,7 @@
   "order": [
     "main",
     "section_ieEV4p",
-    "section_zDyYcy"
+    "section_zDyYcy",
+    "section_wVb3Cg"
   ]
 }
