@@ -782,6 +782,7 @@ fieldset.size-option legend .size-option-button p{
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  overflow: auto;
 }
 .size-chart-modal-overlay.modal-active{
   display: flex;
