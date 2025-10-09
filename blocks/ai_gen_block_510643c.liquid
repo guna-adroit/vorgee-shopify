@@ -113,7 +113,7 @@
 </style>
 
 <div class="button-group-{{ ai_gen_id }} collection-button-group" {{ block.shopify_attributes }}>
-  {% for i in (1..4) %}
+  {% for i in (1..5) %}
     {% liquid
       assign button_text_key = 'button_' | append: i | append: '_text'
       assign button_link_key = 'button_' | append: i | append: '_link'
