@@ -786,6 +786,10 @@ fieldset.size-option legend .size-option-button p{
   display: flex;
 }
 
+body.modal-active .header-section:has(> #header-component[sticky='always']){
+  z-index: unset;
+}
+
 .size-chart-modal-content {
   background: white;
   padding: 30px;
