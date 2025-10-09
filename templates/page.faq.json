@@ -1678,7 +1678,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h3>ORDERS</h3>",
+            "text": "<h3>DELIVERY</h3>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
