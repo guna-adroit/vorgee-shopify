@@ -71,7 +71,6 @@
         "custom_liquid_zzdpn3": {
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "{% if collection.description != blank %}\n<button class=\"collection-show-more-btn\" id=\"toggleBtn\">Show more</button>\n{% endif %}"
           },
