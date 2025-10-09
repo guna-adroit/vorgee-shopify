@@ -59,7 +59,7 @@
               
               <span>{{ product_option.name | escape -}}</span>
               {% if product.metafields.custom.size_chart != blank %}
-                {% if product_option.name == 'Size' %}
+                {% if product_option.name == 'Size' or product_option.name == 'SIZE' %}
                 <div class="size-option-button" id="size-chart">
                     {{ 'icon-ruler.svg' | inline_asset_content }}<p>Size Chart</p>
                 </div>
