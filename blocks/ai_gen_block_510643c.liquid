@@ -117,15 +117,17 @@
     {% liquid
       assign button_text_key = 'button_' | append: i | append: '_text'
       assign button_link_key = 'button_' | append: i | append: '_link'
-      assign button_style_key = 'button_' | append: i | append: '_style'
+      assign button_style_key = 'button_' | append: i | append: '_style' 
+      assign button_class_key = 'button_' | append: i | append: '_classes'
       
       assign button_text = block.settings[button_text_key]
       assign button_link = block.settings[button_link_key]
       assign button_style = block.settings[button_style_key]
+      assign button_classes = block.settings[button_class_key]
     %}
     
     {% if button_text != blank %}
-      <a href="{{ button_link }}" class="button-{{ ai_gen_id }} collection-buttons {{ button_style }}">
+      <a href="{{ button_link }}" class="button-{{ ai_gen_id }} collection-buttons {{ button_classes }} {{ button_style }}">
         {{ button_text }}
       </a>
     {% endif %}
