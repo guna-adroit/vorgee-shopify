@@ -787,7 +787,9 @@ fieldset.size-option legend .size-option-button p{
 .size-chart-modal-overlay.modal-active{
   display: flex;
 }
-
+body.modal-active{
+  overflow: hidden;
+}
 body.modal-active .header-section:has(> #header-component[sticky='always']){
   z-index: unset;
 }
