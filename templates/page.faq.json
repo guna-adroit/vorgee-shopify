@@ -1416,9 +1416,8 @@
             "accordion_row_YdWTeU": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
-              "disabled": true,
               "settings": {
-                "heading": "I left my goggles in the car* (*insert any other spot where they’re subject to heat) and the seal is bent out of shape; can I save them?  ",
+                "heading": "My order has arrived, but it’s not correct.",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -1427,7 +1426,7 @@
                 "text_TK9tzG": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm/hot (not boiling) water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face.  </p>",
+                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. </p><p>Please contact us at <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> (with your order number and an image of the items received) and we will immediately look into it for you. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -1454,48 +1453,6 @@
               },
               "block_order": [
                 "text_TK9tzG"
-              ]
-            },
-            "accordion_row_XeM8qX": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "I placed an order but haven’t received confirmation. What do I do? ",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_EcnxKW": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Order confirmation emails are sent automatically. If you’ve not received an email within 30 minutes of placing your order, please: </p><ul><li>Check your junk or spam email folders</li><li>Check you have been charged for the order</li><li>Check hat you have supplied the correct email address at checkout If you can confirm you have been charged, please email <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> with the order email address and time/date the order was placed. </li></ul>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_EcnxKW"
               ]
             },
             "accordion_row_Wfyhry": {
@@ -1582,6 +1539,48 @@
                 "text_NKwcUD"
               ]
             },
+            "accordion_row_XeM8qX": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "I placed an order but haven’t received confirmation. What do I do? ",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_EcnxKW": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Order confirmation emails are sent automatically. If you’ve not received an email within 30 minutes of placing your order, please: </p><ul><li>Check your junk or spam email folders</li><li>Check you have been charged for the order</li><li>Check hat you have supplied the correct email address at checkout If you can confirm you have been charged, please email <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> with the order email address and time/date the order was placed. </li></ul>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_EcnxKW"
+              ]
+            },
             "accordion_row_LFJqXp": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
@@ -1631,9 +1630,9 @@
             "accordion_row_L3GmCa",
             "accordion_row_tWdwzJ",
             "accordion_row_YdWTeU",
-            "accordion_row_XeM8qX",
             "accordion_row_Wfyhry",
             "accordion_row_HJggGg",
+            "accordion_row_XeM8qX",
             "accordion_row_LFJqXp"
           ]
         }
