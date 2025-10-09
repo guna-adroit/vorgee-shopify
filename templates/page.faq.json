@@ -677,137 +677,11 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "accordion_row_BhzNAp": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "How long should my goggles last?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_kB3LX8": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Goggles, like most sports’ equipment, have a natural lifespan that depends on how often you use them and how well you care for them. A swimmer hitting the pool five or more times a week may only get 3-6 months out of their goggles, while someone swimming 2-3 times a week could see them last closer to a year. </p><p>To get the best life out of your goggles, rinse them in fresh water after every swim, dry them in the shade, and store them in their case rather than loose in your bag. With a little care, you’ll keep them clearer, fresher, and ready for more swims. </p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_kB3LX8"
-              ]
-            },
-            "accordion_row_r7FMwY": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "What are your best care tips?  ",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_jDjYtL": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Swimming pools can be tough on equipment, and that’s a good thing! Chlorine and other pool chemicals keep the water clean and safe for use, but they can also be harsh on fabric, silicone, and rubber. </p><p>To help your Vorgee gear go the distance: </p><ul><li>Rinse well after every swim with fresh, cold water to wash away chlorine or salt residue </li><li>Dry thoroughly in the shade before storing and avoid leaving items damp in your swim bag for too long. If you must store before dry, use breathable mesh bags or pouches.  </li><li>Handle with care by avoiding rough surfaces or excessive stretching of straps and caps. </li><li>Store in a cool, dry place, ideally using cases or pouches provided. </li></ul><p>With the right care, your goggles, swimwear, and equipment will stay fresher, perform better, and last longer! </p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_jDjYtL"
-              ]
-            },
-            "accordion_row_8WBQy9": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "How do I choose the right pair of goggles? ",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_eE9Hwy": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Choosing the right goggles is as simple as 1, 2, 3.  </p><p><strong>1. Find your Zone</strong> – We’ve grouped our goggles into four “zones,” so you can easily match them to your swim: </p><ul><li><strong>Competition</strong> | Designed for racing and club training, with streamlined shapes to reduce drag. </li><li><strong>Fitness</strong> | Built for regular training sessions and open water swimming, balancing comfort and performance. </li><li><strong>Junior</strong> | Scaled for kids and learn-to-swim programs, with smaller fits for growing faces. </li><li><strong>Recreational</strong> | Perfect for casual swimming or lighter usage, with soft seals for all-day comfort. </li></ul><p><strong>2. Find your Fit</strong> – Every swimmer has their own comfort preference, so we offer four distinct fits: </p><ul><li><strong>Snug | </strong>deal fit for swimmers or those who like their goggles to have a low profile and snug fit. The gasket sits and fits firmly inside the eye socket. </li><li><strong>Mid |</strong> Ideal fit for swimmers who like a firm, but comfortable fit. The cushioned gasket sits and fits securely inside the eye socket. </li><li><strong>Broad | </strong>Ideal for swimmers who like a wider lens and broader fit. The cushioned, universally shaped, gasket sits and fits securely outside the eye socket. </li><li><strong>Mask | </strong>Ideal for junior swimmers who like a mask like fit. The soft, silicone mask shaped gasket sits and sits securely on the brow line through to the tip of the cheek. </li></ul><p><strong>3. Choose your Goggle</strong> – Once you’ve matched your zone and fit, simply select the style, lens, and colour that suit your swim best. </p><p><strong>Hot tip:</strong> Before diving in, try the quick fit test. Firmly, but gently, press the over your eyes without using the strap. <strong>If they suction and stay in place for a second or two (even just on one side), you’ve found a pair of goggles that will give you a watertight, comfortable, and fog-free swim.</strong> </p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_eE9Hwy"
-              ]
-            },
             "accordion_row_meEfAF": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Help – my goggles are the right fit, but they’re fogging at the start of my swim. ",
+                "heading": "Can I print my logo on both sides of the cap?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -816,7 +690,7 @@
                 "text_BcEB9p": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Fogging at the start of a swim is completely normal, so don’t ditch your goggles just yet. When you first hop into the water and start swimming, your body is warm and producing heat, while the goggles (and pool water) are typically much cooler. That temperature difference causes condensation to form inside the lenses, just like car windows misting up on a chilly morning. </p><p>Because goggles are a small, enclosed space, the warmth from your face can overwhelm the anti-fog coating until everything evens out. Usually, as your swim continues and temperatures balance, the fog will naturally clear. </p><p><strong>Quick tip:</strong> Adding a tiny drop of cool, clean water inside each lens at the start of your swim can help regulate the temperature difference and reduce condensation. </p>",
+                    "text": "<p>Yes. All our caps can be printed on both sides for maximum visibility. If you want additional print locations, please refer to our Seamless Silicone Caps.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -849,7 +723,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "I left my goggles in the car* (*insert any other spot where they’re subject to heat) and the seal is bent out of shape; can I save them?  ",
+                "heading": "Are Latex Caps a good option?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -858,7 +732,7 @@
                 "text_MciUWx": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm/hot (not boiling) water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face.  </p>",
+                    "text": "<p>Yes. Latex caps are lightweight, flexible, and budget-friendly. They are ideal for large events, promotions, and giveaways where you want strong branding at scale.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -891,7 +765,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "What are the safety specifications of your products?  ",
+                "heading": "What colours are available?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -900,7 +774,7 @@
                 "text_6UY6Mx": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Your health and water safety is our priority, which is why our products are independently tested for adherence to all relevant national and international safety standards. For the specific standards our products are compliant with, please refer to the specifications tab on their product page.  </p><p>We are pleased to advise our goggles, including anti-fog solutions are PFAS free.  </p>",
+                    "text": "<p>We offer a wide range of colours across all cap types, so you can choose the shades that match your branding. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -933,7 +807,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "The product/s I want are out of stock. What happens now?  ",
+                "heading": "Can you print multiple logos or designs on oneorder?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -942,7 +816,7 @@
                 "text_43bknA": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the items returns to stock.  </p>",
+                    "text": "<p>Yes, we can. This is a common requirement. Please contact us with your requirements and we’ll work with you to determine the best approach. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -975,7 +849,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Whoops – I made a mistake on my order. Can I change it?  ",
+                "heading": "How do we order logo printedcaps?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -984,7 +858,7 @@
                 "text_NTp8kw": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
+                    "text": "<p>Simply contact us to get in touch with our team to discuss your requirements. We’ll guide you through the (very easy) process and provide digital artwork proofs before production. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -1017,7 +891,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "What is your returns policy?  ",
+                "heading": "What is the minimum order quantity?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -1026,7 +900,7 @@
                 "text_xNPDH9": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>vorgee.com offers Australia wide shipping only. If you require items shipped internationally, please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> and our team will work to assist. When shipping internationally, the receiver is responsible for all applicable duties and taxes at the destination.</p>",
+                    "text": "<p>Minimum order quantities depend on the cap type but typically start from 50 for all Silicone Cap types through to 200 for Latex Caps. This ensures we can provide high-quality printing at the best value. Please refer to the individual <a href=\"/collections/logo-caps\" title=\"/collections/logo-caps\">logo cap</a> product pages for minimum order quantities per cap type</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -1141,9 +1015,6 @@
             }
           },
           "block_order": [
-            "accordion_row_BhzNAp",
-            "accordion_row_r7FMwY",
-            "accordion_row_8WBQy9",
             "accordion_row_meEfAF",
             "accordion_row_VfNkKh",
             "accordion_row_dNVYUB",
