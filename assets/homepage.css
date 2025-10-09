@@ -1313,6 +1313,6 @@ button#toggleBtn {
 
 @media screen and (min-width: 700px){
   .button-hide-desktop{
-    display: none;
+    display: none !important;
   }
 }
