@@ -1899,7 +1899,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "The product/s I want are out of stock. What happens now?  ",
+                "heading": "Do you shipinternationally?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -1908,7 +1908,7 @@
                 "text_CFWr4J": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the items returns to stock.  </p>",
+                    "text": "<p>vorgee.com offers Australia wide shipping only. If you require items shipped internationally, please email <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com </a>and our team will work to assist. When shipping internationally, the receiver is responsible for all applicable duties and taxes at the destination. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -1941,7 +1941,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Whoops – I made a mistake on my order. Can I change it?  ",
+                "heading": "How can Itrack my order?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -1950,7 +1950,7 @@
                 "text_yax8yQ": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We aim to get your order to you as quickly as possible, so once you’ve placed your order, we typically can’t make any changes. However, if the query relates to order cancellation or a change of postal address, please email <a href=\"mailto:orders@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">orders@vorgee.com</span></a> as soon as possible and provided the order has not already been processed or dispatched, <strong>we may be able to assist</strong>.  </p><p><em><strong>Please note – we cannot adjust the items, sizes, colours or quantities you have ordered. </strong></em> </p>",
+                    "text": "<p>---</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
