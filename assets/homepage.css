@@ -1300,6 +1300,7 @@ button#toggleBtn {
 .flex-wrap .group-block-content{
   flex-wrap: wrap;
 }
+
 @media screen and (max-width: 768px){
  .accelerated-checkout-button{
     --gravity-button-height: 40px;
@@ -1307,5 +1308,11 @@ button#toggleBtn {
   .product-form-buttons:has(.add-to-cart-button.button-secondary) :is(shopify-accelerated-checkout,shopify-accelerated-checkout-cart){
     --shopify-accelerated-checkout-button-block-size: 40px;
     min-height: 40px !important;
+  }
+}
+
+@media screen and (min-width: 700px){
+  .button-hide-desktop{
+    display: none;
   }
 }
