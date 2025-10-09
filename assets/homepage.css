@@ -762,6 +762,7 @@ fieldset.size-option legend .size-option-button{
     display: flex;
     align-items: center;
     gap: 2px;
+    cursor: pointer;
 }
 fieldset.size-option legend .size-option-button p{
   font-weight: 500;
