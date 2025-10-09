@@ -2025,7 +2025,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "My order has arrived, but it’s not correct.",
+                "heading": "What happens if I am not home when my parcel arrives?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -2034,7 +2034,7 @@
                 "text_BA6aeC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. </p><p>Please contact us at <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> (with your order number and an image of the items received) and we will immediately look into it for you. </p>",
+                    "text": "<p>All our online orders are delivered with Authority to Leave, so we recommend including your best parcel hiding spot in your order notes. If you don’t have somewhere your parcel can be left, please nominate an alternate address or let us know in your order notes. </p><p> </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -2062,48 +2062,6 @@
               "block_order": [
                 "text_BA6aeC"
               ]
-            },
-            "accordion_row_q4Czjq": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "What is your returns policy?  ",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_iem4Dp": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>vorgee.com offers Australia wide shipping only. If you require items shipped internationally, please email <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a> and our team will work to assist. When shipping internationally, the receiver is responsible for all applicable duties and taxes at the destination.</p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_iem4Dp"
-              ]
             }
           },
           "block_order": [
@@ -2114,8 +2072,7 @@
             "accordion_row_PR8NM3",
             "accordion_row_ECkbeX",
             "accordion_row_6fdn3A",
-            "accordion_row_UgGyF7",
-            "accordion_row_q4Czjq"
+            "accordion_row_UgGyF7"
           ]
         }
       },
