@@ -1235,6 +1235,7 @@ price-range p, .price-range-block{
 
 button#toggleBtn {
     display: none;
+    cursor: pointer;
 }
 .product-details{
   padding-right: 15%;
