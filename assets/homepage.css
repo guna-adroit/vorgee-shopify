@@ -1200,6 +1200,10 @@ button#fit-indicator-btn{
 price-range p, .price-range-block{
   margin: 0;
 }
+.size-chart-image{
+  aspect-ratio: auto;
+  object-fit: unset;
+}
 
 .page-template h2{
   font-size: 30px;
