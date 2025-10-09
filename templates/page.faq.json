@@ -1413,48 +1413,6 @@
                 "text_zxLLKD"
               ]
             },
-            "accordion_row_YdWTeU": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "My order has arrived, but it’s not correct.",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_TK9tzG": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. </p><p>Please contact us at <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> (with your order number and an image of the items received) and we will immediately look into it for you. </p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_TK9tzG"
-              ]
-            },
             "accordion_row_Wfyhry": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
@@ -1581,6 +1539,48 @@
                 "text_EcnxKW"
               ]
             },
+            "accordion_row_YdWTeU": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "My order has arrived, but it’s not correct.",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_TK9tzG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our apologies – it sounds like something has gone wrong along the way. </p><p>Please contact us at <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> (with your order number and an image of the items received) and we will immediately look into it for you. </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_TK9tzG"
+              ]
+            },
             "accordion_row_LFJqXp": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
@@ -1629,10 +1629,10 @@
             "accordion_row_zaLKVk",
             "accordion_row_L3GmCa",
             "accordion_row_tWdwzJ",
-            "accordion_row_YdWTeU",
             "accordion_row_Wfyhry",
             "accordion_row_HJggGg",
             "accordion_row_XeM8qX",
+            "accordion_row_YdWTeU",
             "accordion_row_LFJqXp"
           ]
         }
