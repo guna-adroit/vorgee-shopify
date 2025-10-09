@@ -933,7 +933,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "How long will it take for my order to arrive?  ",
+                "heading": "How long does production take?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -942,7 +942,7 @@
                 "text_6KBJmT": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Orders received prior to 10am (AEST) on standard business days are typically dispatched same day via Australia Post, Aramex or Direct Freight. Delivery timeframes are dependent on where you live, but as a guide Standard Post delivery to metro areas is 3-5 business days, and Express Post is 1-3 business days.  </p>",
+                    "text": "<p>Standard turnaround is usually 4 weeks from artwork approval to delivery. However, timing may vary based on cap type and order size. If you need caps for a specific event date, let us know and we’ll do our best to meet your deadline.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -970,48 +970,6 @@
               "block_order": [
                 "text_6KBJmT"
               ]
-            },
-            "accordion_row_FCYpUT": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "What happens if I am not home when my parcel arrives?  ",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_mtC3P9": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>All our online orders are delivered with Authority to Leave, so we recommend including your best parcel hiding spot in your order notes. If you don’t have somewhere your parcel can be left, please nominate an alternate address or let us know in your order notes.</p>",
-                    "width": "100%",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "font_weight": "400",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_mtC3P9"
-              ]
             }
           },
           "block_order": [
@@ -1021,8 +979,7 @@
             "accordion_row_aWfBz6",
             "accordion_row_fqCL74",
             "accordion_row_CkEebV",
-            "accordion_row_UcmTGF",
-            "accordion_row_FCYpUT"
+            "accordion_row_UcmTGF"
           ]
         }
       },
