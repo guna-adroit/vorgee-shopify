@@ -45,7 +45,7 @@
                   {{ 'image' | placeholder_svg_tag: 'placeholder-image' }}
                 {% endif %}
                 {% if block.settings.title != blank %}
-                  <h3 class="vorgee-icon-text_title"></h3>
+                  <h3 class="vorgee-icon-text_title">{{ block.settings.title }}</h3>
                 {% endif %}
                 <p>{{ block.settings.description }}</p>
               </div>
