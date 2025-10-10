@@ -1316,3 +1316,7 @@ button#toggleBtn {
     display: none !important;
   }
 }
+
+.about-why-choose-title h3{
+  font-size: 28px;
+}
