@@ -271,7 +271,7 @@
         </div>
       </div>
 
-      {% comment %} <script>
+      <script>
         document.addEventListener('DOMContentLoaded', function () {
           const sizeChartTrigger = document.getElementById('size-chart');
           const modal = document.getElementById('size-chart-modal');
@@ -297,65 +297,7 @@
             }
           });
         });
-      </script> {% endcomment %}
-      <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Function to initialize modal behavior for size chart
-    function initializeSizeChartModal(modalId, triggerId, closeId) {
-      const sizeChartTrigger = document.getElementById(triggerId);
-      const modal = document.getElementById(modalId);
-      const closeBtn = document.getElementById(closeId);
-
-      if (sizeChartTrigger && modal && closeBtn) {
-        sizeChartTrigger.addEventListener('click', function () {
-          modal.classList.add('modal-active');
-          document.body.classList.add('modal-active');
-        });
-
-        closeBtn.addEventListener('click', function () {
-          modal.classList.remove('modal-active');
-          document.body.classList.remove('modal-active');
-        });
-
-        window.addEventListener('click', function (event) {
-          if (event.target === modal) {
-            modal.classList.remove('modal-active');
-            document.body.classList.remove('modal-active');
-          }
-        });
-      }
-    }
-
-    // Initialize size chart modal for each product
-    function initializeQuickAddModals() {
-      // Get all the quick add buttons on the collection page
-      const quickAddButtons = document.querySelectorAll('.quick-add__button');
-
-      quickAddButtons.forEach((btn) => {
-        btn.addEventListener('click', function () {
-          const productId = btn.dataset.productId; // Assuming you have product ID as data attribute
-
-          // Create a unique modal for each product
-          const modalId = `size-chart-modal-${productId}`;
-          const triggerId = `size-chart-${productId}`;
-          const closeId = `close-size-chart-${productId}`;
-
-          // Display the modal content dynamically if not already visible
-          const modal = document.getElementById(modalId);
-          modal.style.display = 'flex'; // Make sure modal is shown
-
-          // Initialize the modal functionality for the specific product
-          initializeSizeChartModal(modalId, triggerId, closeId);
-        });
-      });
-    }
-
-    // Run the initialization for the quick add modals
-    initializeQuickAddModals();
-  });
-</script>
-
-
+      </script>
 
       <script type="application/json">
         {{ product_resource.selected_or_first_available_variant | json }}
