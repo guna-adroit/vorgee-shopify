@@ -1318,5 +1318,5 @@ button#toggleBtn {
 }
 
 .about-why-choose-title h3{
-  font-size: 28px;
+  font-size: 28px !important;
 }
