@@ -1,7 +1,8 @@
 {% # import schema from '../schemas/blocks/accordion' %}
 
 <div
-  class="accordion accordion--{{ block.id }} accordion--{{ block.settings.icon }} {{ block.settings.custom_classes }} border-style spacing-style{% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}{% if block.settings.dividers %} accordion--dividers{% endif %}"
+  {% if block.settings.custom_id %} id="{{ block.settings.custom_id }}"{% endif %}
+  class="accordion accordion--{{ block.id }} accordion--{{ block.settings.icon }} {{ block.settings.custom_classes }} border-style spacing-style{% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}{% if block.settings.dividers %} accordion--dividers{% endif %} scroll-margin"
   style="
     --summary-font-family: var(--font-{{ block.settings.type_preset }}--family);
      --summary-font-style: var(--font-{{ block.settings.type_preset }}--style);
@@ -152,6 +153,11 @@
       "type": "text",
       "id": "custom_classes",
       "label": "Custom Classes"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom Id"
     },
     {
       "type": "header",

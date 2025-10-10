@@ -4534,3 +4534,6 @@ form-embed {
 .facets__item:has( .facets__inputs-list > li:nth-child(1):last-child) {
   display: none;
 }
+.accordion.scroll-margin{
+  scroll-margin-top: 160px;
+}

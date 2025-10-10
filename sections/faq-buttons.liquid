@@ -1,0 +1,180 @@
+{% comment %}
+  sections/buttons-row.liquid
+  - Each button is a block (type "button_block")
+  - Desktop: single horizontal line (no wrap). If buttons overflow, horizontal scroll appears.
+  - Mobile (<= 749px): flex-wrap enabled, buttons take 50% width -> two rows.
+  - Editable: Button label, URL, and optional style (primary/secondary/outline).
+{% endcomment %}
+
+<section class="buttons-row-section {% if section.settings.full_width %}buttons-row--fullwidth{% endif %}" id="ButtonsRow-{{ section.id }}">
+  <div class="buttons-row__inner page-width">
+    {% if section.settings.heading != blank %}
+      <h2 class="buttons-row__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="buttons-row" role="group" aria-label="{{ section.settings.heading | default: 'Buttons' }}">
+      {% for block in section.blocks %}
+        {% if block.type == 'button_block' %}
+          {% assign btn_label = block.settings.label | default: 'Click' %}
+          {% assign btn_url = block.settings.url %}
+          {% assign btn_style = block.settings.style %}
+          <a
+            href="{{ page.url }}#{{ block.settings.faq-id }}"
+            {% if btn_url != blank %}href="{{ btn_url }}"{% endif %}
+            class="buttons-row__button buttons-row__button--{{ btn_style }}"
+            {% if block.settings.open_in_new_window %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >
+            {{ btn_label }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if section.settings.help_text != blank %}
+      <p class="buttons-row__help">{{ section.settings.help_text }}</p>
+    {% endif %}
+  </div>
+
+  <style>
+    /* Basic layout + spacing */
+    #ButtonsRow-{{ section.id }} { padding: 28px 0; }
+    #ButtonsRow-{{ section.id }} .buttons-row__inner { display:block; }
+
+    .buttons-row__heading { margin: 0 0 12px; font-size: 1.125rem; font-weight: 600; }
+
+    .buttons-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: nowrap;               /* DON'T wrap on desktop */
+      overflow-x: auto;                /* allow horizontal scroll if too many */
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;             /* space for scrollbar on some browsers */
+    }
+
+    /* Button look */
+    .buttons-row__button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: transform .08s ease, box-shadow .08s ease;
+      min-height: 40px;
+      transition: 0.4s;
+    }
+    .buttons-row__button:hover{
+        border: 1px solid #000;
+        background: transparent;
+    }
+    .buttons-row__inner .buttons-row {
+        justify-content: center;
+    }
+    .buttons-row__button:focus { outline: 2px solid rgba(0,0,0,0.08); outline-offset: 2px; }
+    .buttons-row__button:active { transform: translateY(1px); }
+
+    /* Styles: primary / secondary / outline */
+    .buttons-row__button--primary {
+      background-color: var(--color-cta, #0070f3);
+      color: var(--color-cta-foreground, #fff);
+    }
+    .buttons-row__button--secondary {
+      background-color: var(--color-muted, #f3f4f6);
+      color: var(--color-text, #111827);
+    }
+    .buttons-row__button--outline {
+      background: transparent;
+      color: var(--color-cta, #0070f3);
+      border-color: currentColor;
+    }
+
+    /* Mobile: allow wrap and make items take half width (two per row) */
+    @media screen and (max-width: 749px) {
+      .buttons-row {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .buttons-row__button {
+        flex: 0 0 45%;            /* two items per row */
+        justify-content: center;
+      }
+      /* If you prefer some buttons to span full width, merchants can add blank blocks or we can add a block setting later */
+    }
+
+    /* Optional full-width container */
+    .buttons-row--fullwidth .buttons-row__inner { max-width: none; padding-left: 20px; padding-right: 20px; }
+    .buttons-row__help { margin-top: 10px; color: #6b7280; font-size: 13px; }
+  </style>
+
+  {% schema %}
+  {
+    "name": "FAQ Buttons row",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "help_text",
+        "label": "Help text (optional)"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full width container",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "button_block",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Button label",
+            "default": "Click"
+          },
+          {
+            "type": "text",
+            "id": "faq-id",
+            "label": "FAQ Custom Id",
+          },
+          {
+            "type": "select",
+            "id": "style",
+            "label": "Style",
+            "options": [
+              { "value": "primary", "label": "Primary" },
+              { "value": "secondary", "label": "Secondary" },
+              { "value": "outline", "label": "Outline" }
+            ],
+            "default": "primary"
+          },
+          {
+            "type": "checkbox",
+            "id": "open_in_new_window",
+            "label": "Open in new window",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "max_blocks": 12,
+    "presets": [
+      {
+        "name": "FAQ Buttons row",
+        "category": "Buttons"
+      }
+    ]
+  }
+  {% endschema %}
+</section>
