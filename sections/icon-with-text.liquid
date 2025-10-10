@@ -44,7 +44,9 @@
                 {% else %}
                   {{ 'image' | placeholder_svg_tag: 'placeholder-image' }}
                 {% endif %}
-                
+                {% if block.settings.title != blank %}
+                  <h3 class="vorgee-icon-text_title"></h3>
+                {% endif %}
                 <p>{{ block.settings.description }}</p>
               </div>
             {% endfor %}
@@ -97,6 +99,12 @@
                 "type": "image_picker",
                 "id": "image",
                 "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Welcome to my shop!"
             },
             {
                 "type": "textarea",
