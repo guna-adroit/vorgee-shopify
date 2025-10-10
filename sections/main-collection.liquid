@@ -166,12 +166,14 @@
 const collecDescription = document.getElementsByClassName("banner-collection-description")[0];
 const toggleBtn = document.getElementById("toggleBtn");
 
-toggleBtn.addEventListener("click", () => {
-  collecDescription.classList.toggle("expanded");
-  toggleBtn.textContent = collecDescription.classList.contains("expanded")
-    ? "Show less"
-    : "Show more";
-});
+if (collecDescription && toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    collecDescription.classList.toggle("expanded");
+    toggleBtn.textContent = collecDescription.classList.contains("expanded")
+      ? "Show less"
+      : "Show more";
+  });
+}
 
 </script>
 
