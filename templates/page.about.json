@@ -270,42 +270,48 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA16-quality-materials.svg",
-            "description": "Utilising only the highest quality materials"
+            "title": "High-quality materials",
+            "description": "for durability, comfort and performance"
           }
         },
         "icon_text_gXjGCA": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA17-manufacturing-sources.svg",
-            "description": "Sourcing only the best, most respected manufacturers"
+            "title": "Top-tier manufacturing partners",
+            "description": "trusted around the world"
           }
         },
         "icon_text_qnq4Lz": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA18-research.svg",
-            "description": "Researching the latest in product technologies and advancements"
+            "title": "Innovative swim technology",
+            "description": "and user-led design"
           }
         },
         "icon_text_WY7dKF": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA19-quality-control.svg",
-            "description": "Applying and adhering to strict quality control measures to produce products which meet their expectations"
+            "title": "Strict quality control",
+            "description": "from concept to final product"
           }
         },
         "icon_text_TJcnUA": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA1A-consumer-trends.svg",
-            "description": "Identifying consumer trends and preferences to guide product development"
+            "title": "Bold colours and modern styles",
+            "description": "that stand out in and out of the pool"
           }
         },
         "icon_text_jijDxR": {
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/uEA1B-fashion.svg",
-            "description": "Injecting bright colours and latest fashion trends into their designs"
+            "title": "A commitment to every swimmer,",
+            "description": "no matter your level, style or swim goal"
           }
         }
       },
