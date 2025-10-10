@@ -271,7 +271,7 @@
         </div>
       </div>
 
-      <script>
+      {% comment %} <script>
         document.addEventListener('DOMContentLoaded', function () {
           const sizeChartTrigger = document.getElementById('size-chart');
           const modal = document.getElementById('size-chart-modal');
@@ -297,7 +297,29 @@
             }
           });
         });
-      </script>
+      </script> {% endcomment %}
+      <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('size-chart-modal');
+    const closeBtn = document.getElementById('close-size-chart');
+
+    // Event delegation: Listen for click events on the document
+    // and check if the clicked target is the size-chart button
+    document.body.addEventListener('click', function (event) {
+      if (event.target && event.target.id === 'size-chart') {
+        modal.classList.add('modal-active');
+        document.body.classList.add('modal-active');
+      }
+      
+      // Close the modal if the close button or the outside area is clicked
+      if (event.target === closeBtn || event.target === modal) {
+        modal.classList.remove('modal-active');
+        document.body.classList.remove('modal-active');
+      }
+    });
+  });
+</script>
+
 
       <script type="application/json">
         {{ product_resource.selected_or_first_available_variant | json }}
