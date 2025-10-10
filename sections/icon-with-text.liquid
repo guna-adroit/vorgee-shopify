@@ -57,7 +57,13 @@
             {% for block in section.blocks %}
               <div class="vorgee-icon-text-item">
                 {% if block.settings.image != blank %}
+                  {% if block.settings.link != blank %}
+                    <a href="{{ block.settings.link }}">
+                  {% endif %}
                   {{ block.settings.image | image_url: width: 250 | image_tag  }}
+                  {% if block.settings.link != blank %}
+                  </a>
+                  {% endif %}
                 {% else %}
                   {{ 'image' | placeholder_svg_tag: 'placeholder-image' }}
                 {% endif %}
