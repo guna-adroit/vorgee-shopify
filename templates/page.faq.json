@@ -58,6 +58,59 @@
         "padding-block-end": 40
       }
     },
+    "faq_buttons_RMap7P": {
+      "type": "faq-buttons",
+      "blocks": {
+        "button_block_69Nmkm": {
+          "type": "button_block",
+          "settings": {
+            "label": "PRODUCT",
+            "faq-id": "faq-product",
+            "style": "secondary",
+            "open_in_new_window": false
+          }
+        },
+        "button_block_J9taNL": {
+          "type": "button_block",
+          "settings": {
+            "label": "LOGO CAPS",
+            "faq-id": "faq-logo-caps",
+            "style": "secondary",
+            "open_in_new_window": false
+          }
+        },
+        "button_block_tiVMCU": {
+          "type": "button_block",
+          "settings": {
+            "label": "ORDERS",
+            "faq-id": "faq-orders",
+            "style": "secondary",
+            "open_in_new_window": false
+          }
+        },
+        "button_block_tcjcCW": {
+          "type": "button_block",
+          "settings": {
+            "label": "DELIVERY",
+            "faq-id": "faq-delivery",
+            "style": "secondary",
+            "open_in_new_window": false
+          }
+        }
+      },
+      "block_order": [
+        "button_block_69Nmkm",
+        "button_block_J9taNL",
+        "button_block_tiVMCU",
+        "button_block_tcjcCW"
+      ],
+      "name": "FAQ Buttons row",
+      "settings": {
+        "heading": "",
+        "help_text": "",
+        "full_width": false
+      }
+    },
     "section_ieEV4p": {
       "type": "section",
       "blocks": {
@@ -99,6 +152,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "custom_classes": "faq-page",
+            "custom_id": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -667,6 +721,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "custom_classes": "faq-page",
+            "custom_id": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -1058,6 +1113,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "custom_classes": "faq-page",
+            "custom_id": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -1540,6 +1596,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "custom_classes": "faq-page",
+            "custom_id": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -1764,6 +1821,7 @@
   },
   "order": [
     "main",
+    "faq_buttons_RMap7P",
     "section_ieEV4p",
     "section_zDyYcy",
     "section_wVb3Cg",
