@@ -299,26 +299,62 @@
         });
       </script> {% endcomment %}
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const modal = document.getElementById('size-chart-modal');
-          const closeBtn = document.getElementById('close-size-chart');
+  document.addEventListener('DOMContentLoaded', function () {
+    // Function to initialize modal behavior for size chart
+    function initializeSizeChartModal(modalId, triggerId, closeId) {
+      const sizeChartTrigger = document.getElementById(triggerId);
+      const modal = document.getElementById(modalId);
+      const closeBtn = document.getElementById(closeId);
 
-          // Event delegation: Listen for click events on the document
-          // and check if the clicked target is the size-chart button
-          document.body.addEventListener('click', function (event) {
-            if (event.target && event.target.id === 'size-chart') {
-              modal.classList.add('modal-active');
-              document.body.classList.add('modal-active');
-            }
-            
-            // Close the modal if the close button or the outside area is clicked
-            if (event.target === closeBtn || event.target === modal) {
-              modal.classList.remove('modal-active');
-              document.body.classList.remove('modal-active');
-            }
-          });
+      if (sizeChartTrigger && modal && closeBtn) {
+        sizeChartTrigger.addEventListener('click', function () {
+          modal.classList.add('modal-active');
+          document.body.classList.add('modal-active');
         });
-      </script>
+
+        closeBtn.addEventListener('click', function () {
+          modal.classList.remove('modal-active');
+          document.body.classList.remove('modal-active');
+        });
+
+        window.addEventListener('click', function (event) {
+          if (event.target === modal) {
+            modal.classList.remove('modal-active');
+            document.body.classList.remove('modal-active');
+          }
+        });
+      }
+    }
+
+    // Initialize size chart modal for each product
+    function initializeQuickAddModals() {
+      // Get all the quick add buttons on the collection page
+      const quickAddButtons = document.querySelectorAll('.quick-add__button');
+
+      quickAddButtons.forEach((btn) => {
+        btn.addEventListener('click', function () {
+          const productId = btn.dataset.productId; // Assuming you have product ID as data attribute
+
+          // Create a unique modal for each product
+          const modalId = `size-chart-modal-${productId}`;
+          const triggerId = `size-chart-${productId}`;
+          const closeId = `close-size-chart-${productId}`;
+
+          // Display the modal content dynamically if not already visible
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'flex'; // Make sure modal is shown
+
+          // Initialize the modal functionality for the specific product
+          initializeSizeChartModal(modalId, triggerId, closeId);
+        });
+      });
+    }
+
+    // Run the initialization for the quick add modals
+    initializeQuickAddModals();
+  });
+</script>
+
 
 
       <script type="application/json">
