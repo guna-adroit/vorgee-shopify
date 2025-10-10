@@ -4494,7 +4494,7 @@ form._formFieldset_cit2d_82 {
 .colour-on-hover .vorgee-icon-text-item:hover {
     filter: none;
 }
-.variant-option__button-label input[checked]+span {
+.variant-option__button-label input[checked]+span.swatch {
     border: 4px solid #c1c1c1;
     border-style: double;
 }
