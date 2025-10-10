@@ -258,7 +258,7 @@
           "settings": {
             "image": "shopify://shop_images/Community_-_Kids_Alive_Do_The_Five.png",
             "title": "<h2>In and Out of the Pool</h2>",
-            "description": "<p>In and Out of the Pool</p><p>Our broader community involvement includes:</p><ol><li>Custom-designed product ranges that raise awareness and funds for important causes</li><li>Product, financial, and team support for community events, clinics, and programs</li><li>Support of clubs and swim communities across Australia</li></ol><p>We are incredibly thankful for our ongoing relationships with swim schools, national and state swimming bodies, coaches, clubs, and athletes. Swimming is more than a sport, it's a culture, a community, and a vital life skill. And we're proud to be part of it.</p><p><strong>Vorgee is here for the swimmers - and the community that makes swimming possible.</strong></p>",
+            "description": "<p>Our broader community involvement includes:</p><ul><li><strong>Custom-designed product ranges</strong> that raise awareness and funds for important causes</li><li><strong>Product, financial, and team support </strong>for community events, clinics, and programs</li><li><strong>Support of clubs and swim communities</strong> across Australia</li></ul><p>We are incredibly grateful for our ongoing relationships with swim schools, national swimming bodies, coaches, clubs, and athletes. Swimming is more than a sport; it's a culture and a community.</p><p><strong>Vorgee is here for the swimmers, and the community that makes swimming possible.</strong></p>",
             "image_alignment": "left"
           }
         }
@@ -276,7 +276,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/pastedImage-300x137.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -284,7 +284,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/hellofthewest.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -292,7 +292,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/seriestriathelon.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -300,7 +300,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Kids-alive.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -308,7 +308,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/masters-swimming-239x300.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -316,7 +316,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/NBCF_PARTNER_LOGO_COLOUR_RGB-300x153.jpg",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -324,7 +324,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/ocean-fit-300x193.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -332,7 +332,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/ocean-swim-300x290.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -340,7 +340,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/scta-300x80.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -348,7 +348,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Swim-Coaches-and-Teaches-Australia-Logo-22-300x154.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -356,7 +356,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Swimming-Brisbane-Web-Logo-01-300x183.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -364,7 +364,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/The-Event-Crew-Logo-300x194.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -372,7 +372,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Tri-pink-logo-21-01-01-300x194.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         },
@@ -380,7 +380,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Triathlon-QLD-logo-224x300.webp",
-            "title": "Welcome to my shop!",
+            "title": "",
             "description": ""
           }
         }
