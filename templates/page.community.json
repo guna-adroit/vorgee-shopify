@@ -66,7 +66,7 @@
           "settings": {
             "image": "shopify://shop_images/Community_-_Swim_Squad.png",
             "title": "<h2>Our Community Commitment</h2>",
-            "description": "<p>At Vorgee, giving back has always been part of who we are. We believe the strength and longevity of the swimming community depends on the support of those who live and breathe it, and we’re proud to play our part.<br/>Our commitment to the community focuses on three core pillars: health and safety, swim development and swim events - all essential to building confident, capable swimmers for life.</p>",
+            "description": "<p>At Vorgee, giving back has always been part of who we are. We recognise the important part it plays in the strength and longevity of the swimming community, which is why we’re committed to supporting the swimming and wider communities.</p><p>Our commitment to the community focuses on three core pillars:<strong> health and safety, swim development & performance, and education</strong> - all essential to building confident swimmers and the future of swimming. </p>",
             "image_alignment": "left"
           }
         },
@@ -75,7 +75,7 @@
           "settings": {
             "image": "shopify://shop_images/Community_-_National_Breast_Cancer_Foundation.png",
             "title": "<h2>Supporting the Foundations of Swimming in Australia</h2>",
-            "description": "<p>Vorgee is proud to support some of the organisations that are at the heart of Australian swimming:</p><ul><li><strong>Australian Swim Schools Association (ASSA)</strong> helping young swimmers build water confidence and safety from their very first lesson</li><li><strong>Kids Alive - Do the Five </strong>sharing life-saving water safety messages with children and families nationwide</li><li><strong>Masters Swimming Australia (MSA)</strong> empowering adult swimmers to stay fit, active, and connected through lifelong swimming</li><li><strong>Swim Coaches and Teachers Australia (SCTA</strong>) supporting the development of expert teachers and coaches across the country</li></ul><p>These partners shape the future of swimming in Australia, and we're honoured to stand alongside them.</p>",
+            "description": "<p>Vorgee is proud to support some of the organisations that are at the heart of Australian swimming:</p><ul><li><strong>Australian Swim Schools Association (ASSA)</strong> supporting the learn to swim industry that helps young swimmers build water confidence from their very first lesson</li><li><strong>Kids Alive - Do the Five</strong> sharing life-saving water safety messages with children and families nationwide</li><li><strong>Masters Swimming Australia (MSA)</strong> empowering adult swimmers to stay fit, active, and connected through lifelong swimming</li><li><strong>Swim Coaches and Teachers Australia (SCTA)</strong> supporting the development of expert teachers and coaches across the country</li></ul>",
             "image_alignment": "right"
           }
         }
@@ -160,7 +160,7 @@
             "text_bR3z6V": {
               "type": "text",
               "settings": {
-                "text": "<p>We’re also deeply committed to the National Breast Cancer Foundation, as a supporter of 18 years. This partnership is personal. Like many Australians, our team has been directly touched by breast cancer. Through awareness campaigns, fundraising, and custom product collaborations, we proudly support their research and vision of Zero Deaths from breast cancer. <br/></p>",
+                "text": "<p>We’re also deeply committed to the <strong>National Breast Cancer Foundation</strong>, as a supporter of 18 years. This partnership is personal. Like many Australians, our team has been directly affected by breast cancer. Through awareness campaigns, fundraising, and custom product collaborations, we proudly support NBCF’s research and vision of Zero Deaths from breast cancer. </p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -276,6 +276,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/pastedImage-300x137.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -283,6 +284,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/hellofthewest.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -290,6 +292,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/seriestriathelon.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -297,6 +300,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Kids-alive.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -304,6 +308,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/masters-swimming-239x300.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -311,6 +316,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/NBCF_PARTNER_LOGO_COLOUR_RGB-300x153.jpg",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -318,6 +324,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/ocean-fit-300x193.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -325,6 +332,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/ocean-swim-300x290.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -332,6 +340,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/scta-300x80.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -339,6 +348,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Swim-Coaches-and-Teaches-Australia-Logo-22-300x154.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -346,6 +356,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Swimming-Brisbane-Web-Logo-01-300x183.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -353,6 +364,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/The-Event-Crew-Logo-300x194.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -360,6 +372,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Tri-pink-logo-21-01-01-300x194.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         },
@@ -367,6 +380,7 @@
           "type": "icon_text",
           "settings": {
             "image": "shopify://shop_images/Triathlon-QLD-logo-224x300.webp",
+            "title": "Welcome to my shop!",
             "description": ""
           }
         }
