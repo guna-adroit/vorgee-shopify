@@ -1340,7 +1340,7 @@ table.size-chart-table {
   text-align: center !important;
 }
 .size-chart-table tr {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000 !important;
   border-color: #000;
 }
 /* Size Chart Table CSS end */
