@@ -1334,6 +1334,8 @@ table.size-chart-table {
 }
 .size-chart-table th {
   background-color: #19C0D5;
+  font-weight: 800;
+  color: #000;
 }
 .size-chart-table td, .size-chart-table th {
   border-right: 1px solid #000;
