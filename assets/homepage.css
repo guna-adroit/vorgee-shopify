@@ -1330,16 +1330,17 @@ button#toggleBtn {
 
 /* Size CHart Table CSS Start */
 table.size-chart-table {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 .size-chart-table th {
   background-color: #19C0D5;
 }
 .size-chart-table td, .size-chart-table th {
-    border-right: 1px solid #000;
+  border-right: 1px solid #000;
+  text-align: center !important;
 }
 .size-chart-table tr {
-    border-bottom: 1px solid #000;
-    border-color: #000;
+  border-bottom: 1px solid #000;
+  border-color: #000;
 }
 /* Size Chart Table CSS end */
