@@ -1323,3 +1323,7 @@ button#toggleBtn {
 .about-why-choose-subtitle h3{
   font-size: 25px !important;
 }
+
+.quick-add-modal .size-option-button{
+  display: none;
+}
