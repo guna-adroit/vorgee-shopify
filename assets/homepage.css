@@ -1325,5 +1325,5 @@ button#toggleBtn {
 }
 
 .quick-add-modal .size-option-button{
-  display: none;
+  display: none !important;
 }
