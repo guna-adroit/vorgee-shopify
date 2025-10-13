@@ -1327,3 +1327,13 @@ button#toggleBtn {
 .quick-add-modal .size-option-button{
   display: none !important;
 }
+
+/* Size CHart Table CSS Start */
+.size-chart-table th {
+  background-color: #19C0D5;
+}
+.size-chart-table td, .size-chart-table th {
+    border-right: 1px solid #000;
+}
+
+/* Size Chart Table CSS end */
