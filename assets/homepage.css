@@ -849,7 +849,7 @@ body.modal-active .header-section:has(> #header-component[sticky='always']){
   border: 1px solid #d1d1d1;
 }
 div#scfw_size-chart-tab-1{
-  overflow: scroll;
+  overflow: auto;
 }
 p.quantity-option-title {
     color: #121212;
