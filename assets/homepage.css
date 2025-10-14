@@ -1346,3 +1346,6 @@ table.size-chart-table {
   border-color: #000;
 }
 /* Size Chart Table CSS end */
+.collection-button-group{
+  width: 100%;
+}
