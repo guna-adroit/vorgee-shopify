@@ -1350,3 +1350,6 @@ table.size-chart-table {
 .collection-button-group{
   width: 100%;
 }
+.collapsible__content--inner-block ul li, .collapsible__content--inner-block ol li{
+  font-size: 16px;
+}
