@@ -314,6 +314,7 @@ search-button.search-action{
   font-weight: 600;
   font-size: 25px !important;
   line-height: 30px;
+  max-width: 100%;
 }
 .product-card-title p, .product-card .text-block p{
 font-weight: 300;
