@@ -1353,4 +1353,9 @@ table.size-chart-table {
 .collapsible__content--inner-block ul li, .collapsible__content--inner-block ol li{
   font-size: 16px;
 }
+@media screen and (min-width: 820px){
+  .custom-collection-banner-block{
+    --section-min-height: 640px !important;
+  }
+}
 
