@@ -1353,14 +1353,4 @@ table.size-chart-table {
 .collapsible__content--inner-block ul li, .collapsible__content--inner-block ol li{
   font-size: 16px;
 }
-.facets__inputs-wrapper::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaaaaa; /* or add it to the track */
-}
-.facets__inputs-wrapper::-webkit-scrollbar-thumb {
-  background: black;
-}
-::-webkit-scrollbar-button {
-  display: none; /* Chrome, Edge, Safari */
-}
+
