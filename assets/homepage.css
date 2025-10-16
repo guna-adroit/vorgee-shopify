@@ -1361,3 +1361,6 @@ table.size-chart-table {
 .facets__inputs-wrapper::-webkit-scrollbar-thumb {
   background: black;
 }
+::-webkit-scrollbar-button {
+  display: none; /* Chrome, Edge, Safari */
+}
