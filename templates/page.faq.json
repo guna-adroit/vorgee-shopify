@@ -415,6 +415,48 @@
                 "text_4HjamL"
               ]
             },
+            "accordion_row_my8fiD": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What size swimwear is right for me?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_GXCHWX": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our swimwear is designed for swimmers who want performance and durability. Every piece is made from chlorine-resistant fabric, giving you long-lasting wear and colour that stands up to regular pool use. </p><p>Because it’s built for a <strong>firm, ‘squad’ fit</strong>, you may find the sizing feels more snug than fashion swimwear. We recommend: </p><ul><li>Choosing your usual size for a firm performance style fit. </li><li>Considering sizing up if you’re between sizes or prefer a looser fit  </li><li>Girls and women with longer torsos may benefit from sizing up for added comfort and ease of movement. </li></ul><p>Please refer to our size charts <a href=\"/pages/size-guide\" title=\"Size Guide\"><strong>here</strong></a> or on each product’s page. If you require further help with sizing, please get in touch <a href=\"/pages/contact\" title=\"Contact\"><strong>here</strong></a> or by emailing <a href=\"mailto:enquiries@vorgee.com\" target=\"_blank\"><span style=\"text-decoration:underline\">enquiries@vorgee.com</span></a>. </p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "custom_classes": "",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "font_weight": "400",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_GXCHWX"
+              ]
+            },
             "accordion_row_HUx4Vm": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
@@ -638,6 +680,7 @@
             "accordion_row_xhAKhN",
             "accordion_row_PmkkDi",
             "accordion_row_gjwig9",
+            "accordion_row_my8fiD",
             "accordion_row_HUx4Vm",
             "accordion_row_KgAmEi",
             "accordion_row_HwhfXQ",
