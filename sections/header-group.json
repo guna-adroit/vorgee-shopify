@@ -15,7 +15,7 @@
       "type": "announcement-bar-static",
       "name": "Announcement Bar Static",
       "settings": {
-        "announcement_text": "Spring Sale Up to 10% Off Code：SPRING10",
+        "announcement_text": "",
         "menu_links": "top-bar-menu",
         "color_scheme": "",
         "background_color": "#f4f4f4",
