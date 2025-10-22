@@ -4306,7 +4306,7 @@ span.cart-drawer__heading.h3{
     line-height: 28px;
 }
 .product-card .product-media {
-    padding: 15px;
+    padding: 0px;
 }
 .slideshow-control .svg-wrapper.icon-arrow {
     color: #ffffff;
