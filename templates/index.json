@@ -1128,7 +1128,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "SHOP NOW!",
-                "link": "shopify://collections/all",
+                "link": "shopify://collections/missile-goggles",
                 "open_in_new_tab": false,
                 "style_class": "custom-btn",
                 "width": "fit-content",
