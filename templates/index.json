@@ -398,7 +398,7 @@
                 "text_7EHfYp": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Vorgee’s swim goggles and equipment will get you in the zone and keep you there.</p>",
+                    "text": "<p>Swim goggles designed to get you in the zone and keep you there.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -426,7 +426,7 @@
                   "type": "button",
                   "settings": {
                     "label": "GET IN THE ZONE",
-                    "link": "shopify://collections/competition",
+                    "link": "shopify://collections/goggles",
                     "open_in_new_tab": false,
                     "style_class": "custom-btn",
                     "width": "fit-content",
