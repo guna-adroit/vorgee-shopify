@@ -1359,3 +1359,6 @@ table.size-chart-table {
   }
 }
 
+.slideshow-control:is(.icon-pause,.icon-play){
+  display: none;
+}
