@@ -4335,6 +4335,7 @@ h2[class*="ai-recently-viewed-title"] {
 }
 .product-media-container.media-fit img {
     object-fit: contain;
+    margin: 0;
 }
 @media screen and (max-width: 749px) {
   .cart-continue-btn.mobile-only {
