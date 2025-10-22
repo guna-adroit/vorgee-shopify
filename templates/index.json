@@ -1007,7 +1007,7 @@
       "custom_css": [],
       "name": "Product list",
       "settings": {
-        "collection": "goggles",
+        "collection": "trending",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 8,
