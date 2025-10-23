@@ -438,10 +438,12 @@
         if (colorOptions && colorOptions.values.length > 1) {
           const swatches = colorOptions.values.slice(0, 5).map(color => {
             const colorValue = color
-  .split('/')        // Split at '/' (creates an array)
-  .pop()             // Take the last part
-  .replace(/\s+/g, '') // Remove all spaces
-  .toLowerCase();  
+                              .split('/')              // split by '/'
+                              .pop()                   // take last part
+                              .split(' ')              // split by space
+                              .pop()                   // take last word
+                              .replace(/\s+/g, '')     // remove any leftover spaces (just in case)
+                              .toLowerCase(); 
             return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};" title="${color}"></div>`;
           }).join('');
           swatchesHtml = `<div class="ai-recently-viewed-variants-{{ ai_gen_id }}">${swatches}</div>`;
