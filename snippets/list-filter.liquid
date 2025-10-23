@@ -63,7 +63,6 @@
                   echo active_value_count
                 elsif active_value_count > 0 and active_value_count <= 3
                   for value in filter.active_values
-                    render 'swatch', swatch: value.swatch, mode: 'filter'
                   endfor
                 endif
               -%}
