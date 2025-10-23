@@ -67,7 +67,7 @@
   <a
     id="{{ product_card_id | md5 }}"
     {% unless onboarding %}
-      href="{{ product.selected_or_first_available_variant.url }}"
+      href="{{ product.selected_or_first_available_variant.url | within: collection}}"
       on:click="/navigateToProduct"
     {% endunless %}
     class="product-card__link"
