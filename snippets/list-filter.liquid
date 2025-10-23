@@ -137,7 +137,7 @@
           assign should_use_pills = true
 
           for value in filter.values
-            if value.label.size > 3
+            if value.label.size > 0
               assign should_use_pills = false
               break
             endif
