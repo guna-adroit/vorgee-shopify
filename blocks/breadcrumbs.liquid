@@ -140,7 +140,7 @@
     {% elsif collection %}
       <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
         {{ block.settings.separator }}
-      </span>
+      </span> {{collection.metafields.custom.parent_collection }}
       {% if collection.metafields.custom.parent_collection != blank %}
         {% assign parent_collection = collection.metafields.custom.parent_collection %}
 
