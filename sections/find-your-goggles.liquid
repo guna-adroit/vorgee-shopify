@@ -132,45 +132,6 @@
     max-width: 100%;
     height: auto;
   }
-
-    @media screen and (max-width: 768px){
-        .custom-dropdown{
-            width: 100%;
-        }
-        .custom-dropdown-toggle{
-            font-size: 16px;
-        }
-        .find-my-goggles-field{
-            flex-direction: column;
-            gap: 2px;
-        }
-        .vorgee-my-goggles-bg-container{
-            height: calc(100vh - 155px);
-        }
-        .find-my-goggles-field label, .find-my-goggles-field select{
-            width: 100%;
-            text-align: left;
-            font-size: 16px;
-        }
-        .vorgee-find-goggles-form {
-            margin: 0 1.5rem;
-        }
-        .vorgee-find-goggles-form {
-            gap: 32px;
-        }
-    }
-</style>
-
-{% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
-{% assign zone_mappings = shop.metaobjects['find_my_goggles'].values %}
-
-<div id="find-my-goggles" class="find-my-goggles">
-  <div class="vorgee-find-goggles-bg-container">
-    <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Find_Your_Zone_Quiz_Background.png?v=1759749224" width="" height="" alt="">
-  </div>
-
-  <div class="vorgee-find-goggles-form-container section section--page-width">
-    <style>
   .custom-dropdown {
     position: relative;
     width: 70%;
@@ -226,7 +187,44 @@
   .custom-dropdown.open .custom-dropdown-menu {
     display: block;
   }
+    @media screen and (max-width: 768px){
+        .custom-dropdown{
+            width: 100%;
+        }
+        .custom-dropdown-toggle{
+            font-size: 16px;
+        }
+        .find-my-goggles-field{
+            flex-direction: column;
+            gap: 2px;
+        }
+        .vorgee-my-goggles-bg-container{
+            height: calc(100vh - 155px);
+        }
+        .find-my-goggles-field label, .find-my-goggles-field select{
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        .vorgee-find-goggles-form {
+            margin: 0 1.5rem;
+        }
+        .vorgee-find-goggles-form {
+            gap: 32px;
+        }
+    }
 </style>
+
+{% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
+{% assign zone_mappings = shop.metaobjects['find_my_goggles'].values %}
+
+<div id="find-my-goggles" class="find-my-goggles">
+  <div class="vorgee-find-goggles-bg-container">
+    <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Find_Your_Zone_Quiz_Background.png?v=1759749224" width="" height="" alt="">
+  </div>
+
+  <div class="vorgee-find-goggles-form-container section section--page-width">
+    
 
 <form class="vorgee-find-goggles-form">
 
