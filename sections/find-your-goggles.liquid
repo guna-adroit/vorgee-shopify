@@ -194,6 +194,14 @@
   .custom-dropdown.open .custom-dropdown-menu {
     display: block;
   }
+  .custom-dropdown-toggle .svg-wrapper {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.custom-dropdown.open .custom-dropdown-toggle .svg-wrapper {
+  transform: rotate(180deg);
+}
     @media screen and (max-width: 768px){
         .custom-dropdown{
             width: 100%;
