@@ -141,6 +141,19 @@
       <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
         {{ block.settings.separator }}
       </span>
+      {% if collection.metafields.custom.parent_collection != blank %}
+        {% assign parent_collection = collection.metafields.custom.parent_collection %}
+
+        <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
+          <a href="{{ parent_collection.url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
+            {{ parent_collection.title }}
+          </a>
+        </div>
+
+        <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
+          {{ block.settings.separator }}
+        </span>
+      {% endif %}
       <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
         <span class="ai-breadcrumb-current-{{ ai_gen_id }}" aria-current="page">
           {{ collection.title }}
