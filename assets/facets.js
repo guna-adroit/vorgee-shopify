@@ -564,7 +564,7 @@ class FacetStatusComponent extends Component {
       return;
     }
 
-    if (checkedInputElementsCount > 3) {
+    if (checkedInputElementsCount > 0) {
       facetStatus.innerHTML = checkedInputElementsCount.toString();
       facetStatus.classList.add('bubble', 'facets__bubble');
       return;
