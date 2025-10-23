@@ -438,7 +438,7 @@
         if (colorOptions && colorOptions.values.length > 1) {
           const swatches = colorOptions.values.slice(0, 5).map(color => {
             const colorValue = this.getColorValue(color);
-            return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};" title="${color}"></div>`;
+            return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${color};" title="${color}"></div>`;
           }).join('');
           swatchesHtml = `<div class="ai-recently-viewed-variants-{{ ai_gen_id }}">${swatches}</div>`;
         }
