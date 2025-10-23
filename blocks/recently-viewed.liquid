@@ -437,8 +437,12 @@
         let swatchesHtml = '';
         if (colorOptions && colorOptions.values.length > 1) {
           const swatches = colorOptions.values.slice(0, 5).map(color => {
-            const colorValue = this.getColorValue(color);
-            return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${color};" title="${color}"></div>`;
+            const colorValue = color
+  .split('/')        // Split at '/' (creates an array)
+  .pop()             // Take the last part
+  .replace(/\s+/g, '') // Remove all spaces
+  .toLowerCase();  
+            return `<div class="ai-recently-viewed-swatch-{{ ai_gen_id }}" style="background-color: ${colorValue};" title="${color}"></div>`;
           }).join('');
           swatchesHtml = `<div class="ai-recently-viewed-variants-{{ ai_gen_id }}">${swatches}</div>`;
         }
