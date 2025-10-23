@@ -142,7 +142,7 @@
         {{ block.settings.separator }}
       </span> 
       <p>{{ collection.metafields.custom.parent_collection.value }}</p>
-      {% if collection.metafields.custom.parent_collection != blank %}
+      {% if collection.metafields.custom.parent_collection.value != blank %}
         {% assign parent_collection = collection.metafields.custom.parent_collection %}
 
         <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
