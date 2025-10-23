@@ -148,6 +148,9 @@
     font-size: 28px;
     text-align: left;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
   {% comment %} .custom-dropdown-toggle::after {
@@ -252,7 +255,13 @@
   <div class="find-my-goggles-field">
     <label>What’s your goggles fit preference?</label>
     <div class="custom-dropdown" data-name="fit">
-      <button type="button" class="custom-dropdown-toggle">-- Select --</button>
+      <button type="button" class="custom-dropdown-toggle">-- Select --
+        <span class="svg-wrapper icon-caret icon-animated">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="var(--icon-stroke-width)" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+      </button>
       <div class="custom-dropdown-menu">
         <button type="button" data-value="snug">Snug: Sleek & low profile. Gasket fits firmly inside the eye socket.</button>
         <button type="button" data-value="mid">Mid: Firm & comfortable. Gasket fits securely inside the eye socket.</button>
@@ -266,7 +275,13 @@
   <div class="find-my-goggles-field">
     <label>You swim the most in:</label>
     <div class="custom-dropdown" data-name="swim_the_most">
-      <button type="button" class="custom-dropdown-toggle">-- Select --</button>
+      <button type="button" class="custom-dropdown-toggle">-- Select --
+        <span class="svg-wrapper icon-caret icon-animated">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="var(--icon-stroke-width)" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+      </button>
       <div class="custom-dropdown-menu">
         <button type="button" data-value="indoor-pools">Indoor pools</button>
         <button type="button" data-value="outdoor-pools">Outdoor pools</button>
