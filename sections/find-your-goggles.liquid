@@ -1,0 +1,211 @@
+<style>
+.find-my-goggles-field {
+  margin-bottom: 20px;
+}
+.find-my-goggles-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.custom-selected {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.custom-selected:hover {
+  border-color: #000;
+}
+
+.custom-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 10;
+  display: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.custom-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.custom-option:hover {
+  background: #f5f5f5;
+}
+
+.custom-dropdown.active .custom-options {
+  display: block;
+}
+
+#goggles-submit {
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#goggles-submit:hover {
+  background: #333;
+}
+
+/* Hide class reused from your logic */
+.hidden {
+  display: none;
+}
+</style>
+
+<div id="find-my-goggles" class="find-my-goggles">
+  <div class="vorgee-find-goggles-bg-container">
+    <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Find_Your_Zone_Quiz_Background.png?v=1759749224" alt="">
+  </div>
+
+  <div class="vorgee-find-goggles-form-container section section--page-width">
+    <form class="vorgee-find-goggles-form">
+
+      <!-- Swim Zone -->
+      <div class="find-my-goggles-field">
+        <label class="find-my-goggles-label">What’s your swim zone?</label>
+        <div class="custom-dropdown" data-name="swimzone">
+          <div class="custom-selected">-- Select --</div>
+          <div class="custom-options">
+            <div class="custom-option" data-value="Competition">Competition: I need goggles built for speed and performance.</div>
+            <div class="custom-option" data-value="Fitness">Fitness: I need goggles built for comfort and endurance.</div>
+            <div class="custom-option" data-value="Junior">Junior: I need goggles built for smaller faces who want to see it all.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fit -->
+      <div class="find-my-goggles-field">
+        <label class="find-my-goggles-label">What’s your goggles fit preference?</label>
+        <div class="custom-dropdown" data-name="fit">
+          <div class="custom-selected">-- Select --</div>
+          <div class="custom-options">
+            <div class="custom-option" data-value="Snug">Snug: Sleek & low profile. Gasket sits and fits firmly inside the eye socket.</div>
+            <div class="custom-option" data-value="Mid">Mid: Firm & comfortable. Gasket sits and fits securely inside the eye socket.</div>
+            <div class="custom-option" data-value="Broad">Broad: Classic & wide. Universally shaped gasket sits and fits securely outside the eye socket.</div>
+            <div class="custom-option" data-value="Mask">Mask: Soft & secure. Super soft gasket sits and fits securely from brow line to tip of cheek.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swim the most -->
+      <div class="find-my-goggles-field">
+        <label class="find-my-goggles-label">You swim the most in:</label>
+        <div class="custom-dropdown" data-name="swim_the_most">
+          <div class="custom-selected">-- Select --</div>
+          <div class="custom-options">
+            <div class="custom-option" data-value="Indoor pools">Indoor pools</div>
+            <div class="custom-option" data-value="Outdoor pools">Outdoor pools</div>
+            <div class="custom-option" data-value="Open Waters">Open Waters</div>
+            <div class="custom-option" data-value="Any pool or body of water">Any pool or body of water</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="goggles-submit" type="button">Find My Goggles</button>
+    </form>
+  </div>
+</div>
+
+<div id="goggles-results" class="find-my-goggles-results section section--page-width">
+  <!-- Your existing Shopify zone mapping blocks remain the same -->
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const resultsContainer = document.getElementById("goggles-results");
+
+  // Custom dropdown logic
+  document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
+    const selected = dropdown.querySelector(".custom-selected");
+    const options = dropdown.querySelector(".custom-options");
+
+    selected.addEventListener("click", e => {
+      e.stopPropagation();
+      closeAllDropdowns(dropdown);
+      dropdown.classList.toggle("active");
+    });
+
+    options.querySelectorAll(".custom-option").forEach(option => {
+      option.addEventListener("click", () => {
+        selected.textContent = option.textContent;
+        selected.dataset.value = option.dataset.value;
+        dropdown.classList.remove("active");
+      });
+    });
+  });
+
+  // Close all dropdowns when clicking outside
+  document.addEventListener("click", () => closeAllDropdowns());
+
+  function closeAllDropdowns(except = null) {
+    document.querySelectorAll(".custom-dropdown").forEach(dd => {
+      if (dd !== except) dd.classList.remove("active");
+    });
+  }
+
+  function showProducts() {
+    const swimzoneVal = document.querySelector('[data-name="swimzone"] .custom-selected').dataset.value || "";
+    const fitVal = document.querySelector('[data-name="fit"] .custom-selected').dataset.value || "";
+    const swimMostVal = (document.querySelector('[data-name="swim_the_most"] .custom-selected').dataset.value || "").trim().replace(/\s+/g, "_");
+
+    // Hide all results
+    resultsContainer.querySelectorAll(".goggles-block").forEach(el => {
+      el.classList.add("hidden");
+    });
+
+    if (!swimzoneVal || !fitVal || !swimMostVal) return;
+
+    const targetId = `zone-${swimzoneVal}-${fitVal}-${swimMostVal}`;
+    console.log(targetId);
+    const targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      targetEl.classList.remove("hidden");
+      targetEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  document.getElementById("goggles-submit").addEventListener("click", function(e) {
+    e.preventDefault();
+    showProducts();
+  });
+});
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Find Your Goggles",
+  "class": "section-wrapper",
+  "tag": "section",
+  "settings": [],
+  
+  "presets": [
+    {
+        "name": "Find Your Goggles"
+    }
+  ]
+}
+{% endschema %} 
