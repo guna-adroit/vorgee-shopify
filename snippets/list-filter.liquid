@@ -55,13 +55,13 @@
             facet-type="swatches"
           >
             <span
-              class="facets__swatch-wrapper{% if active_value_count > 0 %} bubble facets__bubble{% endif %}"
+              class="facets__swatch-wrapper{% if active_value_count > 3 %} bubble facets__bubble{% endif %}"
               ref="facetStatus"
             >
               {%- liquid
-                if active_value_count > 0
+                if active_value_count > 3
                   echo active_value_count
-                elsif active_value_count > 0 and active_value_count <= 0
+                elsif active_value_count > 0 and active_value_count <= 3
                   for value in filter.active_values
                     render 'swatch', swatch: value.swatch, mode: 'filter'
                   endfor
@@ -137,7 +137,7 @@
           assign should_use_pills = true
 
           for value in filter.values
-            if value.label.size > 0
+            if value.label.size > 3
               assign should_use_pills = false
               break
             endif
@@ -173,7 +173,7 @@
 
             if is_image
               assign image_columns = 3
-              if filter.values.size < 0
+              if filter.values.size < 3
                 assign image_columns = filter.values.size
               endif
             endif
