@@ -165,24 +165,12 @@
       },
       "name": "Breadcrumb",
       "settings": {}
-    },
-    "custom_liquid_3GijgF": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<p>{{ collection.metafields.custom.parent_collection }}</p>",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
     "announcement_bar_static_4PF3QF",
     "header_section",
     "top_bar_icon_text_474R7D",
-    "breadcrumb_4ehWhU",
-    "custom_liquid_3GijgF"
+    "breadcrumb_4ehWhU"
   ]
 }
