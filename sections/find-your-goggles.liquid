@@ -187,6 +187,9 @@
   .custom-dropdown-menu button:hover {
     background: #95d8e7;
   }
+  .custom-dropdown-menu button.selected {
+    background: #95d8e7;
+}
 
   .custom-dropdown.open .custom-dropdown-menu {
     display: block;
@@ -349,10 +352,20 @@ document.addEventListener("DOMContentLoaded", function() {
     btn.addEventListener("click", function(e) {
       e.stopPropagation();
       const parent = this.closest(".custom-dropdown");
+
+      // Close others
       document.querySelectorAll(".custom-dropdown").forEach(d => {
         if (d !== parent) d.classList.remove("open");
       });
+
       parent.classList.toggle("open");
+
+      // 🔹 Highlight selected option when reopened
+      const name = parent.dataset.name;
+      const selectedValue = selections[name];
+      parent.querySelectorAll(".custom-dropdown-menu button").forEach(opt => {
+        opt.classList.toggle("selected", opt.dataset.value === selectedValue);
+      });
     });
   });
 
@@ -368,6 +381,13 @@ document.addEventListener("DOMContentLoaded", function() {
       parentDropdown.classList.remove("open");
 
       selections[name] = value;
+
+      // 🔹 Visually mark this option as selected
+      parentDropdown.querySelectorAll(".custom-dropdown-menu button").forEach(opt => {
+        opt.classList.remove("selected");
+      });
+      this.classList.add("selected");
+
       showProducts();
     });
   });
@@ -404,6 +424,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
 
 {% schema %}
 {
