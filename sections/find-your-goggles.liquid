@@ -141,43 +141,112 @@
   </div>
 
   <div class="vorgee-find-goggles-form-container section section--page-width">
-    <form class="vorgee-find-goggles-form">
-      <div class="find-my-goggles-field">
-        <label>What’s your swim zone?</label>
-        <select id="swimzone" name="swimzone">
-          <option value="">-- Select --</option>
-          <option value="competition">Competition: I need goggles built for speed and performance.</option>
-          <option value="fitness">Fitness: I need goggles built for comfort and endurance.</option>
-          <option value="junior">Junior: I need goggles built for smaller faces who want to see it all.</option>
-        </select>
+    <style>
+  .custom-dropdown {
+    position: relative;
+    width: 70%;
+  }
+
+  .custom-dropdown-toggle {
+    width: 100%;
+    padding: .25em 1em .25em 0;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    font-size: 28px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .custom-dropdown-toggle::after {
+    content: "▼";
+    float: right;
+    font-size: 18px;
+  }
+
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    color: black;
+    border-radius: 4px;
+    z-index: 100;
+    max-height: 240px;
+    overflow-y: auto;
+  }
+
+  .custom-dropdown-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .custom-dropdown-menu button:hover {
+    background: #eee;
+  }
+
+  .custom-dropdown.open .custom-dropdown-menu {
+    display: block;
+  }
+</style>
+
+<form class="vorgee-find-goggles-form">
+
+  <!-- Swim Zone -->
+  <div class="find-my-goggles-field">
+    <label>What’s your swim zone?</label>
+    <div class="custom-dropdown" data-name="swimzone">
+      <button type="button" class="custom-dropdown-toggle">-- Select --</button>
+      <div class="custom-dropdown-menu">
+        <button type="button" data-value="competition">Competition: I need goggles built for speed and performance.</button>
+        <button type="button" data-value="fitness">Fitness: I need goggles built for comfort and endurance.</button>
+        <button type="button" data-value="junior">Junior: I need goggles built for smaller faces who want to see it all.</button>
       </div>
+    </div>
+  </div>
 
-      <div class="find-my-goggles-field">
-        <label>What’s your goggles fit preference?</label>
-        <select id="fit" name="fit">
-          <option value="">-- Select --</option>
-          <option value="snug">Snug: Sleek & low profile. Gasket fits firmly inside the eye socket.</option>
-          <option value="mid">Mid: Firm & comfortable. Gasket fits securely inside the eye socket.</option>
-          <option value="broad">Broad: Classic & wide. Gasket fits outside the eye socket.</option>
-          <option value="mask">Mask: Soft & secure. Gasket fits from brow line to cheek.</option>
-        </select>
+  <!-- Fit Preference -->
+  <div class="find-my-goggles-field">
+    <label>What’s your goggles fit preference?</label>
+    <div class="custom-dropdown" data-name="fit">
+      <button type="button" class="custom-dropdown-toggle">-- Select --</button>
+      <div class="custom-dropdown-menu">
+        <button type="button" data-value="snug">Snug: Sleek & low profile. Gasket fits firmly inside the eye socket.</button>
+        <button type="button" data-value="mid">Mid: Firm & comfortable. Gasket fits securely inside the eye socket.</button>
+        <button type="button" data-value="broad">Broad: Classic & wide. Gasket fits outside the eye socket.</button>
+        <button type="button" data-value="mask">Mask: Soft & secure. Gasket fits from brow line to cheek.</button>
       </div>
+    </div>
+  </div>
 
-      <div class="find-my-goggles-field">
-        <label>You swim the most in:</label>
-        <select id="swim_the_most" name="swim_the_most">
-          <option value="">-- Select --</option>
-          <option value="indoor-pools">Indoor pools</option>
-          <option value="outdoor-pools">Outdoor pools</option>
-          <option value="open-waters">Open waters</option>
-          <option value="any-pool-or-body-of-water">Any pool or body of water</option>
-        </select>
+  <!-- Swim Environment -->
+  <div class="find-my-goggles-field">
+    <label>You swim the most in:</label>
+    <div class="custom-dropdown" data-name="swim_the_most">
+      <button type="button" class="custom-dropdown-toggle">-- Select --</button>
+      <div class="custom-dropdown-menu">
+        <button type="button" data-value="indoor-pools">Indoor pools</button>
+        <button type="button" data-value="outdoor-pools">Outdoor pools</button>
+        <button type="button" data-value="open-waters">Open waters</button>
+        <button type="button" data-value="any-pool-or-body-of-water">Any pool or body of water</button>
       </div>
+    </div>
+  </div>
 
-      <button id="goggles-submit" type="button">Find My Goggles</button>
-    </form>
+  <button id="goggles-submit" type="button">Find My Goggles</button>
+</form>
 
-    <p id="no-results">No matching goggles found.</p>
+<p id="no-results" style="display:none; text-align:center; color:white; font-size:24px; margin-top:20px;">No matching goggles found.</p>
+
   </div>
 </div>
 
@@ -213,30 +282,62 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const swimzone = document.getElementById("swimzone");
-  const fit = document.getElementById("fit");
-  const swimMost = document.getElementById("swim_the_most");
   const resultsContainer = document.getElementById("goggles-results");
   const noResults = document.getElementById("no-results");
+
+  let selections = {
+    swimzone: "",
+    fit: "",
+    swim_the_most: ""
+  };
 
   function normalize(val) {
     return val.toLowerCase().trim().replace(/\s+/g, "-");
   }
 
-  function showProducts() {
-    const swimzoneVal = normalize(swimzone.value);
-    const fitVal = normalize(fit.value);
-    const swimMostVal = normalize(swimMost.value);
+  // Toggle dropdowns
+  document.querySelectorAll(".custom-dropdown-toggle").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      const parent = this.closest(".custom-dropdown");
+      document.querySelectorAll(".custom-dropdown").forEach(d => {
+        if (d !== parent) d.classList.remove("open");
+      });
+      parent.classList.toggle("open");
+    });
+  });
 
-    // Hide all blocks first
+  // Select option
+  document.querySelectorAll(".custom-dropdown-menu button").forEach(option => {
+    option.addEventListener("click", function() {
+      const parentDropdown = this.closest(".custom-dropdown");
+      const toggle = parentDropdown.querySelector(".custom-dropdown-toggle");
+      const name = parentDropdown.dataset.name;
+      const value = this.dataset.value;
+
+      toggle.textContent = this.textContent;
+      parentDropdown.classList.remove("open");
+
+      selections[name] = value;
+      showProducts();
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function() {
+    document.querySelectorAll(".custom-dropdown").forEach(d => d.classList.remove("open"));
+  });
+
+  function showProducts() {
+    const { swimzone, fit, swim_the_most } = selections;
+
     resultsContainer.querySelectorAll(".goggles-block").forEach(el => el.classList.add("hidden"));
     noResults.style.display = "none";
 
-    if (!swimzoneVal || !fitVal || !swimMostVal) return;
+    if (!swimzone || !fit || !swim_the_most) return;
 
-    const targetId = `zone-${swimzoneVal}-${fitVal}-${swimMostVal}`;
+    const targetId = `zone-${normalize(swimzone)}-${normalize(fit)}-${normalize(swim_the_most)}`;
     console.log("Looking for:", targetId);
-
     const targetEl = document.getElementById(targetId);
 
     if (targetEl) {
@@ -247,13 +348,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  // Also trigger manually on button click
   document.getElementById("goggles-submit").addEventListener("click", function(e) {
     e.preventDefault();
     showProducts();
-  });
-
-  [swimzone, fit, swimMost].forEach(select => {
-    select.addEventListener("change", showProducts);
   });
 });
 </script>
