@@ -153,13 +153,20 @@
     },
     "find_your_zone_MtBtjJ": {
       "type": "find-your-zone",
+      "disabled": true,
       "name": "Find Your Zone",
+      "settings": {}
+    },
+    "find_your_goggles_qU97bL": {
+      "type": "find-your-goggles",
+      "name": "Find Your Goggles",
       "settings": {}
     }
   },
   "order": [
     "main",
     "form",
-    "find_your_zone_MtBtjJ"
+    "find_your_zone_MtBtjJ",
+    "find_your_goggles_qU97bL"
   ]
 }
