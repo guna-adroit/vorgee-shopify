@@ -1362,3 +1362,8 @@ table.size-chart-table {
 .slideshow-control:is(.icon-pause,.icon-play){
   display: none;
 }
+.facets--horizontal .facets__inputs-wrapper {
+    @media screen and (min-width: 750px) {
+      scrollbar-width: thin !important;
+    }
+  }
