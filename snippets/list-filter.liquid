@@ -59,7 +59,10 @@
               ref="facetStatus"
             >
               {%- liquid
+                if active_value_count > 0
                   echo active_value_count
+                
+                endif
               -%}
             </span>
           </facet-status-component>
@@ -72,7 +75,7 @@
               {% if active_value_count > 1 %}
                 class="bubble facets__bubble"
               {% endif %}
-              hide-when-empty xxx
+              hide-when-empty
               ref="facetStatus"
             >
               {%- liquid

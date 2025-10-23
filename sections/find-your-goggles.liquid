@@ -1,4 +1,209 @@
 <style>
+    .find-my-goggles{
+        position: relative;
+    }
+    .vorgee-find-goggles-bg-container{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .vorgee-find-goggles-bg-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .vorgee-find-goggles-bg-container::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 6;
+    }
+    .vorgee-find-goggles-form-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 7;
+    }
+    .vorgee-find-goggles-form-container label{
+        color: white;
+        font-size: 30px;
+    }
+    .vorgee-find-goggles-form-container select{
+        font-size: 30px;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    .vorgee-find-goggles-form-container select option{
+        color: black;
+        font-size: 16px;
+        font-family: 'boxed', sans-serif !important;
+        background: white;
+    }
+    .vorgee-find-goggles-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        height: 100%;
+    }
+    .find-my-goggles-field{
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjEyOS43cHgiIGhlaWdodD0iMTAwMHB4IiB2aWV3Qm94PSIwIDAgMjEyOS43IDEwMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIxMjkuNyAxMDAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTA2NC4yLDEwMDBMNTMuNSwyNDFjLTU5LjEtNDQuNC03MS0xMjguMy0yNi42LTE4Ny40YzQ0LjQtNTkuMSwxMjguMy03MSwxODcuNC0yNi42bDg1MC4xLDYzOC40bDg1MS4yLTYzOC40YzU5LjEtNDQuNCwxNDMtMzIuNCwxODcuNCwyNi44YzQ0LjMsNTkuMSwzMi40LDE0My0yNi44LDE4Ny40TDEwNjQuMiwxMDAweiIvPjwvZz48L3N2Zz4=);
+        background-position: center right;
+        background-size: 1em;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .find-my-goggles-field label{
+        width: 30%;
+        text-align: right;
+    }
+    .find-my-goggles-field select{
+        width: 70%;
+        vertical-align: middle;
+        font-weight: 600 !important;
+        appearance: none;
+        background: 0;
+        color: #FFF;
+        height: auto;
+        font-weight: 400;
+        padding: .25em 1em .25em 0;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTQuNXB4IiBoZWlnaHQ9IjQuOXB4IiB2aWV3Qm94PSIwIDAgMTQuNSA0LjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE0LjUgNC45OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwyLjRDMCwxLjEsMS4xLDAsMi41LDBsMCwwYzEuMywwLDIuNCwxLjEsMi40LDIuNGwwLDBjMCwxLjMtMS4xLDIuNC0yLjQsMi40bDAsMEMxLjEsNC45LDAsMy44LDAsMi40eiIvPjwvZz48L3N2Zz4=);
+        background-position: bottom left;
+        background-repeat: repeat-x;
+    }
+    .find-my-goggles-field select:focus{
+        outline: none;
+    }
+    button#goggles-submit {
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 15px 55px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    button#goggles-submit:hover{
+        background-color: rgb(115, 190, 196);
+        color: rgb(255, 255, 255);
+    }
+    .find-your-zone-results{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .find-your-zone-result-title{
+        text-align: center;
+        font-size: 36px;
+    }
+    .find-your-zone-result-title span{
+        font-weight: 300;
+    }
+    .collection-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    .product-card {
+        border: 1px solid #F1F1F1;
+        padding: 5px;
+    }
+    .find-your-zone-result-description{
+        font-size: 18px;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .find-my-goggles-results {
+        margin: 60px 0;
+    }
+    .find-my-goggles-result-title-container{
+      text-align: center;
+    }
+    .find-my-goggles-result-title-container h2{
+      margin: 0;
+    }
+    @media screen and (max-width: 768px){
+        .find-my-goggles-field{
+            flex-direction: column;
+            gap: 2px;
+        }
+        .vorgee-my-goggles-bg-container{
+            height: calc(100vh - 155px);
+        }
+        .find-my-goggles-field label, .find-my-goggles-field select{
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+        }
+        .vorgee-find-goggles-form {
+            margin: 0 1.5rem;
+        }
+        .find-your-zone-result-title{
+            font-size: 26px;
+        }
+        .collection-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .vorgee-find-goggles-form {
+            gap: 32px;
+        }
+        .find-your-zone-result-description{
+            font-size: 16px;
+        }
+    }
+</style>
+
+
+
+{% paginate shop.metaobjects['find_my_goggles'].values by 200 %}
+{% comment %}
+This block ensures Shopify loads up to 200 entries, so all mappings are available
+{% endcomment %}
+
+{% assign zone_mappings = shop.metaobjects['find_my_goggles'].values %}
+
+<style>
+  .goggles-block {
+    scroll-margin-top: 125px;
+  }
+  .goggles-block.hidden {
+    display: none;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .product-card {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+  }
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<style>
 .find-my-goggles-field {
   margin-bottom: 20px;
 }
@@ -76,7 +281,7 @@
 
 <div id="find-my-goggles" class="find-my-goggles">
   <div class="vorgee-find-goggles-bg-container">
-    <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Find_Your_Zone_Quiz_Background.png?v=1759749224" alt="">
+    <img src="https://cdn.shopify.com/s/files/1/0662/3136/9798/files/Find_Your_Zone_Quiz_Background.png?v=1759749224" width="" height="" alt="">
   </div>
 
   <div class="vorgee-find-goggles-form-container section section--page-width">
@@ -131,6 +336,8 @@
 <div id="goggles-results" class="find-my-goggles-results section section--page-width">
   <!-- Your existing Shopify zone mapping blocks remain the same -->
 </div>
+
+{% endpaginate %}
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
