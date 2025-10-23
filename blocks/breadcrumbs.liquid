@@ -90,7 +90,7 @@
   <nav class="ai-breadcrumb-nav-{{ ai_gen_id }}" aria-label="Breadcrumb navigation">
     <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
       <a href="{{ routes.root_url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
-        {{ block.settings.home_text }} 1
+        {{ block.settings.home_text }}
       </a>
     </div>
 
@@ -141,9 +141,8 @@
       <span class="ai-breadcrumb-separator-{{ ai_gen_id }}" aria-hidden="true">
         {{ block.settings.separator }}
       </span> 
-      <p>{{ collection.metafields.custom.parent_collection.value }}</p>
       {% if collection.metafields.custom.parent_collection.value != blank %}
-        {% assign parent_collection = collection.metafields.custom.parent_collection %}
+        {% assign parent_collection = collection.metafields.custom.parent_collection.value %}
 
         <div class="ai-breadcrumb-item-{{ ai_gen_id }}">
           <a href="{{ parent_collection.url }}" class="ai-breadcrumb-link-{{ ai_gen_id }}">
