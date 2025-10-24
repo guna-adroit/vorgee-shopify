@@ -2,16 +2,33 @@
 
 <button
   type="submit"
-  class="button submit-button size-style {{ block.settings.style_class }}"
+  class="button submit-button size-style {{ block.settings.style_class }} custom-btn-2"
   style="{% render 'size-style', settings: block.settings %}"
   {{ block.shopify_attributes }}
 >
   {{ block.settings.label }}
+  <span class="icon-round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+    <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </span>
 </button>
 
 {% stylesheet %}
   .submit-button {
     min-width: max-content;
+  }
+  button.submit-button.size-style.custom-btn-2{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 21px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    background-color: #07BED4;
+    color: #333;
   }
 {% endstylesheet %}
 
