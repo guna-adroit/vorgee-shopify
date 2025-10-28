@@ -1705,7 +1705,7 @@
                 "text_yax8yQ": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>---</p>",
+                    "text": "<p>Log in to your account and head to <strong>My Orders</strong> to see your recent purchases and tracking details. </p><p>You’ll also get an email once your order has shipped (don’t forget to check your junk or spam folder in case it lands there).<br/><br/>Can’t find what you need? Email us at <a href=\"mailto:enquiries@vorgee.com\" title=\"mailto:enquiries@vorgee.com\"><strong>enquiries@vorgee.com </strong></a>and we’ll be happy to help.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
