@@ -911,11 +911,27 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "067ad07a8928e0cb04b3": {
+      "type": "apps",
+      "blocks": {
+        "649cd4dd-daaa-44db-86ab-76480bc6078b": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "649cd4dd-daaa-44db-86ab-76480bc6078b"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "section_idLfFX",
     "main",
+    "067ad07a8928e0cb04b3",
     "product_recommendations_qggXJq",
     "section_HydqgY"
   ]
