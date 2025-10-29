@@ -529,7 +529,7 @@
                     "text_AEUq7f": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                        "text": "<p>Got a question? Please email us at <a href=\"mailto:enquiries@vorgee.com\" title=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> or fill in our<br/>contact form <a href=\"/pages/contact\" title=\"Contact\"><strong>here </strong></a></p>",
                         "width": "100%",
                         "max_width": "none",
                         "alignment": "left",
