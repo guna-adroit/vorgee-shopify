@@ -611,8 +611,17 @@
             "accordion_CXxcbH",
             "ai_gen_block_0c3e309_jHNfnt"
           ]
+        },
+        "68573898-70c9-48dd-8c67-37467459e62d": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
+      "block_order": [
+        "68573898-70c9-48dd-8c67-37467459e62d"
+      ],
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
