@@ -136,7 +136,7 @@
         "gap": 12,
         "custom_class": "custom-collection-banner-block",
         "section_width": "page-width",
-        "section_height": "small",
+        "section_height": "large",
         "section_height_custom": 50,
         "color_scheme": "scheme-1",
         "background_media": "image",
