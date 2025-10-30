@@ -67,7 +67,11 @@
       {%- else -%}
         {{
           block.settings.video_1
-          | video_tag: image_size: '3840x', autoplay: true, loop: true, controls: false, muted: true, class: 'slide__video'
+          | video_tag: image_size: '3840x', autoplay: true, loop: true, controls: false, muted: true, class: 'slide__video desktop_video'
+        }}
+        {{
+          block.settings.video_2
+          | video_tag: image_size: '3840x', autoplay: true, loop: true, controls: false, muted: true, class: 'slide__video mobile_video'
         }}
       {%- endif -%}
     {%- else -%}
@@ -114,6 +118,22 @@
       display: none;
     }
     .mobile_slide_image{
+        display: block;
+      }
+  }
+</style>
+{% endif %}
+
+{% if block.settings.video_2 != blank %}
+<style>
+  .mobile_video{
+    display: none;
+  }
+  @media screen and (max-width: 600px){
+    .desktop_video{
+      display: none;
+    }
+    .mobile_video{
         display: block;
       }
   }
@@ -202,6 +222,12 @@
       "type": "video",
       "id": "video_1",
       "label": "t:settings.video",
+      "visible_if": "{{ block.settings.media_type_1 == 'video' }}"
+    },
+    {
+      "type": "video",
+      "id": "video_2",
+      "label": "Mobile Video",
       "visible_if": "{{ block.settings.media_type_1 == 'video' }}"
     },
     {
