@@ -1256,6 +1256,9 @@ button#toggleBtn {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .banner-collection-description.expanded {
+    -webkit-line-clamp: unset; 
+  }
   button#toggleBtn {
     display: block;
   }
