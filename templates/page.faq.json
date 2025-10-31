@@ -218,7 +218,7 @@
                 "text_Pqtn3E": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Swimming pools can be tough on equipment, and that’s a good thing! Chlorine and other pool chemicals keep the water clean and safe for use, but they can also be harsh on fabric, silicone, and rubber. </p><p>To help your Vorgee gear go the distance: </p><ul><li>Rinse well after every swim with fresh, cold water to wash away chlorine or salt residue </li><li>Dry thoroughly in the shade before storing and avoid leaving items damp in your swim bag for too long. If you must store before dry, use breathable mesh bags or pouches.  </li><li>Handle with care by avoiding rough surfaces or excessive stretching of straps and caps. </li><li>Store in a cool, dry place, ideally using cases or pouches provided. </li></ul><p>With the right care, your goggles, swimwear, and equipment will stay fresher, perform better, and last longer! </p>",
+                    "text": "<p>Swimming pools can be tough on equipment, and that’s a good thing! Chlorine and other pool chemicals keep the water clean and safe for use, but they can also be harsh on fabric, silicone, and rubber. </p><p>To help your Vorgee gear go the distance: </p><ul><li>Rinse well after every swim with fresh, cold water to wash away chlorine or salt residue </li><li>Dry thoroughly in the shade before storing and avoid leaving items damp in your swim bag for too long. If you must store before dry, use breathable mesh bags or pouches.  </li><li>Handle with care by avoiding rough surfaces or excessive stretching of straps and caps. </li><li>Store in a cool, dry place, ideally using cases or pouches provided. </li></ul><p>With the right care, your goggles, swimwear, and equipment can perform better for longer! </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -335,7 +335,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "I left my goggles in the car* (*insert any other spot where they’re subject to heat) and the seal is bent out of shape; can I save them?  ",
+                "heading": "I left my goggles out in the sun/in the car* (*any hot environment) and the seal is bent out of shape; can I save them?  ",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -344,7 +344,7 @@
                 "text_GDkFpr": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm/hot (not boiling) water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face.  </p>",
+                    "text": "<p>Typically, yes! Most of our goggles feature a super soft silicone to help the goggles mould to your face. However, this does mean they’re susceptible to getting bent out of shape when in less ideal environments (aren’t we all?!). To rescue your goggles, simply run warm water over the gaskets for a few minutes. Once the goggles have cooled slightly, and it’s safe to do so, wear the goggles for about 10 minutes so they can re-mould to your face. Et voilà!  </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
