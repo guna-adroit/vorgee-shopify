@@ -905,7 +905,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Can you print multiple logos or designs on oneorder?",
+                "heading": "Can you print multiple logos or designs on one order?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
