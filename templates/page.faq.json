@@ -1696,7 +1696,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "How can Itrack my order?",
+                "heading": "How can I track my order?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
