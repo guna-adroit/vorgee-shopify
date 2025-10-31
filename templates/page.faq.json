@@ -947,7 +947,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "How do we order logo printedcaps?",
+                "heading": "How do we order logo printed caps?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -1654,7 +1654,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Do you shipinternationally?",
+                "heading": "Do you ship internationally?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
