@@ -197,11 +197,13 @@
                 "price_range_z4KNJP": {
                   "type": "price-range",
                   "name": "Price Range",
+                  "disabled": true,
                   "settings": {},
                   "blocks": {}
                 },
                 "price_tVjtKg": {
                   "type": "price",
+                  "disabled": true,
                   "settings": {
                     "show_sale_price_first": true,
                     "show_installments": false,
@@ -272,6 +274,7 @@
             },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
+              "disabled": true,
               "settings": {
                 "stacking": true,
                 "show_pickup_availability": false,
