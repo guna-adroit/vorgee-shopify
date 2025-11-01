@@ -1437,7 +1437,7 @@
                 "text_EcnxKW": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Order confirmation emails are sent automatically. If you’ve not received an email within 30 minutes of placing your order, please: </p><ul><li>Check your junk or spam email folders</li><li>Check you have been charged for the order</li><li>Check hat you have supplied the correct email address at checkout If you can confirm you have been charged, please email <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> with the order email address and time/date the order was placed. </li></ul>",
+                    "text": "<p>Order confirmation emails are sent automatically. If you’ve not received an email within 30 minutes of placing your order, please: </p><ul><li>Check your junk or spam email folders</li><li>Check you have been charged for the order</li><li>Check that you have supplied the correct email address at checkout </li></ul><p>If you can confirm you have been charged, please email <a href=\"mailto:enquiries@vorgee.com\">enquiries@vorgee.com</a> with the order email address and time/date the order was placed. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
