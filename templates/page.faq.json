@@ -1353,7 +1353,7 @@
                 "text_dPLXU7": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the items returns to stock.  </p>",
+                    "text": "<p>We’re sorry we don’t have the item you’re seeking. To be notified when the item is back in stock, please click the notify me button on the product page and enter your email address.  </p><p>If there’s a system error or we sell out after you’ve placed your order, we will immediately contact you with alternatives, and/or a full refund. We will also sign you up to the waitlist, so you’re notified as soon as the item returns to stock.  </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
