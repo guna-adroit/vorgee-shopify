@@ -75,51 +75,12 @@
             "custom_liquid": "{% if collection.description != blank %}\n<button class=\"collection-show-more-btn\" id=\"toggleBtn\">Show more</button>\n{% endif %}"
           },
           "blocks": {}
-        },
-        "ai_gen_block_510643c_wwBbeU": {
-          "type": "ai_gen_block_510643c",
-          "settings": {
-            "alignment": "flex-start",
-            "gap": 15,
-            "stack_on_mobile": false,
-            "mobile_gap": 10,
-            "min_width": 140,
-            "padding_vertical": 10,
-            "padding_horizontal": 30,
-            "font_size": 16,
-            "font_weight": "500",
-            "border_width": 2,
-            "background_color": "#050000",
-            "hover_background_color": "#ffffff",
-            "button_1_text": "MEN",
-            "button_1_link": "shopify://collections/men-swimwear",
-            "button_1_classes": "",
-            "button_1_style": "outline",
-            "button_2_text": "WOMEN",
-            "button_2_link": "shopify://collections/women-swimwear",
-            "button_2_classes": "",
-            "button_2_style": "outline",
-            "button_3_text": "BOYS",
-            "button_3_link": "shopify://collections/boys-swimwear",
-            "button_3_classes": "",
-            "button_3_style": "outline",
-            "button_4_text": "GIRLS",
-            "button_4_link": "shopify://collections/girls-swimwear",
-            "button_4_classes": "",
-            "button_4_style": "outline",
-            "button_5_text": "",
-            "button_5_link": "",
-            "button_5_classes": "",
-            "button_5_style": "outline"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "text_tqQTNE",
         "text_twGGkJ",
-        "custom_liquid_TbHTCz",
-        "ai_gen_block_510643c_wwBbeU"
+        "custom_liquid_TbHTCz"
       ],
       "custom_css": [
         ".spacing-style.text-block p {color: white;}"
