@@ -956,7 +956,7 @@
                 "text_NTp8kw": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Simply contact us to get in touch with our team to discuss your requirements. We’ll guide you through the (very easy) process and provide digital artwork proofs before production. </p>",
+                    "text": "<p>Simply <a href=\"/pages/contact\" title=\"Contact\">contact us</a> to get in touch with our team to discuss your requirements. We’ll guide you through the (very easy) process and provide digital artwork proofs before production. </p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
