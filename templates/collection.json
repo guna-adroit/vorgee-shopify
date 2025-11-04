@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Collection title",
           "settings": {
-            "text": "<p>{{ closest.collection.title }}</p>",
+            "text": "<p>Designed for racing, fuelled by colour.<br/><br/><br/></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
