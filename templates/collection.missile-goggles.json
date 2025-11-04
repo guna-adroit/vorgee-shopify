@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Collection title",
           "settings": {
-            "text": "<p>{{ closest.collection.title }}</p>",
+            "text": "<p>{{ closest.collection.metafields.custom.custom_title.value }}</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
