@@ -749,7 +749,7 @@
                 "text_V4K6qX": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>MAKE EVERY STROKE COUNT</h2>",
+                    "text": "<h2>DESIGNED FOR RACING, FULLED BY COLOUR <br/></h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -776,7 +776,7 @@
                 "text_dyjedN": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>With the right goggles, swimwear, and equipment, you can train harder, swim smarter, and immerse yourself.</p>",
+                    "text": "<p>The Missile goggles are designed to deliver a race-day fit with zero distractions </p>",
                     "width": "100%",
                     "max_width": "narrow",
                     "alignment": "left",
