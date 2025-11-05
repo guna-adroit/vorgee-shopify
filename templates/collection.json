@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Collection title",
           "settings": {
-            "text": "<p>Missile Gogle</p>",
+            "text": "<p>Missile Gogles</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
