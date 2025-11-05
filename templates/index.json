@@ -1307,7 +1307,7 @@
             "text_3tA4HH": {
               "type": "text",
               "settings": {
-                "text": "<h2>IMMERSE YOURSELF.  </h2>",
+                "text": "<p>DESIGNED FOR RACING, FUELLED BY COLOUR</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -1334,7 +1334,7 @@
             "text_wNeUd8": {
               "type": "text",
               "settings": {
-                "text": "<p>Swim goggles and equipment designed so you can immerse yourself in the joys of swimming.</p>",
+                "text": "<p>Shop our Missile range for a race-day fit with zero distractions</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -1386,8 +1386,8 @@
       ],
       "name": "Hero Banner",
       "settings": {
-        "hero_image": "shopify://shop_images/Homepage_-_middle_page_banner.png",
-        "mobile_image": "shopify://shop_images/Group_1000009051.png",
+        "hero_image": "shopify://shop_images/b53qLo1A.png",
+        "mobile_image": "shopify://shop_images/b53qLo1A.png",
         "color_scheme": "scheme-6",
         "heading": "Welcome to Our Store",
         "subheading": "Shop the latest collection",
