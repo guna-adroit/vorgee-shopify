@@ -1383,3 +1383,6 @@ table.size-chart-table {
       scrollbar-width: thin !important;
     }
   }
+.menu-drawer__featured-content{
+  z-index: 1 !important;
+}
