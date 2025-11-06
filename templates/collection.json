@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Collection title",
           "settings": {
-            "text": "<p>Fitness</p>",
+            "text": "<p>{{ closest.collection.title }}</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
