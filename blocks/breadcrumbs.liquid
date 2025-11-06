@@ -82,7 +82,7 @@
   {% endif %}
 </style>
 
-<breadcrumb-navigation-{{ ai_gen_id }}
+<breadcrumb-navigation
   class="ai-breadcrumb-{{ ai_gen_id }} section section--page-width"
   data-current-url="{{ request.url }}"
   {{ block.shopify_attributes }}
@@ -233,7 +233,7 @@
       </div>
     {% endif %}
   </nav>
-</breadcrumb-navigation-{{ ai_gen_id }}>
+</breadcrumb-navigation>
 
 <script>
   (function() {
@@ -319,7 +319,7 @@
       }
     }
 
-    customElements.define('breadcrumb-navigation-{{ ai_gen_id }}', BreadcrumbNavigation{{ ai_gen_id }});
+    customElements.define('breadcrumb-navigation', BreadcrumbNavigation);
   })();
 </script>
 
