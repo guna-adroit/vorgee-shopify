@@ -1384,8 +1384,8 @@ table.size-chart-table {
     }
   }
 .menu-drawer__featured-content{
-  z-index: 1 !important;
+  z-index: 4 !important;
 }
 .menu-drawer__submenu{
-  z-index: 2 !important;
+  z-index: 6 !important;
 }
