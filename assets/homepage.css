@@ -1392,3 +1392,6 @@ table.size-chart-table {
 .menu-drawer__submenu{
   z-index: 6 !important;
 }
+.shopify-app-block {
+    width: 100%;
+}
