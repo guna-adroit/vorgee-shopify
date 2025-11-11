@@ -1157,7 +1157,7 @@
         "heading": "Welcome to Our Store",
         "subheading": "Shop the latest collection",
         "button_text": "Shop Now",
-        "button_link": "",
+        "button_link": "shopify://collections/missile-goggles",
         "gradient_color_start": "#00000080",
         "gradient_color_end": "rgba(0,0,0,0)"
       }
