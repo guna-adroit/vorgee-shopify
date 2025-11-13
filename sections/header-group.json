@@ -15,7 +15,7 @@
       "type": "announcement-bar-static",
       "name": "Announcement Bar Static",
       "settings": {
-        "announcement_text": "",
+        "announcement_text": "FREE SHIPPING FOR ORDERS OVER $150!",
         "menu_links": "top-bar-menu",
         "color_scheme": "",
         "background_color": "#f4f4f4",
