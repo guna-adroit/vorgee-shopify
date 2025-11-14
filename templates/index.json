@@ -18,6 +18,7 @@
           "settings": {
             "media_type_1": "video",
             "video_1": "shopify://files/videos/458VA_Vorgee_Campaign_FamilyAnimation_2560x1440_HD.mp4",
+            "video_2": "shopify://files/videos/458VA_Vorgee_Campaign_FamilyAnimation_1600x1200_Compressed_HD.mp4",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
