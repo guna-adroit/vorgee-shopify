@@ -95,7 +95,12 @@
     <span></span>
   </div>
   <div class="v-announcement-text">
-    {{ section.settings.announcement_text }}
+    {% if section.settings.announcement_text contains 'CHRISTMAS' %}
+  <a href="/pages/shipping-policy" style="color: inherit; text-decoration: none;">{{ section.settings.announcement_text }}</a>
+{% else %}
+  {{ section.settings.announcement_text }}
+{% endif %}
+
   </div>
   <div class="v-menu-links v-announcement-right hide-mobile">
     {% for link in section.settings.menu_links.links %}

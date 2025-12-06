@@ -15,6 +15,18 @@
       "type": "announcement-bar-static",
       "name": "Announcement Bar Static",
       "settings": {
+        "announcement_text": "CHRISTMAS CUT OFF & HOLIDAY CLOSURE DATES - CLICK HERE!",
+        "menu_links": "",
+        "color_scheme": "",
+        "background_color": "#f4f4f4",
+        "text_color": "#333333",
+        "link_color": "#333333"
+      }
+    },
+    "announcement_bar_static_E8M4Ej": {
+      "type": "announcement-bar-static",
+      "name": "Announcement Bar Static",
+      "settings": {
         "announcement_text": "FREE SHIPPING FOR ORDERS OVER $150!",
         "menu_links": "top-bar-menu",
         "color_scheme": "",
@@ -169,6 +181,7 @@
   },
   "order": [
     "announcement_bar_static_4PF3QF",
+    "announcement_bar_static_E8M4Ej",
     "header_section",
     "top_bar_icon_text_474R7D",
     "breadcrumb_4ehWhU"
