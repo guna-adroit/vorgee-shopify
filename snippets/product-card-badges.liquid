@@ -20,6 +20,7 @@
       class="
         product-badges__badge product-badges__badge--rectangle
         {% if product.available == false %} color-{{ settings.badge_sold_out_color_scheme }}{% elsif product.compare_at_price > product.price %} color-{{ settings.badge_sale_color_scheme }}{% endif %}
+         {%- if product.available == false -%} {%- if product.template_suffix == "non-purchasable-products" -%} badge-sold-out-hide {%- endif -%} {%- endif -%}
       "
     >
       {%- if product.available == false -%}
@@ -32,6 +33,9 @@
 </div>
 
 {% stylesheet %}
+  .badge-sold-out-hide{
+    display: none !important;
+  }
   .product-badges {
     position: absolute;
     z-index: var(--layer-flat);
