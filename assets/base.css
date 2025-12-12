@@ -4551,7 +4551,7 @@ background-image:
  .needsclick.kl-private-reset-css-Xuajs1 img {
     display: none;
 }
-div#klaviyo-bis-button-container > button {
+div#klaviyo-bis-button-container .kl-private-reset-css-Xuajs1 > button {
     height: 55px;
     padding: 0;
     margin-top: 10px;
