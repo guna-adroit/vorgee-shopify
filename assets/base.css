@@ -4556,3 +4556,8 @@ div#klaviyo-bis-button-container .kl-private-reset-css-Xuajs1 > button {
     padding: 0;
     margin-top: 10px;
 }
+@media screen and (max-width: 768px) {
+  div#klaviyo-bis-button-container .kl-private-reset-css-Xuajs1 > button {
+      height: 40px;
+  }
+}
