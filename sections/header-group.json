@@ -177,36 +177,6 @@
       },
       "name": "Breadcrumb",
       "settings": {}
-    },
-    "header_announcements_pppzey": {
-      "type": "header-announcements",
-      "blocks": {
-        "announcement_8LDkzW": {
-          "type": "_announcement",
-          "settings": {
-            "text": "OUR WAREHOUSE IS CLOSED FOR THE HOLIDAYS FROM 20.12.25 TO 04.01.26. ORDERS RECEIVED AFTER 12PM (AEST) 19.12.15 WILL BE PROCESSED FROM 05.01.26. CLICK HERE FOR MORE DETAILS. MERRY CHRISTMAS & HAPPY HOLIDAYS!",
-            "link": "https://vorgee.com/pages/shipping-policy",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_8LDkzW"
-      ],
-      "name": "t:names.announcement_bar",
-      "settings": {
-        "speed": 5,
-        "section_width": "page-width",
-        "color_scheme": "",
-        "divider_width": 0,
-        "padding-block-start": 15,
-        "padding-block-end": 15
-      }
     }
   },
   "order": [
@@ -214,7 +184,6 @@
     "announcement_bar_static_E8M4Ej",
     "header_section",
     "top_bar_icon_text_474R7D",
-    "breadcrumb_4ehWhU",
-    "header_announcements_pppzey"
+    "breadcrumb_4ehWhU"
   ]
 }
