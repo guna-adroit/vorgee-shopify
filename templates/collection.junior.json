@@ -95,52 +95,13 @@
             "button_4_style": "outline"
           },
           "blocks": {}
-        },
-        "ai_gen_block_510643c_wwBbeU": {
-          "type": "ai_gen_block_510643c",
-          "settings": {
-            "alignment": "flex-start",
-            "gap": 15,
-            "stack_on_mobile": false,
-            "mobile_gap": 10,
-            "min_width": 140,
-            "padding_vertical": 10,
-            "padding_horizontal": 30,
-            "font_size": 16,
-            "font_weight": "500",
-            "border_width": 2,
-            "background_color": "#050000",
-            "hover_background_color": "#ffffff",
-            "button_1_text": "SHOP ALL",
-            "button_1_link": "/collections/goggles",
-            "button_1_classes": "button-hide-desktop",
-            "button_1_style": "outline",
-            "button_2_text": "COMPETITION",
-            "button_2_link": "shopify://collections/competition-goggles",
-            "button_2_classes": "",
-            "button_2_style": "outline",
-            "button_3_text": "FITNESS",
-            "button_3_link": "shopify://collections/fitness-goggles",
-            "button_3_classes": "",
-            "button_3_style": "outline",
-            "button_4_text": "JUNIOR",
-            "button_4_link": "shopify://collections/junior-goggles",
-            "button_4_classes": "",
-            "button_4_style": "outline",
-            "button_5_text": "RECREATION",
-            "button_5_link": "shopify://collections/recreation-goggles",
-            "button_5_classes": "",
-            "button_5_style": "outline"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "text_tqQTNE",
         "text_twGGkJ",
         "custom_liquid_bCgRmk",
-        "collection_button_tPQWMf",
-        "ai_gen_block_510643c_wwBbeU"
+        "collection_button_tPQWMf"
       ],
       "custom_css": [
         ".spacing-style.text-block p {color: white;}"
