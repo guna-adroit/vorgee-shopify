@@ -67,20 +67,11 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "custom_liquid_TbHTCz": {
-          "type": "custom-liquid",
-          "name": "t:names.custom_liquid",
-          "settings": {
-            "custom_liquid": "{% if collection.description != blank %}\n<button class=\"collection-show-more-btn\" id=\"toggleBtn\">Show more</button>\n{% endif %}"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "text_tqQTNE",
-        "text_twGGkJ",
-        "custom_liquid_TbHTCz"
+        "text_twGGkJ"
       ],
       "custom_css": [
         ".spacing-style.text-block p {color: white;}"
