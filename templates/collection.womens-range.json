@@ -110,24 +110,6 @@
     "section_Be484w": {
       "type": "section",
       "blocks": {
-        "ai_gen_block_53d69a0_dKB8Un": {
-          "type": "ai_gen_block_53d69a0",
-          "settings": {
-            "home_text": "Home",
-            "separator": "/",
-            "font_size": 16,
-            "separator_size": 16,
-            "spacing": 10,
-            "current_font_weight": "500",
-            "background_color": "#ffffff",
-            "text_color": "#121212",
-            "current_color": "#121212",
-            "separator_color": "#121212",
-            "padding_top": 50,
-            "padding_bottom": 35
-          },
-          "blocks": {}
-        },
         "text_pKqJQm": {
           "type": "text",
           "name": "t:names.heading",
@@ -158,7 +140,6 @@
         }
       },
       "block_order": [
-        "ai_gen_block_53d69a0_dKB8Un",
         "text_pKqJQm"
       ],
       "name": "t:names.custom_section",
