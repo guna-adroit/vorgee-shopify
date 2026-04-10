@@ -1,88 +1,193 @@
 {% form 'contact' %}
   {{ form.errors | default_errors }}
 
-  <!-- Account Details -->
-  <div class="company-name">
-    <label for="company-name">Company Name</label>
-    <input type="text" name="contact[company_name]" id="company-name" required autocomplete="organization" />
+  <style>
+    .b2b-form { max-width: 640px; font-family: inherit; }
+
+    .b2b-form .form-section-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #888;
+      margin: 2rem 0 1rem;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .b2b-form .form-section-title:first-child { margin-top: 0; }
+
+    .b2b-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .b2b-form .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .b2b-form label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .b2b-form label .required { color: #c0392b; margin-left: 2px; }
+
+    .b2b-form input[type="text"],
+    .b2b-form input[type="email"],
+    .b2b-form input[type="tel"] {
+      height: 40px;
+      padding: 0 12px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .b2b-form input:focus {
+      border-color: #999;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .b2b-form fieldset {
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.25rem;
+      margin: 0;
+    }
+
+    .b2b-form fieldset legend {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #888;
+      padding: 0 8px;
+    }
+
+    .b2b-form .form-submit { margin-top: 1.5rem; }
+
+    .b2b-form .form-submit input[type="submit"] {
+      height: 42px;
+      padding: 0 28px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: inherit;
+      color: #fff;
+      background: #111;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .b2b-form .form-submit input[type="submit"]:hover { background: #333; }
+
+    @media (max-width: 480px) {
+      .b2b-form .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="b2b-form">
+
+    <p class="form-section-title">Account Details</p>
+
+    <div class="form-field">
+      <label for="company-name">Company Name <span class="required">*</span></label>
+      <input type="text" name="contact[company_name]" id="company-name" required autocomplete="organization" />
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="first-name">First Name <span class="required">*</span></label>
+        <input type="text" name="contact[first_name]" id="first-name" required autocomplete="given-name" />
+      </div>
+      <div class="form-field">
+        <label for="last-name">Last Name <span class="required">*</span></label>
+        <input type="text" name="contact[last_name]" id="last-name" required autocomplete="family-name" />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" name="contact[email]" id="email" required autocomplete="email" />
+    </div>
+
+    <div class="form-field">
+      <label for="account-number">Account Number</label>
+      <input type="text" name="contact[account_number]" id="account-number" />
+    </div>
+
+    <fieldset>
+      <legend>Company Shipping Address</legend>
+
+      <div class="form-row" style="margin-top: 12px;">
+        <div class="form-field">
+          <label for="shipping-first-name">First Name <span class="required">*</span></label>
+          <input type="text" name="contact[shipping_first_name]" id="shipping-first-name" required autocomplete="shipping given-name" />
+        </div>
+        <div class="form-field">
+          <label for="shipping-last-name">Last Name <span class="required">*</span></label>
+          <input type="text" name="contact[shipping_last_name]" id="shipping-last-name" required autocomplete="shipping family-name" />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="shipping-company">Company</label>
+        <input type="text" name="contact[shipping_company]" id="shipping-company" autocomplete="shipping organization" />
+      </div>
+
+      <div class="form-field">
+        <label for="shipping-address1">Address <span class="required">*</span></label>
+        <input type="text" name="contact[shipping_address1]" id="shipping-address1" required autocomplete="shipping address-line1" />
+      </div>
+
+      <div class="form-field">
+        <label for="shipping-address2">Apartment, suite, etc.</label>
+        <input type="text" name="contact[shipping_address2]" id="shipping-address2" autocomplete="shipping address-line2" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="shipping-city">City <span class="required">*</span></label>
+          <input type="text" name="contact[shipping_city]" id="shipping-city" required autocomplete="shipping address-level2" />
+        </div>
+        <div class="form-field">
+          <label for="shipping-state">State <span class="required">*</span></label>
+          <input type="text" name="contact[shipping_state]" id="shipping-state" required autocomplete="shipping address-level1" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="shipping-zip">Zip Code <span class="required">*</span></label>
+          <input type="text" name="contact[shipping_zip]" id="shipping-zip" required autocomplete="shipping postal-code" />
+        </div>
+        <div class="form-field">
+          <label for="shipping-phone">Phone Number <span class="required">*</span></label>
+          <input type="tel" name="contact[shipping_phone]" id="shipping-phone" required autocomplete="shipping tel" />
+        </div>
+      </div>
+
+    </fieldset>
+
+    <div class="form-submit">
+      <input type="submit" value="Submit Enquiry" />
+    </div>
+
   </div>
-
-  <div class="first-name">
-    <label for="first-name">First Name</label>
-    <input type="text" name="contact[first_name]" id="first-name" required autocomplete="given-name" />
-  </div>
-
-  <div class="last-name">
-    <label for="last-name">Last Name</label>
-    <input type="text" name="contact[last_name]" id="last-name" required autocomplete="family-name" />
-  </div>
-
-  <div class="email">
-    <label for="email">Email</label>
-    <input type="email" name="contact[email]" id="email" required autocomplete="email" />
-  </div>
-
-  <div class="account-number">
-    <label for="account-number">Account Number</label>
-    <input type="text" name="contact[account_number]" id="account-number" />
-  </div>
-
-  <!-- Company Shipping Address -->
-  <fieldset class="shipping-address">
-    <legend>Company Shipping Address</legend>
-
-    <div class="shipping-first-name">
-      <label for="shipping-first-name">First Name</label>
-      <input type="text" name="contact[shipping_first_name]" id="shipping-first-name" required autocomplete="shipping given-name" />
-    </div>
-
-    <div class="shipping-last-name">
-      <label for="shipping-last-name">Last Name</label>
-      <input type="text" name="contact[shipping_last_name]" id="shipping-last-name" required autocomplete="shipping family-name" />
-    </div>
-
-    <div class="shipping-company">
-      <label for="shipping-company">Company</label>
-      <input type="text" name="contact[shipping_company]" id="shipping-company" autocomplete="shipping organization" />
-    </div>
-
-    <div class="shipping-address1">
-      <label for="shipping-address1">Address</label>
-      <input type="text" name="contact[shipping_address1]" id="shipping-address1" required autocomplete="shipping address-line1" />
-    </div>
-
-    <div class="shipping-address2">
-      <label for="shipping-address2">Apartment, suite, etc.</label>
-      <input type="text" name="contact[shipping_address2]" id="shipping-address2" autocomplete="shipping address-line2" />
-    </div>
-
-    <div class="shipping-city">
-      <label for="shipping-city">City</label>
-      <input type="text" name="contact[shipping_city]" id="shipping-city" required autocomplete="shipping address-level2" />
-    </div>
-
-    <div class="shipping-state">
-      <label for="shipping-state">State</label>
-      <input type="text" name="contact[shipping_state]" id="shipping-state" required autocomplete="shipping address-level1" />
-    </div>
-
-    <div class="shipping-zip">
-      <label for="shipping-zip">Zip Code</label>
-      <input type="text" name="contact[shipping_zip]" id="shipping-zip" required autocomplete="shipping postal-code" />
-    </div>
-
-    <div class="shipping-phone">
-      <label for="shipping-phone">Phone Number</label>
-      <input type="tel" name="contact[shipping_phone]" id="shipping-phone" required autocomplete="shipping tel" />
-    </div>
-
-  </fieldset>
-
-  <div class="submit">
-    <input type="submit" value="Submit Enquiry" />
-  </div>
-
 {% endform %}
+
 
 {% schema %}
 {
