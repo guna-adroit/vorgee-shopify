@@ -1,9 +1,15 @@
 <div class="section section--page-width">
     <div class="b2b-form-container">
         {% form 'contact' %}
-        {{ form.errors | default_errors }}
+        
 
         <div class="b2b-form">
+            {{ form.errors | default_errors }}
+        {% if form.posted_successfully? %}
+            <div class="contact-form__message contact-form__message--success" role="status">
+            <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
+            </div>
+        {% endif %}
 
             <p class="form-section-title">Account Details</p>
 
@@ -192,7 +198,9 @@
     }
 
     .b2b-form .form-submit input[type="submit"]:hover { background: #333; }
-
+    .contact-form__message p{
+        color: green;
+    }
     @media (max-width: 480px) {
       .b2b-form .form-row { grid-template-columns: 1fr; }
     }
