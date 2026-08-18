@@ -1984,7 +1984,7 @@
       },
       "name": "Product list",
       "settings": {
-        "collection": "all",
+        "collection": "featured-products",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 8,
