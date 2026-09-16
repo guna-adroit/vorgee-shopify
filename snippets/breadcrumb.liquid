@@ -86,7 +86,7 @@
         <span class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page"> {{ product.title }}</a>
         </span>
-      {%- when 'collection' and collection.handle -%}
+      {%- when 'collection' -%}
         {%- if current_tags -%}
           <span class="breadcrumbs__item">
              {{ collection.title | link_to: collection.url }}
@@ -137,3 +137,13 @@
 </nav>
 </div>
 {%- endunless -%}  
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- when 'collection' and collection.handle -%}"
+  to: "{%- when 'collection' -%}"
+  position: 2579..2604
+{% endcomment %}
