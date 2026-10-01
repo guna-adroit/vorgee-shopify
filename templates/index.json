@@ -405,8 +405,8 @@
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
-                    "custom_classes": "",
-                    "type_preset": "custom",
+                    "custom_classes": "breast-cancer-copy",
+                    "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "1.5rem",
                     "font_weight": "400",
@@ -836,6 +836,10 @@
         "slide_eWwEVM",
         "slide_67mmk7",
         "slide_MB6CD4"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media (min-width: 750px) {.breast-cancer-copy, .breast-cancer-copy p {font-size: 20px !important; }}"
       ],
       "name": "t:names.slideshow",
       "settings": {
