@@ -431,7 +431,7 @@
                     "label": "SIGN UP TODAY!",
                     "link": "https://fundraise.nbcf.org.au/59E2B8",
                     "open_in_new_tab": true,
-                    "style_class": "button",
+                    "style_class": "custom-btn",
                     "width": "fit-content",
                     "custom_width": 100,
                     "width_mobile": "fit-content",
